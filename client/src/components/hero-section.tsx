@@ -17,7 +17,9 @@ export default function HeroSection() {
                 />
               </div>
               <p className="text-sm md:text-base leading-relaxed mb-8 max-w-4xl mx-auto px-6" data-testid="text-hero-description">
-                Nikmati pengalaman menginap terbaik di villa dan glamping eksklusif dengan pemandangan Gunung Lawu yang memukau
+                Nikmati pengalaman menginap terbaik di villa<br/>
+                dan glamping eksklusif dengan pemandangan<br/>
+                Gunung Lawu yang memukau
               </p>
             </div>
           </div>
