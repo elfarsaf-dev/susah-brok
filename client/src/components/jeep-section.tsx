@@ -94,30 +94,49 @@ const formatPrice = (price: number) => {
 };
 
 function TripCard({ trip, type }: { trip: TripData; type: 'short' | 'long' }) {
+  const jeepImages = [
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300",
+    "https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300", 
+    "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300"
+  ];
+  
+  const tripIndex = parseInt(trip.id.split('-')[2]) - 1;
+  const imageUrl = jeepImages[tripIndex] || jeepImages[0];
+  
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300" data-testid={`trip-card-${trip.id}`}>
-      <div className="flex items-center justify-between mb-4">
-        <h4 className="text-lg font-bold text-gray-900">▶️ {trip.title}</h4>
-        <span className="text-xl font-bold text-primary-600">{formatPrice(trip.price)}</span>
-      </div>
+    <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300" data-testid={`trip-card-${trip.id}`}>
+      <img 
+        src={imageUrl}
+        alt={`Jeep trip ${trip.title}`}
+        className="w-full h-40 object-cover"
+      />
       
-      <div className="mb-4">
-        <ul className="space-y-1">
-          {trip.destinations.map((destination, index) => (
-            <li key={index} className="text-gray-600 text-sm">- {destination}</li>
-          ))}
-        </ul>
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <span className="text-sm text-gray-500">Durasi: {trip.duration}</span>
-        <Button 
-          size="sm"
-          className="bg-primary-600 hover:bg-primary-700 text-white"
-          data-testid={`button-book-${trip.id}`}
-        >
-          Pesan
-        </Button>
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h4 className="text-lg font-bold text-gray-900">▶️ {trip.title}</h4>
+          <span className="text-xl font-bold text-primary-600">{formatPrice(trip.price)}</span>
+        </div>
+        
+        <div className="mb-4">
+          <ul className="space-y-1">
+            {trip.destinations.map((destination, index) => (
+              <li key={index} className="text-gray-600 text-sm">- {destination}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="text-sm text-gray-500">Durasi: {trip.duration}</span>
+          <Button 
+            size="sm"
+            className="bg-primary-600 hover:bg-primary-700 text-white"
+            data-testid={`button-book-${trip.id}`}
+          >
+            Pesan
+          </Button>
+        </div>
       </div>
     </div>
   );
