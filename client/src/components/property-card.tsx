@@ -17,7 +17,7 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
     maximumFractionDigits: 0
   }).format(minPrice);
 
-  const rating = property.rating || 4.5;
+  const rating = property.rating ?? 4.5;
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
 
