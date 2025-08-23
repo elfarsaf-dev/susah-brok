@@ -13,15 +13,273 @@ interface PropertyModalProps {
 export default function PropertyModal({ property, onClose }: PropertyModalProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Generate image slider (using placeholder images since we only have 1 image per property)
-  const sliderImages = [
-    property.image,
-    'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600'
-  ];
+  // Get property-specific image slider
+  const getSliderImages = () => {
+    const imageMap: Record<string, string[]> = {
+      // Villa FJ
+      "Villa FJ": [
+        property.image,
+        'https://i.ibb.co/7d7NTWt2/IMG-5950.jpg',
+        'https://i.ibb.co/4gR5GmwK/IMG-5951.jpg',
+        'https://i.ibb.co/cXRxVGRk/IMG-5952.jpg',
+        'https://i.ibb.co/mCp3Z533/IMG-5953.jpg',
+        'https://i.ibb.co/Wj6TBkd/IMG-5954.jpg'
+      ],
+      // Villa DT
+      "Villa DT": [
+        property.image,
+        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
+        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
+        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
+        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
+        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+      ],
+      // Villa ALM
+      "Villa ALM": [
+        property.image,
+        'https://i.ibb.co/JWKpH31D/IMG-5924.jpg',
+        'https://i.ibb.co/YYgMGpx/IMG-5920.jpg',
+        'https://i.ibb.co/rN2GMKr/IMG-5923.jpg',
+        'https://i.ibb.co/qFkFW7MB/IMG-5922.jpg',
+        'https://i.ibb.co/MyD090Mx/IMG-5921.jpg'
+      ],
+      // Villa TD JW
+      "Villa TD JW": [
+        property.image,
+        'https://i.ibb.co/SwKDCsrX/IMG-5914.jpg',
+        'https://i.ibb.co/Y7L5CRZX/IMG-5913.jpg',
+        'https://i.ibb.co/8LhNP94z/IMG-5912.jpg',
+        'https://i.ibb.co/WNk1LVzm/IMG-5911.jpg',
+        'https://i.ibb.co/BHpZJbmr/IMG-5910.jpg'
+      ],
+      // KRYSM
+      "KRYSM": [
+        property.image,
+        'https://i.ibb.co/j1Bjv7M/IMG-5940.jpg',
+        'https://i.ibb.co/7dGv7FyG/IMG-5941.jpg',
+        'https://i.ibb.co/RTkz4b4N/IMG-5942.jpg',
+        'https://i.ibb.co/1JJzwLF5/IMG-5943.jpg',
+        'https://i.ibb.co/d4mLJZGf/IMG-5944.jpg'
+      ],
+      // Villa "KU"
+      "Villa \"KU\"": [
+        property.image,
+        'https://i.ibb.co/G3vFnP3m/IMG-6001.jpg',
+        'https://i.ibb.co/8gQqjnsV/IMG-6002.jpg',
+        'https://i.ibb.co/hFQNx2SY/IMG-6003.jpg',
+        'https://i.ibb.co/6cg2gyDF/IMG-6004.jpg',
+        'https://i.ibb.co/bgxBvHFH/IMG-6005.jpg'
+      ],
+      // Villa ADR
+      "Villa ADR": [
+        property.image,
+        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
+        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
+        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
+        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
+        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+      ],
+      // Villa KMD
+      "Villa KMD": [
+        property.image,
+        'https://i.ibb.co/fzqZNwnt/IMG-5905.jpg',
+        'https://i.ibb.co/KxP9rYnR/IMG-5906.jpg',
+        'https://i.ibb.co/DfBH2twz/IMG-5907.jpg',
+        'https://i.ibb.co/4gXNxsJ4/IMG-5908.jpg',
+        'https://i.ibb.co/svVFXwpg/IMG-5909.jpg'
+      ],
+      // Villa ZZ
+      "Villa ZZ": [
+        property.image,
+        'https://github.com/elfarsaf-dev/Heu/blob/main/ZIezo/IMG_5849.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/ZIezo/IMG_5851.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/ZIezo/IMG_5853.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/ZIezo/IMG_5850.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/ZIezo/IMG_5852.jpeg?raw=true'
+      ],
+      // Villa RYL
+      "Villa RYL": [
+        property.image,
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Royal/IMG_5854.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Royal/IMG_5858.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Royal/IMG_5857.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Royal/IMG_5856.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Royal/IMG_5855.jpeg?raw=true'
+      ],
+      // Villa DNDR 2
+      "Villa DNDR 2": [
+        property.image,
+        'https://i.ibb.co/HLYGM6B4/IMG-5873.jpg',
+        'https://i.ibb.co/DHsCM10j/IMG-5872.jpg',
+        'https://i.ibb.co/67n6Vpb8/IMG-5871.jpg',
+        'https://i.ibb.co/LbJ2pBZ/IMG-5870.jpg',
+        'https://i.ibb.co/rG58yvGx/IMG-5874.jpg'
+      ],
+      // Villa BDL 2A
+      "Villa BDL 2A": [
+        property.image,
+        'https://i.ibb.co/Y7jdzPXg/IMG-5919.jpg',
+        'https://i.ibb.co/dJctNPX3/IMG-5918.jpg',
+        'https://i.ibb.co/ch42Fw6B/IMG-5917.jpg',
+        'https://i.ibb.co/k6hkQqrF/IMG-5916.jpg',
+        'https://i.ibb.co/nswxnHt6/IMG-5915.jpg'
+      ],
+      // Villa Pine
+      "Villa Pine": [
+        property.image,
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5865.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5866.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5867.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5868.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5869.jpeg?raw=true'
+      ],
+      // Villa EDLW
+      "Villa EDLW": [
+        property.image,
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Edelwis/IMG_5844.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Edelwis/IMG_5845.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Edelwis/IMG_5846.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Edelwis/IMG_5847.jpeg?raw=true',
+        'https://github.com/elfarsaf-dev/Heu/blob/main/Edelwis/IMG_5848.jpeg?raw=true'
+      ],
+      // Mongkrang SC
+      "Mongkrang SC": [
+        property.image,
+        'https://i.ibb.co/PZ87HQSN/IMG-5883.jpg',
+        'https://i.ibb.co/tN3GZNj/IMG-5882.jpg',
+        'https://i.ibb.co/Ngd47RW5/IMG-5884.jpg',
+        'https://i.ibb.co/cSWYDsDJ/IMG-5881.jpg',
+        'https://i.ibb.co/TqT1KZ3n/IMG-5880.jpg'
+      ],
+      // DZ Glamping
+      "DZ Glamping": [
+        property.image,
+        'https://i.ibb.co/WWyZVsyG/IMG-5929.jpg',
+        'https://i.ibb.co/1S92XM3/IMG-5928.jpg',
+        'https://i.ibb.co/jP1t7gxK/IMG-5927.jpg',
+        'https://i.ibb.co/s9RkhmNf/IMG-5926.jpg',
+        'https://i.ibb.co/DD3nRy49/IMG-5925.jpg'
+      ],
+      // ZHY Glamping
+      "ZHY Glamping": [
+        property.image,
+        'https://i.ibb.co/TxDkqXGN/IMG-5930.jpg',
+        'https://i.ibb.co/zVMJvMBg/IMG-5931.jpg',
+        'https://i.ibb.co/9fjNzS3/IMG-5932.jpg',
+        'https://i.ibb.co/3mwxyjkf/IMG-5933.jpg',
+        'https://i.ibb.co/xSzdqGh6/IMG-5934.jpg'
+      ],
+      // BMW Glamping
+      "BMW Glamping": [
+        property.image,
+        'https://i.ibb.co/FkkvQ44L/IMG-5935.jpg',
+        'https://i.ibb.co/v6mHDR9Q/IMG-5936.jpg',
+        'https://i.ibb.co/Gv568xMd/IMG-5937.jpg',
+        'https://i.ibb.co/FSsbzmf/IMG-5938.jpg',
+        'https://i.ibb.co/ZpjM9x0Z/IMG-5939.jpg'
+      ],
+      // Glamping SYD 2
+      "Glamping SYD 2": [
+        property.image,
+        'https://i.ibb.co/mF0wkqSZ/IMG-5945.jpg',
+        'https://i.ibb.co/YFXw0905/IMG-5946.jpg',
+        'https://i.ibb.co/b5HdV0vb/IMG-5947.jpg',
+        'https://i.ibb.co/B2CnMdYr/IMG-5948.jpg',
+        'https://i.ibb.co/wF7dqgMN/IMG-5949.jpg'
+      ],
+      // AZL Glamping
+      "AZL Glamping": [
+        property.image,
+        'https://i.ibb.co/Y4mYHyJv/IMG-5955.jpg',
+        'https://i.ibb.co/TMD2KRmj/IMG-5956.jpg',
+        'https://i.ibb.co/wF7SkVth/IMG-5957.jpg',
+        'https://i.ibb.co/8DSQCXP9/IMG-5958.jpg',
+        'https://i.ibb.co/VYXyQhjy/IMG-5959.jpg'
+      ],
+      // TR Glamping
+      "TR Glamping": [
+        property.image,
+        'https://i.ibb.co/ycxtyPB3/IMG-5960.jpg',
+        'https://i.ibb.co/yBR80RBK/IMG-5961.jpg',
+        'https://i.ibb.co/fGkTzDjD/IMG-5962.jpg',
+        'https://i.ibb.co/4ZSXxwwb/IMG-5963.jpg',
+        'https://i.ibb.co/dw5WNTJH/IMG-5964.jpg'
+      ],
+      // Glamping LWPR
+      "Glamping LWPR": [
+        property.image,
+        'https://i.ibb.co/B0HK0y4/IMG-5965.jpg',
+        'https://i.ibb.co/21XyHY8J/IMG-5966.jpg',
+        'https://i.ibb.co/sdD4gZy6/IMG-5967.jpg',
+        'https://i.ibb.co/Y7chSvRw/IMG-5968.jpg',
+        'https://i.ibb.co/4nTrDs57/IMG-5969.jpg'
+      ],
+      // B.HILLS B
+      "B.HILLS B": [
+        property.image,
+        'https://i.ibb.co/Q76g8H0k/IMG-5970.jpg',
+        'https://i.ibb.co/LDZPWz5h/IMG-5971.jpg',
+        'https://i.ibb.co/nNNYJVcB/IMG-5972.jpg',
+        'https://i.ibb.co/dJfV4BV3/IMG-5973.jpg',
+        'https://i.ibb.co/bjNpNTDg/IMG-5974.jpg'
+      ],
+      // DV Glamping
+      "DV Glamping": [
+        property.image,
+        'https://i.ibb.co/VcwXJMwH/IMG-5975.jpg',
+        'https://i.ibb.co/bg4FbRL5/IMG-5976.jpg',
+        'https://i.ibb.co/YMfMWxx/IMG-5977.jpg',
+        'https://i.ibb.co/jZ5PnpSz/IMG-5978.jpg',
+        'https://i.ibb.co/bMgjqw8z/IMG-5979.jpg'
+      ],
+      // B.HILLS A
+      "B.HILLS A": [
+        property.image,
+        'https://i.ibb.co/VcwXJMwH/IMG-5975.jpg',
+        'https://i.ibb.co/bg4FbRL5/IMG-5976.jpg',
+        'https://i.ibb.co/YMfMWxx/IMG-5977.jpg',
+        'https://i.ibb.co/jZ5PnpSz/IMG-5978.jpg',
+        'https://i.ibb.co/bMgjqw8z/IMG-5979.jpg'
+      ],
+      // Glamping Jingga
+      "Glamping Jingga": [
+        property.image,
+        'https://i.ibb.co/8DgGsbfR/IMG-5985.jpg',
+        'https://i.ibb.co/d0sb20NM/IMG-5986.jpg',
+        'https://i.ibb.co/6RhWfxF7/IMG-5987.jpg',
+        'https://i.ibb.co/39nkBqL8/IMG-5988.jpg',
+        'https://i.ibb.co/CpMynrz5/IMG-5989.jpg'
+      ],
+      // Glamping SVG
+      "Glamping SVG": [
+        property.image,
+        'https://i.ibb.co/TMwctpVy/IMG-5990.jpg',
+        'https://i.ibb.co/tM7g5WBq/IMG-5991.jpg',
+        'https://i.ibb.co/WpHs34Rd/IMG-5992.jpg',
+        'https://i.ibb.co/htv3f12/IMG-5993.jpg',
+        'https://i.ibb.co/8n6ZzQYM/IMG-5994.jpg'
+      ],
+      // Glamping ALM
+      "Glamping ALM": [
+        property.image,
+        'https://i.ibb.co/Q7FMk1hb/IMG-5995.jpg',
+        'https://i.ibb.co/4wvHHCQf/IMG-5996.jpg',
+        'https://i.ibb.co/cKpxkWj8/IMG-5997.jpg',
+        'https://i.ibb.co/PG5GpFnQ/IMG-5998.jpg',
+        'https://i.ibb.co/N6ksn1Sy/IMG-5999.jpg'
+      ]
+    };
+    
+    return imageMap[property.name] || [
+      property.image,
+      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600'
+    ];
+  };
+  
+  const sliderImages = getSliderImages();
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
