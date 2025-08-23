@@ -8,7 +8,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <div className="mb-6">
-              <div className="w-72 h-72 md:w-80 md:h-80 bg-transparent flex items-center justify-center mx-auto mb-12 mt-8">
+              <div className="w-72 h-72 md:w-80 md:h-80 bg-transparent flex items-center justify-center mx-auto mb-4 mt-8">
                 <img 
                   src={logoImage} 
                   alt="BOS VILLA TAWANGMANGU Logo" 
