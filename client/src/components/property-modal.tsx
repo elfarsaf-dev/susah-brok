@@ -37,12 +37,12 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
 
   const handleWhatsApp = () => {
     const message = `Halo, saya tertarik dengan ${property.name} di ${property.location}. Bisakah saya mendapatkan informasi lebih lanjut?`;
-    const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCall = () => {
-    window.open('tel:+6281234567890', '_self');
+    window.open('tel:+6281226374041', '_self');
   };
 
   return (
@@ -124,9 +124,14 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                   {property.location}
                 </p>
               </div>
-              <Badge className="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium capitalize">
-                {property.type}
-              </Badge>
+              <div className="flex flex-col gap-2">
+                <Badge className="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-medium capitalize">
+                  {property.type}
+                </Badge>
+                <Badge className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium" data-testid="text-modal-units">
+                  {property.units} unit tersedia
+                </Badge>
+              </div>
             </div>
             
             {/* Capacity */}
@@ -184,6 +189,13 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               </ul>
             </div>
             
+            {/* Booking Message */}
+            <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-blue-800 text-center font-medium">
+                Untuk info lebih lanjut atau booking bisa klik tombol booking di bawah😊
+              </p>
+            </div>
+            
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -192,7 +204,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 data-testid="button-whatsapp"
               >
                 <span className="mr-2">💬</span>
-                Pesan via WhatsApp
+                Booking {property.type === "villa" ? "Villa" : "Glamping"}
               </Button>
               <Button 
                 onClick={handleCall}

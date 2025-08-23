@@ -37,6 +37,14 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
             {property.type}
           </Badge>
         </div>
+        <div className="absolute top-4 right-4">
+          <Badge 
+            className="bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+            data-testid={`badge-units-${property.id}`}
+          >
+            {property.units} unit tersedia
+          </Badge>
+        </div>
       </div>
       
       <div className="p-6">
