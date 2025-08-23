@@ -32,7 +32,7 @@ export const tripSchema = z.object({
   rating: z.number().min(1).max(5).optional().default(4.5),
   description: z.string(),
   capacity: z.string(),
-  included: z.array(z.string())
+  included: z.array(z.string()).optional()
 });
 
 export type Rate = z.infer<typeof rateSchema>;

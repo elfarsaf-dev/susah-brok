@@ -45,7 +45,7 @@ export const villaData: Property[] = [
       { label: "Minggu – Kamis", price: 2000000 },
       { label: "Jumat", price: 2500000 },
       { label: "Sabtu", price: 3000000 }
-    ],
+,
     units: 1,
     facilities: [
       "4 Kamar tidur",
@@ -63,7 +63,7 @@ export const villaData: Property[] = [
       "Alat makan lengkap",
       "Free 2 extra bed",
       "Free teh, kopi & mie"
-    ],
+,
     capacity: "Maksimal 25 orang",
     notes: [
       "Check in jam 2 siang",
@@ -72,7 +72,7 @@ export const villaData: Property[] = [
       "No miras",
       "No mesum",
       "No drugs"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5818.jpeg?raw=true",
     type: "villa"
   },
@@ -84,7 +84,7 @@ export const villaData: Property[] = [
       { label: "Weekday", price: 1500000 },
       { label: "Jumat", price: 1700000 },
       { label: "Sabtu", price: 2500000 }
-    ],
+,
     units: 1,
     facilities: [
       "3 kamar tidur",
@@ -97,7 +97,7 @@ export const villaData: Property[] = [
       "Alat bakaran dan arang",
       "Berlangganan Netflix",
       "Kolam renang"
-    ],
+,
     capacity: "Maksimal 20 orang",
     notes: [
       "Check in jam 2 siang",
@@ -107,7 +107,7 @@ export const villaData: Property[] = [
       "No mesum", 
       "No drugs",
       "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5824.jpeg?raw=true",
     type: "villa"
   },
@@ -117,7 +117,7 @@ export const villaData: Property[] = [
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Hubungi untuk info harga", price: 0 }
-    ],
+,
     units: 1,
     facilities: [
       "3 Kamar tidur",
@@ -136,7 +136,7 @@ export const villaData: Property[] = [
       "Sepeda motor",
       "Meja biliar",
       "Kolam renang"
-    ],
+,
     capacity: "25 orang",
     notes: [
       "Check in jam 2 siang",
@@ -145,7 +145,7 @@ export const villaData: Property[] = [
       "No miras",
       "No mesum",
       "No drugs"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5821.jpeg?raw=true",
     type: "villa"
   },
@@ -156,7 +156,7 @@ export const villaData: Property[] = [
     rates: [
       { label: "Weekday", price: 2000000 },
       { label: "Weekend", price: 2500000 }
-    ],
+,
     units: 1,
     facilities: [
       "Ruang tamu",
@@ -167,7 +167,7 @@ export const villaData: Property[] = [
       "3 Kamar Tidur",
       "3 Kamar Mandi",
       "Balkon"
-    ],
+,
     capacity: "25-30 orang",
     notes: [
       "Check in jam 2 siang",
@@ -180,7 +180,7 @@ export const villaData: Property[] = [
       "Pas untuk Acara-acara besar",
       "Dekat Wisata",
       "Dekat Kebun Strawberry"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5828.jpeg?raw=true",
     type: "villa"
   },
@@ -190,7 +190,7 @@ export const villaData: Property[] = [
     location: "Sekipan, dekat wisata",
     rates: [
       { label: "Harga 1 jutaan", price: 1000000 }
-    ],
+,
     units: 1,
     facilities: [
       "3 Kamar tidur",
@@ -205,7 +205,7 @@ export const villaData: Property[] = [
       "TV LED",
       "Balkon view",
       "Parkir 3 mobil"
-    ],
+,
     capacity: "15-20 orang",
     notes: [
       "Check in jam 2 siang",
@@ -214,7 +214,7 @@ export const villaData: Property[] = [
       "No miras",
       "No mesum",
       "No drugs"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5822.jpeg?raw=true",
     type: "villa"
   },
@@ -225,7 +225,7 @@ export const villaData: Property[] = [
     rates: [
       { label: "Weekday", price: 2000000 },
       { label: "Weekend", price: 2500000 }
-    ],
+,
     units: 1,
     facilities: [
       "Ruang tamu",
@@ -236,7 +236,7 @@ export const villaData: Property[] = [
       "3 Kamar tidur",
       "3 Kamar mandi",
       "Balkon"
-    ],
+,
     capacity: "25-30 orang",
     notes: [
       "Check in jam 2 siang",
@@ -249,7 +249,7 @@ export const villaData: Property[] = [
       "Pas untuk acara-acara besar",
       "Dekat wisata",
       "Dekat kebun strawberry"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5819.jpeg?raw=true",
     type: "villa"
   },
@@ -259,7 +259,7 @@ export const villaData: Property[] = [
     location: "Sekipan, Tawangmangu",
     rates: [
       { label: "Mulai 2 Jutaan / Malam", price: 2000000 }
-    ],
+,
     units: 1,
     facilities: [
       "4 Kamar tidur",
@@ -274,7 +274,7 @@ export const villaData: Property[] = [
       "Dispenser",
       "Alat bakaran",
       "Free mie, teh, kopi, gula"
-    ],
+,
     capacity: "30-35 orang",
     notes: [
       "Check in jam 2 siang",
@@ -284,7 +284,7 @@ export const villaData: Property[] = [
       "No drugs",
       "Rooftop dengan view sunset & bukit Sekipan",
       "Cocok untuk relaksasi dari hiruk pikuk kota"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5820.jpeg?raw=true",
     type: "villa"
   },
@@ -299,7 +299,7 @@ export const villaData: Property[] = [
       { label: "4 Kamar - Minggu–Kamis", price: 1500000 },
       { label: "4 Kamar - Jumat", price: 1750000 },
       { label: "4 Kamar - Sabtu", price: 2250000 }
-    ],
+,
     units: 1,
     facilities: [
       "3 & 4 kamar tidur",
@@ -318,7 +318,7 @@ export const villaData: Property[] = [
       "Alat grill (gas portable bawa sendiri)",
       "Ruang keluarga luas",
       "View pegunungan Sekipan"
-    ],
+,
     capacity: "15-25 orang",
     notes: [
       "Check in jam 2 siang",
@@ -327,7 +327,7 @@ export const villaData: Property[] = [
       "No mesum",
       "No drugs",
       "Parkir muat 5 mobil (mobil besar seperti Alphard/Elf tidak bisa masuk, karena lebar jalan hanya 2 meter)"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5812.jpeg?raw=true",
     type: "villa"
   },
@@ -338,7 +338,7 @@ export const villaData: Property[] = [
     rates: [
       { label: "Weekday", price: 2000000 },
       { label: "Weekend", price: 2500000 }
-    ],
+,
     units: 1,
     facilities: [
       "2 ruang tamu dengan sofa",
@@ -352,7 +352,7 @@ export const villaData: Property[] = [
       "Free alat BBQ",
       "Free 1 galon",
       "Free kopi, teh, gula & snack"
-    ],
+,
     capacity: "Maksimal 20 orang",
     notes: [
       "Check in jam 2 siang",
@@ -361,7 +361,7 @@ export const villaData: Property[] = [
       "No mesum",
       "No drugs",
       "Price from owner, no mark up"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5813.jpeg?raw=true",
     type: "villa"
   },
@@ -544,7 +544,7 @@ export const glampingData: Property[] = [
       { label: "Jumat - Kolam renang air hangat", price: 700000 },
       { label: "Weekend - Kolam renang air dingin", price: 700000 },
       { label: "Weekend - Kolam renang air hangat", price: 800000 }
-    ],
+,
     units: 11,
     facilities: [
       "Smart TV",
@@ -558,7 +558,7 @@ export const glampingData: Property[] = [
       "Perlengkapan masak & makan",
       "Free breakfast untuk 2 orang",
       "Tempat parkir luas"
-    ],
+,
     capacity: "2-5 orang",
     notes: [
       "Check in jam 2 siang",
@@ -567,7 +567,7 @@ export const glampingData: Property[] = [
       "No miras",
       "No mesum",
       "No drugs"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5817.jpeg?raw=true",
     type: "glamping"
   },
@@ -578,7 +578,7 @@ export const glampingData: Property[] = [
     rates: [
       { label: "Weekday", price: 500000 },
       { label: "Weekend", price: 700000 }
-    ],
+,
     units: 6,
     facilities: [
       "1 Bed",
@@ -592,7 +592,7 @@ export const glampingData: Property[] = [
       "Kopi dan teh",
       "Include sarapan pagi untuk 2 orang",
       "View Gunung Lawu"
-    ],
+,
     capacity: "Maksimal 6 orang",
     notes: [
       "Check in jam 2 siang",
@@ -602,7 +602,7 @@ export const glampingData: Property[] = [
       "No mesum",
       "No drugs",
       "Super cantik dengan view Gunung Lawu"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5815.jpeg?raw=true",
     type: "glamping"
   },
@@ -614,7 +614,7 @@ export const glampingData: Property[] = [
       { label: "Weekday", price: 550000 },
       { label: "Jumat", price: 700000 },
       { label: "Weekend", price: 800000 }
-    ],
+,
     units: 5,
     facilities: [
       "Private Pool Air Hangat",
@@ -630,7 +630,7 @@ export const glampingData: Property[] = [
       "Free Mineral Water, Gula, Teh & Kopi",
       "Area Parkir",
       "Free BBQ"
-    ],
+,
     capacity: "2-4 orang",
     notes: [
       "Check in jam 2 siang",
@@ -641,7 +641,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Price From Owner, No Mark Up",
       "Dekat Wisata Buper Pleseran & Telaga Asmara"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5827.jpeg?raw=true",
     type: "glamping"
   },
@@ -651,7 +651,7 @@ export const glampingData: Property[] = [
     location: "Tawangmangu",
     rates: [
       { label: "Harga start 500K", price: 500000 }
-    ],
+,
     units: 1,
     facilities: [
       "1 Bed di lantai 2, bawahnya sofa",
@@ -664,7 +664,7 @@ export const glampingData: Property[] = [
       "Mini kitchen",
       "Private pool",
       "View adem"
-    ],
+,
     capacity: "2-6 orang",
     notes: [
       "Check in jam 2 siang",
@@ -675,7 +675,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Glamping baru di Tawangmangu dengan view cantik",
       "Dekat wisata"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5825.jpeg?raw=true",
     type: "glamping"
   },
@@ -686,7 +686,7 @@ export const glampingData: Property[] = [
     rates: [
       { label: "Weekday", price: 500000 },
       { label: "Weekend", price: 800000 }
-    ],
+,
     units: 5,
     facilities: [
       "Bed ukuran 160x200",
@@ -706,7 +706,7 @@ export const glampingData: Property[] = [
       "Diskon 50% tiket masuk wisata Buper Pleseran",
       "Free BBQ",
       "Free tenda"
-    ],
+,
     capacity: "2-7 orang",
     notes: [
       "Check in jam 2 siang",
@@ -718,7 +718,7 @@ export const glampingData: Property[] = [
       "Cocok untuk keluarga kecil, dan pasangan suami istri",
       "Pas juga untuk honeymoon",
       "Dekat wisata Pleseran"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5831.jpeg?raw=true",
     type: "glamping"
   },
@@ -730,7 +730,7 @@ export const glampingData: Property[] = [
       { label: "Senin–Kamis", price: 550000 },
       { label: "Jumat", price: 650000 },
       { label: "Sabtu", price: 750000 }
-    ],
+,
     units: 3,
     facilities: [
       "Kasur ukuran queen size",
@@ -740,7 +740,7 @@ export const glampingData: Property[] = [
       "Smart TV",
       "Free kopi, gula & teh",
       "Sharing pool"
-    ],
+,
     capacity: "2-4 orang",
     notes: [
       "Check in jam 2 siang",
@@ -749,7 +749,7 @@ export const glampingData: Property[] = [
       "No mesum",
       "No drugs",
       "Dekat wisata Bukit Sekipan"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5832.jpeg?raw=true",
     type: "glamping"
   },
@@ -761,7 +761,7 @@ export const glampingData: Property[] = [
       { label: "Minggu–Kamis", price: 400000 },
       { label: "Jumat", price: 500000 },
       { label: "Sabtu", price: 700000 }
-    ],
+,
     units: 3,
     facilities: [
       "Mini pool",
@@ -775,7 +775,7 @@ export const glampingData: Property[] = [
       "Free Popmie / biskuit, air mineral, gula, teh & kopi (free refill)",
       "Area parkir luas",
       "View full alam pegunungan yang asri"
-    ],
+,
     capacity: "2-4 orang",
     notes: [
       "Check in jam 2 siang",
@@ -785,7 +785,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Price from Owner, No Mark Up",
       "Dekat dengan Buper Pleseran & Telaga Asmara"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5837.jpeg?raw=true",
     type: "glamping"
   },
@@ -795,7 +795,7 @@ export const glampingData: Property[] = [
     location: "Tawangmangu",
     rates: [
       { label: "Harga mulai 600 ribuan", price: 600000 }
-    ],
+,
     units: 3,
     facilities: [
       "Mini pool air hangat",
@@ -808,7 +808,7 @@ export const glampingData: Property[] = [
       "Free breakfast 2 pax",
       "Free gula, teh & kopi",
       "Area parkir luas"
-    ],
+,
     capacity: "Maksimal 5 orang",
     notes: [
       "Check in jam 2 siang",
@@ -817,7 +817,7 @@ export const glampingData: Property[] = [
       "No mesum",
       "No drugs",
       "Dekat wisata Bukit Sekipan & kebun stroberi (bisa petik sendiri)"
-    ],
+,
     image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5826.jpeg?raw=true",
     type: "glamping"
   },
@@ -1082,10 +1082,8 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
-    ],
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
@@ -1094,19 +1092,11 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
+,
+    image: "/attached_assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
     rating: 4.8,
     description: "Nikmati keindahan alam Tawangmangu dengan mengunjungi air terjun eksotis, kebun sayur organik, dan perkebunan strawberry segar. Cocok untuk keluarga yang ingin menikmati wisata alam dan kuliner lokal.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional", 
-      "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
-    ]
   },
   {
     id: "short-trip-2", 
@@ -1119,10 +1109,8 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
-    ],
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
@@ -1131,19 +1119,19 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
+,
+    image: "/attached_assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
     rating: 4.7,
     description: "Eksplorasi keindahan Grojokan Sewu dengan petik strawberry segar dan berbelanja oleh-oleh khas Tawangmangu. Perfect untuk wisata keluarga yang menginginkan kombinasi alam dan kuliner.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "BBM", 
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
-    ]
+
+
+
+ 
+
+
+
+
   },
   {
     id: "short-trip-3",
@@ -1156,11 +1144,11 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
+
       "Dokumentasi foto",
-      "Air mineral",
+
       "Snack ringan"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
@@ -1169,20 +1157,20 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Safari_jeep_tour_522c96ad.png",
+,
+    image: "/attached_assets/generated_images/Safari_jeep_tour_522c96ad.png",
     rating: 4.6,
     description: "Jelajahi keunikan Umbul Udal-udalan dengan pemandangan yang menakjubkan, dilengkapi dengan wisata petik strawberry dan berbelanja oleh-oleh lokal yang khas.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
-      "Air mineral",
+
+
+
+
+ 
+
       "Snack ringan",
-      "Dokumentasi"
-    ]
+
+
   },
   {
     id: "short-trip-4",
@@ -1195,11 +1183,11 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman", 
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
+
       "Dokumentasi foto",
-      "Air mineral",
+
       "Perlengkapan safety"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
@@ -1208,20 +1196,20 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
+,
+    image: "/attached_assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
     rating: 4.9,
     description: "Adrenalin rush di sirkuit Sekipan dengan jalur offroad yang menantang, dilengkapi wisata petik strawberry untuk menyegarkan perjalanan Anda.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Perlengkapan safety",
-      "Air mineral", 
-      "Dokumentasi"
-    ]
+
+
+
+
+
+
+ 
+
+
   },
   {
     id: "short-trip-5",
@@ -1234,10 +1222,8 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
-    ],
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
@@ -1246,19 +1232,19 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Jungle_trail_jeep_a6f22847.png",
+,
+    image: "/attached_assets/generated_images/Jungle_trail_jeep_a6f22847.png",
     rating: 4.5,
     description: "Pesona Kampung 1.000 Bunga yang colorful dan Bumi Perkemahan Pleseran dengan pemandangan alam yang memukau. Perfect untuk foto-foto cantik!",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
-    ]
+
+
+
+
+
+
+
+
   },
   // LONG TRIPS
   {
@@ -1272,12 +1258,12 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk", 
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
+
+
+
       "Dokumentasi foto",
       "Tour guide"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk makan siang",
@@ -1286,21 +1272,21 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Mountain_road_jeep_f6bfc25c.png",
+,
+    image: "/attached_assets/generated_images/Mountain_road_jeep_f6bfc25c.png",
     rating: 4.8,
     description: "Perjalanan menuju Telaga Madirda yang eksotis melalui Grojokan Sewu Pintu 2. Nikmati keindahan alam yang masih asri dan pemandangan yang menakjubkan.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "Tour guide",
-      "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi"
-    ]
+
+
+
+
+
+
+
+
+
+
   },
   {
     id: "long-trip-2",
@@ -1313,13 +1299,13 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
-      "Makan siang",
-      "Air mineral",
+ 
+
+
       "Dokumentasi foto",
-      "Tour guide",
+
       "Snack"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk makan siang",
@@ -1328,22 +1314,22 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
+,
+    image: "/attached_assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
     rating: 4.9,
     description: "Petualangan lengkap mengelilingi Gunung Lawu dengan mengunjungi Telaga Madirda, Hutan Pinus yang sejuk, Candi Sukuh yang bersejarah, dan Grojokan Jumog yang spektakuler.",
     capacity: "1-4 orang per jeep", 
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "Tour guide",
-      "BBM",
-      "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Dokumentasi"
-    ]
+
+
+
+
+
+
+
+
+
+
+
   },
   {
     id: "long-trip-3",
@@ -1356,14 +1342,14 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
+
+
+
       "Dokumentasi foto",
-      "Tour guide",
-      "Perlengkapan safety",
+
+
       "Snack"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang", 
       "Trip paling lengkap",
@@ -1372,23 +1358,23 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
+,
+    image: "/attached_assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
     rating: 4.8,
     description: "Kombinasi sempurna antara petualangan offroad di sirkuit, eksplorasi jalur hutan, wisata Pleseran, berbelanja oleh-oleh, dan petik strawberry segar.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional", 
-      "Tour guide",
-      "BBM", 
-      "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Perlengkapan safety",
-      "Dokumentasi"
-    ]
+
+
+ 
+
+ 
+
+
+
+
+
+
+
   },
   {
     id: "long-trip-4",
@@ -1401,14 +1387,14 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
+
+
+
       "Dokumentasi foto",
-      "Tour guide",
-      "Snack",
+
+
       "Tiket paralayang tandem"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Sudah termasuk paralayang tandem",
@@ -1416,23 +1402,23 @@ export const tripData: Trip[] = [
       "Cuaca sangat mempengaruhi",
       "Booking minimal H-3",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Jungle_trail_jeep_a6f22847.png",
+,
+    image: "/attached_assets/generated_images/Jungle_trail_jeep_a6f22847.png",
     rating: 4.9,
     description: "Pengalaman ultimate dengan paralayang tandem di atas Tawangmangu, dilengkapi wisata Telaga Madirda, Hutan Pinus, dan Candi Sukuh yang bersejarah.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep", 
-      "Driver profesional",
-      "Tour guide",
-      "BBM",
-      "Tiket masuk semua lokasi",
-      "Paralayang tandem", 
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Dokumentasi"
-    ]
+
+ 
+
+
+
+
+ 
+
+
+
+
+
   },
   {
     id: "long-trip-5",
@@ -1445,14 +1431,14 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
+
+
+
       "Dokumentasi foto", 
-      "Tour guide",
-      "Perlengkapan safety",
+
+
       "Snack"
-    ],
+,
     notes: [
       "Harga per jeep maksimal 4 orang",
       "Offroad susur sungai yang menantang",
@@ -1461,23 +1447,23 @@ export const tripData: Trip[] = [
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-3",
       "DP 50% dari total harga"
-    ],
-    image: "@assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
+,
+    image: "/attached_assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
     rating: 4.7,
     description: "Sensasi offroad susur sungai yang mendebarkan menuju Jembatan Kaca dengan pemandangan spektakuler, dilengkapi wisata Telaga Madirda dan berbelanja oleh-oleh.",
     capacity: "1-4 orang per jeep",
-    included: [
-      "Transportasi jeep",
-      "Driver profesional",
-      "Tour guide", 
-      "BBM",
-      "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Perlengkapan safety",
-      "Dokumentasi"
-    ]
+
+
+
+ 
+
+
+
+
+
+
+
+
   }
 ];
 
