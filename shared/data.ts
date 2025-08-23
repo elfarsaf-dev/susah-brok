@@ -1095,7 +1095,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
+    image: "https://i.ibb.co/1JT6rGBX/IMG-6025.png",
     rating: 4.8,
     description: "Nikmati keindahan alam Tawangmangu dengan mengunjungi air terjun eksotis, kebun sayur organik, dan perkebunan strawberry segar. Cocok untuk keluarga yang ingin menikmati wisata alam dan kuliner lokal.",
     capacity: "Max 4 orang",
@@ -1132,7 +1132,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
+    image: "https://i.ibb.co/nqFqzpSD/IMG-6024.png",
     rating: 4.7,
     description: "Eksplorasi keindahan Grojokan Sewu dengan petik strawberry segar dan berbelanja oleh-oleh khas Tawangmangu. Perfect untuk wisata keluarga yang menginginkan kombinasi alam dan kuliner.",
     capacity: "Max 4 orang",
@@ -1170,7 +1170,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Safari_jeep_tour_522c96ad.png",
+    image: "https://i.ibb.co/G3xxXNnw/IMG-6023.png",
     rating: 4.6,
     description: "Jelajahi keunikan Umbul Udal-udalan dengan pemandangan yang menakjubkan, dilengkapi dengan wisata petik strawberry dan berbelanja oleh-oleh lokal yang khas.",
     capacity: "Max 4 orang",
@@ -1209,7 +1209,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
+    image: "https://i.ibb.co/b5vPPV94/IMG-6026.png",
     rating: 4.9,
     description: "Adrenalin rush di sirkuit Sekipan dengan jalur offroad yang menantang, dilengkapi wisata petik strawberry untuk menyegarkan perjalanan Anda.",
     capacity: "Max 4 orang",
@@ -1247,7 +1247,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Jungle_trail_jeep_a6f22847.png",
+    image: "https://i.ibb.co/kV47XFCs/IMG-6022.png",
     rating: 4.5,
     description: "Pesona Kampung 1.000 Bunga yang colorful dan Bumi Perkemahan Pleseran dengan pemandangan alam yang memukau. Perfect untuk foto-foto cantik!",
     capacity: "Max 4 orang",
@@ -1287,7 +1287,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Mountain_road_jeep_f6bfc25c.png",
+    image: "https://i.ibb.co/9kbW89Gw/IMG-6021.png",
     rating: 4.8,
     description: "Perjalanan menuju Telaga Madirda yang eksotis melalui Grojokan Sewu Pintu 2. Nikmati keindahan alam yang masih asri dan pemandangan yang menakjubkan.",
     capacity: "Max 4 orang",
@@ -1329,7 +1329,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Mountain_adventure_jeep_9b771aa0.png",
+    image: "https://i.ibb.co/MkXS9czR/IMG-6020.png",
     rating: 4.9,
     description: "Petualangan lengkap mengelilingi Gunung Lawu dengan mengunjungi Telaga Madirda, Hutan Pinus yang sejuk, Candi Sukuh yang bersejarah, dan Grojokan Jumog yang spektakuler.",
     capacity: "Max 4 orang", 
@@ -1373,7 +1373,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Rocky_terrain_jeep_2f6b5344.png",
+    image: "https://i.ibb.co/yBddf75h/IMG-6019.png",
     rating: 4.8,
     description: "Kombinasi sempurna antara petualangan offroad di sirkuit, eksplorasi jalur hutan, wisata Pleseran, berbelanja oleh-oleh, dan petik strawberry segar.",
     capacity: "Max 4 orang",
@@ -1417,7 +1417,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-3",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Jungle_trail_jeep_a6f22847.png",
+    image: "https://i.ibb.co/v2qWyT3/IMG-6018.png",
     rating: 4.9,
     description: "Pengalaman ultimate dengan paralayang tandem di atas Tawangmangu, dilengkapi wisata Telaga Madirda, Hutan Pinus, dan Candi Sukuh yang bersejarah.",
     capacity: "Max 4 orang",
@@ -1462,7 +1462,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-3",
       "DP 50% dari total harga"
     ],
-    image: "@assets/generated_images/Waterfall_jeep_adventure_5aa1f87f.png",
+    image: "https://i.ibb.co/B5sSTTJ4/IMG-6017.png",
     rating: 4.7,
     description: "Sensasi offroad susur sungai yang mendebarkan menuju Jembatan Kaca dengan pemandangan spektakuler, dilengkapi wisata Telaga Madirda dan berbelanja oleh-oleh.",
     capacity: "Max 4 orang",
