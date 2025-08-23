@@ -1,4 +1,4 @@
-import { MapPin, Users } from "lucide-react";
+import { MapPin, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Property } from "@shared/schema";
@@ -16,6 +16,10 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
   }).format(minPrice);
+
+  const rating = property.rating || 4.5;
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
 
   return (
     <div 
@@ -61,6 +65,25 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
           <Users className="mr-2 text-primary-600 h-4 w-4" />
           {property.capacity}
         </p>
+
+        {/* Rating */}
+        <div className="flex items-center mb-3" data-testid={`rating-${property.id}`}>
+          <div className="flex items-center mr-2">
+            {[...Array(5)].map((_, index) => (
+              <Star
+                key={index}
+                className={`h-4 w-4 ${
+                  index < fullStars
+                    ? 'text-yellow-400 fill-current'
+                    : index === fullStars && hasHalfStar
+                    ? 'text-yellow-400 fill-current'
+                    : 'text-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+          <span className="text-sm text-gray-600 font-medium">{rating.toFixed(1)}</span>
+        </div>
         
         <div className="mb-4">
           <div className="flex flex-wrap gap-1 mb-3">
