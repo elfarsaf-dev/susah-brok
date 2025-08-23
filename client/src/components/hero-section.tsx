@@ -16,10 +16,8 @@ export default function HeroSection() {
                   style={{ filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8))' }}
                 />
               </div>
-              <p className="text-base md:text-lg leading-relaxed mb-8 max-w-5xl mx-auto px-8" data-testid="text-hero-description">
-                Nikmati pengalaman menginap terbaik di villa<br/>
-                dan glamping eksklusif dengan pemandangan<br/>
-                Gunung Lawu yang memukau
+              <p className="text-sm md:text-base leading-relaxed mb-8 max-w-4xl mx-auto px-6" data-testid="text-hero-description">
+                Nikmati pengalaman menginap terbaik di villa dan glamping eksklusif dengan pemandangan Gunung Lawu yang memukau
               </p>
             </div>
           </div>
