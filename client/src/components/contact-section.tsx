@@ -68,6 +68,13 @@ export default function ContactSection() {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-700">
           <div className="text-center">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 p-1">
+              <img 
+                src="https://i.ibb.co/F4WY9NbT/ai-repair-20250823211605583.png" 
+                alt="BOS VILLA TAWANGMANGU Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-primary-400 mb-4">BOS VILLA TAWANGMANGU</h3>
             <p className="text-gray-400 mb-4">Pengalaman menginap terbaik di kaki Gunung Lawu</p>
             <div className="flex justify-center space-x-6 mb-6">

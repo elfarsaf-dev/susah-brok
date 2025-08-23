@@ -7,8 +7,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <div className="mb-6">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mountain className="text-primary-600 text-3xl" />
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+                <img 
+                  src="https://i.ibb.co/F4WY9NbT/ai-repair-20250823211605583.png" 
+                  alt="BOS VILLA TAWANGMANGU Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-4" data-testid="text-hero-title">
                 BOS VILLA TAWANGMANGU
