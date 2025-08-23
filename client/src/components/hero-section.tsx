@@ -8,7 +8,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <div className="mb-6">
-              <div className="w-80 h-80 md:w-96 md:h-96 bg-transparent flex items-center justify-center mx-auto mb-8">
+              <div className="w-72 h-72 md:w-80 md:h-80 bg-transparent flex items-center justify-center mx-auto mb-12 mt-8">
                 <img 
                   src={logoImage} 
                   alt="BOS VILLA TAWANGMANGU Logo" 
@@ -16,7 +16,7 @@ export default function HeroSection() {
                   style={{ filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8))' }}
                 />
               </div>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-testid="text-hero-description">
+              <p className="text-lg md:text-xl leading-relaxed mb-8 max-w-4xl mx-auto px-6" data-testid="text-hero-description">
                 Nikmati pengalaman menginap terbaik di villa dan glamping eksklusif dengan pemandangan Gunung Lawu yang memukau
               </p>
             </div>
