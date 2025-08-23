@@ -1,4 +1,5 @@
 import { Mountain } from "lucide-react";
+import logoImage from "@assets/ai_repair_20250823211605583_1755958920038.png";
 
 export default function HeroSection() {
   return (
@@ -7,9 +8,9 @@ export default function HeroSection() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
             <div className="mb-6">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 p-2">
+              <div className="w-24 h-24 bg-transparent flex items-center justify-center mx-auto mb-4">
                 <img 
-                  src="https://i.ibb.co/F4WY9NbT/ai-repair-20250823211605583.png" 
+                  src={logoImage} 
                   alt="BOS VILLA TAWANGMANGU Logo" 
                   className="w-full h-full object-contain"
                 />
