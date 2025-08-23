@@ -20,7 +20,7 @@ export default function FloatingToggle({ currentType, onToggle }: FloatingToggle
         ) : (
           <Tent className="text-xl h-6 w-6" />
         )}
-        <span className="ml-2 hidden md:inline" data-testid="text-toggle-type">
+        <span className="ml-2" data-testid="text-toggle-type">
           {currentType === "villa" ? "Villa" : "Glamping"}
         </span>
       </Button>
