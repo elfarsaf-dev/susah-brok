@@ -235,11 +235,11 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // B.HILLS A
       "B.HILLS A": [
         property.image,
-        'https://i.ibb.co/VcwXJMwH/IMG-5975.jpg',
-        'https://i.ibb.co/bg4FbRL5/IMG-5976.jpg',
-        'https://i.ibb.co/YMfMWxx/IMG-5977.jpg',
-        'https://i.ibb.co/jZ5PnpSz/IMG-5978.jpg',
-        'https://i.ibb.co/bMgjqw8z/IMG-5979.jpg'
+        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
+        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
+        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
+        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
+        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
       ],
       // Glamping Jingga
       "Glamping Jingga": [
@@ -267,6 +267,15 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
         'https://i.ibb.co/cKpxkWj8/IMG-5997.jpg',
         'https://i.ibb.co/PG5GpFnQ/IMG-5998.jpg',
         'https://i.ibb.co/N6ksn1Sy/IMG-5999.jpg'
+      ],
+      // Glamping DYN
+      "Glamping DYN": [
+        property.image,
+        'https://i.ibb.co/mrp3Tkvp/IMG-5888.jpg',
+        'https://i.ibb.co/tw24BMMp/IMG-5887.jpg',
+        'https://i.ibb.co/sJyZLCfj/IMG-5886.jpg',
+        'https://i.ibb.co/Df84VnYQ/IMG-5885.jpg',
+        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
       ]
     };
     
