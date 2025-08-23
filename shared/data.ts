@@ -1079,17 +1079,18 @@ export const tripData: Trip[] = [
     duration: "1 - 1 ½ Jam",
     price: 400000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Dokumentasi foto",
       "Air mineral"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
       "Belum termasuk makan",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
@@ -1097,12 +1098,12 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.8,
     description: "Nikmati keindahan alam Tawangmangu dengan mengunjungi air terjun eksotis, kebun sayur organik, dan perkebunan strawberry segar. Cocok untuk keluarga yang ingin menikmati wisata alam dan kuliner lokal.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional", 
       "BBM",
-      "Tiket masuk lokasi",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Air mineral",
       "Dokumentasi"
     ]
@@ -1115,17 +1116,18 @@ export const tripData: Trip[] = [
     duration: "1-2 Jam",
     price: 400000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Dokumentasi foto",
       "Air mineral"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
       "Belum termasuk makan",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
@@ -1133,12 +1135,12 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.7,
     description: "Eksplorasi keindahan Grojokan Sewu dengan petik strawberry segar dan berbelanja oleh-oleh khas Tawangmangu. Perfect untuk wisata keluarga yang menginginkan kombinasi alam dan kuliner.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
       "BBM", 
-      "Tiket masuk lokasi",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Air mineral",
       "Dokumentasi"
     ]
@@ -1151,18 +1153,19 @@ export const tripData: Trip[] = [
     duration: "1-2 Jam",
     price: 450000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Dokumentasi foto",
       "Air mineral",
       "Snack ringan"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
       "Belum termasuk makan besar",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
@@ -1170,12 +1173,12 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.6,
     description: "Jelajahi keunikan Umbul Udal-udalan dengan pemandangan yang menakjubkan, dilengkapi dengan wisata petik strawberry dan berbelanja oleh-oleh lokal yang khas.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
       "BBM",
-      "Tiket masuk lokasi", 
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
       "Air mineral",
       "Snack ringan",
       "Dokumentasi"
@@ -1189,18 +1192,19 @@ export const tripData: Trip[] = [
     duration: "1 - 1 ½ Jam",
     price: 450000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman", 
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Dokumentasi foto",
       "Air mineral",
       "Perlengkapan safety"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
       "Untuk yang suka tantangan",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
@@ -1208,12 +1212,12 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.9,
     description: "Adrenalin rush di sirkuit Sekipan dengan jalur offroad yang menantang, dilengkapi wisata petik strawberry untuk menyegarkan perjalanan Anda.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
       "BBM",
-      "Tiket masuk lokasi",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Perlengkapan safety",
       "Air mineral", 
       "Dokumentasi"
@@ -1227,17 +1231,18 @@ export const tripData: Trip[] = [
     duration: "1 - 1 ½ Jam", 
     price: 450000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Dokumentasi foto",
       "Air mineral"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk driver & BBM",
       "Spot foto Instagram-able",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-1",
       "DP 50% dari total harga"
@@ -1245,12 +1250,12 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.5,
     description: "Pesona Kampung 1.000 Bunga yang colorful dan Bumi Perkemahan Pleseran dengan pemandangan alam yang memukau. Perfect untuk foto-foto cantik!",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
       "BBM",
-      "Tiket masuk lokasi",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Air mineral",
       "Dokumentasi"
     ]
@@ -1264,19 +1269,20 @@ export const tripData: Trip[] = [
     duration: "4-5 Jam",
     price: 550000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk", 
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Makan siang",
       "Air mineral",
       "Dokumentasi foto",
       "Tour guide"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk makan siang",
       "Perjalanan cukup jauh",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
@@ -1284,13 +1290,13 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.8,
     description: "Perjalanan menuju Telaga Madirda yang eksotis melalui Grojokan Sewu Pintu 2. Nikmati keindahan alam yang masih asri dan pemandangan yang menakjubkan.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
       "Tour guide",
       "BBM",
-      "Tiket masuk lokasi",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Makan siang",
       "Air mineral",
       "Dokumentasi"
@@ -1304,10 +1310,10 @@ export const tripData: Trip[] = [
     duration: "4-5 Jam",
     price: 650000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata", 
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
       "Makan siang",
       "Air mineral",
       "Dokumentasi foto",
@@ -1315,9 +1321,10 @@ export const tripData: Trip[] = [
       "Snack"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk makan siang",
       "Trip paling populer",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
@@ -1325,7 +1332,7 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.9,
     description: "Petualangan lengkap mengelilingi Gunung Lawu dengan mengunjungi Telaga Madirda, Hutan Pinus yang sejuk, Candi Sukuh yang bersejarah, dan Grojokan Jumog yang spektakuler.",
-    capacity: "1-6 orang per jeep", 
+    capacity: "1-4 orang per jeep", 
     included: [
       "Transportasi jeep",
       "Driver profesional",
@@ -1346,10 +1353,10 @@ export const tripData: Trip[] = [
     duration: "4-5 Jam",
     price: 750000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Makan siang",
       "Air mineral",
       "Dokumentasi foto",
@@ -1358,9 +1365,10 @@ export const tripData: Trip[] = [
       "Snack"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang", 
+      "Harga per jeep maksimal 4 orang", 
       "Trip paling lengkap",
       "Untuk yang suka tantangan",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-2",
       "DP 50% dari total harga"
@@ -1368,7 +1376,7 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.8,
     description: "Kombinasi sempurna antara petualangan offroad di sirkuit, eksplorasi jalur hutan, wisata Pleseran, berbelanja oleh-oleh, dan petik strawberry segar.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional", 
@@ -1390,10 +1398,10 @@ export const tripData: Trip[] = [
     duration: "4-5 Jam",
     price: 850000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Makan siang",
       "Air mineral",
       "Dokumentasi foto",
@@ -1402,7 +1410,7 @@ export const tripData: Trip[] = [
       "Tiket paralayang tandem"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Sudah termasuk paralayang tandem",
       "Trip premium dengan aktivitas extreme",
       "Cuaca sangat mempengaruhi",
@@ -1412,7 +1420,7 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.9,
     description: "Pengalaman ultimate dengan paralayang tandem di atas Tawangmangu, dilengkapi wisata Telaga Madirda, Hutan Pinus, dan Candi Sukuh yang bersejarah.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep", 
       "Driver profesional",
@@ -1434,10 +1442,10 @@ export const tripData: Trip[] = [
     duration: "4-5 Jam",
     price: 850000,
     facilities: [
-      "Jeep 4WD berkapasitas 6 orang",
+      "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk lokasi wisata",
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
       "Makan siang",
       "Air mineral",
       "Dokumentasi foto", 
@@ -1446,9 +1454,10 @@ export const tripData: Trip[] = [
       "Snack"
     ],
     notes: [
-      "Harga per jeep maksimal 6 orang",
+      "Harga per jeep maksimal 4 orang",
       "Offroad susur sungai yang menantang",
       "Jembatan kaca dengan view menakjubkan",
+      "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
       "Booking minimal H-3",
       "DP 50% dari total harga"
@@ -1456,7 +1465,7 @@ export const tripData: Trip[] = [
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     rating: 4.7,
     description: "Sensasi offroad susur sungai yang mendebarkan menuju Jembatan Kaca dengan pemandangan spektakuler, dilengkapi wisata Telaga Madirda dan berbelanja oleh-oleh.",
-    capacity: "1-6 orang per jeep",
+    capacity: "1-4 orang per jeep",
     included: [
       "Transportasi jeep",
       "Driver profesional",
