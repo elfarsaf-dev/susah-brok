@@ -189,10 +189,10 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               </ul>
             </div>
             
-            {/* Booking Message */}
+            {/* Info Message */}
             <div className="mb-5 p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="text-blue-800 text-center font-medium text-sm">
-                Untuk info lebih lanjut atau booking bisa klik tombol booking di bawah😊
+                Ada pertanyaan atau ingin tahu lebih detail? Silakan hubungi kami😊
               </p>
             </div>
             
@@ -204,7 +204,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 data-testid="button-whatsapp"
               >
                 <span className="mr-2">💬</span>
-                Booking {property.type === "villa" ? "Villa" : "Glamping"}
+                Tanya Ketersediaan
               </Button>
               <Button 
                 onClick={handleCall}

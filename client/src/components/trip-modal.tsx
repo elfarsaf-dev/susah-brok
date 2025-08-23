@@ -35,7 +35,7 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
   };
 
   const handleWhatsApp = () => {
-    const message = `Halo, saya tertarik dengan ${trip.name} (${trip.category} trip) dengan durasi ${trip.duration}. Bisakah saya mendapatkan informasi lebih lanjut dan booking?`;
+    const message = `Halo, saya tertarik dengan ${trip.name} (${trip.category} trip) dengan durasi ${trip.duration}. Bisakah saya mendapatkan informasi lebih lanjut tentang trip ini?`;
     const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -220,10 +220,10 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
               </ul>
             </div>
             
-            {/* Booking Message */}
+            {/* Info Message */}
             <div className="mb-5 p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="text-blue-800 text-center font-medium text-sm">
-                Untuk info lebih lanjut atau booking trip jeep bisa klik tombol booking di bawah😊
+                Ada pertanyaan tentang trip ini? Silakan hubungi kami untuk info lengkap😊
               </p>
             </div>
             
@@ -235,7 +235,7 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
                 data-testid="button-whatsapp"
               >
                 <span className="mr-2">💬</span>
-                Booking Trip Jeep
+                Tanya Info Trip
               </Button>
               <Button 
                 onClick={handleCall}
