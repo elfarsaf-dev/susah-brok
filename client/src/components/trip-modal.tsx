@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, ChevronLeft, ChevronRight, Check, Info, Phone, MapPin, Clock, Users } from "lucide-react";
+import { X, Check, Phone, MapPin, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
@@ -11,28 +11,6 @@ interface TripModalProps {
 }
 
 export default function TripModal({ trip, onClose }: TripModalProps) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Generate image slider for trips
-  const sliderImages = [
-    trip.image,
-    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => prev === 0 ? sliderImages.length - 1 : prev - 1);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   const handleWhatsApp = () => {
     const message = `Halo, saya tertarik dengan ${trip.name} (${trip.category} trip) dengan durasi ${trip.duration}. Bisakah saya mendapatkan informasi lebih lanjut tentang trip ini?`;
@@ -70,52 +48,14 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
             <X className="h-4 w-4 text-gray-600" />
           </Button>
           
-          {/* Image Slider */}
-          <div className="relative h-80" data-testid="image-slider">
-            <div className="h-full">
-              {sliderImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`${trip.name} ${index + 1}`}
-                  className={`w-full h-full object-cover ${index === currentSlide ? '' : 'hidden'}`}
-                  data-testid={`img-slide-${index}`}
-                />
-              ))}
-            </div>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={prevSlide}
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
-              data-testid="button-prev-slide"
-            >
-              <ChevronLeft className="h-4 w-4 text-gray-600" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={nextSlide}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
-              data-testid="button-next-slide"
-            >
-              <ChevronRight className="h-4 w-4 text-gray-600" />
-            </Button>
-            
-            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
-              {sliderImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentSlide ? 'bg-white shadow-lg' : 'bg-white bg-opacity-60'
-                  }`}
-                  data-testid={`button-slide-dot-${index}`}
-                />
-              ))}
-            </div>
+          {/* Trip Image */}
+          <div className="relative h-80" data-testid="trip-image">
+            <img
+              src={trip.image}
+              alt={trip.name}
+              className="w-full h-full object-cover"
+              data-testid="img-trip-main"
+            />
           </div>
           
           {/* Trip Details */}
@@ -207,18 +147,6 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
               </div>
             </div>
             
-            {/* Notes */}
-            <div className="mb-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Syarat & Ketentuan</h3>
-              <ul className="space-y-1" data-testid="notes-list">
-                {trip.notes.map((note, index) => (
-                  <li key={index} className="flex items-start" data-testid={`note-item-${index}`}>
-                    <Info className="text-primary-600 mr-2 mt-0.5 h-3.5 w-3.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{note}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
             
             {/* Info Message */}
             <div className="mb-5 p-3 bg-blue-50 border border-blue-200 rounded-xl">
