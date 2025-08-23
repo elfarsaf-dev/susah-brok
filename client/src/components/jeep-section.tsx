@@ -1,62 +1,179 @@
 import { Button } from "@/components/ui/button";
 
+interface TripData {
+  id: string;
+  title: string;
+  destinations: string[];
+  duration: string;
+  price: number;
+}
+
+const shortTrips: TripData[] = [
+  {
+    id: "short-trip-1",
+    title: "TRIP 1",
+    destinations: ["Villa", "Grojokan putri", "Kebun Sayur", "Kebun Strawberry"],
+    duration: "1 - 1 ½ Jam",
+    price: 400000
+  },
+  {
+    id: "short-trip-2", 
+    title: "TRIP 2",
+    destinations: ["Villa", "Kebun strawberry", "Grojokan sewu", "Pusat Oleh-oleh"],
+    duration: "1-2 Jam",
+    price: 400000
+  },
+  {
+    id: "short-trip-3",
+    title: "TRIP 3", 
+    destinations: ["Villa", "Kebun strawberry", "Umbul Udal-udalan", "Pusat Oleh-oleh"],
+    duration: "1-2 Jam",
+    price: 450000
+  },
+  {
+    id: "short-trip-4",
+    title: "TRIP 4",
+    destinations: ["Villa", "Sirkuit Sekipan", "Kebun Strawberry", "Jalur Offroad"],
+    duration: "1 - 1 ½ Jam", 
+    price: 450000
+  },
+  {
+    id: "short-trip-5",
+    title: "TRIP 5",
+    destinations: ["Villa", "Kampung 1.000 Bunga", "Bumi Perkemahan Pleseran"],
+    duration: "1 - 1 ½ Jam",
+    price: 450000
+  }
+];
+
+const longTrips: TripData[] = [
+  {
+    id: "long-trip-1",
+    title: "TRIP 1",
+    destinations: ["Villa", "Grojokan sewu pintu 2", "Telaga Madirda"],
+    duration: "4-5 Jam",
+    price: 550000
+  },
+  {
+    id: "long-trip-2",
+    title: "TRIP 2", 
+    destinations: ["Villa", "Telaga Madirda", "Hutan Pinus", "Candu Sukuh", "Grojokan Jumog"],
+    duration: "4-5 Jam",
+    price: 650000
+  },
+  {
+    id: "long-trip-3",
+    title: "TRIP 3",
+    destinations: ["Villa", "Sirkuit Sekipan", "Pleseran", "Jalur Hutan", "Sirkuit", "Pusat Oleh-oleh", "Petik Strawberry"],
+    duration: "4-5 Jam",
+    price: 750000
+  },
+  {
+    id: "long-trip-4", 
+    title: "TRIP 4",
+    destinations: ["Villa", "Telaga Madirda", "Hutan Pinus", "Candi Sukuh", "Paralayang", "Pusat Oleh-oleh"],
+    duration: "4-5 Jam",
+    price: 850000
+  },
+  {
+    id: "long-trip-5",
+    title: "TRIP 5",
+    destinations: ["Villa", "Telaga Madirda", "Offroad Susur Sungai", "Jembatan Kaca", "Pusat Oleh-oleh"],
+    duration: "4-5 Jam", 
+    price: 850000
+  }
+];
+
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(price);
+};
+
+function TripCard({ trip, type }: { trip: TripData; type: 'short' | 'long' }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300" data-testid={`trip-card-${trip.id}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="text-lg font-bold text-gray-900">▶️ {trip.title}</h4>
+        <span className="text-xl font-bold text-primary-600">{formatPrice(trip.price)}</span>
+      </div>
+      
+      <div className="mb-4">
+        <ul className="space-y-1">
+          {trip.destinations.map((destination, index) => (
+            <li key={index} className="text-gray-600 text-sm">- {destination}</li>
+          ))}
+        </ul>
+      </div>
+      
+      <div className="flex items-center justify-between">
+        <span className="text-sm text-gray-500">Durasi: {trip.duration}</span>
+        <Button 
+          size="sm"
+          className="bg-primary-600 hover:bg-primary-700 text-white"
+          data-testid={`button-book-${trip.id}`}
+        >
+          Pesan
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 export default function JeepSection() {
   return (
-    <section id="jeep" className="py-16 bg-white" data-testid="jeep-section">
+    <section id="jeep" className="py-16 bg-gray-50" data-testid="jeep-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Sewa Jeep Wisata
+            HARGA TRIP JEEP
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Jelajahi keindahan Tawangmangu dengan layanan sewa jeep yang nyaman dan aman
+            Jelajahi keindahan Tawangmangu dengan berbagai pilihan paket wisata jeep yang menarik
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Jeep rental service card 1 */}
-          <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300" data-testid="jeep-card-regular">
-            <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="Jeep wisata adventure" 
-              className="w-full h-48 object-cover rounded-lg mb-6"
-            />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Paket Wisata Reguler</h3>
-            <p className="text-gray-600 mb-4">
-              Nikmati perjalanan wisata dengan jeep yang nyaman ke berbagai destinasi menarik di Tawangmangu
-            </p>
-            <div className="flex items-center justify-between">
-              <span className="text-2xl font-bold text-primary-600">Mulai Rp 300.000</span>
-              <Button 
-                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-                data-testid="button-book-regular"
-              >
-                Pesan Sekarang
-              </Button>
-            </div>
+        {/* SHORT TRIP Section */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">#SHORT TRIP</h3>
+            <p className="text-gray-600">Wisata singkat untuk pengalaman yang berkesan</p>
           </div>
           
-          {/* Jeep rental service card 2 */}
-          <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300" data-testid="jeep-card-premium">
-            <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="Jeep wisata premium" 
-              className="w-full h-48 object-cover rounded-lg mb-6"
-            />
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Paket Wisata Premium</h3>
-            <p className="text-gray-600 mb-4">
-              Pengalaman wisata eksklusif dengan guide profesional dan destinasi terbaik di sekitar Gunung Lawu
-            </p>
-            <div className="flex items-center justify-between">
-              <span className="text-2xl font-bold text-primary-600">Mulai Rp 500.000</span>
-              <Button 
-                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-                data-testid="button-book-premium"
-              >
-                Pesan Sekarang
-              </Button>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {shortTrips.map((trip) => (
+              <TripCard key={trip.id} trip={trip} type="short" />
+            ))}
           </div>
+        </div>
+        
+        {/* LONG TRIP Section */}
+        <div>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">#LONG TRIP</h3>
+            <p className="text-gray-600">Petualangan panjang untuk eksplorasi mendalam</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {longTrips.map((trip) => (
+              <TripCard key={trip.id} trip={trip} type="long" />
+            ))}
+          </div>
+        </div>
+        
+        {/* Contact Info */}
+        <div className="text-center mt-12 p-6 bg-white rounded-xl border border-gray-200">
+          <h4 className="text-lg font-bold text-gray-900 mb-2">Informasi & Pemesanan</h4>
+          <p className="text-gray-600 mb-4">Hubungi kami untuk detail lebih lanjut dan pemesanan trip jeep</p>
+          <Button 
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
+            data-testid="button-contact-jeep"
+          >
+            Hubungi via WhatsApp
+          </Button>
         </div>
       </div>
     </section>
