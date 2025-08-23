@@ -73,11 +73,11 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // Villa ADR
       "Villa ADR": [
         property.image,
-        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
-        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
-        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
-        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
-        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+        'https://i.ibb.co/rR1M7Jjf/IMG-5901.jpg',
+        'https://i.ibb.co/PzZV8yLd/IMG-5900.jpg',
+        'https://i.ibb.co/8n7TNtgb/IMG-5902.jpg',
+        'https://i.ibb.co/gZRPZMVn/IMG-5903.jpg',
+        'https://i.ibb.co/9HWGJBms/IMG-5904.jpg'
       ],
       // Villa KMD
       "Villa KMD": [
@@ -235,11 +235,11 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // B.HILLS A
       "B.HILLS A": [
         property.image,
-        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
-        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
-        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
-        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
-        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+        'https://i.ibb.co/mFBJyGG0/IMG-5980.jpg',
+        'https://i.ibb.co/8g61hcTK/IMG-5981.jpg',
+        'https://i.ibb.co/BVG7M7gf/IMG-5982.jpg',
+        'https://i.ibb.co/YF441mVG/IMG-5984.jpg',
+        'https://i.ibb.co/WdYDxNK/IMG-5983.jpg'
       ],
       // Glamping Jingga
       "Glamping Jingga": [
