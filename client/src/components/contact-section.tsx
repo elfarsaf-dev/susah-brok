@@ -7,16 +7,16 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Telepon",
-      details: ["+62 812-3456-7890", "+62 857-1234-5678"],
+      details: ["+62 812-2637-4041"],
       action: null
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
-      details: ["+62 812-3456-7890"],
+      details: ["+62 812-2637-4041"],
       action: {
         text: "Chat Sekarang",
-        onClick: () => window.open("https://wa.me/6281234567890", "_blank"),
+        onClick: () => window.open("https://wa.me/6281226374041", "_blank"),
         className: "bg-green-600 hover:bg-green-700"
       }
     },
