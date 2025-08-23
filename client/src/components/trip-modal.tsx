@@ -134,6 +134,18 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
               </div>
             </div>
             
+            {/* Included */}
+            <div className="mb-5">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Yang Sudah Termasuk</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5" data-testid="included-grid">
+                {trip.included.map((item, index) => (
+                  <div key={index} className="flex items-center" data-testid={`included-item-${index}`}>
+                    <Check className="text-green-600 mr-2 h-3.5 w-3.5" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
             
             
             {/* Info Message */}
