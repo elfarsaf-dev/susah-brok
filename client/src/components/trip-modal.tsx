@@ -101,7 +101,7 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
             <div className="mb-5">
               <h3 className="text-lg font-bold text-gray-900 mb-2">Harga</h3>
               <div className="bg-gray-50 p-3 rounded-lg" data-testid="price-section">
-                <p className="font-medium text-gray-900 text-sm">Per Jeep (Maksimal 6 orang)</p>
+                <p className="font-medium text-gray-900 text-sm">Per Jeep (Maksimal 4 orang)</p>
                 <p className="text-xl font-bold text-primary-600">
                   {formattedPrice}
                 </p>
