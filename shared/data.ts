@@ -1,4 +1,4 @@
-import type { Property } from "./schema";
+import type { Property, Trip } from "./schema";
 
 export const villaData: Property[] = [
 {
@@ -1069,10 +1069,421 @@ export const glampingData: Property[] = [
 }
 ];
 
+export const tripData: Trip[] = [
+  // SHORT TRIPS
+  {
+    id: "short-trip-1",
+    name: "Paket Alam & Kuliner",
+    category: "short",
+    destinations: ["Villa", "Grojokan putri", "Kebun Sayur", "Kebun Strawberry"],
+    duration: "1 - 1 ½ Jam",
+    price: 400000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Dokumentasi foto",
+      "Air mineral"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk driver & BBM",
+      "Belum termasuk makan",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-1",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.8,
+    description: "Nikmati keindahan alam Tawangmangu dengan mengunjungi air terjun eksotis, kebun sayur organik, dan perkebunan strawberry segar. Cocok untuk keluarga yang ingin menikmati wisata alam dan kuliner lokal.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional", 
+      "BBM",
+      "Tiket masuk lokasi",
+      "Air mineral",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "short-trip-2", 
+    name: "Wisata Air Terjun",
+    category: "short",
+    destinations: ["Villa", "Kebun strawberry", "Grojokan sewu", "Pusat Oleh-oleh"],
+    duration: "1-2 Jam",
+    price: 400000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Dokumentasi foto",
+      "Air mineral"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk driver & BBM",
+      "Belum termasuk makan",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-1",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.7,
+    description: "Eksplorasi keindahan Grojokan Sewu dengan petik strawberry segar dan berbelanja oleh-oleh khas Tawangmangu. Perfect untuk wisata keluarga yang menginginkan kombinasi alam dan kuliner.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "BBM", 
+      "Tiket masuk lokasi",
+      "Air mineral",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "short-trip-3",
+    name: "Petualangan Umbul",
+    category: "short", 
+    destinations: ["Villa", "Kebun strawberry", "Umbul Udal-udalan", "Pusat Oleh-oleh"],
+    duration: "1-2 Jam",
+    price: 450000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Dokumentasi foto",
+      "Air mineral",
+      "Snack ringan"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk driver & BBM",
+      "Belum termasuk makan besar",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-1",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.6,
+    description: "Jelajahi keunikan Umbul Udal-udalan dengan pemandangan yang menakjubkan, dilengkapi dengan wisata petik strawberry dan berbelanja oleh-oleh lokal yang khas.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "BBM",
+      "Tiket masuk lokasi", 
+      "Air mineral",
+      "Snack ringan",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "short-trip-4",
+    name: "Sirkuit Offroad",
+    category: "short",
+    destinations: ["Villa", "Sirkuit Sekipan", "Kebun Strawberry", "Jalur Offroad"],
+    duration: "1 - 1 ½ Jam",
+    price: 450000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman", 
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Dokumentasi foto",
+      "Air mineral",
+      "Perlengkapan safety"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk driver & BBM",
+      "Untuk yang suka tantangan",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-1",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.9,
+    description: "Adrenalin rush di sirkuit Sekipan dengan jalur offroad yang menantang, dilengkapi wisata petik strawberry untuk menyegarkan perjalanan Anda.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "BBM",
+      "Tiket masuk lokasi",
+      "Perlengkapan safety",
+      "Air mineral", 
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "short-trip-5",
+    name: "Wisata Bunga",
+    category: "short",
+    destinations: ["Villa", "Kampung 1.000 Bunga", "Bumi Perkemahan Pleseran"],
+    duration: "1 - 1 ½ Jam", 
+    price: 450000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Dokumentasi foto",
+      "Air mineral"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk driver & BBM",
+      "Spot foto Instagram-able",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-1",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.5,
+    description: "Pesona Kampung 1.000 Bunga yang colorful dan Bumi Perkemahan Pleseran dengan pemandangan alam yang memukau. Perfect untuk foto-foto cantik!",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "BBM",
+      "Tiket masuk lokasi",
+      "Air mineral",
+      "Dokumentasi"
+    ]
+  },
+  // LONG TRIPS
+  {
+    id: "long-trip-1",
+    name: "Eksplorasi Telaga Madirda",
+    category: "long",
+    destinations: ["Villa", "Grojokan sewu pintu 2", "Telaga Madirda"],
+    duration: "4-5 Jam",
+    price: 550000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk", 
+      "Tiket masuk lokasi wisata",
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi foto",
+      "Tour guide"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk makan siang",
+      "Perjalanan cukup jauh",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-2",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.8,
+    description: "Perjalanan menuju Telaga Madirda yang eksotis melalui Grojokan Sewu Pintu 2. Nikmati keindahan alam yang masih asri dan pemandangan yang menakjubkan.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "Tour guide",
+      "BBM",
+      "Tiket masuk lokasi",
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "long-trip-2",
+    name: "Adventure Gunung Lawu",
+    category: "long",
+    destinations: ["Villa", "Telaga Madirda", "Hutan Pinus", "Candi Sukuh", "Grojokan Jumog"],
+    duration: "4-5 Jam",
+    price: 650000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata", 
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi foto",
+      "Tour guide",
+      "Snack"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk makan siang",
+      "Trip paling populer",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-2",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1544553037-9cedeecac25b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.9,
+    description: "Petualangan lengkap mengelilingi Gunung Lawu dengan mengunjungi Telaga Madirda, Hutan Pinus yang sejuk, Candi Sukuh yang bersejarah, dan Grojokan Jumog yang spektakuler.",
+    capacity: "1-6 orang per jeep", 
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "Tour guide",
+      "BBM",
+      "Tiket masuk semua lokasi",
+      "Makan siang",
+      "Air mineral",
+      "Snack",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "long-trip-3",
+    name: "Sirkuit Explorer",
+    category: "long",
+    destinations: ["Villa", "Sirkuit Sekipan", "Pleseran", "Jalur Hutan", "Sirkuit", "Pusat Oleh-oleh", "Petik Strawberry"],
+    duration: "4-5 Jam",
+    price: 750000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi foto",
+      "Tour guide",
+      "Perlengkapan safety",
+      "Snack"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang", 
+      "Trip paling lengkap",
+      "Untuk yang suka tantangan",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-2",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.8,
+    description: "Kombinasi sempurna antara petualangan offroad di sirkuit, eksplorasi jalur hutan, wisata Pleseran, berbelanja oleh-oleh, dan petik strawberry segar.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional", 
+      "Tour guide",
+      "BBM", 
+      "Tiket masuk semua lokasi",
+      "Makan siang",
+      "Air mineral",
+      "Snack",
+      "Perlengkapan safety",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "long-trip-4",
+    name: "Paralayang Adventure",
+    category: "long",
+    destinations: ["Villa", "Telaga Madirda", "Hutan Pinus", "Candi Sukuh", "Paralayang", "Pusat Oleh-oleh"],
+    duration: "4-5 Jam",
+    price: 850000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi foto",
+      "Tour guide",
+      "Snack",
+      "Tiket paralayang tandem"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Sudah termasuk paralayang tandem",
+      "Trip premium dengan aktivitas extreme",
+      "Cuaca sangat mempengaruhi",
+      "Booking minimal H-3",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.9,
+    description: "Pengalaman ultimate dengan paralayang tandem di atas Tawangmangu, dilengkapi wisata Telaga Madirda, Hutan Pinus, dan Candi Sukuh yang bersejarah.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep", 
+      "Driver profesional",
+      "Tour guide",
+      "BBM",
+      "Tiket masuk semua lokasi",
+      "Paralayang tandem", 
+      "Makan siang",
+      "Air mineral",
+      "Snack",
+      "Dokumentasi"
+    ]
+  },
+  {
+    id: "long-trip-5",
+    name: "Jembatan Kaca Explorer",
+    category: "long",
+    destinations: ["Villa", "Telaga Madirda", "Offroad Susur Sungai", "Jembatan Kaca", "Pusat Oleh-oleh"],
+    duration: "4-5 Jam",
+    price: 850000,
+    facilities: [
+      "Jeep 4WD berkapasitas 6 orang",
+      "Driver berpengalaman",
+      "BBM sudah termasuk",
+      "Tiket masuk lokasi wisata",
+      "Makan siang",
+      "Air mineral",
+      "Dokumentasi foto", 
+      "Tour guide",
+      "Perlengkapan safety",
+      "Snack"
+    ],
+    notes: [
+      "Harga per jeep maksimal 6 orang",
+      "Offroad susur sungai yang menantang",
+      "Jembatan kaca dengan view menakjubkan",
+      "Cuaca buruk trip bisa dibatalkan",
+      "Booking minimal H-3",
+      "DP 50% dari total harga"
+    ],
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    rating: 4.7,
+    description: "Sensasi offroad susur sungai yang mendebarkan menuju Jembatan Kaca dengan pemandangan spektakuler, dilengkapi wisata Telaga Madirda dan berbelanja oleh-oleh.",
+    capacity: "1-6 orang per jeep",
+    included: [
+      "Transportasi jeep",
+      "Driver profesional",
+      "Tour guide", 
+      "BBM",
+      "Tiket masuk semua lokasi",
+      "Makan siang",
+      "Air mineral",
+      "Snack",
+      "Perlengkapan safety",
+      "Dokumentasi"
+    ]
+  }
+];
+
 export const getAllProperties = (): Property[] => {
   return [...villaData, ...glampingData];
 };
 
 export const getPropertiesByType = (type: "villa" | "glamping"): Property[] => {
   return type === "villa" ? villaData : glampingData;
+};
+
+export const getAllTrips = (): Trip[] => {
+  return tripData;
+};
+
+export const getTripsByCategory = (category: "short" | "long"): Trip[] => {
+  return tripData.filter(trip => trip.category === category);
 };
