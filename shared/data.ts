@@ -1084,9 +1084,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1105,9 +1103,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional", 
       "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ]
   },
   {
@@ -1121,9 +1117,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1142,9 +1136,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional",
       "BBM", 
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ]
   },
   {
@@ -1158,10 +1150,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral",
-      "Snack ringan"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1180,10 +1169,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional",
       "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
-      "Air mineral",
-      "Snack ringan",
-      "Dokumentasi"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ]
   },
   {
@@ -1198,8 +1184,6 @@ export const tripData: Trip[] = [
       "Driver berpengalaman", 
       "BBM sudah termasuk",
       "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral",
       "Perlengkapan safety"
     ],
     notes: [
@@ -1220,9 +1204,7 @@ export const tripData: Trip[] = [
       "Driver profesional",
       "BBM",
       "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Perlengkapan safety",
-      "Air mineral", 
-      "Dokumentasi"
+      "Perlengkapan safety"
     ]
   },
   {
@@ -1236,9 +1218,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Dokumentasi foto",
-      "Air mineral"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1257,9 +1237,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional",
       "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Air mineral",
-      "Dokumentasi"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ]
   },
   // LONG TRIPS
@@ -1278,7 +1256,6 @@ export const tripData: Trip[] = [
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
-      "Sudah termasuk makan siang",
       "Perjalanan cukup jauh",
       "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
@@ -1309,15 +1286,10 @@ export const tripData: Trip[] = [
       "Driver berpengalaman",
       "BBM sudah termasuk",
       "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)", 
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi foto",
-      "Tour guide",
-      "Snack"
+      "Tour guide"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
-      "Sudah termasuk makan siang",
       "Trip paling populer",
       "Jika hujan disediakan jas hujan",
       "Cuaca buruk trip bisa dibatalkan",
