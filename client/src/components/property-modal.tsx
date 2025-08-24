@@ -480,7 +480,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-xl font-medium transition-colors"
                 data-testid="button-call"
               >
-                <span className="mr-2">💬</span>
+                <span className="mr-2">☎️</span>
                 Hubungi Sekarang
               </Button>
             </div>
