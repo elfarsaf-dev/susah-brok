@@ -92,7 +92,7 @@ export default function ContactSection() {
             <p className="text-gray-500 text-center" data-testid="text-copyright">
               Made with ❤️ for travelers seeking unforgettable mountain adventures
               <br />
-              <span className="text-sm">&copy; 2024 BOS VILLA TAWANGMANGU. All rights reserved.</span>
+              <span className="text-sm">&copy; {new Date().getFullYear()} BOS VILLA TAWANGMANGU. All rights reserved.</span>
             </p>
           </div>
         </div>
