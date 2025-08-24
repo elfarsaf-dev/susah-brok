@@ -116,7 +116,9 @@ export const villaData: Property[] = [
     name: "Villa TD JW",
     location: "Sekipan, Tawangmangu",
     rates: [
-      { label: "Hubungi untuk info harga", price: 0 }
+      { label: "Minggu - Kamis", price: 1500000 },
+      { label: "Jumat", price: 2500000 },
+      { label: "Sabtu", price: 3000000 }
     ],
     units: 1,
     facilities: [
@@ -1272,11 +1274,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk", 
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi foto",
-      "Tour guide"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1296,10 +1294,7 @@ export const tripData: Trip[] = [
       "Driver profesional",
       "Tour guide",
       "BBM",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ]
   },
   {
@@ -1337,12 +1332,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional",
       "Tour guide",
-      "BBM",
-      "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Dokumentasi"
+      "BBM"    
     ]
   },
   {
@@ -1356,13 +1346,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi foto",
-      "Tour guide",
-      "Perlengkapan safety",
-      "Snack"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang", 
@@ -1381,13 +1365,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep",
       "Driver profesional", 
       "Tour guide",
-      "BBM", 
-      "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Perlengkapan safety",
-      "Dokumentasi"
+      "BBM"
     ]
   },
   {
@@ -1401,13 +1379,7 @@ export const tripData: Trip[] = [
       "Jeep 4WD berkapasitas 4 orang",
       "Driver berpengalaman",
       "BBM sudah termasuk",
-      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi foto",
-      "Tour guide",
-      "Snack",
-      "Tiket paralayang tandem"
+      "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1425,13 +1397,7 @@ export const tripData: Trip[] = [
       "Transportasi jeep", 
       "Driver profesional",
       "Tour guide",
-      "BBM",
-      "Tiket masuk semua lokasi",
-      "Paralayang tandem", 
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Dokumentasi"
+      "BBM"
     ]
   },
   {
@@ -1446,12 +1412,8 @@ export const tripData: Trip[] = [
       "Driver berpengalaman",
       "BBM sudah termasuk",
       "Tiket masuk beberapa lokasi (belum termasuk tiket wisata tertentu)",
-      "Makan siang",
-      "Air mineral",
-      "Dokumentasi foto", 
       "Tour guide",
-      "Perlengkapan safety",
-      "Snack"
+      "Perlengkapan safety"
     ],
     notes: [
       "Harga per jeep maksimal 4 orang",
@@ -1472,11 +1434,7 @@ export const tripData: Trip[] = [
       "Tour guide", 
       "BBM",
       "Tiket masuk semua lokasi",
-      "Makan siang",
-      "Air mineral",
-      "Snack",
-      "Perlengkapan safety",
-      "Dokumentasi"
+      "Perlengkapan safety"
     ]
   }
 ];
