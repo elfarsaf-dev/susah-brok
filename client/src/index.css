@@ -85,3 +85,35 @@
     background-position: center;
   }
 }
+
+/* Mobile Menu Animations */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Hamburger Icon Animation */
+@keyframes rotate90 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}
+
+@keyframes rotateNeg90 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-90deg); }
+}
+
+/* Mobile menu backdrop effect */
+.mobile-menu-backdrop {
+  backdrop-filter: blur(2px);
+}
