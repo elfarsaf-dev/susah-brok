@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Check, Phone, MapPin, Clock, Users } from "lucide-react";
+import { X, Check, MapPin, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +19,9 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
   };
 
   const handleCall = () => {
-    window.open('tel:+6281226374041', '_self');
+    const message = `Halo, saya ingin menghubungi langsung tentang ${trip.name}. Mohon info lebih lanjut`;
+    const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   const formattedPrice = new Intl.NumberFormat('id-ID', {
@@ -155,10 +157,10 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
               </Button>
               <Button 
                 onClick={handleCall}
-                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white py-2.5 px-5 rounded-xl font-medium transition-colors"
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-5 rounded-xl font-medium transition-colors"
                 data-testid="button-call"
               >
-                <Phone className="mr-2 h-4 w-4" />
+                <span className="mr-2">💬</span>
                 Hubungi Sekarang
               </Button>
             </div>
