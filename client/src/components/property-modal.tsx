@@ -19,74 +19,74 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // Villa FJ
       "Villa FJ": [
         property.image,
-        'https://i.ibb.co/7d7NTWt2/IMG-5950.jpg',
-        'https://i.ibb.co/4gR5GmwK/IMG-5951.jpg',
-        'https://i.ibb.co/cXRxVGRk/IMG-5952.jpg',
-        'https://i.ibb.co/mCp3Z533/IMG-5953.jpg',
-        'https://i.ibb.co/Wj6TBkd/IMG-5954.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5954.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5951.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5950.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5952.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5953.jpeg'
       ],
       // Villa DT
       "Villa DT": [
         property.image,
-        'https://i.ibb.co/gQmjfRq/IMG-5898.jpg',
-        'https://i.ibb.co/g86mvyw/IMG-5897.jpg',
-        'https://i.ibb.co/1cBZHSx/IMG-5896.jpg',
-        'https://i.ibb.co/nMHg9ycr/IMG-5895.jpg',
-        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5898.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5896.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5897.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5895.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5899.jpeg'
       ],
       // Villa ALM
       "Villa ALM": [
         property.image,
-        'https://i.ibb.co/JWKpH31D/IMG-5924.jpg',
-        'https://i.ibb.co/YYgMGpx/IMG-5920.jpg',
-        'https://i.ibb.co/rN2GMKr/IMG-5923.jpg',
-        'https://i.ibb.co/qFkFW7MB/IMG-5922.jpg',
-        'https://i.ibb.co/MyD090Mx/IMG-5921.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5921.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5920.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5922.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5924.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5923.jpeg'
       ],
       // Villa TD JW
       "Villa TD JW": [
         property.image,
-        'https://i.ibb.co/SwKDCsrX/IMG-5914.jpg',
-        'https://i.ibb.co/Y7L5CRZX/IMG-5913.jpg',
-        'https://i.ibb.co/8LhNP94z/IMG-5912.jpg',
-        'https://i.ibb.co/WNk1LVzm/IMG-5911.jpg',
-        'https://i.ibb.co/BHpZJbmr/IMG-5910.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5912.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5911.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5910.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5913.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5914.jpeg'
       ],
       // KRYSM
       "KRYSM": [
         property.image,
-        'https://i.ibb.co/j1Bjv7M/IMG-5940.jpg',
-        'https://i.ibb.co/7dGv7FyG/IMG-5941.jpg',
-        'https://i.ibb.co/RTkz4b4N/IMG-5942.jpg',
-        'https://i.ibb.co/1JJzwLF5/IMG-5943.jpg',
-        'https://i.ibb.co/d4mLJZGf/IMG-5944.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5940.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5941.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5943.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5944.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5942.jpeg'
       ],
       // Villa "KU"
       "Villa \"KU\"": [
         property.image,
-        'https://i.ibb.co/G3vFnP3m/IMG-6001.jpg',
-        'https://i.ibb.co/8gQqjnsV/IMG-6002.jpg',
-        'https://i.ibb.co/hFQNx2SY/IMG-6003.jpg',
-        'https://i.ibb.co/6cg2gyDF/IMG-6004.jpg',
-        'https://i.ibb.co/bgxBvHFH/IMG-6005.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_6004.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_6001.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_6003.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_6005.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_6002.jpeg'
       ],
       // Villa ADR
       "Villa ADR": [
         property.image,
-        'https://i.ibb.co/rR1M7Jjf/IMG-5901.jpg',
-        'https://i.ibb.co/PzZV8yLd/IMG-5900.jpg',
-        'https://i.ibb.co/8n7TNtgb/IMG-5902.jpg',
-        'https://i.ibb.co/gZRPZMVn/IMG-5903.jpg',
-        'https://i.ibb.co/9HWGJBms/IMG-5904.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5904.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5903.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5902.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5901.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5900.jpeg'
       ],
       // Villa KMD
       "Villa KMD": [
         property.image,
-        'https://i.ibb.co/fzqZNwnt/IMG-5905.jpg',
-        'https://i.ibb.co/KxP9rYnR/IMG-5906.jpg',
-        'https://i.ibb.co/DfBH2twz/IMG-5907.jpg',
-        'https://i.ibb.co/4gXNxsJ4/IMG-5908.jpg',
-        'https://i.ibb.co/svVFXwpg/IMG-5909.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5909.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5908.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5906.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5907.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5905.jpeg'
       ],
       // Villa ZZ
       "Villa ZZ": [
@@ -109,29 +109,29 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // Villa DNDR 2
       "Villa DNDR 2": [
         property.image,
-        'https://i.ibb.co/HLYGM6B4/IMG-5873.jpg',
-        'https://i.ibb.co/DHsCM10j/IMG-5872.jpg',
-        'https://i.ibb.co/67n6Vpb8/IMG-5871.jpg',
-        'https://i.ibb.co/LbJ2pBZ/IMG-5870.jpg',
-        'https://i.ibb.co/rG58yvGx/IMG-5874.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5873.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5872.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5870.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5871.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5874.jpeg'
       ],
       // Villa BDL 2A
       "Villa BDL 2A": [
         property.image,
-        'https://i.ibb.co/Y7jdzPXg/IMG-5919.jpg',
-        'https://i.ibb.co/dJctNPX3/IMG-5918.jpg',
-        'https://i.ibb.co/ch42Fw6B/IMG-5917.jpg',
-        'https://i.ibb.co/k6hkQqrF/IMG-5916.jpg',
-        'https://i.ibb.co/nswxnHt6/IMG-5915.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5918.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5916.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5915.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5917.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5919.jpeg'
       ],
       // Villa Pine
       "Villa Pine": [
         property.image,
-        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5865.jpeg?raw=true',
-        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5866.jpeg?raw=true',
-        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5867.jpeg?raw=true',
-        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5868.jpeg?raw=true',
-        'https://github.com/elfarsaf-dev/Heu/blob/main/Pine/IMG_5869.jpeg?raw=true'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5866.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5868.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5869.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5867.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5865.jpeg'
       ],
       // Villa EDLW
       "Villa EDLW": [
@@ -145,137 +145,137 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // Mongkrang SC
       "Mongkrang SC": [
         property.image,
-        'https://i.ibb.co/PZ87HQSN/IMG-5883.jpg',
-        'https://i.ibb.co/tN3GZNj/IMG-5882.jpg',
-        'https://i.ibb.co/Ngd47RW5/IMG-5884.jpg',
-        'https://i.ibb.co/cSWYDsDJ/IMG-5881.jpg',
-        'https://i.ibb.co/TqT1KZ3n/IMG-5880.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5884.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5883.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5881.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5882.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5880.jpeg'
       ],
       // DZ Glamping
       "DZ Glamping": [
         property.image,
-        'https://i.ibb.co/WWyZVsyG/IMG-5929.jpg',
-        'https://i.ibb.co/1S92XM3/IMG-5928.jpg',
-        'https://i.ibb.co/jP1t7gxK/IMG-5927.jpg',
-        'https://i.ibb.co/s9RkhmNf/IMG-5926.jpg',
-        'https://i.ibb.co/DD3nRy49/IMG-5925.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5928.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5927.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5926.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5929.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5925.jpeg'
       ],
       // ZHY Glamping
       "ZHY Glamping": [
         property.image,
-        'https://i.ibb.co/TxDkqXGN/IMG-5930.jpg',
-        'https://i.ibb.co/zVMJvMBg/IMG-5931.jpg',
-        'https://i.ibb.co/9fjNzS3/IMG-5932.jpg',
-        'https://i.ibb.co/3mwxyjkf/IMG-5933.jpg',
-        'https://i.ibb.co/xSzdqGh6/IMG-5934.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5931.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5933.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5934.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5930.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5932.jpeg'
       ],
       // BMW Glamping
       "BMW Glamping": [
         property.image,
-        'https://i.ibb.co/FkkvQ44L/IMG-5935.jpg',
-        'https://i.ibb.co/v6mHDR9Q/IMG-5936.jpg',
-        'https://i.ibb.co/Gv568xMd/IMG-5937.jpg',
-        'https://i.ibb.co/FSsbzmf/IMG-5938.jpg',
-        'https://i.ibb.co/ZpjM9x0Z/IMG-5939.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5935.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5937.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5938.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5936.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5939.jpeg'
       ],
       // Glamping SYD 2
       "Glamping SYD 2": [
         property.image,
-        'https://i.ibb.co/mF0wkqSZ/IMG-5945.jpg',
-        'https://i.ibb.co/YFXw0905/IMG-5946.jpg',
-        'https://i.ibb.co/b5HdV0vb/IMG-5947.jpg',
-        'https://i.ibb.co/B2CnMdYr/IMG-5948.jpg',
-        'https://i.ibb.co/wF7dqgMN/IMG-5949.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5948.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5949.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5945.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5947.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5946.jpeg'
       ],
       // AZL Glamping
       "AZL Glamping": [
         property.image,
-        'https://i.ibb.co/Y4mYHyJv/IMG-5955.jpg',
-        'https://i.ibb.co/TMD2KRmj/IMG-5956.jpg',
-        'https://i.ibb.co/wF7SkVth/IMG-5957.jpg',
-        'https://i.ibb.co/8DSQCXP9/IMG-5958.jpg',
-        'https://i.ibb.co/VYXyQhjy/IMG-5959.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5956.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5955.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5958.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5957.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5959.jpeg'
       ],
       // TR Glamping
       "TR Glamping": [
         property.image,
-        'https://i.ibb.co/ycxtyPB3/IMG-5960.jpg',
-        'https://i.ibb.co/yBR80RBK/IMG-5961.jpg',
-        'https://i.ibb.co/fGkTzDjD/IMG-5962.jpg',
-        'https://i.ibb.co/4ZSXxwwb/IMG-5963.jpg',
-        'https://i.ibb.co/dw5WNTJH/IMG-5964.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5964.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5961.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5962.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5963.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5960.jpeg'
       ],
       // Glamping LWPR
       "Glamping LWPR": [
         property.image,
-        'https://i.ibb.co/B0HK0y4/IMG-5965.jpg',
-        'https://i.ibb.co/21XyHY8J/IMG-5966.jpg',
-        'https://i.ibb.co/sdD4gZy6/IMG-5967.jpg',
-        'https://i.ibb.co/Y7chSvRw/IMG-5968.jpg',
-        'https://i.ibb.co/4nTrDs57/IMG-5969.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5969.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5968.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5967.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5965.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5966.jpeg'
       ],
       // B.HILLS B
       "B.HILLS B": [
         property.image,
-        'https://i.ibb.co/Q76g8H0k/IMG-5970.jpg',
-        'https://i.ibb.co/LDZPWz5h/IMG-5971.jpg',
-        'https://i.ibb.co/nNNYJVcB/IMG-5972.jpg',
-        'https://i.ibb.co/dJfV4BV3/IMG-5973.jpg',
-        'https://i.ibb.co/bjNpNTDg/IMG-5974.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5974.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5973.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5971.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5970.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5972.jpeg'
       ],
       // DV Glamping
       "DV Glamping": [
         property.image,
-        'https://i.ibb.co/VcwXJMwH/IMG-5975.jpg',
-        'https://i.ibb.co/bg4FbRL5/IMG-5976.jpg',
-        'https://i.ibb.co/YMfMWxx/IMG-5977.jpg',
-        'https://i.ibb.co/jZ5PnpSz/IMG-5978.jpg',
-        'https://i.ibb.co/bMgjqw8z/IMG-5979.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5979.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5978.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5976.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5977.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5975.jpeg'
       ],
       // B.HILLS A
       "B.HILLS A": [
         property.image,
-        'https://i.ibb.co/mFBJyGG0/IMG-5980.jpg',
-        'https://i.ibb.co/8g61hcTK/IMG-5981.jpg',
-        'https://i.ibb.co/BVG7M7gf/IMG-5982.jpg',
-        'https://i.ibb.co/YF441mVG/IMG-5984.jpg',
-        'https://i.ibb.co/WdYDxNK/IMG-5983.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5983.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5981.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5980.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5984.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5982.jpeg'
       ],
       // Glamping Jingga
       "Glamping Jingga": [
         property.image,
-        'https://i.ibb.co/8DgGsbfR/IMG-5985.jpg',
-        'https://i.ibb.co/d0sb20NM/IMG-5986.jpg',
-        'https://i.ibb.co/6RhWfxF7/IMG-5987.jpg',
-        'https://i.ibb.co/39nkBqL8/IMG-5988.jpg',
-        'https://i.ibb.co/CpMynrz5/IMG-5989.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Svg/IMG_5988.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Svg/IMG_5987.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Svg/IMG_5986.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5985.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5989.jpeg'
       ],
       // Glamping SVG
       "Glamping SVG": [
         property.image,
-        'https://i.ibb.co/TMwctpVy/IMG-5990.jpg',
-        'https://i.ibb.co/tM7g5WBq/IMG-5991.jpg',
-        'https://i.ibb.co/WpHs34Rd/IMG-5992.jpg',
-        'https://i.ibb.co/htv3f12/IMG-5993.jpg',
-        'https://i.ibb.co/8n6ZzQYM/IMG-5994.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/IMG_5993.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/IMG_5992.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/IMG_5991.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Svg/IMG_5994.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Svg/IMG_5990.jpeg'
       ],
       // Glamping ALM
       "Glamping ALM": [
         property.image,
-        'https://i.ibb.co/Q7FMk1hb/IMG-5995.jpg',
-        'https://i.ibb.co/4wvHHCQf/IMG-5996.jpg',
-        'https://i.ibb.co/cKpxkWj8/IMG-5997.jpg',
-        'https://i.ibb.co/PG5GpFnQ/IMG-5998.jpg',
-        'https://i.ibb.co/N6ksn1Sy/IMG-5999.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_5999.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_5998.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Ku/IMG_5996.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Alami/IMG_5997.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Alami/IMG_5995.jpeg'
       ],
       // Glamping DYN
       "Glamping DYN": [
         property.image,
-        'https://i.ibb.co/mrp3Tkvp/IMG-5888.jpg',
-        'https://i.ibb.co/tw24BMMp/IMG-5887.jpg',
-        'https://i.ibb.co/sJyZLCfj/IMG-5886.jpg',
-        'https://i.ibb.co/Df84VnYQ/IMG-5885.jpg',
-        'https://i.ibb.co/5hJgt5ys/IMG-5889.jpg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5898.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5896.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5897.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5895.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5899.jpeg'
       ]
     };
     
