@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface SearchBarProps {
   searchQuery: string;
@@ -7,6 +8,8 @@ interface SearchBarProps {
 }
 
 export default function SearchBar({ searchQuery, onSearchChange }: SearchBarProps) {
+  const { t } = useLanguage();
+  
   return (
     <section className="bg-white py-8 shadow-md" data-testid="search-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +17,7 @@ export default function SearchBar({ searchQuery, onSearchChange }: SearchBarProp
           <div className="relative">
             <Input
               type="text"
-              placeholder="Cari berdasarkan nama atau fasilitas..."
+              placeholder={t.search.placeholder}
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-lg"

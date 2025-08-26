@@ -752,4 +752,4 @@ Website ini dibangun dengan teknologi modern dan best practices untuk memberikan
 ✅ Direct WhatsApp integration
 ✅ Serverless deployment ready
 
-**Untuk bantuan lebih lanjut atau development custom features, silakan hubungi developer team.**
+**Untuk bantuan lebih lanjut atau development custom features, silakan hubungi ELFAR.DEV.**

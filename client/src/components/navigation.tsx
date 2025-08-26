@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageToggle } from "@/components/language-toggle";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { href: "#home", label: "Beranda" },
-    { href: "#properties", label: "Properti" },
-    { href: "#jeep", label: "Sewa Jeep" },
-    { href: "#about", label: "Tentang" },
-    { href: "#contact", label: "Kontak" },
+    { href: "#home", label: t.nav.home },
+    { href: "#properties", label: t.nav.properties },
+    { href: "#jeep", label: t.nav.jeep },
+    { href: "#about", label: t.nav.about },
+    { href: "#contact", label: t.nav.contact },
   ];
 
   const handleNavClick = (href: string) => {
@@ -35,26 +38,32 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item, index) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    index === 0 
-                      ? "text-gray-900 hover:text-primary-600" 
-                      : "text-gray-700 hover:text-primary-600"
-                  }`}
-                  data-testid={`link-${item.label.toLowerCase()}`}
-                >
-                  {item.label}
-                </button>
-              ))}
+            <div className="ml-10 flex items-center space-x-4">
+              <div className="flex items-baseline space-x-4">
+                {navItems.map((item, index) => (
+                  <button
+                    key={item.href}
+                    onClick={() => handleNavClick(item.href)}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      index === 0 
+                        ? "text-gray-900 hover:text-primary-600" 
+                        : "text-gray-700 hover:text-primary-600"
+                    }`}
+                    data-testid={`link-${item.label.toLowerCase()}`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+              <div className="ml-4 border-l border-gray-200 pl-4">
+                <LanguageToggle />
+              </div>
             </div>
           </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and language toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageToggle />
             <Button
               variant="ghost"
               size="sm"
@@ -100,7 +109,7 @@ export default function Navigation() {
           {/* Menu footer with contact info */}
           <div className="px-4 py-3 bg-gradient-to-r from-primary-50 to-blue-50 border-t border-gray-100">
             <p className="text-sm text-gray-600 text-center font-medium">
-              💬 Hubungi kami untuk info lebih lanjut
+              💬 {t.contact.getInTouch}
             </p>
             <div className="flex justify-center mt-2">
               <button

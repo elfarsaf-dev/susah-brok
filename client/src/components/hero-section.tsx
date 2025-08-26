@@ -1,7 +1,10 @@
 import { Mountain } from "lucide-react";
 import logoImage from "@assets/ai_repair_20250823211605583_1755958920038.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+  
   return (
     <section id="home" className="relative" data-testid="hero-section">
       <div className="h-96 hero-bg">
@@ -17,7 +20,7 @@ export default function HeroSection() {
                 />
               </div>
               <p className="text-sm md:text-base leading-relaxed mb-8 max-w-4xl mx-auto px-6" data-testid="text-hero-description">
-                Nikmati pengalaman menginap terbaik di villa dan glamping eksklusif dengan pemandangan Gunung Lawu yang memukau
+                {t.hero.description}
               </p>
             </div>
           </div>

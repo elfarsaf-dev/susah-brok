@@ -4,8 +4,10 @@ import TripModal from "@/components/trip-modal";
 import { useTrips } from "@/hooks/use-trips";
 import { useState } from "react";
 import type { Trip } from "@shared/schema";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function JeepSection() {
+  const { t } = useLanguage();
   const {
     trips,
     searchQuery,
@@ -28,10 +30,10 @@ export default function JeepSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trip Jeep Wisata Tawangmangu
+            {t.jeep.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Jelajahi keindahan Tawangmangu dengan berbagai pilihan paket wisata jeep yang menakjubkan
+            {t.jeep.description}
           </p>
         </div>
 

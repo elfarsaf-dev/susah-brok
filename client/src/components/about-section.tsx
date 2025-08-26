@@ -1,6 +1,9 @@
 import { CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutSection() {
+  const { t } = useLanguage();
+  
   const stats = [
     "50+ Properti Terpilih",
     "5000+ Tamu Puas", 
@@ -13,13 +16,10 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Tentang BOS VILLA TAWANGMANGU
+              {t.about.title}
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Kami adalah penyedia akomodasi terpercaya di Tawangmangu yang telah melayani ribuan tamu dengan pengalaman menginap yang tak terlupakan. Dengan koleksi villa dan glamping terbaik, kami berkomitmen memberikan kenyamanan maksimal bagi setiap tamu.
-            </p>
             <p className="text-lg text-gray-600 mb-8">
-              Lokasi strategis di kaki Gunung Lawu memberikan akses mudah ke berbagai destinasi wisata, udara sejuk pegunungan, dan pemandangan alam yang menakjubkan.
+              {t.about.description}
             </p>
             <div className="flex flex-wrap gap-4">
               {stats.map((stat, index) => (

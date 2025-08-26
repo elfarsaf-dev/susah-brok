@@ -1,12 +1,15 @@
 import { Phone, MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoImage from "@assets/ai_repair_20250823211605583_1755958920038.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+  
   const contactMethods = [
     {
       icon: Phone,
-      title: "Telepon",
+      title: t.contact.phone,
       details: ["+62 812-2637-4041"],
       action: null
     },
@@ -22,7 +25,7 @@ export default function ContactSection() {
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t.contact.email,
       details: ["info@bosvillatawangmangu.com", "booking@bosvillatawangmangu.com"],
       action: null
     }
@@ -32,9 +35,9 @@ export default function ContactSection() {
     <section id="contact" className="py-16 bg-gray-900 text-white" data-testid="contact-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.contact.title}</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Siap membantu mewujudkan liburan impian Anda di Tawangmangu
+            {t.contact.subtitle}
           </p>
         </div>
         
