@@ -278,11 +278,11 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
       // Glamping DYN
       "Glamping DYN": [
         property.image,
-        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5898.jpeg',
-        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5896.jpeg',
-        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5897.jpeg',
-        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5895.jpeg',
-        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/Jingga/IMG_5899.jpeg'
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploadswe/WhatsApp Image 2025-08-23 at 19.38.57 (1).jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploadswe/WhatsApp Image 2025-08-23 at 19.38.58 (2).jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploadswe/WhatsApp Image 2025-08-23 at 19.38.57.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploadswe/WhatsApp Image 2025-08-23 at 19.38.58.jpeg',
+        'https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploadswe/WhatsApp Image 2025-08-23 at 19.38.58 (1).jpeg'
       ]
     };
     
