@@ -11,16 +11,23 @@ interface TripModalProps {
 }
 
 export default function TripModal({ trip, onClose }: TripModalProps) {
+  const [selectedAdmin, setSelectedAdmin] = useState<1 | 2>(1);
+
+  // Admin contact information
+  const adminContacts = {
+    1: { phone: '6281226374041', name: 'Admin 1' },
+    2: { phone: '6282241819992', name: 'Admin 2' }
+  };
 
   const handleWhatsApp = () => {
     const message = `Halo, saya tertarik dengan ${trip.name} (${trip.category} trip) dengan durasi ${trip.duration}. Bisakah saya mendapatkan informasi lebih lanjut tentang trip ini?`;
-    const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${adminContacts[selectedAdmin].phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCall = () => {
     const message = `Halo, saya ingin menghubungi langsung tentang ${trip.name}. Mohon info lebih lanjut`;
-    const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${adminContacts[selectedAdmin].phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -143,6 +150,39 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
               <p className="text-blue-800 text-center font-medium text-sm">
                 Ada pertanyaan tentang trip ini? Silakan hubungi kami untuk info lengkap😊
               </p>
+            </div>
+            
+            {/* Admin Selection */}
+            <div className="mb-4">
+              <h4 className="text-sm font-medium text-gray-700 mb-2 text-center">Pilih Admin:</h4>
+              <div className="flex gap-2 justify-center">
+                <Button
+                  variant={selectedAdmin === 1 ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedAdmin(1)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    selectedAdmin === 1 
+                      ? 'bg-primary-600 hover:bg-primary-700 text-white' 
+                      : 'border border-gray-300 hover:bg-gray-50 text-gray-700'
+                  }`}
+                  data-testid="button-admin-1"
+                >
+                  Admin 1
+                </Button>
+                <Button
+                  variant={selectedAdmin === 2 ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedAdmin(2)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                    selectedAdmin === 2 
+                      ? 'bg-primary-600 hover:bg-primary-700 text-white' 
+                      : 'border border-gray-300 hover:bg-gray-50 text-gray-700'
+                  }`}
+                  data-testid="button-admin-2"
+                >
+                  Admin 2
+                </Button>
+              </div>
             </div>
             
             {/* Action Buttons */}
