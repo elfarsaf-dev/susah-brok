@@ -442,54 +442,6 @@ export const villaData: Property[] = [
   "type": "villa"
 },
 {
-  id: "villa-pine",
-  name: "Villa Pine",
-  location: "Sekipan, Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 900000 },
-    { label: "Jumat", price: 900000 },
-    { label: "Sabtu", price: 1300000 }
-  ],
-  units: 4,
-  facilities: [
-    "Private pool air hangat",
-    "2 queen bed",
-    "1 kamar mandi air hangat",
-    "Ruang tamu luas",
-    "TV",
-    "Wi-Fi",
-    "Karaoke keluarga",
-    "Dapur + alat dapur lengkap",
-    "Dispenser + air galon",
-    "Free teh, gula, kopi",
-    "Kapasitas maksimal 10 orang",
-    "Parkir muat 4 mobil",
-    "Lokasi di bukit Sekipan (pusat wisata)",
-    "Dekat Kampoeng Halloween (1 menit)",
-    "Dekat Telaga Sarangan (40 menit)",
-    "Dekat Lawu Park (10 menit)",
-    "Dekat Wonderpark (4 menit)",
-    "Dekat Rumah Atsiri (10 menit)",
-    "Dekat Sakura Hills (10 menit)"
-  ],
-  capacity: "10 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Harga sewaktu-waktu bisa berubah",
-    "No miras/alkohol",
-    "No dangdutan/orgen tunggal/live music",
-    "Jam malam 23.30 WIB",
-    "Tidak boleh melanggar hukum & norma",
-    "DP tidak bisa kembali",
-    "Pindah villa = DP hangus",
-    "Cancel = DP hangus",
-    "Reschedule max H-4 & hanya bisa 1x"
-  ],
-  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5814.jpeg?raw=true",
-  type: "villa"
-},
-{
   id: "villa-edelweis",
   name: "Villa EDLW",
   location: "Sekipan, Tawangmangu",
@@ -1067,6 +1019,54 @@ export const glampingData: Property[] = [
     "No drugs"
   ],
   image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5833.jpeg?raw=true",
+  type: "glamping"
+},
+{
+  id: "glamping-pine",
+  name: "Glamping Pine",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 900000 },
+    { label: "Jumat", price: 900000 },
+    { label: "Sabtu", price: 1300000 }
+  ],
+  units: 4,
+  facilities: [
+    "Private pool air hangat",
+    "2 queen bed",
+    "1 kamar mandi air hangat",
+    "Ruang tamu luas",
+    "Smart TV",
+    "Wi-Fi",
+    "Karaoke keluarga",
+    "Dapur + alat dapur lengkap",
+    "Dispenser + air galon",
+    "Free teh, gula, kopi",
+    "Kapasitas maksimal 10 orang",
+    "Parkir muat 4 mobil",
+    "Lokasi di bukit Sekipan (pusat wisata)",
+    "Dekat Kampoeng Halloween (1 menit)",
+    "Dekat Telaga Sarangan (40 menit)",
+    "Dekat Lawu Park (10 menit)",
+    "Dekat Wonderpark (4 menit)",
+    "Dekat Rumah Atsiri (10 menit)",
+    "Dekat Sakura Hills (10 menit)"
+  ],
+  capacity: "10 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Harga sewaktu-waktu bisa berubah",
+    "No miras/alkohol",
+    "No dangdutan/orgen tunggal/live music",
+    "Jam malam 23.30 WIB",
+    "Tidak boleh melanggar hukum & norma",
+    "DP tidak bisa kembali",
+    "Pindah villa = DP hangus",
+    "Cancel = DP hangus",
+    "Reschedule max H-4 & hanya bisa 1x"
+  ],
+  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5814.jpeg?raw=true",
   type: "glamping"
 }
 ];
