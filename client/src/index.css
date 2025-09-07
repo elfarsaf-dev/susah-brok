@@ -245,14 +245,14 @@
     max-width: 100% !important;
   }
   
-  /* Prevent touch-based horizontal scrolling except on specific elements */
-  * {
+  /* Prevent touch-based horizontal scrolling on main content */
+  body, main, section:not(.category-section) {
     touch-action: pan-y pinch-zoom;
   }
   
   /* Allow horizontal scrolling only on category scroll container */
-  .mobile-scroll, .scrollbar-hide {
-    touch-action: pan-x pan-y pinch-zoom;
+  .mobile-scroll, .scrollbar-hide, [class*="overflow-x-auto"] {
+    touch-action: pan-x pan-y pinch-zoom !important;
   }
   
   /* Prevent elastic bounce on body */

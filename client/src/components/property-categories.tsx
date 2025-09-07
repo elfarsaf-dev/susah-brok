@@ -100,9 +100,10 @@ export default function PropertyCategories({ onCategoryFilter }: PropertyCategor
         
         {/* Mobile Layout - Horizontal Scroll */}
         <div 
-          className="sm:hidden overflow-x-auto pb-4 scrollbar-hide"
+          className="sm:hidden overflow-x-auto pb-4 scrollbar-hide mobile-scroll"
           style={{
-            WebkitOverflowScrolling: 'touch'
+            WebkitOverflowScrolling: 'touch',
+            touchAction: 'pan-x pan-y pinch-zoom'
           }}
         >
           <div className="flex gap-2 px-1" style={{ width: 'max-content' }}>
