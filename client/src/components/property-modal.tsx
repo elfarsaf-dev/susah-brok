@@ -14,6 +14,8 @@ interface PropertyModalProps {
 export default function PropertyModal({ property, onClose }: PropertyModalProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedAdmin, setSelectedAdmin] = useState<1 | 2>(1);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Admin contact information
   const adminContacts = {
@@ -310,6 +312,30 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
     setCurrentSlide(index);
   };
 
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   const handleWhatsApp = () => {
     const message = `Halo, saya tertarik dengan ${property.name} di ${property.location}. Bisakah saya mendapatkan informasi lebih lanjut?`;
     const whatsappUrl = `https://wa.me/${adminContacts[selectedAdmin].phone}?text=${encodeURIComponent(message)}`;
@@ -369,14 +395,24 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
           >
-            <div className="h-full">
+            <div 
+              className="h-full select-none relative cursor-grab active:cursor-grabbing"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              style={{ touchAction: 'pan-y pinch-zoom' }}
+            >
               {sliderImages.map((img, index) => (
-                <img
+                <motion.img
                   key={index}
                   src={img}
                   alt={`${property.name} ${index + 1}`}
-                  className={`w-full h-full object-cover ${index === currentSlide ? '' : 'hidden'}`}
+                  className={`w-full h-full object-cover absolute inset-0`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   data-testid={`img-slide-${index}`}
+                  style={{ pointerEvents: index === currentSlide ? 'auto' : 'none' }}
                 />
               ))}
             </div>
@@ -385,7 +421,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               variant="ghost"
               size="sm"
               onClick={prevSlide}
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
+              className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg hidden sm:flex"
               data-testid="button-prev-slide"
             >
               <ChevronLeft className="h-4 w-4 text-gray-600" />
@@ -395,18 +431,18 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               variant="ghost"
               size="sm"
               onClick={nextSlide}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg hidden sm:flex"
               data-testid="button-next-slide"
             >
               <ChevronRight className="h-4 w-4 text-gray-600" />
             </Button>
             
-            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1.5 bg-black bg-opacity-20 px-2 py-1 rounded-full backdrop-blur-sm">
               {sliderImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                  className={`w-3 h-3 sm:w-2.5 sm:h-2.5 rounded-full transition-all ${
                     index === currentSlide ? 'bg-white shadow-lg' : 'bg-white bg-opacity-60'
                   }`}
                   data-testid={`button-slide-dot-${index}`}
