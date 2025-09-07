@@ -99,13 +99,17 @@ export default function PropertyCategories({ onCategoryFilter }: PropertyCategor
         </h3>
         
         {/* Mobile Layout - Horizontal Scroll */}
-        <div className="block sm:hidden overflow-x-auto pb-4 scrollbar-hide">
-          <div className="flex gap-2 min-w-max px-1 animate-fadeInUp">
+        <div 
+          className="sm:hidden overflow-x-auto pb-4 scrollbar-hide"
+          style={{
+            WebkitOverflowScrolling: 'touch'
+          }}
+        >
+          <div className="flex gap-2 px-1" style={{ width: 'max-content' }}>
             {categories.map((category) => (
-              <Button
+              <button
                 key={category.id}
-                variant={isSelected(category.id) ? "default" : "outline"}
-                className={`h-auto p-2 flex flex-col items-center gap-1 relative transition-all duration-200 hover:scale-105 min-w-[70px] ${
+                className={`h-auto p-2 flex flex-col items-center gap-1 relative transition-all duration-200 hover:scale-105 min-w-[80px] flex-shrink-0 rounded-lg border ${
                   isSelected(category.id) 
                     ? "bg-primary-600 text-white border-primary-600 shadow-lg" 
                     : "bg-white text-gray-700 border-gray-200 hover:border-primary-300 hover:bg-primary-50"
@@ -123,7 +127,7 @@ export default function PropertyCategories({ onCategoryFilter }: PropertyCategor
                 <div className="text-xs font-medium text-center leading-tight">
                   {category.label}
                 </div>
-              </Button>
+              </button>
             ))}
           </div>
         </div>

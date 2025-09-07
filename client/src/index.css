@@ -158,6 +158,14 @@
   display: none;
 }
 
+/* Ensure mobile touch scrolling works */
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
 /* Card hover glow effect */
 .card-glow {
   transition: all 0.3s ease;
