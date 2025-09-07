@@ -29,7 +29,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         <img 
           src={trip.image} 
           alt={trip.name} 
-          className="w-full h-32 sm:h-48 object-cover"
+          className="w-full h-28 sm:h-40 object-cover"
           data-testid={`img-trip-${trip.id}`}
         />
         <div className="absolute top-4 left-4">
@@ -50,34 +50,34 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         </div>
       </div>
       
-      <div className="p-3 sm:p-4">
-        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 line-clamp-2" data-testid={`text-name-${trip.id}`}>
+      <div className="p-2 sm:p-3">
+        <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1 line-clamp-2" data-testid={`text-name-${trip.id}`}>
           {trip.name}
         </h3>
         
-        <p className="text-gray-600 mb-2 text-xs line-clamp-2 sm:line-clamp-3" data-testid={`text-description-${trip.id}`}>
+        <p className="text-gray-600 mb-1 text-xs line-clamp-2" data-testid={`text-description-${trip.id}`}>
           {trip.description}
         </p>
         
-        <div className="mb-2 space-y-1">
+        <div className="mb-1 space-y-0.5">
           <p className="text-gray-600 flex items-center text-xs" data-testid={`text-capacity-${trip.id}`}>
-            <Users className="mr-2 text-primary-600 h-4 w-4" />
+            <Users className="mr-1 text-primary-600 h-3 w-3" />
             {trip.capacity}
           </p>
           
           <p className="text-gray-600 flex items-center text-xs" data-testid={`text-duration-${trip.id}`}>
-            <Clock className="mr-2 text-primary-600 h-4 w-4" />
+            <Clock className="mr-1 text-primary-600 h-3 w-3" />
             Durasi: {trip.duration}
           </p>
         </div>
 
         {/* Rating */}
-        <div className="flex items-center mb-2" data-testid={`rating-${trip.id}`}>
+        <div className="flex items-center mb-1" data-testid={`rating-${trip.id}`}>
           <div className="flex items-center mr-2">
             {[...Array(5)].map((_, index) => (
               <Star
                 key={index}
-                className={`h-4 w-4 ${
+                className={`h-3 w-3 ${
                   index < fullStars
                     ? 'text-yellow-400 fill-current'
                     : index === fullStars && hasHalfStar
@@ -87,11 +87,11 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
               />
             ))}
           </div>
-          <span className="text-xs text-gray-600 font-medium">{rating.toFixed(1)}</span>
+          <span className="text-xs text-gray-600 font-medium ml-1">{rating.toFixed(1)}</span>
         </div>
         
         {/* Destinations Preview */}
-        <div className="mb-3 hidden sm:block">
+        <div className="mb-2 hidden sm:block">
           <div className="flex flex-wrap gap-1 mb-2">
             {trip.destinations.slice(0, 3).map((destination, index) => (
               <Badge 
@@ -115,16 +115,16 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <div>
-            <span className="text-lg font-bold text-primary-600" data-testid={`text-price-${trip.id}`}>
+        <div className="flex flex-col gap-1.5">
+          <div className="text-center">
+            <span className="text-sm sm:text-base font-bold text-primary-600" data-testid={`text-price-${trip.id}`}>
               {formattedPrice}
             </span>
-            <span className="text-gray-600 text-xs">/jeep</span>
+            <span className="text-gray-600 text-xs block">/jeep</span>
           </div>
           <Button 
             onClick={onViewDetail}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-3 sm:px-4 py-1.5 rounded-lg font-medium text-sm transition-colors duration-200 w-full sm:w-auto"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-2 py-1 rounded-md font-medium text-xs w-full transition-colors duration-200"
             data-testid={`button-detail-${trip.id}`}
           >
             Lihat Detail
