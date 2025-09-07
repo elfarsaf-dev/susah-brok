@@ -1097,7 +1097,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/alam dan kuliner.jpeg",
     rating: 4.8,
-    description: "Nikmati keindahan alam Tawangmangu dengan mengunjungi air terjun eksotis, kebun sayur organik, dan perkebunan strawberry segar. Cocok untuk keluarga yang ingin menikmati wisata alam dan kuliner lokal.",
+    description: "Wisata alam ke air terjun, kebun sayur organik, dan petik strawberry segar.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1130,7 +1130,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/air terjun.jpeg",
     rating: 4.7,
-    description: "Eksplorasi keindahan Grojokan Sewu dengan petik strawberry segar dan berbelanja oleh-oleh khas Tawangmangu. Perfect untuk wisata keluarga yang menginginkan kombinasi alam dan kuliner.",
+    description: "Jelajahi Grojokan Sewu, petik strawberry, dan belanja oleh-oleh khas.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1163,7 +1163,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/umbul.jpeg",
     rating: 4.6,
-    description: "Jelajahi keunikan Umbul Udal-udalan dengan pemandangan yang menakjubkan, dilengkapi dengan wisata petik strawberry dan berbelanja oleh-oleh lokal yang khas.",
+    description: "Petualangan seru ke Umbul Udal-udalan dengan petik strawberry.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1197,7 +1197,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/sirkuit offroad).jpeg",
     rating: 4.9,
-    description: "Adrenalin rush di sirkuit Sekipan dengan jalur offroad yang menantang, dilengkapi wisata petik strawberry untuk menyegarkan perjalanan Anda.",
+    description: "Sensasi offroad menantang di sirkuit Sekipan plus petik strawberry.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1231,7 +1231,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/wisata bunga.jpeg",
     rating: 4.5,
-    description: "Pesona Kampung 1.000 Bunga yang colorful dan Bumi Perkemahan Pleseran dengan pemandangan alam yang memukau. Perfect untuk foto-foto cantik!",
+    description: "Kunjungi Kampung 1.000 Bunga yang colorful, perfect untuk foto-foto!",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1264,7 +1264,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/telaga madirda.jpeg",
     rating: 4.8,
-    description: "Perjalanan menuju Telaga Madirda yang eksotis melalui Grojokan Sewu Pintu 2. Nikmati keindahan alam yang masih asri dan pemandangan yang menakjubkan.",
+    description: "Eksplorasi Telaga Madirda eksotis melalui Grojokan Sewu Pintu 2.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1298,7 +1298,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/gunung lawu.jpeg",
     rating: 4.9,
-    description: "Petualangan lengkap mengelilingi Gunung Lawu dengan mengunjungi Telaga Madirda, Hutan Pinus yang sejuk, Candi Sukuh yang bersejarah, dan Grojokan Jumog yang spektakuler.",
+    description: "Adventure lengkap Gunung Lawu: Telaga Madirda, Hutan Pinus, Candi Sukuh.",
     capacity: "Max 4 orang", 
     included: [
       "Transportasi jeep",
@@ -1331,7 +1331,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/sirkuit explorer.jpeg",
     rating: 4.8,
-    description: "Kombinasi sempurna antara petualangan offroad di sirkuit, eksplorasi jalur hutan, wisata Pleseran, berbelanja oleh-oleh, dan petik strawberry segar.",
+    description: "Trip lengkap: offroad sirkuit, jalur hutan, Pleseran, dan strawberry.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
@@ -1363,7 +1363,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/paralayang.jpeg",
     rating: 4.9,
-    description: "Pengalaman ultimate dengan paralayang tandem di atas Tawangmangu, dilengkapi wisata Telaga Madirda, Hutan Pinus, dan Candi Sukuh yang bersejarah.",
+    description: "Ultimate experience: paralayang tandem plus wisata Telaga Madirda.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep", 
@@ -1398,7 +1398,7 @@ export const tripData: Trip[] = [
     ],
     image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/jembatan kaca.jpeg",
     rating: 4.7,
-    description: "Sensasi offroad susur sungai yang mendebarkan menuju Jembatan Kaca dengan pemandangan spektakuler, dilengkapi wisata Telaga Madirda dan berbelanja oleh-oleh.",
+    description: "Offroad susur sungai menuju Jembatan Kaca dengan view spektakuler.",
     capacity: "Max 4 orang",
     included: [
       "Transportasi jeep",
