@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.bosvillatawangmangu.my.id/sitemap.xml
+
+# Specific crawl directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block unnecessary files
+Disallow: /api/
+Disallow: *.json
+Disallow: /src/
