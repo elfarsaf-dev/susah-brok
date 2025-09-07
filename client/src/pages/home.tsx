@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 no-horizontal-scroll">
       <Navigation />
       <HeroSection />
       <SearchBar searchQuery={searchQuery} onSearchChange={setSearchQuery} />
