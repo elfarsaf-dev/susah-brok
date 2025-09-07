@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, ChevronLeft, ChevronRight, Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -16,6 +16,8 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
   const [selectedAdmin, setSelectedAdmin] = useState<1 | 2>(1);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isAutoSliding, setIsAutoSliding] = useState(true);
+  const autoSlideIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Admin contact information
   const adminContacts = {
@@ -302,14 +304,29 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
+    pauseAutoSlide();
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => prev === 0 ? sliderImages.length - 1 : prev - 1);
+    pauseAutoSlide();
+  };
+
+  const pauseAutoSlide = () => {
+    setIsAutoSliding(false);
+    if (autoSlideIntervalRef.current) {
+      clearInterval(autoSlideIntervalRef.current);
+      autoSlideIntervalRef.current = null;
+    }
+    // Resume auto-slide after 10 seconds of inactivity
+    setTimeout(() => {
+      setIsAutoSliding(true);
+    }, 10000);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+    pauseAutoSlide();
   };
 
   // Touch handlers for mobile swipe
@@ -330,11 +347,37 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
     const isRightSwipe = distance < -50;
     
     if (isLeftSwipe) {
-      nextSlide();
+      setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
+      pauseAutoSlide();
     } else if (isRightSwipe) {
-      prevSlide();
+      setCurrentSlide((prev) => prev === 0 ? sliderImages.length - 1 : prev - 1);
+      pauseAutoSlide();
     }
   };
+
+  // Auto-slide effect
+  useEffect(() => {
+    if (isAutoSliding && sliderImages.length > 1) {
+      autoSlideIntervalRef.current = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
+      }, 8000); // 8 seconds
+    }
+
+    return () => {
+      if (autoSlideIntervalRef.current) {
+        clearInterval(autoSlideIntervalRef.current);
+      }
+    };
+  }, [isAutoSliding, sliderImages.length]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (autoSlideIntervalRef.current) {
+        clearInterval(autoSlideIntervalRef.current);
+      }
+    };
+  }, []);
 
   const handleWhatsApp = () => {
     const message = `Halo, saya tertarik dengan ${property.name} di ${property.location}. Bisakah saya mendapatkan informasi lebih lanjut?`;
