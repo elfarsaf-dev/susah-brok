@@ -98,7 +98,38 @@ export default function PropertyCategories({ onCategoryFilter }: PropertyCategor
           Kategori Berdasarkan Fasilitas
         </h3>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+        {/* Mobile Layout - Horizontal Scroll */}
+        <div className="block sm:hidden overflow-x-auto pb-4 scrollbar-hide">
+          <div className="flex gap-2 min-w-max px-1 animate-fadeInUp">
+            {categories.map((category) => (
+              <Button
+                key={category.id}
+                variant={isSelected(category.id) ? "default" : "outline"}
+                className={`h-auto p-2 flex flex-col items-center gap-1 relative transition-all duration-200 hover:scale-105 min-w-[70px] ${
+                  isSelected(category.id) 
+                    ? "bg-primary-600 text-white border-primary-600 shadow-lg" 
+                    : "bg-white text-gray-700 border-gray-200 hover:border-primary-300 hover:bg-primary-50"
+                }`}
+                onClick={() => handleCategoryClick(category.id)}
+                data-testid={`category-${category.id}`}
+              >
+                {isSelected(category.id) && (
+                  <div className="absolute -top-1 -right-1 bg-green-500 text-white rounded-full p-0.5">
+                    <Check size={8} />
+                  </div>
+                )}
+                
+                <div className="text-lg">{category.icon}</div>
+                <div className="text-xs font-medium text-center leading-tight">
+                  {category.label}
+                </div>
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Layout - Grid */}
+        <div className="hidden sm:grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
           {categories.map((category) => (
             <Button
               key={category.id}

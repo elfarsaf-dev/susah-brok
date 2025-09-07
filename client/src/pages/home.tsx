@@ -55,7 +55,7 @@ export default function Home() {
           <PropertyCategories onCategoryFilter={setCategoryFilter} />
           
           {/* Property Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8" data-testid="properties-grid">
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-8 mt-8" data-testid="properties-grid">
             {properties.slice(0, displayedCount).map((property) => (
               <PropertyCard 
                 key={property.id} 

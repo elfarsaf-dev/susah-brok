@@ -23,16 +23,18 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
 
   return (
     <div 
-      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group cursor-pointer card-glow animate-slide-in-grid"
       data-testid={`card-property-${property.id}`}
+      onClick={onViewDetail}
     >
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <img 
           src={property.image} 
           alt={property.name} 
-          className="w-full h-64 object-cover"
+          className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
           data-testid={`img-property-${property.id}`}
         />
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
         <div className="absolute top-4 left-4">
           <Badge 
             className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium capitalize"
@@ -51,28 +53,28 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2" data-testid={`text-name-${property.id}`}>
+      <div className="p-3 sm:p-6">
+        <h3 className="text-base sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2" data-testid={`text-name-${property.id}`}>
           {property.name}
         </h3>
         
-        <p className="text-gray-600 mb-3 flex items-center" data-testid={`text-location-${property.id}`}>
-          <MapPin className="mr-2 text-primary-600 h-4 w-4" />
-          {property.location}
+        <p className="text-gray-600 mb-2 sm:mb-3 flex items-center text-sm" data-testid={`text-location-${property.id}`}>
+          <MapPin className="mr-1 sm:mr-2 text-primary-600 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+          <span className="truncate">{property.location}</span>
         </p>
         
-        <p className="text-gray-600 mb-3 flex items-center" data-testid={`text-capacity-${property.id}`}>
-          <Users className="mr-2 text-primary-600 h-4 w-4" />
-          {property.capacity}
+        <p className="text-gray-600 mb-2 sm:mb-3 flex items-center text-sm" data-testid={`text-capacity-${property.id}`}>
+          <Users className="mr-1 sm:mr-2 text-primary-600 h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+          <span className="truncate">{property.capacity}</span>
         </p>
 
         {/* Rating */}
-        <div className="flex items-center mb-3" data-testid={`rating-${property.id}`}>
+        <div className="flex items-center mb-2 sm:mb-3" data-testid={`rating-${property.id}`}>
           <div className="flex items-center mr-2">
             {[...Array(5)].map((_, index) => (
               <Star
                 key={index}
-                className={`h-4 w-4 ${
+                className={`h-3 w-3 sm:h-4 sm:w-4 ${
                   index < fullStars
                     ? 'text-yellow-400 fill-current'
                     : index === fullStars && hasHalfStar
@@ -82,46 +84,50 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
               />
             ))}
           </div>
-          <span className="text-sm text-gray-600 font-medium">{rating.toFixed(1)}</span>
+          <span className="text-xs sm:text-sm text-gray-600 font-medium">{rating.toFixed(1)}</span>
         </div>
         
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-1 mb-3">
-            {property.facilities.slice(0, 3).map((facility, index) => (
+        <div className="mb-3 sm:mb-4">
+          <div className="flex flex-wrap gap-1 mb-2 sm:mb-3">
+            {property.facilities.slice(0, 2).map((facility, index) => (
               <Badge 
                 key={index}
                 variant="secondary"
-                className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs"
+                className="bg-gray-100 text-gray-700 px-1 sm:px-2 py-1 rounded-md text-xs line-clamp-1"
                 data-testid={`badge-facility-${property.id}-${index}`}
               >
-                {facility}
+                {facility.length > 15 ? facility.substring(0, 15) + '...' : facility}
               </Badge>
             ))}
-            {property.facilities.length > 3 && (
+            {property.facilities.length > 2 && (
               <Badge 
                 variant="secondary"
-                className="bg-gray-100 text-gray-700 px-2 py-1 rounded-md text-xs"
+                className="bg-gray-100 text-gray-700 px-1 sm:px-2 py-1 rounded-md text-xs"
                 data-testid={`badge-more-facilities-${property.id}`}
               >
-                +{property.facilities.length - 3} lainnya
+                +{property.facilities.length - 2}
               </Badge>
             )}
           </div>
         </div>
         
-        <div className="flex items-center justify-between">
-          <div>
-            <span className="text-2xl font-bold text-primary-600" data-testid={`text-price-${property.id}`}>
-              {formattedPrice}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <div className="text-center sm:text-left">
+            <span className="text-lg sm:text-2xl font-bold text-primary-600 block sm:inline" data-testid={`text-price-${property.id}`}>
+              {formattedPrice.replace('Rp', 'Rp ')}
             </span>
-            <span className="text-gray-600 text-sm">/malam</span>
+            <span className="text-gray-600 text-xs sm:text-sm block sm:inline">/malam</span>
           </div>
           <Button 
-            onClick={onViewDetail}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            onClick={(e) => {
+              e.stopPropagation();
+              onViewDetail();
+            }}
+            className="bg-primary-600 hover:bg-primary-700 text-white px-3 sm:px-6 py-2 rounded-lg font-medium transition-all duration-200 text-sm w-full sm:w-auto group-hover:bg-primary-700"
             data-testid={`button-detail-${property.id}`}
           >
-            Lihat Detail
+            <span className="hidden sm:inline">Lihat Detail</span>
+            <span className="sm:hidden">Detail</span>
           </Button>
         </div>
       </div>
