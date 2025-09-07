@@ -75,7 +75,7 @@ export default function JeepSection() {
         </div>
         
         {/* Trip Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-testid="trips-grid">
+        <div className="grid grid-cols-2 gap-4 md:gap-8" data-testid="trips-grid">
           {trips.map((trip) => (
             <TripCard 
               key={trip.id} 
