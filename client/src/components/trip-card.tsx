@@ -29,7 +29,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         <img 
           src={trip.image} 
           alt={trip.name} 
-          className="w-full h-48 object-cover"
+          className="w-full h-32 sm:h-48 object-cover"
           data-testid={`img-trip-${trip.id}`}
         />
         <div className="absolute top-4 left-4">
@@ -50,17 +50,17 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         </div>
       </div>
       
-      <div className="p-4">
-        <h3 className="text-lg font-bold text-gray-900 mb-2" data-testid={`text-name-${trip.id}`}>
+      <div className="p-3 sm:p-4">
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 line-clamp-2" data-testid={`text-name-${trip.id}`}>
           {trip.name}
         </h3>
         
-        <p className="text-gray-600 mb-2 text-xs" data-testid={`text-description-${trip.id}`}>
+        <p className="text-gray-600 mb-2 text-xs line-clamp-2 sm:line-clamp-3" data-testid={`text-description-${trip.id}`}>
           {trip.description}
         </p>
         
-        <div className="mb-2">
-          <p className="text-gray-600 flex items-center text-xs mb-1" data-testid={`text-capacity-${trip.id}`}>
+        <div className="mb-2 space-y-1">
+          <p className="text-gray-600 flex items-center text-xs" data-testid={`text-capacity-${trip.id}`}>
             <Users className="mr-2 text-primary-600 h-4 w-4" />
             {trip.capacity}
           </p>
@@ -91,7 +91,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         </div>
         
         {/* Destinations Preview */}
-        <div className="mb-3">
+        <div className="mb-3 hidden sm:block">
           <div className="flex flex-wrap gap-1 mb-2">
             {trip.destinations.slice(0, 3).map((destination, index) => (
               <Badge 
@@ -115,7 +115,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
           </div>
         </div>
         
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <div>
             <span className="text-lg font-bold text-primary-600" data-testid={`text-price-${trip.id}`}>
               {formattedPrice}
@@ -124,7 +124,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
           </div>
           <Button 
             onClick={onViewDetail}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-1.5 rounded-lg font-medium text-sm transition-colors duration-200"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-3 sm:px-4 py-1.5 rounded-lg font-medium text-sm transition-colors duration-200 w-full sm:w-auto"
             data-testid={`button-detail-${trip.id}`}
           >
             Lihat Detail
