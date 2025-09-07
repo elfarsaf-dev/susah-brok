@@ -3,6 +3,7 @@ import HeroSection from "@/components/hero-section";
 import SearchBar from "@/components/search-bar";
 import PropertyCard from "@/components/property-card";
 import PropertyModal from "@/components/property-modal";
+import PropertyCategories from "@/components/property-categories";
 import FloatingToggle from "@/components/floating-toggle";
 import JeepSection from "@/components/jeep-section";
 import AdvantagesSection from "@/components/advantages-section";
@@ -22,7 +23,8 @@ export default function Home() {
     setPropertyType,
     displayedCount,
     setDisplayedCount,
-    hasMore
+    hasMore,
+    setCategoryFilter
   } = useProperties();
 
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -44,13 +46,16 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Pilihan Akomodasi Terbaik
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Temukan villa dan glamping impian Anda dengan fasilitas lengkap dan pemandangan menakjubkan di Tawangmangu
             </p>
           </div>
           
+          {/* Property Categories */}
+          <PropertyCategories onCategoryFilter={setCategoryFilter} />
+          
           {/* Property Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-testid="properties-grid">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8" data-testid="properties-grid">
             {properties.slice(0, displayedCount).map((property) => (
               <PropertyCard 
                 key={property.id} 
