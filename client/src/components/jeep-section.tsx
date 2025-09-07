@@ -75,7 +75,7 @@ export default function JeepSection() {
         </div>
         
         {/* Trip Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-testid="trips-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-testid="trips-grid">
           {trips.map((trip) => (
             <TripCard 
               key={trip.id} 
@@ -107,7 +107,7 @@ export default function JeepSection() {
             data-testid="button-contact-jeep"
             onClick={() => {
               const message = "Halo, saya tertarik dengan trip jeep wisata Tawangmangu. Bisakah saya mendapatkan informasi lebih lanjut?";
-              const whatsappUrl = `https://wa.me/6281226374041?text=${encodeURIComponent(message)}`;
+              const whatsappUrl = `https://wa.me/6282241819992?text=${encodeURIComponent(message)}`;
               window.open(whatsappUrl, '_blank');
             }}
           >
