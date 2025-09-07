@@ -66,6 +66,28 @@ export default function ContactSection() {
           })}
         </div>
         
+        {/* Google Maps Embed */}
+        <div className="mt-12" data-testid="map-container">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold mb-2">Lokasi Kami</h3>
+            <p className="text-gray-300">
+              Temukan kami di Tawangmangu, Karanganyar, Jawa Tengah
+            </p>
+          </div>
+          <div className="w-full h-96 rounded-lg overflow-hidden shadow-lg" data-testid="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.48!2d111.1575355!3d-7.6609892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e798bc16c335eb7%3A0x1dfae8981be2e88f!2sBos%20villa%20tawangmangu%20(info%20lengkap%20villa%20Tawangmangu)!5e0!3m2!1sen!2sid!4v1000000000000!5m2!1sen!2sid"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="BOS Villa Tawangmangu Location"
+            ></iframe>
+          </div>
+        </div>
+        
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-700">
           <div className="text-center">
