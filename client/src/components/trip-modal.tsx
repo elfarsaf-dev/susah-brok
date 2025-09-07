@@ -3,6 +3,7 @@ import { X, Check, MapPin, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Trip } from "@shared/schema";
 
 interface TripModalProps {
@@ -39,8 +40,20 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
   }).format(trip.price);
 
   return (
-    <Dialog open={true} onOpenChange={onClose}>
+    <AnimatePresence>
+      <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl w-[90vw] max-h-[85vh] overflow-y-auto p-0 rounded-2xl border-0 shadow-2xl" data-testid={`modal-trip-${trip.id}`}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 50 }}
+          transition={{ 
+            duration: 0.4, 
+            ease: [0.16, 1, 0.3, 1],
+            scale: { type: "spring", damping: 25, stiffness: 200 }
+          }}
+          className="w-full h-full"
+        >
         <DialogTitle className="sr-only">{trip.name} - Detail Trip Jeep</DialogTitle>
         <DialogDescription className="sr-only">
           Detail lengkap untuk {trip.name} ({trip.category} trip) dengan durasi {trip.duration} dan informasi booking
@@ -206,7 +219,9 @@ export default function TripModal({ trip, onClose }: TripModalProps) {
             </div>
           </div>
         </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
+    </AnimatePresence>
   );
 }

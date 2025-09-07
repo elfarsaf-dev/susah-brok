@@ -3,6 +3,7 @@ import { X, ChevronLeft, ChevronRight, Check, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Property } from "@shared/schema";
 
 interface PropertyModalProps {
@@ -322,26 +323,52 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
   };
 
   return (
-    <Dialog open={true} onOpenChange={onClose}>
+    <AnimatePresence>
+      <Dialog open={true} onOpenChange={onClose}>
       <DialogContent className="max-w-3xl w-[90vw] max-h-[85vh] overflow-y-auto p-0 rounded-2xl border-0 shadow-2xl" data-testid={`modal-property-${property.id}`}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 50 }}
+          transition={{ 
+            duration: 0.4, 
+            ease: [0.16, 1, 0.3, 1],
+            scale: { type: "spring", damping: 25, stiffness: 200 }
+          }}
+          className="w-full h-full"
+        >
         <DialogTitle className="sr-only">{property.name} - Detail Properti</DialogTitle>
         <DialogDescription className="sr-only">
           Detail lengkap untuk {property.name} di {property.location} dengan fasilitas dan informasi booking
         </DialogDescription>
         
         <div className="relative rounded-2xl overflow-hidden">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={onClose}
-            className="absolute top-3 right-3 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
-            data-testid="button-close-modal"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.2 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <X className="h-4 w-4 text-gray-600" />
-          </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onClose}
+              className="absolute top-3 right-3 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-1.5 transition-all shadow-lg"
+              data-testid="button-close-modal"
+            >
+              <X className="h-4 w-4 text-gray-600" />
+            </Button>
+          </motion.div>
           
           {/* Image Slider */}
-          <div className="relative h-80" data-testid="image-slider">
+          <motion.div 
+            className="relative h-80" 
+            data-testid="image-slider"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+          >
             <div className="h-full">
               {sliderImages.map((img, index) => (
                 <img
@@ -386,11 +413,21 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
           
           {/* Property Details */}
-          <div className="p-6">
-            <div className="flex items-center justify-between mb-5">
+          <motion.div 
+            className="p-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <motion.div 
+              className="flex items-center justify-between mb-5"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.4 }}
+            >
               <div>
                 <h2 className="text-2xl font-bold text-gray-900" data-testid="text-modal-name">
                   {property.name}
@@ -408,7 +445,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                   {property.units} unit tersedia
                 </Badge>
               </div>
-            </div>
+            </motion.div>
             
             {/* Capacity */}
             <div className="mb-5">
@@ -524,9 +561,11 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
                 Hubungi Sekarang
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
+    </AnimatePresence>
   );
 }
