@@ -29,7 +29,7 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         <img 
           src={trip.image} 
           alt={trip.name} 
-          className="w-full h-64 object-cover"
+          className="w-full h-48 object-cover"
           data-testid={`img-trip-${trip.id}`}
         />
         <div className="absolute top-4 left-4">
@@ -50,29 +50,29 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         </div>
       </div>
       
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2" data-testid={`text-name-${trip.id}`}>
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-gray-900 mb-2" data-testid={`text-name-${trip.id}`}>
           {trip.name}
         </h3>
         
-        <p className="text-gray-600 mb-3 text-sm" data-testid={`text-description-${trip.id}`}>
+        <p className="text-gray-600 mb-2 text-xs" data-testid={`text-description-${trip.id}`}>
           {trip.description}
         </p>
         
-        <div className="mb-3">
-          <p className="text-gray-600 flex items-center text-sm mb-2" data-testid={`text-capacity-${trip.id}`}>
+        <div className="mb-2">
+          <p className="text-gray-600 flex items-center text-xs mb-1" data-testid={`text-capacity-${trip.id}`}>
             <Users className="mr-2 text-primary-600 h-4 w-4" />
             {trip.capacity}
           </p>
           
-          <p className="text-gray-600 flex items-center text-sm" data-testid={`text-duration-${trip.id}`}>
+          <p className="text-gray-600 flex items-center text-xs" data-testid={`text-duration-${trip.id}`}>
             <Clock className="mr-2 text-primary-600 h-4 w-4" />
             Durasi: {trip.duration}
           </p>
         </div>
 
         {/* Rating */}
-        <div className="flex items-center mb-3" data-testid={`rating-${trip.id}`}>
+        <div className="flex items-center mb-2" data-testid={`rating-${trip.id}`}>
           <div className="flex items-center mr-2">
             {[...Array(5)].map((_, index) => (
               <Star
@@ -87,12 +87,12 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
               />
             ))}
           </div>
-          <span className="text-sm text-gray-600 font-medium">{rating.toFixed(1)}</span>
+          <span className="text-xs text-gray-600 font-medium">{rating.toFixed(1)}</span>
         </div>
         
         {/* Destinations Preview */}
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-1 mb-3">
+        <div className="mb-3">
+          <div className="flex flex-wrap gap-1 mb-2">
             {trip.destinations.slice(0, 3).map((destination, index) => (
               <Badge 
                 key={index}
@@ -117,14 +117,14 @@ export default function TripCard({ trip, onViewDetail }: TripCardProps) {
         
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-2xl font-bold text-primary-600" data-testid={`text-price-${trip.id}`}>
+            <span className="text-lg font-bold text-primary-600" data-testid={`text-price-${trip.id}`}>
               {formattedPrice}
             </span>
-            <span className="text-gray-600 text-sm">/jeep</span>
+            <span className="text-gray-600 text-xs">/jeep</span>
           </div>
           <Button 
             onClick={onViewDetail}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-1.5 rounded-lg font-medium text-sm transition-colors duration-200"
             data-testid={`button-detail-${trip.id}`}
           >
             Lihat Detail
