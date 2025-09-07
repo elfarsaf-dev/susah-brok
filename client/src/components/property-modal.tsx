@@ -321,7 +321,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
     // Resume auto-slide after 10 seconds of inactivity
     setTimeout(() => {
       setIsAutoSliding(true);
-    }, 10000);
+    }, 5000);
   };
 
   const goToSlide = (index: number) => {
@@ -360,7 +360,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
     if (isAutoSliding && sliderImages.length > 1) {
       autoSlideIntervalRef.current = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-      }, 8000); // 8 seconds
+      }, 4000); // 8 seconds
     }
 
     return () => {
