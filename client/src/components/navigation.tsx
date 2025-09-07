@@ -106,11 +106,11 @@ export default function Navigation() {
               <button
                 onClick={() => {
                   setIsMenuOpen(false);
-                  window.open('https://wa.me/6281226374041?text=Halo%2C%20saya%20tertarik%20dengan%20BOS%20VILLA%20TAWANGMANGU', '_blank');
+                  window.open('https://wa.me/6282241819992?text=Halo%2C%20saya%20tertarik%20dengan%20BOS%20VILLA%20TAWANGMANGU', '_blank');
                 }}
                 className="text-green-600 text-sm font-semibold hover:text-green-700 transition-colors duration-200"
               >
-                WhatsApp: 0812-2637-4041
+                WhatsApp: 0822-4181-9992
               </button>
             </div>
           </div>
