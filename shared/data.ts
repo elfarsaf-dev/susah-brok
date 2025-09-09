@@ -1721,24 +1721,27 @@ export const glampingData: Property[] = [
 },
 {
   id: "glamping-iks-2",
-  name: "Glamping IKS 2",
+  name: "Glamping Lawu Kala Senja✨",
   location: "Tawangmangu",
   rates: [
-    { label: "Weekday", price: 500000 },
-    { label: "Weekend", price: 700000 }
+    { label: "Single bed - Weekday", price: 550000 },
+    { label: "Single bed - Weekend", price: 660000 },
+    { label: "Double bed - Weekday", price: 715000 },
+    { label: "Double bed - Weekend", price: 825000 }
   ],
   units: 1,
   facilities: [
-    "Bed dengan ukuran besar",
+    "Pilihan Single bed atau Double bed",
     "Kamar Mandi Dalam",
     "Water Heater",
     "Toiletries",
     "Smart TV",
     "Free Coffee & Teh",
     "Free Breakfast",
+    "View pegunungan",
     "Dekat Wisata: Bukit Sekipan, Sekipan Camp, Wonderpark, Lawupark"
   ],
-  capacity: "4 orang",
+  capacity: "2-4 orang",
   notes: [
     "Check in jam 14.00",
     "Check out jam 12.00",
