@@ -15,6 +15,7 @@ export const propertySchema = z.object({
   capacity: z.string(),
   notes: z.array(z.string()),
   image: z.string(),
+  slideImages: z.array(z.string()).optional(),
   type: z.enum(["villa", "glamping"]),
   rating: z.number().min(1).max(5).optional()
 });
