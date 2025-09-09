@@ -1,0 +1,68 @@
+The Netlify deploy errored, with the following guidance provided:
+
+**Diagnosis:**
+The build failed with an error indicating that a Netlify Function (`api.js`) failed to require one of its dependencies (`serverless-http`), which is not present in the site's top-level `package.json`.
+
+**Solution:**
+1. Verify that the `serverless-http` package is included in the site's top-level `package.json` file or was committed to the repository.
+2. Add `serverless-http` to the top-level `package.json` dependencies. If it's already in `package.json`, ensure it is properly installed and available during the build process.
+
+The relevant error logs are:
+
+Line 0: build-image version: 49a91c7d30c1d30335a55061910aa7562f1d1cdb (noble)
+Line 1: buildbot version: 212ccaf577a2fc5bf8b9889b567db579b33d36ee
+Line 2: Fetching cached dependencies
+Line 3: Failed to fetch cache, continuing with build
+Line 4: Starting to prepare the repo for build
+Line 5: No cached dependencies found. Cloning fresh repo
+Line 6: git clone --filter=blob:none https://github.com/elfarsaf-dev/bosvilla
+Line 7: Preparing Git Reference refs/heads/main
+Line 8: Custom build path detected. Proceeding with the specified path: ''
+Line 9: Starting to install dependencies
+Line 10: Downloading and installing node v18.20.8...
+Line 11: Downloading https://nodejs.org/dist/v18.20.8/node-v18.20.8-linux-x64.tar.xz...
+Line 12: Computing checksum with sha256sum
+Line 13: Checksums matched!
+Line 87: ​
+Line 88: [90m(build.command completed in 3.6s)[39m
+Line 89: [96m[1m​[22m[39m
+Line 90: [96m[1mFunctions bundling                                            [22m[39m
+Line 91: [96m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 92: ​
+Line 93: Packaging Functions from [36mnetlify/functions[39m directory:
+Line 94:  - api.js
+Line 95: ​
+Line 96: [91m[1m​[22m[39m
+Line 97: [91m[1mDependencies installation error                               [22m[39m
+Line 98: [91m[1m────────────────────────────────────────────────────────────────[22m[39m
+Line 99: ​
+Line 100:   [31m[1mError message[22m[39m
+Line 101:   A Netlify Function failed to require one of its dependencies.
+Line 102:   Please make sure it is present in the site's top-level "package.json".
+​
+Line 103:   In file "/opt/build/repo/netlify/functions/api.js"
+Line 104:   Cannot find module 'serverless-http'
+Line 105:   Require stack:
+Line 106:   - /opt/buildhome/node-deps/node_modules/@netlify/zip-it-and-ship-it/dist/runtimes/node/bundlers/zisi/resolve.js
+Line 107: ​
+Line 108:   [31m[1mResolved config[22m[39m
+Line 109:   build:
+Line 110:     base: /opt/build/repo
+Line 111:     command: npm run build
+Line 112:     commandOrigin: config
+Line 113:     environment:
+Line 114:       - NODE_VERSION
+Line 115:     publish: /opt/build/repo/dist/public
+Line 116:     publishOrigin: config
+Line 117:   functionsDirectory: /opt/build/repo/netlify/functions
+Line 118:   headers:
+Line 119:     - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.js
+      values:
+   
+Line 120: Build failed due to a user error: Build script returned non-zero exit code: 2
+Line 121: Failing build: Failed to build site
+Line 122: Finished processing build request in 49.447s
+Line 123: Failed during stage 'building site': Build script returned non-zero exit code: 2
