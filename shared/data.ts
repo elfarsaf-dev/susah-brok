@@ -483,6 +483,656 @@ export const villaData: Property[] = [
   ],
   image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5811.jpeg?raw=true",
   type: "villa"
+},
+{
+  id: "villa-cantika",
+  name: "Villa Cantika",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "Private Pool / Kolam Renang",
+    "3 Kamar Tidur Bed Besar",
+    "2 Kamar Mandi Air Hangat",
+    "Ruang Keluarga Besar dan Ruang Tamu Besar",
+    "2 TV Android UK 43 Inc",
+    "Set Karaoke Lengkap",
+    "PS 3 Lengkap Game dan Netflix",
+    "Kitchen Set (Peralatan Makan dan Masak Cukup Komplit)",
+    "Galon, Kulkas, Dispenser, Majicom",
+    "Free Kopi, Teh, Gula & Mie Istimewa",
+    "Free 1 Extra Bed",
+    "Parkiran Muat 4 Mobil",
+    "Tersedia Jetset Apabila Mati Lampu",
+    "Tersedia Sepeda Gunung Ontel 2",
+    "Tersedia Bakar-Bakaran BBQ",
+    "Dekat Wisata: Bukit Sekipan, Kampung Halloween, Tawangmangu Wonder Park"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40 (2).jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (6).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (8).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (7).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-aries",
+  name: "Villa Aries",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1100000 },
+    { label: "Weekend", price: 1300000 }
+  ],
+  units: 1,
+  facilities: [
+    "2 Kamar Tidur",
+    "2 Kamar Mandi Dalam",
+    "1 Kamar Mandi Luar",
+    "Rooftop Lantai 3 & 4",
+    "Karaoke + Sound",
+    "Ruang Tamu",
+    "Alat Bakaran Lengkap",
+    "Kitchen Set Lengkap",
+    "Free Wi-Fi",
+    "Water Heater",
+    "Smart TV",
+    "Balkon View",
+    "Parkir 3 Mobil",
+    "Dispenser",
+    "Dilengkapi Pagar Besi sehingga Aman"
+  ],
+  capacity: "15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 11.00",
+    "Jam malam 24:00"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (7).jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (8).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (9).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (6).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-hasan",
+  name: "Villa Hassan",
+  location: "Jl. Sekipan - Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1300000 },
+    { label: "Jum'at", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "Private Swimming Pool",
+    "PS 3 2stik",
+    "3 Kamar Tidur",
+    "3 Kamar Mandi Air Hangat",
+    "Kompor BBQ",
+    "Water Heater",
+    "Rooftop & Balkon",
+    "Dispenser",
+    "Kulkas 2 Pintu",
+    "Rice Cooker",
+    "Smart TV 55inc with Netflix",
+    "Swan Float",
+    "Kitchen Set",
+    "Parkir (3 Mobil)",
+    "Sepeda Olah Raga",
+    "Karaoke",
+    "Wi-Fi Speed 50mbps",
+    "Free Kopi, Gula, Teh, Mie Instan & 1 Galon Air Mineral"
+  ],
+  capacity: "15-20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (2).jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.12.jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-country-1",
+  name: "Villa Country 1",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 3500000 },
+    { label: "Weekend", price: 4500000 }
+  ],
+  units: 10,
+  facilities: [
+    "10 Kamar",
+    "8 Kamar Mandi",
+    "Ruang Tamu",
+    "Free Wi-Fi",
+    "Air Hangat",
+    "Dapur",
+    "Karaoke",
+    "Teras"
+  ],
+  capacity: "40-50 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.11 (1).jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.08.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.10.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.10 (1).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-cokro-2",
+  name: "Villa Cokro 2",
+  location: "Sekipan Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1300000 },
+    { label: "Weekend", price: 1500000 }
+  ],
+  units: 1,
+  facilities: [
+    "Kolam Renang",
+    "2 Kamar Tidur",
+    "2 Kamar Mandi dengan Air Hangat",
+    "Alat Dapur yang Komplit",
+    "Magic Com",
+    "Dispenser Air Mineral",
+    "Ruang Tamu dengan Sofa Empuk",
+    "TV LED",
+    "Sound Karaoke Keluarga",
+    "Free Wi-Fi",
+    "Alat BBQ",
+    "Pintu Pagar Besi yang Aman",
+    "Dekat Wisata: Bukit Sekipan, Wonderpark, Taman Balekambang"
+  ],
+  capacity: "8-15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.29 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (6).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.29.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (1).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-kayu",
+  name: "Villa Kayu",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2000000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "4 Kamar Tidur (atas 2, bawah 2)",
+    "Ruang Karaoke",
+    "Kamar Mandi dengan Water Heater",
+    "Genset",
+    "Free 10 Extra Bed",
+    "Peralatan Dapur Lengkap",
+    "Free Wi-Fi",
+    "Parkiran Luas",
+    "Halaman Cukup Luas"
+  ],
+  capacity: "50 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/bagian depan vk.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.06.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.03.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.05.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.01.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.05 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.01 (1).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-dea-3",
+  name: "Villa Dea 3",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur",
+    "2 Kamar Mandi",
+    "Private Pool",
+    "Karaoke",
+    "Kitchen Set",
+    "Free Wi-Fi",
+    "Water Heater",
+    "Smart TV",
+    "Parkir Luas"
+  ],
+  capacity: "15-20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan vdea.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (3).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-dea-1-2",
+  name: "Villa Dea 1 & 2",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 2,
+  facilities: [
+    "3 Kamar Tidur",
+    "2 Kamar Mandi",
+    "Private Pool",
+    "Karaoke",
+    "Kitchen Set",
+    "Free Wi-Fi",
+    "Water Heater",
+    "Smart TV",
+    "Parkir Luas"
+  ],
+  capacity: "15-20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan d12.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (7).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (6).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (8).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (1).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-sekar-mawar",
+  name: "Villa Sekar Mawar",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 3,
+  facilities: [
+    "Kolam Renang",
+    "Kamar Mandi Dalam/Luar (3 Kamar)",
+    "Water Heater",
+    "Wi-Fi Available",
+    "Karaoke",
+    "Kitchen Set / Dapur",
+    "BBQ Area",
+    "Kopi & Teh",
+    "Mineral Water",
+    "Rooftop",
+    "Area Parkir (4 Mobil)",
+    "Free Pop Mie, Snack"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan sk.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.18.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.20 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.17.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.19 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.21 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.14.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.21.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.17 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.19.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.20.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.18 (1).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-zam",
+  name: "Villa ZAM",
+  location: "Kalisoro Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1200000 },
+    { label: "Weekend", price: 1500000 }
+  ],
+  units: 1,
+  facilities: [
+    "2 Lantai",
+    "3 Kamar Tidur",
+    "2 Kamar Mandi",
+    "Kitchen Room",
+    "Ruang Tamu",
+    "Ruang Keluarga",
+    "Balkon Atas",
+    "Parkir Luas",
+    "Wi-Fi Available",
+    "Karaoke",
+    "Smart TV",
+    "Air Hangat",
+    "Free Kopi, Gula, Teh, Air Mineral Galon",
+    "Dekat Wisata: Bukit Sekipan, Wonderpark, Balekambang, Grojogan Sewu"
+  ],
+  capacity: "15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/villa sam.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.26.00 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.26.00.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.57 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (2).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-yura",
+  name: "Villa Yra",
+  location: "Pancot, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2000000 },
+    { label: "Jum'at", price: 3000000 },
+    { label: "Weekend", price: 3000000 },
+    { label: "Sabtu", price: 3500000 }
+  ],
+  units: 4,
+  facilities: [
+    "Privat Pool / Kolam Renang",
+    "4 Kamar (1 King Size dan 3 Queen Size) dilengkapi TV di setiap kamar",
+    "3 Kamar Mandi + 1 Ruang Bilas dilengkapi dengan Water Heater",
+    "Sound + Karaoke",
+    "Kitchen Set (alat masak, alat makan, kulkas, magic com, water dispenser)",
+    "Free Gula, Teh, Kopi",
+    "Free Wi-Fi",
+    "Alat BBQ Manual (bakaran arang)",
+    "Parkiran",
+    "Genset"
+  ],
+  capacity: "25 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan graha.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (9).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (12).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (6).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (8).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (7).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (11).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (10).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-yasalam",
+  name: "Villa Yasalam",
+  location: "Pancot, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2500000 },
+    { label: "Jum'at", price: 3000000 },
+    { label: "Weekend", price: 3500000 }
+  ],
+  units: 1,
+  facilities: [
+    "Ruang keluarga",
+    "4 Kamar tidur (kingbed)",
+    "4 Kamar mandi (2 kamar mandi dalam, 2 kamar mandi luar)",
+    "Alat bakaran dan BBQ",
+    "Wi-Fi Available",
+    "Smart TV",
+    "Set Karaoke",
+    "Dapur dan meja makan dengan peralatan komplit",
+    "Area Parkir sampai 7 mobil (luar, dalam villa)",
+    "Kolam Renang",
+    "Area Balkon",
+    "Rooftop",
+    "Trek kebun sayur dan sungai"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan yasalam.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (7).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (8).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (10).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (11).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (9).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (6).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-hepa-4",
+  name: "Villa He-Pa 4",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "KOLAM 🏊",
+    "KAMAR 3",
+    "KAMAR MANDI 2 (1 DALAM 1 LUAR)",
+    "AIR HANGAT",
+    "KARAOKE",
+    "TV 50\" SMART TV",
+    "KITCHEN SET",
+    "WIFI 30 MBPS",
+    "DISPENSER (FREE 1 GALON)",
+    "ALAT BAKAR BAKAR",
+    "PARKIR MOBIL 2-3 MOBIL"
+  ],
+  capacity: "15-20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan hepa.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.35.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.35 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (2).jpeg"
+  ],
+  type: "villa"
+},
+{
+  id: "villa-karismaya-3",
+  name: "Villa Kharisma 3",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Jum'at", price: 1600000 },
+    { label: "Weekend", price: 1800000 }
+  ],
+  units: 3,
+  facilities: [
+    "Private Pool / Kolam Renang",
+    "Bed Queen Size / King Size / Single Bed (4 bed)",
+    "Kamar Mandi Dalam",
+    "Water Heater",
+    "Karaoke",
+    "Gazebo",
+    "Ruang Tamu dengan Sofa Empuk",
+    "Mini Bar",
+    "Kitchen Set / Dapur",
+    "Wi-Fi Available",
+    "LED TV",
+    "Area Parkir (kapasitas 7 mobil)",
+    "Taman/Garden",
+    "Dekat Wisata (Bukit Sekipan, Wonderpark, Taman Balekambang)"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan krismaya 3.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.47.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.41.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.42 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.42.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.45 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.45.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.41 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (2).jpeg"
+  ],
+  type: "villa"
 }
 ];
 
@@ -1067,6 +1717,178 @@ export const glampingData: Property[] = [
     "Reschedule max H-4 & hanya bisa 1x"
   ],
   image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5814.jpeg?raw=true",
+  type: "glamping"
+},
+{
+  id: "glamping-iks-2",
+  name: "Glamping IKS 2",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 500000 },
+    { label: "Weekend", price: 700000 }
+  ],
+  units: 1,
+  facilities: [
+    "Bed dengan ukuran besar",
+    "Kamar Mandi Dalam",
+    "Water Heater",
+    "Toiletries",
+    "Smart TV",
+    "Free Coffee & Teh",
+    "Free Breakfast",
+    "Dekat Wisata: Bukit Sekipan, Sekipan Camp, Wonderpark, Lawupark"
+  ],
+  capacity: "4 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.07 (1).jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.06.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.08.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.06 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.07.jpeg"
+  ],
+  type: "glamping"
+},
+{
+  id: "glamping-agung",
+  name: "Glamping Agung",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1000000 },
+    { label: "Weekend", price: 1250000 }
+  ],
+  units: 1,
+  facilities: [
+    "Kolam renang bersama",
+    "2 Kamar dengan 3 bed",
+    "Kamar mandi air hangat",
+    "Mini kitchen dengan peralatan yang cukup komplit",
+    "Ruang Keluarga",
+    "TV",
+    "Wi-Fi Available",
+    "Set Karaoke",
+    "Alat bakaran",
+    "Tenda (Matras, Sleeping bag, lampu)",
+    "Balkon",
+    "Halaman rumput",
+    "Area balkon",
+    "Dekat glamping terdapat trek hutan dan sungai"
+  ],
+  capacity: "6 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan gma.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.01.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.03.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.03 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.00 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.01 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (1).jpeg"
+  ],
+  type: "glamping"
+},
+{
+  id: "glamping-salam",
+  name: "Glamping Salam",
+  location: "Sekipan Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 600000 },
+    { label: "Jum'at", price: 700000 },
+    { label: "Weekend", price: 800000 }
+  ],
+  units: 5,
+  facilities: [
+    "1 Kamar dengan king bed",
+    "Free extrabed Uk. 90x200",
+    "1 kamar mandi dengan water heater",
+    "Tersedia handuk + alat mandi",
+    "Sofa bed",
+    "Kolam renang pribadi",
+    "Smart TV",
+    "Free Wifi",
+    "Tersedia dapur umum (alat masak lengkap)",
+    "Free 2 pack sarapan",
+    "Free Gula, teh, kopi",
+    "Parkir depan glamping",
+    "Dekat kebun strawberry dan wisata bukit sekipan"
+  ],
+  capacity: "4 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/glamping salam.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (2).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.28 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (1).jpeg"
+  ],
+  type: "glamping"
+},
+{
+  id: "tabriz-glamping",
+  name: "Tabriiz Glamping",
+  location: "Pleseran, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 800000 },
+    { label: "Weekend", price: 1000000 }
+  ],
+  units: 5,
+  facilities: [
+    "Welcome Drink",
+    "Bed 160*200",
+    "Wi-Fi Available",
+    "TV Android",
+    "Kursi Lipat",
+    "Breakfast 2 Pax",
+    "Privat Pool 🏊",
+    "Air Hangat",
+    "Parkir Luas",
+    "View Bukit dan Kebun Sayur"
+  ],
+  capacity: "5 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan tabris.jpeg",
+  slideImages: [
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (4).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (5).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09.jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (1).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (7).jpeg",
+    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (2).jpeg"
+  ],
   type: "glamping"
 }
 ];
