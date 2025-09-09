@@ -53,7 +53,7 @@ export function useProperties() {
                   facility.toLowerCase().includes("rooftop")
                 );
             case "harga-terbaik":
-              return property.rates.some(rate => rate.price < 1000000);
+              return property.rates.some(rate => rate.price < 2000000);
             case "karaoke":
               return property.facilities.some(facility => 
                 facility.toLowerCase().includes("karaoke")
