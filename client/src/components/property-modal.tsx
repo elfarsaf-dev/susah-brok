@@ -27,6 +27,12 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
 
   // Get property-specific image slider
   const getSliderImages = () => {
+    // Use slideImages if available, otherwise use the main image plus some defaults
+    if (property.slideImages && property.slideImages.length > 0) {
+      return [property.image, ...property.slideImages];
+    }
+    
+    // Fallback to hardcoded images for older properties that don't have slideImages yet
     const imageMap: Record<string, string[]> = {
       // Villa FJ
       "Villa FJ": [
