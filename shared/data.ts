@@ -520,7 +520,7 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40 (2).jpeg",
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg",
   slideImages: [
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (3).jpeg",
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (6).jpeg",
@@ -567,7 +567,7 @@ export const villaData: Property[] = [
     "Check out jam 11.00",
     "Jam malam 24:00"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (7).jpeg",
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
   slideImages: [
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (8).jpeg",
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (2).jpeg",
@@ -661,7 +661,7 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.11 (1).jpeg",
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
   slideImages: [
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.08.jpeg",
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
@@ -1747,7 +1747,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.07 (1).jpeg",
+  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.08.jpeg",
   slideImages: [
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.06.jpeg",
     "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.08.jpeg",
