@@ -1857,8 +1857,9 @@ export const glampingData: Property[] = [
   name: "Tabriiz Glamping",
   location: "Pleseran, Tawangmangu",
   rates: [
-    { label: "Weekday", price: 800000 },
-    { label: "Weekend", price: 1000000 }
+    { label: "Minggu - Kamis", price: 400000 },
+    { label: "Jumat", price: 500000 },
+    { label: "Sabtu", price: 700000 }
   ],
   units: 5,
   facilities: [
