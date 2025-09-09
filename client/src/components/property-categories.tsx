@@ -39,7 +39,7 @@ export default function PropertyCategories({ onCategoryFilter }: PropertyCategor
       id: "harga-terbaik",
       label: "Harga Terbaik",
       icon: "💰",
-      description: "Under 1 juta per malam"
+      description: "Under 2 juta per malam"
     },
     {
       id: "karaoke",
