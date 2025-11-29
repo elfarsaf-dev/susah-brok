@@ -200,6 +200,14 @@ body {
     font-weight: 500;
 }
 
+.hero-location {
+    font-size: 14px;
+    margin-top: 15px;
+    opacity: 0.95;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+}
+
 /* ==========================================
    MAIN CONTENT
    ========================================== */
@@ -861,4 +869,97 @@ body {
 
 .info-card {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* ==========================================
+   LOCATION SECTION
+   ========================================== */
+.location-section {
+    background: var(--color-white);
+    padding: 50px 30px;
+    margin-top: 50px;
+    border-left: 5px solid var(--color-secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(45, 80, 22, 0.08);
+}
+
+.location-section h3 {
+    color: var(--color-primary);
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.location-info h4,
+.location-attractions h4 {
+    color: var(--color-secondary);
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.location-info p {
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.location-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.location-info ul li {
+    color: var(--color-text-dark);
+    padding-left: 0;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.location-attractions ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.location-attractions ul li {
+    color: var(--color-text-dark);
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+}
+
+.location-attractions ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Mobile Location Section */
+@media (max-width: 768px) {
+    .location-section {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .location-section h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
