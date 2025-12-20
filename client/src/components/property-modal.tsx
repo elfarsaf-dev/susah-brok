@@ -21,8 +21,8 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
 
   // Admin contact information
   const adminContacts = {
-    1: { phone: '6282241819992', name: 'Admin 1' },
-    2: { phone: '6281225611759', name: 'Admin 2' }
+    1: { phone: '6282241819992', name: 'Admin Izudin' },
+    2: { phone: '6281225611759', name: 'Admin Dawud' }
   };
 
   // Get property-specific image slider
