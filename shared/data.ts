@@ -34,7 +34,7 @@ export const villaData: Property[] = [
     "Tidak boleh melanggar hukum dan norma masyarakat",
     "DP 30% dari harga"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5830.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5830.jpeg",
   "type": "villa"
 },
 {
@@ -73,7 +73,7 @@ export const villaData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5818.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5818.jpeg",
     type: "villa"
   },
 {
@@ -108,7 +108,7 @@ export const villaData: Property[] = [
       "No drugs",
       "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5824.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5824.jpeg",
     type: "villa"
   },
 {
@@ -148,7 +148,7 @@ export const villaData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5821.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5821.jpeg",
     type: "villa"
   },
 {
@@ -183,7 +183,7 @@ export const villaData: Property[] = [
       "Dekat Wisata",
       "Dekat Kebun Strawberry"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5828.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5828.jpeg",
     type: "villa"
   },
 {
@@ -217,7 +217,7 @@ export const villaData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5822.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5822.jpeg",
     type: "villa"
   },
 {
@@ -252,7 +252,7 @@ export const villaData: Property[] = [
       "Dekat wisata",
       "Dekat kebun strawberry"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5819.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5819.jpeg",
     type: "villa"
   },
 {
@@ -287,7 +287,7 @@ export const villaData: Property[] = [
       "Rooftop dengan view sunset & bukit Sekipan",
       "Cocok untuk relaksasi dari hiruk pikuk kota"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5820.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5820.jpeg",
     type: "villa"
   },
 {
@@ -330,7 +330,7 @@ export const villaData: Property[] = [
       "No drugs",
       "Parkir muat 5 mobil (mobil besar seperti Alphard/Elf tidak bisa masuk, karena lebar jalan hanya 2 meter)"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5812.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5812.jpeg",
     type: "villa"
   },
 {
@@ -364,7 +364,7 @@ export const villaData: Property[] = [
       "No drugs",
       "Price from owner, no mark up"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5813.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5813.jpeg",
     type: "villa"
   },
 {
@@ -400,7 +400,7 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5816.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5816.jpeg",
   "type": "villa"
 },
 {
@@ -438,7 +438,7 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5823.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5823.jpeg",
   "type": "villa"
 },
 {
@@ -481,7 +481,7 @@ export const villaData: Property[] = [
     "No pacaran/mesum",
     "No orgen tunggal"
   ],
-  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5811.jpeg?raw=true",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5811.jpeg",
   type: "villa"
 },
 {
@@ -520,18 +520,18 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (6).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (8).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (7).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.40 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (6).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.40.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.40 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-06-18 at 13.13.39.jpeg"
   ],
   type: "villa"
 },
@@ -567,16 +567,16 @@ export const villaData: Property[] = [
     "Check out jam 11.00",
     "Jam malam 24:00"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (8).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (9).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (6).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (9).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.04.13 (6).jpeg"
   ],
   type: "villa"
 },
@@ -619,17 +619,17 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (2).jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (2).jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.13.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 15.41.12.jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.14.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.15.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.14 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.13 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.13.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.15 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 15.41.12.jpeg"
   ],
   type: "villa"
 },
@@ -661,13 +661,13 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.08.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.10.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-12 at 10.58.10 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.08.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.10.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.09 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-12 at 10.58.10 (1).jpeg"
   ],
   type: "villa"
 },
@@ -704,16 +704,16 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.29 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (6).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.29.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.29 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (6).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.29.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-17 at 13.03.30 (1).jpeg"
   ],
   type: "villa"
 },
@@ -742,21 +742,21 @@ export const villaData: Property[] = [
     "Check in jam 14.00",
     "Check out jam 12.00"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/bagian depan vk.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/bagian depan vk.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.06.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.03.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.05.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.01.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.05 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.02.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-09-23 at 08.42.01 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.06.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.02 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.03.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.04.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.05.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.04 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.01.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.05 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.02.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-09-23 at 08.42.01 (1).jpeg"
   ],
   type: "villa"
 },
@@ -789,12 +789,12 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan vdea.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan vdea.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (3).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.34.08.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.34.08 (3).jpeg"
   ],
   type: "villa"
 },
@@ -827,16 +827,16 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan d12.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan d12.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (7).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (6).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (8).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (6).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 15.31.08 (1).jpeg"
   ],
   type: "villa"
 },
@@ -872,19 +872,19 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan sk.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan sk.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.18.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.20 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.17.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.19 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.21 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.14.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.21.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.17 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.19.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.20.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-28 at 21.49.18 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.18.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.20 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.17.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.19 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.21 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.14.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.21.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.17 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.19.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.20.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-28 at 21.49.18 (1).jpeg"
   ],
   type: "villa"
 },
@@ -921,17 +921,17 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/villa sam.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/villa sam.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.26.00 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.26.00.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.57 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (2).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.59.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.26.00 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.26.00.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.58.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.58 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.57 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-09-30 at 12.25.59 (2).jpeg"
   ],
   type: "villa"
 },
@@ -967,21 +967,21 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan graha.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan graha.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (9).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (12).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (6).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (8).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (7).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (11).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (10).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (9).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (12).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (6).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (11).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (10).jpeg"
   ],
   type: "villa"
 },
@@ -1019,18 +1019,18 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan yasalam.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan yasalam.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (7).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (8).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (10).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (11).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (9).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (6).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (10).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (11).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (9).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (6).jpeg"
   ],
   type: "villa"
 },
@@ -1065,16 +1065,16 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan hepa.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan hepa.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.35.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.35 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (2).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.36.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.35.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.37.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.35 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.36 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.25.37 (2).jpeg"
   ],
   type: "villa"
 },
@@ -1113,24 +1113,24 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan krismaya 3.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan krismaya 3.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.47.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.41.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.42 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.42.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.45 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.45.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.41 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.43.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (2).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.44.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.46.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.47.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.41.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.42 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.42.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.45 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.45.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.43 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.46 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.41 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.43.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2022-08-19 at 14.16.44 (2).jpeg"
   ],
   type: "villa"
 },
@@ -1165,9 +1165,9 @@ export const villaData: Property[] = [
     "No drugs",
     "Wisata terdekat: Bukit Sekipan, Taman New Balekambang, Air Terjun Grojokan Sewu"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.41_8f31b1c6.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.41_8f31b1c6.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.41_8f31b1c6.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.41_8f31b1c6.jpg"
   ],
   type: "villa"
 },
@@ -1207,24 +1207,24 @@ export const villaData: Property[] = [
     "Harga khusus di hari raya & tahun baru minimal 2-3x lipat",
     "Tersedia variasi harga: Weekday 1,4jt – 1,5jt, Weekend 1,6jt – 1,8jt"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.41_2110bf0f.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.41_2110bf0f.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.41_2110bf0f.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.44_d52fabad.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.44_e333b3cd.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.44_f7862910.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.45_947dcabf.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.45_b771e72a.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.46_0bd3dd88.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.47_b2da0dac.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.49_f13af576.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.42_98bb07cd.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.42_e9729306.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.43_992a8aab.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.46_f1191755.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.49_4927643d.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.51_da65abaf.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.52.46_0cf464a3.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.41_2110bf0f.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.44_d52fabad.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.44_e333b3cd.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.44_f7862910.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.45_947dcabf.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.45_b771e72a.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.46_0bd3dd88.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.47_b2da0dac.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.49_f13af576.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.42_98bb07cd.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.42_e9729306.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.43_992a8aab.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.46_f1191755.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.49_4927643d.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.51_da65abaf.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.52.46_0cf464a3.jpg"
   ],
   type: "villa"
 },
@@ -1259,15 +1259,15 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.36_d1035140.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.36_d1035140.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.36_d1035140.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.19_b46463ba.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.20_810b6743.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.22_43f261b3.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.19_4dd3759b.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.21_33b041eb.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.21_d594284f.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.36_d1035140.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.19_b46463ba.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.20_810b6743.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.22_43f261b3.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.19_4dd3759b.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.21_33b041eb.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.21_d594284f.jpg"
   ],
   type: "villa"
 },
@@ -1312,9 +1312,9 @@ export const villaData: Property[] = [
     "Dilarang membawa minuman keras & obat-obatan terlarang",
     "Dilarang merusak & mengambil properti villa"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.24.13_786688ab.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.24.13_786688ab.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.24.13_786688ab.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.24.13_786688ab.jpg"
   ],
   type: "villa"
 }
@@ -1356,7 +1356,7 @@ export const glampingData: Property[] = [
       "No mesum",
       "No drugs"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5817.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5817.jpeg",
     type: "glamping"
   },
 {
@@ -1391,7 +1391,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Super cantik dengan view Gunung Lawu"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5815.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5815.jpeg",
     type: "glamping"
   },
 {
@@ -1430,7 +1430,7 @@ export const glampingData: Property[] = [
       "Price From Owner, No Mark Up",
       "Dekat Wisata Buper Pleseran & Telaga Asmara"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5827.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5827.jpeg",
     type: "glamping"
   },
 {
@@ -1464,7 +1464,7 @@ export const glampingData: Property[] = [
       "Glamping baru di Tawangmangu dengan view cantik",
       "Dekat wisata"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5825.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5825.jpeg",
     type: "glamping"
   },
 {
@@ -1507,7 +1507,7 @@ export const glampingData: Property[] = [
       "Pas juga untuk honeymoon",
       "Dekat wisata Pleseran"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5831.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5831.jpeg",
     type: "glamping"
   },
 {
@@ -1538,7 +1538,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Dekat wisata Bukit Sekipan"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5832.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5832.jpeg",
     type: "glamping"
   },
 {
@@ -1574,7 +1574,7 @@ export const glampingData: Property[] = [
       "Price from Owner, No Mark Up",
       "Dekat dengan Buper Pleseran & Telaga Asmara"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5837.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5837.jpeg",
     type: "glamping"
   },
 {
@@ -1606,7 +1606,7 @@ export const glampingData: Property[] = [
       "No drugs",
       "Dekat wisata Bukit Sekipan & kebun stroberi (bisa petik sendiri)"
     ],
-    image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5826.jpeg?raw=true",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5826.jpeg",
     type: "glamping"
   },
 {
@@ -1642,7 +1642,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5839.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5839.jpeg",
   "type": "glamping"
 },
 {
@@ -1676,7 +1676,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5838.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5838.jpeg",
   "type": "glamping"
 },
 {
@@ -1711,7 +1711,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5836.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5836.jpeg",
   "type": "glamping"
 },
 {
@@ -1748,7 +1748,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5835.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5835.jpeg",
   "type": "glamping"
 },
 {
@@ -1784,7 +1784,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  "image": "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5834.jpeg?raw=true",
+  "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5834.jpeg",
   "type": "glamping"
 },
 {
@@ -1813,7 +1813,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5829.jpeg?raw=true",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5829.jpeg",
   type: "glamping"
 },
 {
@@ -1852,7 +1852,7 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5833.jpeg?raw=true",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5833.jpeg",
   type: "glamping"
 },
 {
@@ -1900,7 +1900,7 @@ export const glampingData: Property[] = [
     "Cancel = DP hangus",
     "Reschedule max H-4 & hanya bisa 1x"
   ],
-  image: "https://github.com/elfarsaf-dev/lawuscape-/blob/main/Gambar/IMG_5814.jpeg?raw=true",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5814.jpeg",
   type: "glamping"
 },
 {
@@ -1934,11 +1934,11 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.06.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-07-21 at 21.07.06.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.08.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.06 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2023-07-21 at 21.07.07.jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-07-21 at 21.07.08.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-07-21 at 21.07.06 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2023-07-21 at 21.07.07.jpeg"
   ],
   type: "glamping"
 },
@@ -1976,16 +1976,16 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan gma.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan gma.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.01.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.03.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.03 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.00 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.01 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.01.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.02.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.03.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.03 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.00 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.01 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-16 at 15.33.02 (1).jpeg"
   ],
   type: "glamping"
 },
@@ -2023,15 +2023,15 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/glamping salam.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/glamping salam.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (2).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.28 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (1).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.28 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (1).jpeg"
   ],
   type: "glamping"
 },
@@ -2065,15 +2065,15 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/depan tabris.jpeg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan tabris.jpeg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (4).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (5).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09.jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (1).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (7).jpeg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (2).jpeg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (2).jpeg"
   ],
   type: "glamping"
 },
@@ -2111,19 +2111,19 @@ export const glampingData: Property[] = [
     "No drugs",
     "Promo sampai akhir Oktober (sementara masih ada pengerjaan finishing, tamu mungkin sedikit terganggu)"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.23_190b7e61.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.23_190b7e61.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.24_33dcd642.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.24_89beef0d.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.24_8779999d.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.25_6881a697.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.25_f31e3ba3.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.26_b65e4bee.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.27_50ced3bd.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.27_86a51689.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.27_af4f78fb.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.25_ba938b07.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.26_5f43d1a1.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_33dcd642.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_89beef0d.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_8779999d.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_6881a697.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_f31e3ba3.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.26_b65e4bee.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_50ced3bd.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_86a51689.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_af4f78fb.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_ba938b07.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.26_5f43d1a1.jpg"
   ],
   type: "glamping"
 },
@@ -2162,18 +2162,18 @@ export const glampingData: Property[] = [
     "Promo rate sampai akhir Oktober (Weekday 500rb / Weekend 800rb)",
     "Tamu mungkin sedikit terganggu pekerja & pengerjaan finishing karena masih proses untuk type oval"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.08_facc2b9b.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.08_facc2b9b.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.05_c17d9cda.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.06_70d8a939.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.07_e7f374fa.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.08_41d0408b.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.08_7279e7c0.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.09_41718f03.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.14_6312170b.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.04_6431fdcc.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.05_97058cb9.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-25 at 18.09.05_42f5a4a2.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.05_c17d9cda.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.06_70d8a939.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.07_e7f374fa.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.08_41d0408b.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.08_7279e7c0.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.09_41718f03.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.14_6312170b.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.04_6431fdcc.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.05_97058cb9.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.05_42f5a4a2.jpg"
   ],
   type: "glamping"
 },
@@ -2211,14 +2211,14 @@ export const glampingData: Property[] = [
     "No drugs",
     "Dekat wisata Buper Pleseran & Telaga Asmara"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.31_028d071b.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.31_028d071b.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.29_73f923b7.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.31_3fdfa6df.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.32_b55750a6.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.30_38e49035.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.30_ed0cefb1.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.32_89506ab0.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.29_73f923b7.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.31_3fdfa6df.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.32_b55750a6.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.30_38e49035.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.30_ed0cefb1.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.32_89506ab0.jpg"
   ],
   type: "glamping"
 },
@@ -2254,16 +2254,16 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.20_642ba8c3.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.20_642ba8c3.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.34_8768be8f.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.35_3953525e.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.35_c7a9d385.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.38.04_0f254821.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.38.05_fdc0871b.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.35_831dbc12.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.38.05_dc3ec4a6.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.20_642ba8c3.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.34_8768be8f.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.35_3953525e.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.35_c7a9d385.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.38.04_0f254821.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.38.05_fdc0871b.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.35_831dbc12.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.38.05_dc3ec4a6.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.20_642ba8c3.jpg"
   ],
   type: "glamping"
 },
@@ -2298,13 +2298,13 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.35.09_25064397.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.35.09_25064397.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.36_305cb1ef.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.17_3197d9d1.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.17_a7a296a9.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.18_f71d74e9.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.36.19_97b7d573.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.36_305cb1ef.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.17_3197d9d1.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.17_a7a296a9.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.18_f71d74e9.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.36.19_97b7d573.jpg"
   ],
   type: "glamping"
 },
@@ -2339,18 +2339,18 @@ export const glampingData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.31_43637a58.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.31_43637a58.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.31_43637a58.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.31_f1882c17.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.33_5a7830b5.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.33_0627714f.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.33_e7a4f3e4.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.34_02f1f300.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 19.24.12_6372326f.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.31_f5544c37.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.32_c1886934.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 18.35.32_f013e278.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.31_43637a58.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.31_f1882c17.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.33_5a7830b5.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.33_0627714f.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.33_e7a4f3e4.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.34_02f1f300.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 19.24.12_6372326f.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.31_f5544c37.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.32_c1886934.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 18.35.32_f013e278.jpg"
   ],
   type: "glamping"
 },
@@ -2389,15 +2389,15 @@ export const glampingData: Property[] = [
     "No drugs",
     "Nikmati suasana staycation dengan pemandangan pegunungan dan udara yang sejuk disekitar glamping"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.24_568f29ad.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.24_568f29ad.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.24_568f29ad.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.25_166a33fe.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.25_e66393f7.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.26_a5b93e1c.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.26_fb0bccb2.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.27_9dc2d12e.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.25_6a1ab1c7.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.24_568f29ad.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.25_166a33fe.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.25_e66393f7.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.26_a5b93e1c.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.26_fb0bccb2.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.27_9dc2d12e.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.25_6a1ab1c7.jpg"
   ],
   type: "glamping"
 },
@@ -2440,18 +2440,18 @@ export const glampingData: Property[] = [
     "No drugs",
     "Nikmati suasana staycation dengan pemandangan pegunungan dan udara yang sejuk disekitar glamping"
   ],
-  image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.27_95fd5641.jpg",
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.27_95fd5641.jpg",
   slideImages: [
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.26_9865dcfb.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.28_75a0bbdb.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.28_f2320721.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.29_55fcbdda.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.29_b98bbccc.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.30_5d11e875.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.30_34184bb3.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.30_80b9707a.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.29_467b4042.jpg",
-    "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/rt/WhatsApp Image 2025-09-27 at 20.10.25_ce5732ed.jpg"
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.26_9865dcfb.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.28_75a0bbdb.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.28_f2320721.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.29_55fcbdda.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.29_b98bbccc.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.30_5d11e875.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.30_34184bb3.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.30_80b9707a.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.29_467b4042.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-27 at 20.10.25_ce5732ed.jpg"
   ],
   type: "glamping"
 }
@@ -2481,7 +2481,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/alam dan kuliner.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/alam dan kuliner.jpeg",
     rating: 4.8,
     description: "Wisata alam ke air terjun, kebun sayur organik, dan petik strawberry segar.",
     capacity: "Max 4 orang",
@@ -2514,7 +2514,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/air terjun.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/air terjun.jpeg",
     rating: 4.7,
     description: "Jelajahi Grojokan Sewu, petik strawberry, dan belanja oleh-oleh khas.",
     capacity: "Max 4 orang",
@@ -2547,7 +2547,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/umbul.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/umbul.jpeg",
     rating: 4.6,
     description: "Petualangan seru ke Umbul Udal-udalan dengan petik strawberry.",
     capacity: "Max 4 orang",
@@ -2581,7 +2581,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/sirkuit offroad).jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/sirkuit offroad).jpeg",
     rating: 4.9,
     description: "Sensasi offroad menantang di sirkuit Sekipan plus petik strawberry.",
     capacity: "Max 4 orang",
@@ -2615,7 +2615,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-1",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/wisata bunga.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/wisata bunga.jpeg",
     rating: 4.5,
     description: "Kunjungi Kampung 1.000 Bunga yang colorful, perfect untuk foto-foto!",
     capacity: "Max 4 orang",
@@ -2648,7 +2648,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/telaga madirda.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/telaga madirda.jpeg",
     rating: 4.8,
     description: "Eksplorasi Telaga Madirda eksotis melalui Grojokan Sewu Pintu 2.",
     capacity: "Max 4 orang",
@@ -2682,7 +2682,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/gunung lawu.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/gunung lawu.jpeg",
     rating: 4.9,
     description: "Adventure lengkap Gunung Lawu: Telaga Madirda, Hutan Pinus, Candi Sukuh.",
     capacity: "Max 4 orang", 
@@ -2715,7 +2715,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-2",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/sirkuit explorer.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/sirkuit explorer.jpeg",
     rating: 4.8,
     description: "Trip lengkap: offroad sirkuit, jalur hutan, Pleseran, dan strawberry.",
     capacity: "Max 4 orang",
@@ -2747,7 +2747,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-3",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/paralayang.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/paralayang.jpeg",
     rating: 4.9,
     description: "Ultimate experience: paralayang tandem plus wisata Telaga Madirda.",
     capacity: "Max 4 orang",
@@ -2782,7 +2782,7 @@ export const tripData: Trip[] = [
       "Booking minimal H-3",
       "DP 50% dari total harga"
     ],
-    image: "https://raw.githubusercontent.com/elfarsaf-dev/Heu/main/uploads/jembatan kaca.jpeg",
+    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/uploads/jembatan kaca.jpeg",
     rating: 4.7,
     description: "Offroad susur sungai menuju Jembatan Kaca dengan view spektakuler.",
     capacity: "Max 4 orang",
