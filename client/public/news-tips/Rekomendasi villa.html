@@ -41,14 +41,14 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Beranda</a>
-                <a href="/#properties" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Properti</a>
-                <a href="/#jeep" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Sewa Jeep</a>
-                <a href="/news-tips" class="block px-3 py-2 rounded-md text-base font-medium text-teal-600 font-bold bg-teal-50">News & Tips</a>
-                <a href="/#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Tentang</a>
-                <a href="/#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50">Kontak</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="px-4 py-4 space-y-2">
+                <a href="/" class="hover:text-teal-600 hover:bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2 text-gray-700">Beranda</a>
+                <a href="/#properties" class="hover:text-teal-600 hover:bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2 text-gray-700">Properti</a>
+                <a href="/#jeep" class="hover:text-teal-600 hover:bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2 text-gray-700">Sewa Jeep</a>
+                <a href="/news-tips" class="text-teal-600 bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2">News & Tips</a>
+                <a href="/#about" class="hover:text-teal-600 hover:bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2 text-gray-700">Tentang</a>
+                <a href="/#contact" class="hover:text-teal-600 hover:bg-teal-50 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 transform hover:translate-x-2 text-gray-700">Kontak</a>
             </div>
         </div>
         <script>
@@ -57,7 +57,20 @@
                 var menu = document.getElementById('mobile-menu');
                 if (button && menu) {
                     button.addEventListener('click', function() {
-                        menu.classList.toggle('hidden');
+                        const isHidden = menu.classList.contains('hidden');
+                        if (isHidden) {
+                            menu.classList.remove('hidden');
+                            setTimeout(() => {
+                                menu.classList.remove('max-h-0', 'opacity-0');
+                                menu.classList.add('max-h-96', 'opacity-100');
+                            }, 10);
+                        } else {
+                            menu.classList.add('opacity-0', 'max-h-0');
+                            menu.classList.remove('max-h-96', 'opacity-100');
+                            setTimeout(() => {
+                                menu.classList.add('hidden');
+                            }, 300);
+                        }
                     });
                 }
             });
