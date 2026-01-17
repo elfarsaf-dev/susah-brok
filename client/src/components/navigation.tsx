@@ -11,7 +11,6 @@ export default function Navigation() {
     { href: "/", label: "Beranda", isExternal: false },
     { href: "/#properties", label: "Properti", isExternal: true },
     { href: "/#jeep", label: "Sewa Jeep", isExternal: true },
-    { href: "/news", label: "News & Tips", isExternal: false },
     { href: "/#about", label: "Tentang", isExternal: true },
     { href: "/#contact", label: "Kontak", isExternal: true },
   ];
