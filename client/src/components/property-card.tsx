@@ -35,17 +35,17 @@ export default function PropertyCard({ property, onViewDetail }: PropertyCardPro
           data-testid={`img-property-${property.id}`}
         />
         <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-        <div className="absolute top-4 left-4">
+        <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
           <Badge 
-            className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium capitalize"
+            className="bg-primary-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-sm font-medium capitalize"
             data-testid={`badge-type-${property.id}`}
           >
             {property.type}
           </Badge>
         </div>
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-2 sm:top-4 right-2 sm:left-auto right-2 sm:right-4">
           <Badge 
-            className="bg-white text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+            className="bg-white text-gray-800 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-sm font-medium whitespace-nowrap"
             data-testid={`badge-units-${property.id}`}
           >
             {property.units} unit tersedia
