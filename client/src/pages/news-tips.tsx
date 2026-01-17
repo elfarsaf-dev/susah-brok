@@ -1,100 +1,122 @@
 import Navigation from "@/components/navigation";
 import ContactSection from "@/components/contact-section";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, User, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
-
-const newsItems = [
-  {
-    id: 1,
-    title: "5 Villa dengan View Gunung Lawu Terbaik di Tawangmangu",
-    excerpt: "Mencari villa dengan pemandangan pegunungan yang asri? Berikut rekomendasi villa terbaik untuk liburan keluarga Anda.",
-    date: "15 Jan 2026",
-    author: "Admin",
-    category: "Rekomendasi",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 2,
-    title: "Tips Glamping Nyaman Bersama Keluarga saat Musim Hujan",
-    excerpt: "Jangan biarkan hujan merusak rencana liburan Anda. Simak tips glamping agar tetap hangat dan menyenangkan.",
-    date: "12 Jan 2026",
-    author: "Admin",
-    category: "Tips & Trik",
-    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: 3,
-    title: "Destinasi Wisata Hits Terbaru 2026 di Tawangmangu",
-    excerpt: "Tawangmangu terus berkembang dengan tempat-tempat baru yang instagramable. Cek daftar lengkapnya di sini.",
-    date: "10 Jan 2026",
-    author: "Admin",
-    category: "Wisata",
-    image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80"
-  }
-];
 
 export default function NewsTips() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
-      {/* Header Section */}
-      <section className="bg-primary-600 py-20 text-white">
+      {/* Header Section - SEO friendly header */}
+      <header className="bg-primary-600 py-20 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">News & Tips</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Berita & Tips Wisata Tawangmangu</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Informasi terbaru mengenai villa, glamping, dan tips wisata seru di sekitar Tawangmangu.
+            Informasi terbaru mengenai villa, glamping, dan panduan wisata terbaik di sekitar Gunung Lawu, Tawangmangu.
           </p>
         </div>
-      </section>
+      </header>
 
-      {/* Content Section */}
-      <section className="py-16">
+      {/* Main Content Area */}
+      <main className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-primary-600">
-                    {item.category}
-                  </Badge>
+            
+            {/* Artikel 1 */}
+            <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" 
+                  alt="Villa dengan View Gunung Lawu" 
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-md text-sm font-semibold">
+                  Rekomendasi
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
+                  <time dateTime="2026-01-15">15 Jan 2026</time>
+                  <span>Oleh: Admin</span>
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {item.date}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      {item.author}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3">
-                    {item.excerpt}
-                  </p>
-                  <Link href={`/news/${item.id}`}>
-                    <a className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-                      Baca Selengkapnya
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </a>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
+                <h2 className="text-xl font-bold text-gray-900 mb-3">
+                  <a href="/news/1" className="hover:text-primary-600 transition-colors">
+                    5 Villa dengan View Gunung Lawu Terbaik di Tawangmangu
+                  </a>
+                </h2>
+                <p className="text-gray-600 mb-6 flex-1">
+                  Mencari villa dengan pemandangan pegunungan yang asri? Berikut rekomendasi villa terbaik untuk liburan keluarga Anda di awal tahun 2026.
+                </p>
+                <a href="/news/1" className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                  Baca Selengkapnya →
+                </a>
+              </div>
+            </article>
+
+            {/* Artikel 2 */}
+            <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Tips Glamping Nyaman" 
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-md text-sm font-semibold">
+                  Tips & Trik
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
+                  <time dateTime="2026-01-12">12 Jan 2026</time>
+                  <span>Oleh: Admin</span>
+                </div>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">
+                  <a href="/news/2" className="hover:text-primary-600 transition-colors">
+                    Tips Glamping Nyaman Bersama Keluarga saat Musim Hujan
+                  </a>
+                </h2>
+                <p className="text-gray-600 mb-6 flex-1">
+                  Jangan biarkan hujan merusak rencana liburan Anda. Simak tips memilih lokasi glamping yang aman dan perlengkapan wajib agar tetap hangat.
+                </p>
+                <a href="/news/2" className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                  Baca Selengkapnya →
+                </a>
+              </div>
+            </article>
+
+            {/* Artikel 3 */}
+            <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" 
+                  alt="Destinasi Wisata Tawangmangu" 
+                  className="w-full h-full object-cover"
+                />
+                <span className="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-md text-sm font-semibold">
+                  Wisata
+                </span>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex items-center text-sm text-gray-500 mb-4 gap-4">
+                  <time dateTime="2026-01-10">10 Jan 2026</time>
+                  <span>Oleh: Admin</span>
+                </div>
+                <h2 className="text-xl font-bold text-gray-900 mb-3">
+                  <a href="/news/3" className="hover:text-primary-600 transition-colors">
+                    Destinasi Wisata Hits Terbaru 2026 di Tawangmangu
+                  </a>
+                </h2>
+                <p className="text-gray-600 mb-6 flex-1">
+                  Tawangmangu terus menghadirkan destinasi baru yang instagramable. Berikut daftar tempat wisata terbaru yang wajib dikunjungi tahun ini.
+                </p>
+                <a href="/news/3" className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                  Baca Selengkapnya →
+                </a>
+              </div>
+            </article>
+
           </div>
         </div>
-      </section>
+      </main>
 
       <ContactSection />
     </div>
