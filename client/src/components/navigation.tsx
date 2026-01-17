@@ -1,23 +1,34 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocation, Link } from "wouter";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   const navItems = [
-    { href: "#home", label: "Beranda" },
-    { href: "#properties", label: "Properti" },
-    { href: "#jeep", label: "Sewa Jeep" },
-    { href: "#about", label: "Tentang" },
-    { href: "#contact", label: "Kontak" },
+    { href: "/", label: "Beranda", isExternal: false },
+    { href: "/#properties", label: "Properti", isExternal: true },
+    { href: "/#jeep", label: "Sewa Jeep", isExternal: true },
+    { href: "/news", label: "News & Tips", isExternal: false },
+    { href: "/#about", label: "Tentang", isExternal: true },
+    { href: "/#contact", label: "Kontak", isExternal: true },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, isExternal: boolean) => {
     setIsMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (isExternal && location !== "/") {
+      window.location.href = href;
+      return;
+    }
+    
+    if (href.startsWith("/#")) {
+      const id = href.split("#")[1];
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -26,29 +37,40 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 cursor-pointer">
               <h1 className="text-xl font-bold text-primary-700" data-testid="text-logo">
                 BOS VILLA TAWANGMANGU
               </h1>
-            </div>
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navItems.map((item, index) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    index === 0 
-                      ? "text-gray-900 hover:text-primary-600" 
-                      : "text-gray-700 hover:text-primary-600"
-                  }`}
-                  data-testid={`link-${item.label.toLowerCase()}`}
-                >
-                  {item.label}
-                </button>
+              {navItems.map((item) => (
+                item.isExternal ? (
+                  <button
+                    key={item.href}
+                    onClick={() => handleNavClick(item.href, true)}
+                    className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
+                    data-testid={`link-${item.label.toLowerCase()}`}
+                  >
+                    {item.label}
+                  </button>
+                ) : (
+                  <Link key={item.href} href={item.href}>
+                    <a
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        location === item.href
+                          ? "text-primary-600"
+                          : "text-gray-700 hover:text-primary-600"
+                      }`}
+                      data-testid={`link-${item.label.toLowerCase()}`}
+                    >
+                      {item.label}
+                    </a>
+                  </Link>
+                )
               ))}
             </div>
           </div>
@@ -73,27 +95,47 @@ export default function Navigation() {
       
       {/* Mobile menu */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-        isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        isMenuOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
       }`} data-testid="mobile-menu">
         <div className="bg-white border-t border-gray-200 shadow-lg backdrop-blur-sm">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item, index) => (
-              <button
-                key={item.href}
-                onClick={() => handleNavClick(item.href)}
-                className={`text-gray-700 hover:text-primary-600 hover:bg-primary-50 block px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-200 transform hover:translate-x-2 hover:shadow-md ${
-                  isMenuOpen ? 'animate-slide-in' : ''
-                }`}
-                style={{
-                  animationDelay: `${index * 50}ms`
-                }}
-                data-testid={`link-mobile-${item.label.toLowerCase()}`}
-              >
-                <span className="flex items-center">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3 opacity-60"></span>
-                  {item.label}
-                </span>
-              </button>
+              item.isExternal ? (
+                <button
+                  key={item.href}
+                  onClick={() => handleNavClick(item.href, true)}
+                  className={`text-gray-700 hover:text-primary-600 hover:bg-primary-50 block px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-200 transform hover:translate-x-2 hover:shadow-md ${
+                    isMenuOpen ? 'animate-slide-in' : ''
+                  }`}
+                  style={{
+                    animationDelay: `${index * 50}ms`
+                  }}
+                  data-testid={`link-mobile-${item.label.toLowerCase()}`}
+                >
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3 opacity-60"></span>
+                    {item.label}
+                  </span>
+                </button>
+              ) : (
+                <Link key={item.href} href={item.href}>
+                  <a
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`hover:text-primary-600 hover:bg-primary-50 block px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-200 transform hover:translate-x-2 hover:shadow-md ${
+                      location === item.href ? "text-primary-600 bg-primary-50" : "text-gray-700"
+                    } ${isMenuOpen ? 'animate-slide-in' : ''}`}
+                    style={{
+                      animationDelay: `${index * 50}ms`
+                    }}
+                    data-testid={`link-mobile-${item.label.toLowerCase()}`}
+                  >
+                    <span className="flex items-center">
+                      <span className="w-2 h-2 bg-primary-500 rounded-full mr-3 opacity-60"></span>
+                      {item.label}
+                    </span>
+                  </a>
+                </Link>
+              )
             ))}
           </div>
           
