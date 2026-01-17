@@ -11,23 +11,28 @@ export default function Navigation() {
     { href: "/", label: "Beranda", isExternal: false },
     { href: "/#properties", label: "Properti", isExternal: true },
     { href: "/#jeep", label: "Sewa Jeep", isExternal: true },
-    { href: "/news-tips", label: "News & Tips", isExternal: true },
+    { 
+      label: "News & Tips", 
+      onClick: () => {
+        window.location.href = "/news-tips";
+      }
+    },
     { href: "/#about", label: "Tentang", isExternal: true },
     { href: "/#contact", label: "Kontak", isExternal: true },
   ];
 
-  const handleNavClick = (href: string, isExternal: boolean) => {
+  const handleNavClick = (href?: string, isExternal?: boolean, onClick?: () => void) => {
     setIsMenuOpen(false);
-    if (isExternal && location !== "/") {
-      if (href === "/news-tips") {
-        window.location.href = href;
-        return;
-      }
+    if (onClick) {
+      onClick();
+      return;
+    }
+    if (isExternal && location !== "/" && href) {
       window.location.href = href;
       return;
     }
     
-    if (href.startsWith("/#")) {
+    if (href?.startsWith("/#")) {
       const id = href.split("#")[1];
       const element = document.getElementById(id);
       if (element) {
@@ -52,17 +57,17 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                item.isExternal ? (
+                item.onClick || item.isExternal ? (
                   <button
-                    key={item.href}
-                    onClick={() => handleNavClick(item.href, true)}
+                    key={item.label}
+                    onClick={() => handleNavClick(item.href, item.isExternal, item.onClick)}
                     className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors"
                     data-testid={`link-${item.label.toLowerCase()}`}
                   >
                     {item.label}
                   </button>
                 ) : (
-                  <Link key={item.href} href={item.href}>
+                  <Link key={item.href} href={item.href || "/"}>
                     <a
                       className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         location === item.href
@@ -104,10 +109,10 @@ export default function Navigation() {
         <div className="bg-white border-t border-gray-200 shadow-lg backdrop-blur-sm">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item, index) => (
-              item.isExternal ? (
+              item.onClick || item.isExternal ? (
                 <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href, true)}
+                  key={item.label}
+                  onClick={() => handleNavClick(item.href, item.isExternal, item.onClick)}
                   className={`text-gray-700 hover:text-primary-600 hover:bg-primary-50 block px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-200 transform hover:translate-x-2 hover:shadow-md ${
                     isMenuOpen ? 'animate-slide-in' : ''
                   }`}
@@ -122,7 +127,7 @@ export default function Navigation() {
                   </span>
                 </button>
               ) : (
-                <Link key={item.href} href={item.href}>
+                <Link key={item.href} href={item.href || "/"}>
                   <a
                     onClick={() => setIsMenuOpen(false)}
                     className={`hover:text-primary-600 hover:bg-primary-50 block px-4 py-3 rounded-xl text-base font-medium w-full text-left transition-all duration-200 transform hover:translate-x-2 hover:shadow-md ${
