@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import ContactSection from "@/components/contact-section";
+import { Link } from "wouter";
 
 export default function NewsTips() {
   return (
@@ -39,16 +40,20 @@ export default function NewsTips() {
                   <span>Oleh: Admin</span>
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 mb-3">
-                  <a href="/news/1" className="hover:text-primary-600 transition-colors">
-                    5 Villa dengan View Gunung Lawu Terbaik di Tawangmangu
-                  </a>
+                  <Link href="/news/1">
+                    <a className="hover:text-primary-600 transition-colors">
+                      5 Villa dengan View Gunung Lawu Terbaik di Tawangmangu
+                    </a>
+                  </Link>
                 </h2>
                 <p className="text-gray-600 mb-6 flex-1">
                   Mencari villa dengan pemandangan pegunungan yang asri? Berikut rekomendasi villa terbaik untuk liburan keluarga Anda di awal tahun 2026.
                 </p>
-                <a href="/news/1" className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
-                  Baca Selengkapnya →
-                </a>
+                <Link href="/news/1">
+                  <a className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-auto">
+                    Baca Selengkapnya →
+                  </a>
+                </Link>
               </div>
             </article>
 
