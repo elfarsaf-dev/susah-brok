@@ -19,6 +19,10 @@ export default function Navigation() {
   const handleNavClick = (href: string, isExternal: boolean) => {
     setIsMenuOpen(false);
     if (isExternal && location !== "/") {
+      if (href === "/news-tips") {
+        window.location.href = href;
+        return;
+      }
       window.location.href = href;
       return;
     }
