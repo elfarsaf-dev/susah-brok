@@ -1,0 +1,21 @@
+{
+  "name": "BOS VILLA TAWANGMANGU",
+  "short_name": "BOS Villa",
+  "description": "Villa & Glamping Terbaik di Tawangmangu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16A34A",
+  "icons": [
+    {
+      "src": "https://www.bosvillatawangmangu.my.id/assets/ai_repair_20250823211605583_1755958920038-Cm-iqkvB.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://www.bosvillatawangmangu.my.id/assets/ai_repair_20250823211605583_1755958920038-Cm-iqkvB.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
