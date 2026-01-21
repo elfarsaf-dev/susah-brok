@@ -11,8 +11,13 @@
     <title>News & Tips - BOS VILLA TAWANGMANGU</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .primary-bg { background-color: #0d9488; }
-        .primary-text { color: #0d9488; }
+        :root {
+            --primary: 142 72% 29%;
+            --primary-foreground: 144 72% 98%;
+        }
+        .primary-bg { background-color: hsl(142 72% 29%); }
+        .primary-text { color: hsl(142 72% 29%); }
+        .text-primary-700 { color: #15803d; }
         @media (max-width: 768px) {
             .mobile-grid {
                 display: grid !important;
@@ -69,8 +74,8 @@
                 <div class="flex items-center">
                     <a href="/" class="flex-shrink-0 cursor-pointer">
                         <img src="https://cdn.ferdev.my.id/assets/elfar/IMG_5981.png" alt="Logo" class="h-8 w-8 inline-block mr-2">
-                        <h1 class="text-xl font-bold text-teal-700 inline-block align-middle">
-                            BOS VILLA
+                        <h1 class="text-xl font-bold text-primary-700 inline-block align-middle">
+                            BOS VILLA TAWANGMANGU
                         </h1>
                     </a>
                 </div>
