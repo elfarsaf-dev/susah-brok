@@ -1783,6 +1783,283 @@ slideImages: [
 ];
 
 export const glampingData: Property[] = [
+
+  id: "glamping-turu",
+  name: "Glamping TURU",
+  location: "Pleseran, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 500000 },
+    { label: "Jumat", price: 600000 },
+    { label: "Sabtu / Tgl Merah", price: 800000 }
+  ],
+  units: 1,
+  facilities: [
+    "Kamar Mandi Air Hangat",
+    "2 Bed",
+    "TV",
+    "WiFi",
+    "Private Pool / Kolam Renang",
+    "Alat Makan",
+    "Kompor Portable",
+    "Free Breakfast 2 Pack",
+    "Free Welcome Drink",
+    "Free BBQ"
+  ],
+  capacity: "6 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5643.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5630.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5629.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5623.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5622.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5621.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5619.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5617.jpeg"
+],
+  type: "glamping"
+},
+
+{
+  id: "glamping-tab",
+  name: "Glamping Tab",
+  location: "Pleseran, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 400000 },
+    { label: "Jumat", price: 500000 },
+    { label: "Sabtu", price: 700000 }
+  ],
+  units: 1,
+  facilities: [
+    "Welcome Drink",
+    "Bed 160x200",
+    "WiFi",
+    "TV Android",
+    "Kursi Lipat",
+    "Breakfast 2 Pax",
+    "Private Pool / Kolam Renang",
+    "Air Hangat",
+    "Parkir Luas",
+    "View Bukit dan Kebun Sayur"
+  ],
+  capacity: "5 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5609.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5600.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5592.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5587.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5586.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5591.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5601.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5616.jpeg"
+],
+  type: "glamping"
+},
+
+{
+  id: "glamping-hosbet",
+  name: "Glamping Hosbet",
+  location: "Pleseran, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 600000 },
+    { label: "Jumat", price: 700000 },
+    { label: "Weekend", price: 800000 }
+  ],
+  units: 1,
+  facilities: [
+    "Single Bed",
+    "Mini Pool",
+    "Rooftop",
+    "Dapur",
+    "Dispenser",
+    "Alat Dapur Komplit",
+    "Amenities Komplit",
+    "Meja Kursi Mini",
+    "TV Android",
+    "Kulkas",
+    "Mini Bar",
+    "Kamar Mandi Dalam",
+    "Kloset Duduk",
+    "Parkir Luas",
+    "View Istimewa",
+    "Akses Jalan Mudah",
+    "Free Sarapan 2 Porsi",
+    "Free BBQ"
+  ],
+  capacity: "5 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5292.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5287.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5283.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5280.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5271.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5270.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5248.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5249.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5247.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5245.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5244.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5243.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5242.jpeg"
+],
+  type: "glamping"
+},
+{
+  id: "nuha-glamping",
+  name: "Nuha Glamping",
+  location: "Tawangmangu",
+  rates: [],
+  units: 1,
+  facilities: [
+    "Private Pool Air Hangat",
+    "Queen Bed Size 160x200",
+    "Kamar Mandi dengan Water Heater",
+    "Amenities",
+    "Sofa Bed",
+    "Google TV",
+    "Mini Kitchen Set",
+    "Free Wifi",
+    "Bersih, Adem dan Nyaman",
+    "Dekat Resto, Masjid dan Kebun Stroberi",
+    "Free Sarapan 2 Porsi",
+    "Free Mie Instan",
+    "Free Telur",
+    "Teh, Kopi dan Gula",
+    "BBQ Grill"
+  ],
+  capacity: "2–6 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5176.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5175.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5174.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5173.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5172.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5171.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5170.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5169.jpeg"
+],
+  type: "glamping"
+},
+
+{
+  id: "glamping-krishna",
+  name: "Glamping Krishna",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 600000 },
+    { label: "Jumat", price: 700000 },
+    { label: "Sabtu", price: 800000 }
+  ],
+  units: 1,
+  facilities: [
+    "1 King Size Bed",
+    "Sofa Bed",
+    "Kamar Mandi Air Hangat",
+    "Amenities",
+    "Kolam Air Hangat",
+    "Smart TV + Wifi",
+    "Mini Kitchen",
+    "Welcome Drink (Gula, Teh dan Kopi)",
+    "Breakfast 2 Pack",
+    "Ketel Listrik",
+    "Disediakan Alat BBQ"
+  ],
+  capacity: "5 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5106.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5105.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5104.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5103.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5102.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5101.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5100.jpeg"
+],
+  type: "glamping"
+},
+
+{
+  id: "nura-glamping",
+  name: "Nura Glamping",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 600000 },
+    { label: "Jumat", price: 800000 },
+    { label: "Weekend", price: 900000 }
+  ],
+  units: 1,
+  facilities: [
+    "Queen Size Bed",
+    "Android TV",
+    "Kamar Mandi Dalam Shower Water Heater",
+    "Dapur Mini",
+    "Wifi",
+    "Private Pool / Kolam Renang",
+    "Kamar Bisa Connecting",
+    "Floating Breakfast (Weekday)",
+    "BBQ (Weekend)",
+    "Welcome Drink dan Snack",
+    "SPA (Extra Charge)"
+  ],
+  capacity: "2–4 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5039.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5038.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5037.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5036.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5035.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5034.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5033.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5032.jpeg"
+],
+  type: "glamping"
+}, 
 {
     id: "glamping-diyanis",
     name: "Glamping DYN",
