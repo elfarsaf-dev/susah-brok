@@ -1783,7 +1783,7 @@ slideImages: [
 ];
 
 export const glampingData: Property[] = [
- { 
+{
   id: "glamping-turu",
   name: "Glamping TURU",
   location: "Pleseran, Tawangmangu",
@@ -1959,15 +1959,18 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5176.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5013.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5175.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5174.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5173.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5172.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5171.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5170.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5169.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5008.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5014.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4998.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4997.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4996.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4995.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4992.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4991.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4989.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4987.jpeg"
 ],
   type: "glamping"
 },
@@ -2004,14 +2007,15 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5106.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4689.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5105.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5104.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5103.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5102.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5101.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5100.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4681.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4680.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4671.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4678.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4670.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4665.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4682.jpeg"
 ],
   type: "glamping"
 },
@@ -2048,18 +2052,24 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5039.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4795.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5038.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5037.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5036.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5035.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5034.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5033.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5032.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4796.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4788.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4789.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4790.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4787.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4781.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4780.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4779.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4774.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4772.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4767.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4765.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4759.jpeg"
 ],
   type: "glamping"
-}, 
+},
 {
     id: "glamping-diyanis",
     name: "Glamping DYN",
