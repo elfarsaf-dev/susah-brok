@@ -3,7 +3,7 @@ import type { Property, Trip } from "./schema";
 export const villaData: Property[] = [
 {
   id: "villa-rumah-nenek-1-kalisoro",
-  name: "Villa RM1",
+  name: "Villa Rumah Nenek 1",
   location: "Kalisoro, Tawangmangu",
   rates: [
     { label: "Weekday", price: 1500000 },
@@ -38,21 +38,33 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5896.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5069.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5895.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5894.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5893.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5892.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5891.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5890.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5068.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5064.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5063.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5059.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5058.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5042.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5045.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5053.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5046.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5039.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5036.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5037.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5017.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5026.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5029.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5032.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5033.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5016.jpeg"
 ],
   type: "villa"
 },
 
 {
   id: "villa-rumah-nenek-1-sekipan",
-  name: "Villa RN1",
+  name: "Villa Rumah Nenek 1 Sekipan",
   location: "Sekipan, Tawangmangu",
   rates: [
     { label: "Minggu - Kamis", price: 2000000 },
@@ -88,21 +100,29 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5869.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5071.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5868.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5867.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5866.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5865.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5864.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5863.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5077.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5078.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5081.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5095.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5093.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5097.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5105.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5112.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5108.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5118.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5117.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5099.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5086.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5073.jpeg"
 ],
   type: "villa"
 },
 
 {
   id: "villa-asih",
-  name: "Villa ASH",
+  name: "Villa Asih",
   location: "Kalisoro, Tawangmangu",
   rates: [
     { label: "Weekday", price: 1000000 },
@@ -131,19 +151,28 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5841.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4928.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5840.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5839.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5838.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5837.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5836.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4933.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4923.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4922.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4921.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4920.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4915.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4914.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4909.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4904.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4902.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4900.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4896.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4890.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4883.jpeg"
 ],
   type: "villa"
 },
 {
   id: "villa-alaska",
-  name: "Villa ALS",
+  name: "Villa Alaska",
   location: "Sekipan, Tawangmangu",
   rates: [
     { label: "Weekday", price: 2500000 },
@@ -170,20 +199,26 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5809.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4846.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5808.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5807.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5806.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5805.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5804.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4852.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4853.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4858.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4857.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4856.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4866.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4865.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4859.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4867.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4877.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4876.jpeg"
 ],
   type: "villa"
 },
 
 {
   id: "villa-mimimumu",
-  name: "Villa MIMU",
+  name: "Villa Mimimumu",
   location: "Tawangmangu",
   rates: [
     { label: "Weekday", price: 1300000 },
@@ -217,14 +252,19 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5786.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4818.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5785.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5784.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5783.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5782.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5781.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5780.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4813.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4812.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4811.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4810.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4809.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4821.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4819.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4825.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4841.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4844.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4838.jpeg"
 ],
   type: "villa"
 },
@@ -261,19 +301,27 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5759.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4694.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5758.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5757.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5756.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5755.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5754.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4625.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4631.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4639.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4635.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4634.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4644.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4648.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4646.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4652.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4656.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4663.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4655.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4651.jpeg"
 ],
   type: "villa"
 },
 {
   id: "villa-omah-rija",
-  name: "Villa Rijal",
+  name: "Villa Omah Rija",
   location: "Tawangmangu",
   rates: [
     { label: "Minggu - Kamis", price: 1000000 },
@@ -311,21 +359,34 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5729.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4489.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5728.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5727.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5726.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5725.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5724.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5723.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4496.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4485.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4469.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4476.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4480.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4481.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4463.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4462.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4461.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4460.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4457.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4454.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4453.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4452.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4450.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4439.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4445.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4446.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4438.jpeg"
 ],
   type: "villa"
 },
 
 {
   id: "villa-atalia",
-  name: "Villa Ata",
+  name: "Villa Atalia",
   location: "Tawangmangu",
   rates: [
     { label: "Minggu - Kamis", price: 800000 },
@@ -363,13 +424,15 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5711.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4436.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5710.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5709.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5708.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5707.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5706.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4432.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4431.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4426.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4430.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4421.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4418.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4411.jpeg"
 ],
   type: "villa"
 },
@@ -409,19 +472,33 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5689.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4549.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5688.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5687.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5686.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5685.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5684.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4545.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4542.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4541.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4536.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4535.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4531.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4530.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4528.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4527.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4526.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4519.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4518.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4514.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4515.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4513.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4508.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4505.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4503.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4502.jpeg"
 ],
   type: "villa"
 },
 {
   id: "villa-125",
-  name: "Villa supra bapak",
+  name: "Villa 125",
   location: "Kalisoro, Tawangmangu",
   rates: [
     { label: "Weekday", price: 2000000 },
@@ -452,17 +529,98 @@ slideImages: [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5666.jpeg",
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4409.jpeg",
 slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5665.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5664.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5663.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5662.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5661.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5660.jpeg"
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4408.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4402.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4396.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4395.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4391.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4386.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4385.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4384.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4381.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4380.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4372.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4364.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4360.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4359.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4358.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_4349.jpeg"
 ],
   type: "villa"
-},  
+},
+{
+  id: "santa-villa",
+  name: "Santa Villa",
+  location: "Kalisoro, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 2500000 },
+    { label: "Jumat", price: 3000000 },
+    { label: "Sabtu", price: 3500000 }
+  ],
+  units: 1,
+  facilities: [
+    "Villa + Balkon",
+    "4 Kamar Tidur",
+    "4 Kamar Mandi Air Panas",
+    "Rooftop Luas",
+    "Kolam Renang",
+    "Pantry / Mini Bar",
+    "Fasilitas Dapur Lengkap (Magicom, Kulkas, Alat Masak)",
+    "Ruang Keluarga",
+    "TV Cable 43 Inch (Indihome, YouTube)",
+    "Karaoke (Bluetooth & Near Cable)",
+    "Free WiFi",
+    "Extra Bed (Rp100.000)",
+    "Alat Bakaran BBQ",
+    "Parkir Luas",
+    "Villa Baru",
+    "Free Gula, Teh, Kopi",
+    "Free Mie Instan & Telur Ayam",
+    "Sayuran, Bumbu & Beras",
+    "Sate",
+    "Free Aqua Galon",
+    "View Perbukitan & Hutan Pinus Sekipan"
+  ],
+  capacity: "25–30 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Harga sewaktu-waktu bisa berubah",
+    "Bukan villa bebas",
+    "No miras / alkohol",
+    "No drugs / narkoba",
+    "No pacaran",
+    "No mesum",
+    "No orgen tunggal atau live music",
+    "Jam malam pukul 23.00",
+    "Tidak boleh melanggar hukum dan norma yang berlaku",
+    "Mengikuti tata tertib villa",
+    "Minimal DP 50%",
+    "Jika melebihi kapasitas dikenakan biaya Rp50.000 / orang"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4707.jpeg",
+  slideImages: [
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4701.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4711.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4716.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4717.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4720.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4721.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4724.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4740.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4739.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4754.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4751.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4743.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4736.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4735.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4731.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_4729.jpeg"
+  ],
+  type: "villa"
+},
 {
   "id": "villa-fill&jill",
   "name": "Villa FJ",
