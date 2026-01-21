@@ -65,6 +65,11 @@
                 justify-content: flex-end !important;
                 padding: 0.5rem !important;
                 height: 100% !important;
+                pointer-events: none !important; /* Allow clicks to pass through to the underlying link */
+            }
+            .mobile-card h2 a {
+                color: white !important;
+                pointer-events: auto !important; /* Re-enable clicks for the title link */
             }
             .mobile-card h2 {
                 font-size: 0.8rem !important;
