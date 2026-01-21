@@ -1783,7 +1783,7 @@ slideImages: [
 ];
 
 export const glampingData: Property[] = [
-
+ { 
   id: "glamping-turu",
   name: "Glamping TURU",
   location: "Pleseran, Tawangmangu",
