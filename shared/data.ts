@@ -2,6 +2,468 @@ import type { Property, Trip } from "./schema";
 
 export const villaData: Property[] = [
 {
+  id: "villa-rumah-nenek-1-kalisoro",
+  name: "Villa RM1",
+  location: "Kalisoro, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1500000 },
+    { label: "Weekend", price: 1700000 }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur (5 Bed)",
+    "3 Kamar Mandi Air Panas",
+    "Dapur Komplit",
+    "Free Gula, Teh, Kopi",
+    "Free Aqua Galon",
+    "Free Mie Instan dan Telur",
+    "Disediakan Alat Bakaran BBQ",
+    "2 Ruang Tamu",
+    "2 TV Kabel",
+    "Karaoke",
+    "Mini Kolam Renang",
+    "Pendopo Tengah",
+    "Wifi Indihome 24 Jam",
+    "Parkir Luas (4 Mobil)",
+    "Keamanan 24 Jam",
+    "Gazebo",
+    "Taman Anak"
+  ],
+  capacity: "10–15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5896.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5895.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5894.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5893.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5892.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5891.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5890.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-rumah-nenek-1-sekipan",
+  name: "Villa RN1",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 2000000 },
+    { label: "Jumat", price: 2500000 },
+    { label: "Sabtu / Weekend", price: 3000000 }
+  ],
+  units: 1,
+  facilities: [
+    "Villa + Balkon",
+    "5 Kamar Tidur",
+    "3 Kamar Mandi Air Panas",
+    "1 Kamar Mandi",
+    "Mini Kolam Renang",
+    "Pantry / Mini Bar",
+    "Fasilitas Dapur Lengkap",
+    "Ruang Keluarga",
+    "TV Cable 43 Inch",
+    "Karaoke",
+    "Free Wifi",
+    "Disediakan Alat Bakaran BBQ",
+    "Free Gula, Teh, Kopi",
+    "Free Mie Instan dan Telur",
+    "Free Aqua Galon",
+    "Parkir 5–6 Mobil",
+    "View Perbukitan dan Hutan Pinus"
+  ],
+  capacity: "15–20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5869.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5868.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5867.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5866.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5865.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5864.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5863.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-asih",
+  name: "Villa ASH",
+  location: "Kalisoro, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1000000 },
+    { label: "Jumat", price: 1500000 },
+    { label: "Weekend", price: 2000000 }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur",
+    "2 Kamar Mandi",
+    "Kolam Renang",
+    "Ruang Tamu",
+    "Ruang Kumpul Keluarga",
+    "Kitchen Set",
+    "Fullset Karaoke",
+    "Free Wifi",
+    "Halaman Rumput Luas",
+    "Gazebo"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5841.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5840.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5839.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5838.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5837.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5836.jpeg"
+],
+  type: "villa"
+},
+{
+  id: "villa-alaska",
+  name: "Villa ALS",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2500000 },
+    { label: "Weekend", price: 3000000 }
+  ],
+  units: 1,
+  facilities: [
+    "4 Kamar Tidur (5 Bed)",
+    "3 Kamar Mandi Water Heater",
+    "Dapur dengan Peralatan Komplit",
+    "Private Pool / Kolam Renang",
+    "Living Room",
+    "Smart TV",
+    "Rooftop",
+    "Free Mie, Kopi, Gula dan Teh",
+    "Disediakan Alat Bakaran BBQ"
+  ],
+  capacity: "30 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5809.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5808.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5807.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5806.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5805.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5804.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-mimimumu",
+  name: "Villa MIMU",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 1300000 },
+    { label: "Weekend", price: 1500000 }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur",
+    "2 Kamar Mandi Air Hangat",
+    "Kolam Renang",
+    "Fasilitas Dapur Lengkap",
+    "Kulkas",
+    "Peralatan Shalat",
+    "Free Mie Instan",
+    "Free Kopi, Gula dan Teh",
+    "Free Air Galon",
+    "Karaoke",
+    "Wifi",
+    "Smart TV",
+    "Disediakan Alat Bakaran Arang",
+    "Ruang Keluarga Luas",
+    "Dekat Kebun Stroberi",
+    "Dekat Wisata Bukit Sekipan"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5786.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5785.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5784.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5783.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5782.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5781.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5780.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-cleovin",
+  name: "Villa Cleovin",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 800000 },
+    { label: "Jumat", price: 1000000 },
+    { label: "Sabtu", price: 1500000 }
+  ],
+  units: 1,
+  facilities: [
+    "2 King Size Bed",
+    "Sofa Bed",
+    "2 Kamar Mandi Air Hangat",
+    "Amenities",
+    "Kolam Air Hangat",
+    "Smart TV Karaoke + Wifi",
+    "Mini Kitchen",
+    "Welcome Drink (Gula, Teh, Kopi)",
+    "Breakfast 4 Pack",
+    "Ketel Listrik",
+    "Disediakan Alat BBQ"
+  ],
+  capacity: "8 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5759.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5758.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5757.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5756.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5755.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5754.jpeg"
+],
+  type: "villa"
+},
+{
+  id: "villa-omah-rija",
+  name: "Villa Rijal",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 1000000 },
+    { label: "Jumat", price: 1200000 },
+    { label: "Sabtu / Weekend", price: 1500000 }
+  ],
+  units: 1,
+  facilities: [
+    "4 Kamar Tidur (1 Double Bed)",
+    "3 Kamar Mandi Air Hangat",
+    "Dapur dan Perlengkapan Masak / Makan",
+    "Ruang Keluarga Luas",
+    "2 TV (Google TV)",
+    "Fullset Karaoke",
+    "Free WiFi",
+    "Private Pool / Kolam Renang",
+    "Balkon",
+    "Rooftop",
+    "Free 2 Extra Bed (160x200)",
+    "Free Gula, Teh dan Kopi",
+    "Free Mie Instan dan Telur",
+    "Free Snack Khas Tawangmangu",
+    "Disediakan Alat Bakaran BBQ",
+    "Halaman Luas",
+    "Garasi / Parkir Mobil",
+    "Disediakan Fasilitas Sepeda Motor",
+    "View Bukit Sekipan"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5729.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5728.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5727.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5726.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5725.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5724.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5723.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-atalia",
+  name: "Villa Ata",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Minggu - Kamis", price: 800000 },
+    { label: "Jumat", price: 900000 },
+    { label: "Sabtu / Hari Libur", price: 1000000 }
+  ],
+  units: 1,
+  facilities: [
+    "2 Kamar Tidur",
+    "1 Kamar Mandi Air Hangat",
+    "Ruang Tamu",
+    "Ruang Keluarga",
+    "Rooftop",
+    "Smart TV + Karaoke Set",
+    "Dapur Full Furnished",
+    "Kulkas",
+    "Magicom",
+    "Dispenser",
+    "Disediakan Alat Bakaran BBQ",
+    "Area Parkir",
+    "Free 1 Extra Bed (160x200)",
+    "Free WiFi",
+    "Free Mie Instan",
+    "Free Telur",
+    "Free Gula, Teh dan Kopi",
+    "Free Air Galon",
+    "Dekat Wisata Strawberry, Grojogan Sewu, Bukit Sekipan"
+  ],
+  capacity: "15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5711.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5710.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5709.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5708.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5707.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5706.jpeg"
+],
+  type: "villa"
+},
+
+{
+  id: "villa-kmy-04",
+  name: "Villa KMY 04",
+  location: "Sekipan, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2500000 },
+    { label: "Freeday", price: 3000000 },
+    { label: "Weekend", price: 3500000 }
+  ],
+  units: 1,
+  facilities: [
+    "4 Kamar Tidur",
+    "2 Kamar Mandi Luar",
+    "2 Kamar Mandi Dalam",
+    "TV + Karaoke Set",
+    "Living Room",
+    "Living Room Luas",
+    "Dapur Lengkap (Magicom, Kulkas, Dispenser)",
+    "Free Galon, Kopi, Gula dan Teh",
+    "Parkiran Luas",
+    "Bisa Tambah Extra Bed (Charge)",
+    "Disediakan Alat Bakaran BBQ",
+    "Wifi",
+    "Rooftop",
+    "3 Lantai"
+  ],
+  capacity: "30 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5689.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5688.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5687.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5686.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5685.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5684.jpeg"
+],
+  type: "villa"
+},
+{
+  id: "villa-125",
+  name: "Villa supra bapak",
+  location: "Kalisoro, Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 2000000 },
+    { label: "Weekend", price: 2500000 }
+  ],
+  units: 1,
+  facilities: [
+    "4 Kamar Tidur",
+    "4 Kamar Mandi Dalam Air Hangat",
+    "1 Kamar Mandi Luar",
+    "Dapur dengan Alat Masak Komplit",
+    "Musholla",
+    "Private Pool / Kolam Renang",
+    "Wifi",
+    "Karaoke",
+    "Free Mie Instan",
+    "Free Kopi, Gula dan Teh",
+    "Rumah Kaca",
+    "View Langsung Gunung Lawu",
+    "Parkir Muat 6 Mobil"
+  ],
+  capacity: "40 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5666.jpeg",
+slideImages: [
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5665.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5664.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5663.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5662.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5661.jpeg",
+  "https://cdn.ferdev.my.id/assets/elfar/IMG_5660.jpeg"
+],
+  type: "villa"
+},  
+{
   "id": "villa-fill&jill",
   "name": "Villa FJ",
   "location": "Sekipan, Tawangmangu",
