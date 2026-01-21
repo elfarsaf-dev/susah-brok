@@ -19,13 +19,45 @@ export function useProperties() {
     // Filter by search query
     if (searchQuery.trim()) {
       const searchTerm = searchQuery.toLowerCase();
-      filtered = filtered.filter(property => 
-        property.name.toLowerCase().includes(searchTerm) ||
-        property.location.toLowerCase().includes(searchTerm) ||
-        property.facilities.some(facility => 
-          facility.toLowerCase().includes(searchTerm)
-        )
-      );
+      
+      // Match numbers in search query (capacity or price)
+      const numMatch = searchQuery.match(/\d+/);
+      const searchNum = numMatch ? parseInt(numMatch[0]) : null;
+
+      filtered = filtered.filter(property => {
+        // 1. Basic text search
+        const textMatch = 
+          property.name.toLowerCase().includes(searchTerm) ||
+          property.location.toLowerCase().includes(searchTerm) ||
+          property.facilities.some(facility => 
+            facility.toLowerCase().includes(searchTerm)
+          );
+
+        if (textMatch) return true;
+
+        // 2. Numerical search (Capacity or Price)
+        if (searchNum !== null) {
+          // Capacity logic: if user searches "20", match properties with capacity around 20
+          // e.g., "15-25 orang", "20 orang", "maksimal 20 orang"
+          const capMatch = property.capacity.match(/\d+/g);
+          if (capMatch) {
+            const caps = capMatch.map(n => parseInt(n));
+            const minCap = Math.min(...caps);
+            const maxCap = Math.max(...caps);
+            
+            // Match if searchNum is within range or close to it
+            // Logic: if searchNum is 20, match if it's between min-5 and max+5
+            if (searchNum >= minCap - 5 && searchNum <= maxCap + 5) return true;
+          }
+
+          // Price logic: if user searches "1500" (for 1.5jt) or "1500000"
+          const searchPrice = searchNum < 10000 ? searchNum * 1000 : searchNum;
+          const prices = property.rates.map(r => r.price);
+          if (prices.some(p => Math.abs(p - searchPrice) <= 200000)) return true;
+        }
+
+        return false;
+      });
     }
     
     // Filter by categories (facilities)

@@ -14,7 +14,7 @@ export default function SearchBar({ searchQuery, onSearchChange }: SearchBarProp
           <div className="relative">
             <Input
               type="text"
-              placeholder="Cari berdasarkan nama atau fasilitas..."
+              placeholder="Cari nama, fasilitas, kapasitas (misal: 20), atau harga..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-lg"
