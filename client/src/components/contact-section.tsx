@@ -93,7 +93,7 @@ export default function ContactSection() {
           <div className="text-center">
             <div className="w-20 h-20 bg-transparent flex items-center justify-center mx-auto mb-4">
               <img 
-                src={logoImage} 
+                src="https://cdn.ferdev.my.id/assets/elfar/IMG_5981.png" 
                 alt="BOS VILLA TAWANGMANGU Logo" 
                 className="w-full h-full object-contain"
               />

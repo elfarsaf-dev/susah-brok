@@ -10,7 +10,7 @@ export default function HeroSection() {
             <div className="mb-6">
               <div className="w-72 h-72 md:w-80 md:h-80 bg-transparent flex items-center justify-center mx-auto -mb-6 mt-8">
                 <img 
-                  src={logoImage} 
+                  src="https://cdn.ferdev.my.id/assets/elfar/IMG_5981.png" 
                   alt="BOS VILLA TAWANGMANGU Logo" 
                   className="w-full h-full object-contain drop-shadow-2xl"
                   style={{ filter: 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8))' }}
