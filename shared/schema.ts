@@ -1,5 +1,24 @@
 import { z } from "zod";
 
+export const newsSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  content: z.string(),
+  date: z.string(),
+  image: z.string(),
+  category: z.string()
+});
+
+export const tipsSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  content: z.string(),
+  image: z.string()
+});
+
+export type News = z.infer<typeof newsSchema>;
+export type Tips = z.infer<typeof tipsSchema>;
+
 export const rateSchema = z.object({
   label: z.string(),
   price: z.number(),
