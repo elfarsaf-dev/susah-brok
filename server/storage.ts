@@ -5,6 +5,7 @@ import { randomUUID } from "crypto";
 export interface User {
   id: string;
   username: string;
+  githubToken?: string;
 }
 
 export type InsertUser = Omit<User, "id">;
