@@ -174,44 +174,50 @@
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-grid">
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow mobile-card desktop-card">
-                <a href="/news-tips/Rekomendasi%20villa.html" class="zoom-container">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Rekomendasi Villa" class="zoom-image">
-                </a>
-                <div class="p-6 mobile-card-content">
-                    <span class="text-xs font-bold primary-bg text-white px-2 py-1 rounded mb-4 inline-block badge">Rekomendasi</span>
-                    <h2 class="text-xl font-bold mb-3"><a href="/news-tips/Rekomendasi%20villa.html" class="hover:text-teal-600">5 Villa dengan View Gunung Lawu Terbaik</a></h2>
-                    <p class="text-gray-600 mb-6 text-sm">Rekomendasi villa terbaik untuk liburan keluarga Anda di awal tahun 2026.</p>
-                    <a href="/news-tips/Rekomendasi%20villa.html" class="primary-text font-semibold read-more">Baca Selengkapnya →</a>
-                </div>
-            </article>
-
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow mobile-card desktop-card">
-                <a href="/news-tips/tips.html" class="zoom-container">
-                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" alt="Tips Wisata" class="zoom-image">
-                </a>
-                <div class="p-6 mobile-card-content">
-                    <span class="text-xs font-bold primary-bg text-white px-2 py-1 rounded mb-4 inline-block badge">Tips</span>
-                    <h2 class="text-xl font-bold mb-3"><a href="/news-tips/tips.html" class="hover:text-teal-600">Tips Glamping Nyaman Saat Musim Hujan</a></h2>
-                    <p class="text-gray-600 mb-6 text-sm">Simak tips memilih lokasi glamping yang aman dan perlengkapan wajib agar tetap hangat.</p>
-                    <a href="/news-tips/tips.html" class="primary-text font-semibold read-more">Baca Selengkapnya →</a>
-                </div>
-            </article>
-
-            <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow mobile-card desktop-card">
-                <a href="/news-tips/Villa%20murah.html" class="zoom-container">
-                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=800&q=80" alt="Villa Murah" class="zoom-image">
-                </a>
-                <div class="p-6 mobile-card-content">
-                    <span class="text-xs font-bold primary-bg text-white px-2 py-1 rounded mb-4 inline-block badge">Hemat</span>
-                    <h2 class="text-xl font-bold mb-3"><a href="/news-tips/Villa%20murah.html" class="hover:text-teal-600">Daftar Villa Murah Berkualitas di Sekipan</a></h2>
-                    <p class="text-gray-600 mb-6 text-sm">Liburan hemat tetap nyaman dengan pilihan villa harga terjangkau berikut ini.</p>
-                    <a href="/news-tips/Villa%20murah.html" class="primary-text font-semibold read-more">Baca Selengkapnya →</a>
-                </div>
-            </article>
+        <div id="content-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-grid">
+            <!-- Content will be loaded dynamically -->
+            <div class="col-span-full flex justify-center py-12">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
+            </div>
         </div>
     </main>
+
+    <script>
+        async function loadContent() {
+            const grid = document.getElementById('content-grid');
+            try {
+                // Fetch news and tips in parallel
+                // In production, we use the public API or a shared JSON
+                // For this demo, we'll try to fetch from the local API if available
+                const response = await fetch('/api/news');
+                if (!response.ok) throw new Error('Failed to fetch');
+                const news = await response.json();
+                
+                if (news.length === 0) {
+                    grid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500 italic">Belum ada berita atau tips yang tersedia.</div>';
+                    return;
+                }
+
+                grid.innerHTML = news.map(item => `
+                    <article class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:shadow-xl transition-shadow mobile-card desktop-card">
+                        <div class="zoom-container h-48">
+                            <img src="${item.image || 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80'}" alt="${item.title}" class="zoom-image">
+                        </div>
+                        <div class="p-6 mobile-card-content">
+                            <span class="text-xs font-bold primary-bg text-white px-2 py-1 rounded mb-4 inline-block badge">${item.category || 'News'}</span>
+                            <h2 class="text-xl font-bold mb-3"><a href="#" class="hover:text-teal-600">${item.title}</a></h2>
+                            <p class="text-gray-600 mb-6 text-sm line-clamp-3">${item.content}</p>
+                            <a href="#" class="primary-text font-semibold read-more">Baca Selengkapnya →</a>
+                        </div>
+                    </article>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading content:', error);
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-red-500">Gagal memuat konten. Pastikan server berjalan.</div>';
+            }
+        }
+        loadContent();
+    </script>
 
     <footer class="py-16 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

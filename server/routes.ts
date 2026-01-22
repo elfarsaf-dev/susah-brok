@@ -35,14 +35,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
   }
 
   // News endpoints
-  app.get("/api/news", async (req, res) => {
+  app.get("/api/news", async (_req, res) => {
     try {
-      const token = req.headers.authorization?.split(" ")[1];
-      if (!token) return res.status(401).json({ message: "No token provided" });
-      
-      const { content } = await fetchFromGithub(token);
-      // Ensure we only return news if it exists, otherwise empty array
-      res.json(content.news || []);
+      // In public view, we use a public token or bypass auth for reading
+      // For SAFELFAR05/Yiv we can use the public raw URL or Octokit without auth for public repos
+      const octokit = new Octokit();
+      const { data }: any = await octokit.rest.repos.getContent({
+        owner: GITHUB_OWNER,
+        repo: GITHUB_REPO,
+        path: GITHUB_PATH,
+      });
+      const content = Buffer.from(data.content, "base64").toString();
+      const json = JSON.parse(content);
+      res.json(json.news || []);
     } catch (error: any) {
       console.error("Github fetch error:", error);
       res.status(500).json({ message: "Failed to fetch news from GitHub" });
