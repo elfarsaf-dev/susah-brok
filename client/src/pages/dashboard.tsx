@@ -18,11 +18,25 @@ export default function Dashboard() {
 
   const { data: news, isLoading: newsLoading } = useQuery<News[]>({ 
     queryKey: ["/api/news"],
-    enabled: !!githubToken 
+    enabled: !!githubToken,
+    queryFn: async () => {
+      const res = await fetch("/api/news", {
+        headers: { "Authorization": `Bearer ${githubToken}` }
+      });
+      if (!res.ok) throw new Error("Failed to fetch news");
+      return res.json();
+    }
   });
   const { data: tips, isLoading: tipsLoading } = useQuery<Tips[]>({ 
     queryKey: ["/api/tips"],
-    enabled: !!githubToken 
+    enabled: !!githubToken,
+    queryFn: async () => {
+      const res = await fetch("/api/tips", {
+        headers: { "Authorization": `Bearer ${githubToken}` }
+      });
+      if (!res.ok) throw new Error("Failed to fetch tips");
+      return res.json();
+    }
   });
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
