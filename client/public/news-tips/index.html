@@ -186,12 +186,12 @@
         async function loadContent() {
             const grid = document.getElementById('content-grid');
             try {
-                // Fetch news and tips in parallel
-                // In production, we use the public API or a shared JSON
-                // For this demo, we'll try to fetch from the local API if available
-                const response = await fetch('/api/news');
-                if (!response.ok) throw new Error('Failed to fetch');
-                const news = await response.json();
+                // Fetch directly from GitHub Raw URL for pure static mode
+                const GITHUB_RAW_URL = "https://raw.githubusercontent.com/SAFELFAR05/Yiv/main/components.json";
+                const response = await fetch(GITHUB_RAW_URL);
+                if (!response.ok) throw new Error('Failed to fetch from GitHub');
+                const data = await response.json();
+                const news = data.news || [];
                 
                 if (news.length === 0) {
                     grid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500 italic">Belum ada berita atau tips yang tersedia.</div>';
@@ -213,7 +213,7 @@
                 `).join('');
             } catch (error) {
                 console.error('Error loading content:', error);
-                grid.innerHTML = '<div class="col-span-full text-center py-12 text-red-500">Gagal memuat konten. Pastikan server berjalan.</div>';
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-red-500">Gagal memuat konten dari GitHub.</div>';
             }
         }
         loadContent();

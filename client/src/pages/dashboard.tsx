@@ -1,6 +1,6 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { News, Tips } from "@shared/schema";
-import { queryClient, apiRequest } from "@/lib/queryClient";
+import { queryClient } from "@/lib/queryClient";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,36 +8,38 @@ import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Plus, Trash2, Github, Lock } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Loader2, Plus, Github, Lock } from "lucide-react";
+import { useState } from "react";
+import { Octokit } from "octokit";
 
 export default function Dashboard() {
   const { toast } = useToast();
   const [githubToken, setGithubToken] = useState<string | null>(localStorage.getItem("github_token"));
-  const [isLoggingIn, setIsLoggingIn] = useState(false);
+  
+  const GITHUB_OWNER = "SAFELFAR05";
+  const GITHUB_REPO = "Yiv";
+  const GITHUB_PATH = "components.json";
 
-  const { data: news, isLoading: newsLoading } = useQuery<News[]>({ 
-    queryKey: ["/api/news"],
-    enabled: !!githubToken,
-    queryFn: async () => {
-      const res = await fetch("/api/news", {
-        headers: { "Authorization": `Bearer ${githubToken}` }
-      });
-      if (!res.ok) throw new Error("Failed to fetch news");
-      return res.json();
-    }
+  const fetchFromGithub = async () => {
+    if (!githubToken) throw new Error("No token");
+    const octokit = new Octokit({ auth: githubToken });
+    const { data }: any = await octokit.rest.repos.getContent({
+      owner: GITHUB_OWNER,
+      repo: GITHUB_REPO,
+      path: GITHUB_PATH,
+    });
+    const content = JSON.parse(atob(data.content));
+    return { content, sha: data.sha };
+  };
+
+  const { data: githubData, isLoading } = useQuery({ 
+    queryKey: ["github-content"],
+    queryFn: fetchFromGithub,
+    enabled: !!githubToken 
   });
-  const { data: tips, isLoading: tipsLoading } = useQuery<Tips[]>({ 
-    queryKey: ["/api/tips"],
-    enabled: !!githubToken,
-    queryFn: async () => {
-      const res = await fetch("/api/tips", {
-        headers: { "Authorization": `Bearer ${githubToken}` }
-      });
-      if (!res.ok) throw new Error("Failed to fetch tips");
-      return res.json();
-    }
-  });
+
+  const news = githubData?.content?.news || [];
+  const tips = githubData?.content?.tips || [];
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -56,24 +58,31 @@ export default function Dashboard() {
     toast({ title: "Logged out", description: "GitHub token removed" });
   };
 
-  const newsMutation = useMutation({
-    mutationFn: async (data: News) => {
-      // In a real app, you'd send the token in headers or to the backend
-      await apiRequest("POST", "/api/news", { ...data, githubToken });
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/news"] });
-      toast({ title: "Success", description: "News pushed to GitHub (Simulated)" });
-    }
-  });
+  const pushMutation = useMutation({
+    mutationFn: async ({ type, data }: { type: 'news' | 'tips', data: any }) => {
+      if (!githubToken || !githubData) throw new Error("Missing data");
+      const octokit = new Octokit({ auth: githubToken });
+      
+      const updatedContent = {
+        ...githubData.content,
+        [type]: [...(githubData.content[type] || []), data]
+      };
 
-  const tipsMutation = useMutation({
-    mutationFn: async (data: Tips) => {
-      await apiRequest("POST", "/api/tips", { ...data, githubToken });
+      await octokit.rest.repos.createOrUpdateFileContents({
+        owner: GITHUB_OWNER,
+        repo: GITHUB_REPO,
+        path: GITHUB_PATH,
+        message: `Add ${type}: ${data.title}`,
+        content: btoa(JSON.stringify(updatedContent, null, 2)),
+        sha: githubData.sha,
+      });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/tips"] });
-      toast({ title: "Success", description: "Tips pushed to GitHub (Simulated)" });
+      queryClient.invalidateQueries({ queryKey: ["github-content"] });
+      toast({ title: "Success", description: "Updated on GitHub" });
+    },
+    onError: (error: any) => {
+      toast({ title: "Error", description: error.message, variant: "destructive" });
     }
   });
 
@@ -122,7 +131,7 @@ export default function Dashboard() {
     );
   }
 
-  if (newsLoading || tipsLoading) return <div className="flex items-center justify-center h-screen"><Loader2 className="animate-spin" /></div>;
+  if (isLoading) return <div className="flex items-center justify-center h-screen"><Loader2 className="animate-spin" /></div>;
 
   return (
     <div className="min-h-screen bg-background pb-12">
@@ -130,7 +139,7 @@ export default function Dashboard() {
         <div className="container flex h-16 items-center justify-between max-w-6xl mx-auto px-4">
           <div className="flex items-center gap-2 font-bold text-xl">
             <Github className="w-6 h-6" />
-            <span>Content Manager</span>
+            <span>Content Manager (Static Mode)</span>
           </div>
           <Button variant="ghost" size="sm" onClick={handleLogout} className="text-muted-foreground">
             Logout
@@ -146,19 +155,19 @@ export default function Dashboard() {
                 <CardTitle className="flex items-center gap-2 text-primary">
                   <Plus className="w-5 h-5" /> Add News Item
                 </CardTitle>
-                <CardDescription>New item will be committed to your GitHub JSON file</CardDescription>
+                <CardDescription>Direct client-side push to GitHub</CardDescription>
               </CardHeader>
               <CardContent>
                 <Form {...newsForm}>
-                  <form onSubmit={newsForm.handleSubmit(d => newsMutation.mutate(d))} className="space-y-4">
+                  <form onSubmit={newsForm.handleSubmit(d => pushMutation.mutate({ type: 'news', data: d }))} className="space-y-4">
                     <FormField control={newsForm.control} name="title" render={({field}) => (
                       <FormItem><FormLabel>Title</FormLabel><FormControl><Input placeholder="News Title" {...field} /></FormControl></FormItem>
                     )} />
                     <FormField control={newsForm.control} name="content" render={({field}) => (
                       <FormItem><FormLabel>Content</FormLabel><FormControl><Textarea placeholder="Write your news content here..." className="min-h-[120px]" {...field} /></FormControl></FormItem>
                     )} />
-                    <Button type="submit" disabled={newsMutation.isPending} className="w-full">
-                      {newsMutation.isPending ? <Loader2 className="mr-2 animate-spin" /> : <Github className="mr-2 h-4 w-4" />} 
+                    <Button type="submit" disabled={pushMutation.isPending} className="w-full">
+                      {pushMutation.isPending ? <Loader2 className="mr-2 animate-spin" /> : <Github className="mr-2 h-4 w-4" />} 
                       Push News to GitHub
                     </Button>
                   </form>
@@ -175,15 +184,15 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <Form {...tipsForm}>
-                  <form onSubmit={tipsForm.handleSubmit(d => tipsMutation.mutate(d))} className="space-y-4">
+                  <form onSubmit={tipsForm.handleSubmit(d => pushMutation.mutate({ type: 'tips', data: d }))} className="space-y-4">
                     <FormField control={tipsForm.control} name="title" render={({field}) => (
                       <FormItem><FormLabel>Title</FormLabel><FormControl><Input placeholder="Tip Title" {...field} /></FormControl></FormItem>
                     )} />
                     <FormField control={tipsForm.control} name="content" render={({field}) => (
                       <FormItem><FormLabel>Content</FormLabel><FormControl><Textarea placeholder="Write your tip here..." className="min-h-[100px]" {...field} /></FormControl></FormItem>
                     )} />
-                    <Button type="submit" disabled={tipsMutation.isPending} className="w-full">
-                      {tipsMutation.isPending ? <Loader2 className="mr-2 animate-spin" /> : <Github className="mr-2 h-4 w-4" />}
+                    <Button type="submit" disabled={pushMutation.isPending} className="w-full">
+                      {pushMutation.isPending ? <Loader2 className="mr-2 animate-spin" /> : <Github className="mr-2 h-4 w-4" />}
                       Push Tip to GitHub
                     </Button>
                   </form>
@@ -202,8 +211,8 @@ export default function Dashboard() {
               <div className="space-y-4">
                 <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Latest News</h3>
                 <div className="grid gap-3">
-                  {news?.length === 0 && <p className="text-sm text-muted-foreground italic">No news items found on GitHub.</p>}
-                  {news?.map(item => (
+                  {news.length === 0 && <p className="text-sm text-muted-foreground italic">No news items found on GitHub.</p>}
+                  {news.map((item: any) => (
                     <Card key={item.id} className="hover-elevate transition-all border-l-4 border-l-primary">
                       <CardHeader className="p-4">
                         <CardTitle className="text-base">{item.title}</CardTitle>
@@ -217,8 +226,8 @@ export default function Dashboard() {
               <div className="space-y-4 pt-4">
                 <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Latest Tips</h3>
                 <div className="grid gap-3">
-                  {tips?.length === 0 && <p className="text-sm text-muted-foreground italic">No tips found on GitHub.</p>}
-                  {tips?.map(item => (
+                  {tips.length === 0 && <p className="text-sm text-muted-foreground italic">No tips found on GitHub.</p>}
+                  {tips.map((item: any) => (
                     <Card key={item.id} className="hover-elevate transition-all border-l-4 border-l-blue-500">
                       <CardHeader className="p-4">
                         <CardTitle className="text-base">{item.title}</CardTitle>
