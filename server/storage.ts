@@ -1,8 +1,13 @@
-import { type User, type InsertUser, type News, type Tips } from "@shared/schema";
+import { type News, type Tips } from "@shared/schema";
 import { randomUUID } from "crypto";
 
-// modify the interface with any CRUD methods
-// you might need
+// Mock User types since they are missing from schema.ts
+export interface User {
+  id: string;
+  username: string;
+}
+
+export type InsertUser = Omit<User, "id">;
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
