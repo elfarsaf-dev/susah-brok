@@ -159,9 +159,15 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <Form {...newsForm}>
-                  <form onSubmit={newsForm.handleSubmit(d => pushMutation.mutate({ type: 'news', data: d }))} className="space-y-4">
+                    <form onSubmit={newsForm.handleSubmit(d => pushMutation.mutate({ type: 'news', data: d }))} className="space-y-4">
                     <FormField control={newsForm.control} name="title" render={({field}) => (
                       <FormItem><FormLabel>Title</FormLabel><FormControl><Input placeholder="News Title" {...field} /></FormControl></FormItem>
+                    )} />
+                    <FormField control={newsForm.control} name="author" render={({field}) => (
+                      <FormItem><FormLabel>Author</FormLabel><FormControl><Input placeholder="Author Name" {...field} /></FormControl></FormItem>
+                    )} />
+                    <FormField control={newsForm.control} name="image" render={({field}) => (
+                      <FormItem><FormLabel>Image Link (URL)</FormLabel><FormControl><Input placeholder="https://example.com/image.jpg" {...field} /></FormControl></FormItem>
                     )} />
                     <FormField control={newsForm.control} name="content" render={({field}) => (
                       <FormItem><FormLabel>Content</FormLabel><FormControl><Textarea placeholder="Write your news content here..." className="min-h-[120px]" {...field} /></FormControl></FormItem>
@@ -187,6 +193,12 @@ export default function Dashboard() {
                   <form onSubmit={tipsForm.handleSubmit(d => pushMutation.mutate({ type: 'tips', data: d }))} className="space-y-4">
                     <FormField control={tipsForm.control} name="title" render={({field}) => (
                       <FormItem><FormLabel>Title</FormLabel><FormControl><Input placeholder="Tip Title" {...field} /></FormControl></FormItem>
+                    )} />
+                    <FormField control={tipsForm.control} name="author" render={({field}) => (
+                      <FormItem><FormLabel>Author</FormLabel><FormControl><Input placeholder="Author Name" {...field} /></FormControl></FormItem>
+                    )} />
+                    <FormField control={tipsForm.control} name="image" render={({field}) => (
+                      <FormItem><FormLabel>Image Link (URL)</FormLabel><FormControl><Input placeholder="https://example.com/image.jpg" {...field} /></FormControl></FormItem>
                     )} />
                     <FormField control={tipsForm.control} name="content" render={({field}) => (
                       <FormItem><FormLabel>Content</FormLabel><FormControl><Textarea placeholder="Write your tip here..." className="min-h-[100px]" {...field} /></FormControl></FormItem>

@@ -6,14 +6,16 @@ export const newsSchema = z.object({
   content: z.string(),
   date: z.string(),
   image: z.string(),
-  category: z.string()
+  category: z.string(),
+  author: z.string().optional()
 });
 
 export const tipsSchema = z.object({
   id: z.string(),
   title: z.string(),
   content: z.string(),
-  image: z.string()
+  image: z.string(),
+  author: z.string().optional()
 });
 
 export type News = z.infer<typeof newsSchema>;
