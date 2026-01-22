@@ -41,6 +41,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (!token) return res.status(401).json({ message: "No token provided" });
       
       const { content } = await fetchFromGithub(token);
+      // Ensure we only return news if it exists, otherwise empty array
       res.json(content.news || []);
     } catch (error: any) {
       console.error("Github fetch error:", error);
