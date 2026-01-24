@@ -5,13 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, LogOut, Loader2, Trash2, Image as ImageIcon } from "lucide-react";
+import { Plus, LogOut, Loader2, Trash2 } from "lucide-react";
 
 export default function Dashboard() {
   const [, setLocation] = useLocation();
   const { toast } = useToast();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginForm, setLoginForm] = useState({ username: "", token: "" });
+  
   const [loading, setLoading] = useState(false);
   const [facilities, setFacilities] = useState<string[]>([""]);
   const [notes, setNotes] = useState<string[]>([""]);
@@ -33,15 +35,28 @@ export default function Dashboard() {
 
   useEffect(() => {
     const user = localStorage.getItem("user");
-    if (!user) {
-      setLocation("/login");
+    if (user === "admin") {
+      setIsLoggedIn(true);
     }
-  }, [setLocation]);
+  }, []);
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (loginForm.username === "admin") {
+      localStorage.setItem("github_token", loginForm.token);
+      localStorage.setItem("user", loginForm.username);
+      setIsLoggedIn(true);
+      toast({ title: "Login Berhasil", description: "Selamat datang di Dashboard" });
+    } else {
+      toast({ title: "Login Gagal", variant: "destructive", description: "Username salah" });
+    }
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("github_token");
     localStorage.removeItem("user");
-    setLocation("/login");
+    setIsLoggedIn(false);
+    setLoginForm({ username: "", token: "" });
   };
 
   const addField = (setter: any, current: any[]) => setter([...current, ""]);
@@ -58,7 +73,7 @@ export default function Dashboard() {
     e.preventDefault();
     const token = localStorage.getItem("github_token");
     if (!token) {
-      toast({ title: "Error", description: "No GitHub token found", variant: "destructive" });
+      toast({ title: "Error", description: "Token GitHub tidak ditemukan", variant: "destructive" });
       return;
     }
 
@@ -73,27 +88,23 @@ export default function Dashboard() {
         units: Number(formData.units)
       };
 
-      // GitHub API Logic to update shared/data.ts
       const repo = "elfarsaf-dev/susah-brok";
       const path = "shared/data.ts";
       
-      // 1. Get current file content and sha
       const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
         headers: { Authorization: `token ${token}` }
       });
       const fileData = await getRes.json();
       const content = atob(fileData.content);
       
-      // 2. Inject new data into villaData or glampingData array
       const arrayName = propertyData.type === "villa" ? "villaData" : "glampingData";
       const insertIndex = content.lastIndexOf("];");
       
-      if (insertIndex === -1) throw new Error("Could not find data array in file");
+      if (insertIndex === -1) throw new Error("Format file data tidak dikenali");
 
       const newDataString = JSON.stringify(propertyData, null, 2) + ",\n";
       const updatedContent = content.slice(0, insertIndex) + newDataString + content.slice(insertIndex);
 
-      // 3. Update file on GitHub
       const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
         method: "PUT",
         headers: {
@@ -107,28 +118,58 @@ export default function Dashboard() {
         }),
       });
 
-      if (!updateRes.ok) throw new Error("Failed to update GitHub");
+      if (!updateRes.ok) throw new Error("Gagal update ke GitHub");
 
-      toast({
-        title: "Property Added",
-        description: `Successfully added ${propertyData.name} to GitHub!`,
-      });
+      toast({ title: "Berhasil", description: `${propertyData.name} berhasil ditambahkan ke GitHub!` });
       
-      // Reset form
       setFormData({ id: "", name: "", location: "", type: "villa", capacity: "", units: 1, image: "" });
       setFacilities([""]);
       setNotes([""]);
       setSlideImages([""]);
     } catch (error: any) {
-      toast({
-        title: "Error",
-        description: error.message || "Failed to update property",
-        variant: "destructive",
-      });
+      toast({ title: "Error", description: error.message || "Gagal simpan data", variant: "destructive" });
     } finally {
       setLoading(false);
     }
   };
+
+  if (!isLoggedIn) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-background p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Admin Dashboard Login</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="username">Username</Label>
+                <Input
+                  id="username"
+                  value={loginForm.username}
+                  onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
+                  placeholder="Masukkan username"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="token">GitHub Personal Access Token</Label>
+                <Input
+                  id="token"
+                  type="password"
+                  value={loginForm.token}
+                  onChange={(e) => setLoginForm({ ...loginForm, token: e.target.value })}
+                  placeholder="ghp_..."
+                  required
+                />
+              </div>
+              <Button type="submit" className="w-full">Login</Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8">
@@ -142,49 +183,24 @@ export default function Dashboard() {
 
         <form onSubmit={handleSubmit} className="space-y-8">
           <Card>
-            <CardHeader>
-              <CardTitle>Informasi Dasar</CardTitle>
-            </CardHeader>
+            <CardHeader><CardTitle>Informasi Dasar</CardTitle></CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="id">Property ID (Unique)</Label>
-                <Input
-                  id="id"
-                  value={formData.id}
-                  onChange={(e) => setFormData({ ...formData, id: e.target.value })}
-                  placeholder="e.g. villa-rumah-nenek-2"
-                  required
-                />
+                <Label htmlFor="id">ID Properti (Unik)</Label>
+                <Input id="id" value={formData.id} onChange={(e) => setFormData({ ...formData, id: e.target.value })} placeholder="id-villa-baru" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="name">Nama Properti</Label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. Villa Rumah Nenek 2"
-                  required
-                />
+                <Input id="name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="Nama Villa" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="location">Lokasi</Label>
-                <Input
-                  id="location"
-                  value={formData.location}
-                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                  placeholder="e.g. Kalisoro, Tawangmangu"
-                  required
-                />
+                <Input id="location" value={formData.location} onChange={(e) => setFormData({ ...formData, location: e.target.value })} placeholder="Kalisoro, Tawangmangu" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="type">Tipe</Label>
-                <Select
-                  value={formData.type}
-                  onValueChange={(value) => setFormData({ ...formData, type: value })}
-                >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
+                <Select value={formData.type} onValueChange={(v) => setFormData({ ...formData, type: v })}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="villa">Villa</SelectItem>
                     <SelectItem value="glamping">Glamping</SelectItem>
@@ -193,90 +209,61 @@ export default function Dashboard() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="capacity">Kapasitas</Label>
-                <Input
-                  id="capacity"
-                  value={formData.capacity}
-                  onChange={(e) => setFormData({ ...formData, capacity: e.target.value })}
-                  placeholder="e.g. 10-15 orang"
-                  required
-                />
+                <Input id="capacity" value={formData.capacity} onChange={(e) => setFormData({ ...formData, capacity: e.target.value })} placeholder="10-15 orang" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="units">Jumlah Unit</Label>
-                <Input
-                  id="units"
-                  type="number"
-                  value={formData.units}
-                  onChange={(e) => setFormData({ ...formData, units: parseInt(e.target.value) })}
-                  required
-                />
+                <Input id="units" type="number" value={formData.units} onChange={(e) => setFormData({ ...formData, units: parseInt(e.target.value) })} required />
               </div>
             </CardContent>
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Harga (Rates)</CardTitle>
-            </CardHeader>
+            <CardHeader><CardTitle>Harga (Rates)</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               {rates.map((rate, index) => (
                 <div key={index} className="flex gap-4 items-end">
                   <div className="flex-1 space-y-2">
                     <Label>Label</Label>
-                    <Input
-                      value={rate.label}
-                      onChange={(e) => {
-                        const next = [...rates];
-                        next[index].label = e.target.value;
-                        setRates(next);
-                      }}
-                    />
+                    <Input value={rate.label} onChange={(e) => {
+                      const next = [...rates];
+                      next[index].label = e.target.value;
+                      setRates(next);
+                    }} />
                   </div>
                   <div className="flex-1 space-y-2">
                     <Label>Harga</Label>
-                    <Input
-                      type="number"
-                      value={rate.price}
-                      onChange={(e) => {
-                        const next = [...rates];
-                        next[index].price = parseInt(e.target.value);
-                        setRates(next);
-                      }}
-                    />
+                    <Input type="number" value={rate.price} onChange={(e) => {
+                      const next = [...rates];
+                      next[index].price = parseInt(e.target.value);
+                      setRates(next);
+                    }} />
                   </div>
                 </div>
               ))}
-              <Button type="button" variant="outline" size="sm" onClick={() => setRates([...rates, { label: "", price: 0 }])}>
-                Tambah Harga
-              </Button>
+              <Button type="button" variant="outline" size="sm" onClick={() => setRates([...rates, { label: "", price: 0 }])}>Tambah Harga</Button>
             </CardContent>
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Fasilitas & Catatan</CardTitle>
-            </CardHeader>
+            <CardHeader><CardTitle>Fasilitas & Catatan</CardTitle></CardHeader>
             <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <Label>Fasilitas</Label>
                 {facilities.map((f, i) => (
                   <div key={i} className="flex gap-2">
                     <Input value={f} onChange={(e) => updateField(setFacilities, facilities, i, e.target.value)} />
-                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setFacilities, facilities, i)}>
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setFacilities, facilities, i)}><Trash2 className="h-4 w-4" /></Button>
                   </div>
                 ))}
                 <Button type="button" variant="outline" size="sm" onClick={() => addField(setFacilities, facilities)}>Tambah Fasilitas</Button>
               </div>
               <div className="space-y-4">
-                <Label>Catatan (Rules)</Label>
+                <Label>Catatan</Label>
                 {notes.map((n, i) => (
                   <div key={i} className="flex gap-2">
                     <Input value={n} onChange={(e) => updateField(setNotes, notes, i, e.target.value)} />
-                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setNotes, notes, i)}>
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setNotes, notes, i)}><Trash2 className="h-4 w-4" /></Button>
                   </div>
                 ))}
                 <Button type="button" variant="outline" size="sm" onClick={() => addField(setNotes, notes)}>Tambah Catatan</Button>
@@ -285,46 +272,27 @@ export default function Dashboard() {
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle>Media (Images)</CardTitle>
-            </CardHeader>
+            <CardHeader><CardTitle>Media</CardTitle></CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="main-image">Main Image URL</Label>
-                <Input
-                  id="main-image"
-                  value={formData.image}
-                  onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-                  placeholder="https://..."
-                  required
-                />
+                <Label htmlFor="main-image">URL Gambar Utama</Label>
+                <Input id="main-image" value={formData.image} onChange={(e) => setFormData({ ...formData, image: e.target.value })} placeholder="https://..." required />
               </div>
               <div className="space-y-4">
-                <Label>Slide Images (Gallery)</Label>
+                <Label>Galeri Foto</Label>
                 {slideImages.map((s, i) => (
                   <div key={i} className="flex gap-2">
                     <Input value={s} onChange={(e) => updateField(setSlideImages, slideImages, i, e.target.value)} />
-                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setSlideImages, slideImages, i)}>
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setSlideImages, slideImages, i)}><Trash2 className="h-4 w-4" /></Button>
                   </div>
                 ))}
-                <Button type="button" variant="outline" size="sm" onClick={() => addField(setSlideImages, slideImages)}>Tambah Gambar Slide</Button>
+                <Button type="button" variant="outline" size="sm" onClick={() => addField(setSlideImages, slideImages)}>Tambah Gambar Galeri</Button>
               </div>
             </CardContent>
           </Card>
 
           <Button type="submit" className="w-full h-12 text-lg" disabled={loading}>
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Mengirim ke GitHub...
-              </>
-            ) : (
-              <>
-                <Plus className="mr-2 h-5 w-5" /> Simpan Properti ke GitHub
-              </>
-            )}
+            {loading ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Mengirim...</> : <><Plus className="mr-2 h-5 w-5" /> Simpan ke GitHub</>}
           </Button>
         </form>
       </div>
