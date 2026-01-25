@@ -2951,12 +2951,6 @@ slideImages: [
   ],
   type: "glamping"
 },
-{
-  id: "tabriz-glamping",
-  name: "Tabriiz Glamping",
-  location: "Pleseran, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 800000 },
     { label: "Weekend", price: 1000000 }
   ],
   units: 5,
