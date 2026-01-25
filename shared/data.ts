@@ -1,77 +1,7 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-{
-  id: "santa-villa",
-  name: "Santa Villa",
-  location: "Kalisoro, Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 2500000 },
-    { label: "Jumat", price: 3000000 },
-    { label: "Sabtu", price: 3500000 }
-  ],
-  units: 1,
-  facilities: [
-    "Villa + Balkon",
-    "4 Kamar Tidur",
-    "4 Kamar Mandi Air Panas",
-    "Rooftop Luas",
-    "Kolam Renang",
-    "Pantry / Mini Bar",
-    "Fasilitas Dapur Lengkap (Magicom, Kulkas, Alat Masak)",
-    "Ruang Keluarga",
-    "TV Cable 43 Inch (Indihome, YouTube)",
-    "Karaoke (Bluetooth & Near Cable)",
-    "Free WiFi",
-    "Extra Bed (Rp100.000)",
-    "Alat Bakaran BBQ",
-    "Parkir Luas",
-    "Villa Baru",
-    "Free Gula, Teh, Kopi",
-    "Free Mie Instan & Telur Ayam",
-    "Sayuran, Bumbu & Beras",
-    "Sate",
-    "Free Aqua Galon",
-    "View Perbukitan & Hutan Pinus Sekipan"
-  ],
-  capacity: "25–30 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Harga sewaktu-waktu bisa berubah",
-    "Bukan villa bebas",
-    "No miras / alkohol",
-    "No drugs / narkoba",
-    "No pacaran",
-    "No mesum",
-    "No orgen tunggal atau live music",
-    "Jam malam pukul 23.00",
-    "Tidak boleh melanggar hukum dan norma yang berlaku",
-    "Mengikuti tata tertib villa",
-    "Minimal DP 50%",
-    "Jika melebihi kapasitas dikenakan biaya Rp50.000 / orang"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4707.jpeg",
-  slideImages: [
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4701.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4711.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4716.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4717.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4720.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4721.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4724.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4740.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4739.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4754.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4751.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4743.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4736.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4735.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4731.jpeg",
-    "https://cdn.ferdev.my.id/assets/elfar/IMG_4729.jpeg"
-  ],
-  type: "villa"
-},
+
 {
   "id": "villa-fill&jill",
   "name": "Villa FJ",
