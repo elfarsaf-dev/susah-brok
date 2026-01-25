@@ -1,4 +1,4 @@
-import type { Property, Trip } from "./schema";
+import type  from "./schema";
 
 export const villaData: Property[] = [
 {
