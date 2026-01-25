@@ -1242,7 +1242,6 @@ export const villaData: Property[] = [
 ];
 
 export const glampingData: Property[] = [
-
 {
   id: "nuha-glamping",
   name: "Nuha Glamping",
@@ -1386,44 +1385,6 @@ slideImages: [
 ],
   type: "glamping"
 },
-{
-    id: "glamping-diyanis",
-    name: "Glamping DYN",
-    location: "Sekipan, Tawangmangu",
-    rates: [
-      { label: "Weekday - Kolam renang air dingin", price: 500000 },
-      { label: "Weekday - Kolam renang air hangat", price: 600000 },
-      { label: "Jumat - Kolam renang air dingin", price: 600000 },
-      { label: "Jumat - Kolam renang air hangat", price: 700000 },
-      { label: "Weekend - Kolam renang air dingin", price: 700000 },
-      { label: "Weekend - Kolam renang air hangat", price: 800000 }
-    ],
-    units: 11,
-    facilities: [
-      "Smart TV",
-      "Free Wi-Fi", 
-      "Kamar mandi air hangat",
-      "Private pool hangat",
-      "1 bed besar",
-      "Dispenser",
-      "Free mie instan, kopi, gula, teh",
-      "Dapur mini",
-      "Perlengkapan masak & makan",
-      "Free breakfast untuk 2 orang",
-      "Tempat parkir luas"
-    ],
-    capacity: "2-5 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang", 
-      "Bukti nikah untuk pasangan",
-      "No miras",
-      "No mesum",
-      "No drugs"
-    ],
-    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5817.jpeg",
-    type: "glamping"
-  },
 {
     id: "mongkrang-story-cottage",
     name: "Mongkrang SC",
