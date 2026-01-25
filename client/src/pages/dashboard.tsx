@@ -205,9 +205,17 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // REPAIR: Remove corrupted headers
-      if (content.includes('import type {') && content.includes('"id":')) {
-        content = content.replace(/import type \{[\s\S]*?\} from "\.\/schema";/, 'import { type Property } from "./schema";');
+      // REPAIR: Remove corrupted headers and fragments
+      if (content.includes('import { type Property } from "./schema";')) {
+          // Check for fragments after the header but before villaData
+          const headerEnd = content.indexOf('import { type Property } from "./schema";') + 'import { type Property } from "./schema";'.length;
+          const arrayStart = content.indexOf('export const villaData');
+          if (arrayStart > headerEnd) {
+              const middle = content.slice(headerEnd, arrayStart);
+              if (middle.includes('"id":') || middle.includes('rates:')) {
+                  content = content.slice(0, headerEnd) + "\n\n" + content.slice(arrayStart);
+              }
+          }
       }
 
       let updatedContent = "";
@@ -221,15 +229,44 @@ export default function Dashboard() {
         
         if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} array`);
 
-        const arrayContent = arrayMatch[2];
-        const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
+        const beforeArray = content.slice(0, arrayMatch.index);
+        const arrayPrefix = arrayMatch[1];
+        let arrayBody = arrayMatch[2];
+        const arraySuffix = arrayMatch[3];
+        const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
+
+        // STRICT regex for finding the object block by ID
+        // Matches { ... id: "ID" ... } ensuring it starts with { and ends with }
+        const idMatchRegex = new RegExp(`\\{[^\\{]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
         
-        // Remove existing and insert new at the beginning of the array to ensure cleanliness
-        const cleanedArrayContent = arrayContent.replace(idRegex, '').trim();
-        const separator = cleanedArrayContent ? ',\n' : '';
-        const newArrayContent = `\n${formattedData}${separator}${cleanedArrayContent}\n`;
-        
-        updatedContent = content.replace(arrayRegex, `$1${newArrayContent}$3`);
+        // Find all matches to calculate exact boundaries
+        let matches = [];
+        let m;
+        while ((m = idMatchRegex.exec(arrayBody)) !== null) {
+            // Count braces to confirm it's a full object
+            let open = 0;
+            let start = m.index;
+            let end = -1;
+            for(let i = start; i < arrayBody.length; i++) {
+                if(arrayBody[i] === '{') open++;
+                if(arrayBody[i] === '}') open--;
+                if(open === 0) {
+                    end = i + 1;
+                    break;
+                }
+            }
+            if (end !== -1) matches.push({start, end});
+        }
+
+        if (matches.length > 0) {
+            // Replace the first match (most specific)
+            const target = matches[0];
+            const newArrayBody = arrayBody.slice(0, target.start) + formattedData + arrayBody.slice(target.end);
+            updatedContent = beforeArray + arrayPrefix + newArrayBody + arraySuffix + afterArray;
+        } else {
+            // If not found in body, maybe it was wrongly placed outside or ID changed
+            throw new Error("Properti tidak ditemukan dalam array. Gunakan Tambah Baru jika ID berubah.");
+        }
       } else {
         const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
         const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
@@ -351,8 +388,8 @@ export default function Dashboard() {
               <CardContent className="space-y-4">
                 {rates.map((rate, index) => (
                   <div key={index} className="flex gap-4 items-end">
-                    <div className="flex-1 space-y-2"><Label>Label</Label><Input value={rate.label} onChange={(e) => { const next = [...rates]; next[index].label = e.target.value; setRates(next); }} /></div>
-                    <div className="flex-1 space-y-2"><Label>Harga</Label><Input type="number" value={rate.price} onChange={(e) => { const next = [...rates]; next[index].price = parseInt(e.target.value); setRates(next); }} /></div>
+                    <div className="flex-1_space-y-2"><Label>Label</Label><Input value={rate.label} onChange={(e) => { const next = [...rates]; next[index].label = e.target.value; setRates(next); }} /></div>
+                    <div className="flex-1_space-y-2"><Label>Harga</Label><Input type="number" value={rate.price} onChange={(e) => { const next = [...rates]; next[index].price = parseInt(e.target.value); setRates(next); }} /></div>
                     <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setRates, rates, index)}><Trash2 className="h-4 w-4" /></Button>
                   </div>
                 ))}
