@@ -163,33 +163,24 @@ export default function Dashboard() {
     return updateRes;
   };
 
-  const findBlockInArray = (arrayBody: string, targetId: string) => {
-    // Escaping targetId for regex safety
-    const safeId = targetId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    // Using a more specific ID match to avoid partial matches
-    const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${safeId}"[\\s\\S]*?\\}`, 'g');
-    
-    let m;
-    while ((m = idRegex.exec(arrayBody)) !== null) {
-        let open = 0;
-        let start = m.index;
-        let end = -1;
-        // Verify it's actually an object block for the target ID
-        const blockContent = m[0];
-        // Re-check ID specifically to ensure it's not a partial match or in another field
-        if (!new RegExp(`id:\\s*"${safeId}"`).test(blockContent)) continue;
+  const extractBlocks = (text: string) => {
+    const blocks: { start: number; end: number; content: string }[] = [];
+    let braceCount = 0;
+    let start = -1;
 
-        for(let i = start; i < arrayBody.length; i++) {
-            if(arrayBody[i] === '{') open++;
-            if(arrayBody[i] === '}') open--;
-            if(open === 0) {
-                end = i + 1;
-                break;
-            }
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] === '{') {
+        if (braceCount === 0) start = i;
+        braceCount++;
+      } else if (text[i] === '}') {
+        braceCount--;
+        if (braceCount === 0 && start !== -1) {
+          blocks.push({ start, end: i + 1, content: text.slice(start, i + 1) });
+          start = -1;
         }
-        if (end !== -1) return { start, end };
+      }
     }
-    return null;
+    return blocks;
   };
 
   const handleDelete = async (prop: Property) => {
@@ -215,11 +206,17 @@ export default function Dashboard() {
       const arraySuffix = arrayMatch[3];
       const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
 
-      // Find exactly the block for this ID
-      const block = findBlockInArray(arrayBody, prop.id);
+      // Find all blocks within the specific array
+      const blocks = extractBlocks(arrayBody);
+      const blockToRemove = blocks.find(b => {
+        // Strict ID check: matches id: "value" or id: 'value'
+        const idMatch = b.content.match(/id:\s*(["'])(.*?)\1/);
+        return idMatch && idMatch[2] === prop.id;
+      });
 
-      if (block) {
-          arrayBody = arrayBody.slice(0, block.start) + arrayBody.slice(block.end);
+      if (blockToRemove) {
+          // Remove the specific block
+          arrayBody = arrayBody.slice(0, blockToRemove.start) + arrayBody.slice(blockToRemove.end);
           // Cleanup
           arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
           
@@ -277,9 +274,17 @@ export default function Dashboard() {
       const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
 
       // Remove existing entries of this ID ONLY within the correct array
-      let block;
-      while ((block = findBlockInArray(arrayBody, propertyData.id)) !== null) {
-          arrayBody = arrayBody.slice(0, block.start) + arrayBody.slice(block.end);
+      const blocks = extractBlocks(arrayBody);
+      // Remove from end to start to maintain indices
+      const sortedBlocksToRemove = blocks
+        .filter(b => {
+          const idMatch = b.content.match(/id:\s*(["'])(.*?)\1/);
+          return idMatch && idMatch[2] === propertyData.id;
+        })
+        .sort((a, b) => b.start - a.start);
+
+      for (const b of sortedBlocksToRemove) {
+        arrayBody = arrayBody.slice(0, b.start) + arrayBody.slice(b.end);
       }
 
       // Cleanup
@@ -354,7 +359,7 @@ export default function Dashboard() {
                 <CardHeader className="p-4">
                   <CardTitle className="text-lg">{prop.name}</CardTitle>
                   <p className="text-sm text-muted-foreground">{prop.location}</p>
-                  <p className="text-xs font-bold uppercase mt-1 text-primary">{prop.type}</p>
+                  <p className="text-xs font-bold uppercase mt-1 text-primary">{prop.type} (ID: {prop.id})</p>
                 </CardHeader>
                 <CardContent className="p-4 pt-0 flex justify-between gap-2">
                   <Button variant="outline" size="sm" className="flex-1" onClick={() => startEdit(prop)}><Pencil className="mr-2 h-3 w-3" /> Edit</Button>
