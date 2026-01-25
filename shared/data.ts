@@ -1242,53 +1242,7 @@ export const villaData: Property[] = [
 ];
 
 export const glampingData: Property[] = [
-{
-  id: "nuha-glamping",
-  name: "Nuha Glamping",
-  location: "Tawangmangu",
-  rates: [],
-  units: 1,
-  facilities: [
-    "Private Pool Air Hangat",
-    "Queen Bed Size 160x200",
-    "Kamar Mandi dengan Water Heater",
-    "Amenities",
-    "Sofa Bed",
-    "Google TV",
-    "Mini Kitchen Set",
-    "Free Wifi",
-    "Bersih, Adem dan Nyaman",
-    "Dekat Resto, Masjid dan Kebun Stroberi",
-    "Free Sarapan 2 Porsi",
-    "Free Mie Instan",
-    "Free Telur",
-    "Teh, Kopi dan Gula",
-    "BBQ Grill"
-  ],
-  capacity: "2–6 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5013.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5008.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5014.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4998.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4997.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4996.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4995.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4992.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4991.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4989.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4987.jpeg"
-],
-  type: "glamping"
-},
+
 
 {
   id: "glamping-krishna",
