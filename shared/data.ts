@@ -2,58 +2,6 @@ import type  from "./schema";
 
 export const villaData: Property[] = [
 
-{
-  id: "villa-atalia",
-  name: "Villa Atalia",
-  location: "Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 800000 },
-    { label: "Jumat", price: 900000 },
-    { label: "Sabtu / Hari Libur", price: 1000000 }
-  ],
-  units: 1,
-  facilities: [
-    "2 Kamar Tidur",
-    "1 Kamar Mandi Air Hangat",
-    "Ruang Tamu",
-    "Ruang Keluarga",
-    "Rooftop",
-    "Smart TV + Karaoke Set",
-    "Dapur Full Furnished",
-    "Kulkas",
-    "Magicom",
-    "Dispenser",
-    "Disediakan Alat Bakaran BBQ",
-    "Area Parkir",
-    "Free 1 Extra Bed (160x200)",
-    "Free WiFi",
-    "Free Mie Instan",
-    "Free Telur",
-    "Free Gula, Teh dan Kopi",
-    "Free Air Galon",
-    "Dekat Wisata Strawberry, Grojogan Sewu, Bukit Sekipan"
-  ],
-  capacity: "15 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4436.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4432.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4431.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4426.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4430.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4421.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4418.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4411.jpeg"
-],
-  type: "villa"
-},
 
 {
   id: "villa-kmy-04",
