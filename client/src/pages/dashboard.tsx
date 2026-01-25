@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,7 +27,6 @@ interface Property {
 }
 
 export default function Dashboard() {
-  const [, setLocation] = useLocation();
   const { toast } = useToast();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginForm, setLoginForm] = useState({ username: "", token: "" });
@@ -78,25 +76,23 @@ export default function Dashboard() {
       const data = await res.json();
       const content = atob(data.content);
       
-      // Basic extraction of villaData and glampingData using regex
-      // Note: This is a simplified parser for this specific file structure
       const villaMatch = content.match(/export const villaData: Property\[\] = (\[[\s\S]*?\]);/);
       const glampingMatch = content.match(/export const glampingData: Property\[\] = (\[[\s\S]*?\]);/);
       
       let allProps: Property[] = [];
-      if (villaMatch) {
-        try {
-          // Evaluating the JS array string safely-ish for this context
-          // In a real app, use a proper TS/JS parser
-          const cleanStr = villaMatch[1].replace(/,\s*\]/, ']').replace(/Property\[\]/g, '');
-          const villas = JSON.parse(JSON.stringify(eval(cleanStr)));
-          allProps = [...allProps, ...villas];
-        } catch (e) { console.error("Error parsing villas", e); }
-      }
       
+      const parseData = (match: any) => {
+        if (!match) return [];
+        try {
+          const cleanStr = match[1].replace(/,\s*\]/, ']').replace(/Property\[\]/g, '');
+          return JSON.parse(JSON.stringify(eval(cleanStr)));
+        } catch (e) { return []; }
+      };
+
+      allProps = [...parseData(villaMatch), ...parseData(glampingMatch)];
       setProperties(allProps);
     } catch (error) {
-      toast({ title: "Error", description: "Gagal mengambil data dari GitHub", variant: "destructive" });
+      toast({ title: "Error", description: "Gagal mengambil data", variant: "destructive" });
     }
   };
 
@@ -138,7 +134,6 @@ export default function Dashboard() {
 
   const handleDelete = async (id: string) => {
     if (!confirm("Yakin ingin menghapus properti ini?")) return;
-    
     setLoading(true);
     const token = localStorage.getItem("github_token");
     try {
@@ -148,9 +143,7 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       const content = atob(fileData.content);
       
-      // Very basic deletion logic by removing the object with matching ID
-      // This is a placeholder for a more robust TS file manipulator
-      const regex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${id}"[\\s\\S]*?\\},?\\n?`, 'g');
+      const regex = new RegExp(`\\{[^\\{]*?id:\\s*"${id}"[\\s\\S]*?\\},?\\n?`, 'g');
       const updatedContent = content.replace(regex, '');
 
       const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
@@ -196,13 +189,16 @@ export default function Dashboard() {
       
       let updatedContent = "";
       if (editingId) {
-        // Edit mode: replace existing object
-        const regex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
+        const regex = new RegExp(`\\{[^\\{]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
         updatedContent = content.replace(regex, JSON.stringify(propertyData, null, 2));
       } else {
-        // Add mode: append to array
-        const insertIndex = content.lastIndexOf("];");
-        updatedContent = content.slice(0, insertIndex) + JSON.stringify(propertyData, null, 2) + ",\n" + content.slice(insertIndex);
+        const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
+        const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
+        const match = content.match(arrayRegex);
+        if (!match) throw new Error(`Could not find ${arrayLabel} in file`);
+        
+        const insertPos = match.index! + match[0].length;
+        updatedContent = content.slice(0, insertPos) + "\n" + JSON.stringify(propertyData, null, 2) + ",\n" + content.slice(insertPos);
       }
 
       const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
@@ -228,6 +224,16 @@ export default function Dashboard() {
     }
   };
 
+  const addField = (setter: any, current: any[]) => setter([...current, ""]);
+  const removeField = (setter: any, current: any[], index: number) => {
+    if (current.length > 1) setter(current.filter((_, i) => i !== index));
+  };
+  const updateField = (setter: any, current: any[], index: number, value: string) => {
+    const next = [...current];
+    next[index] = value;
+    setter(next);
+  };
+
   if (!isLoggedIn) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background p-4">
@@ -235,14 +241,8 @@ export default function Dashboard() {
           <CardHeader><CardTitle className="text-2xl text-center">Admin Dashboard</CardTitle></CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
-              <div className="space-y-2">
-                <Label>Username</Label>
-                <Input value={loginForm.username} onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })} required />
-              </div>
-              <div className="space-y-2">
-                <Label>GitHub Token</Label>
-                <Input type="password" value={loginForm.token} onChange={(e) => setLoginForm({ ...loginForm, token: e.target.value })} required />
-              </div>
+              <div className="space-y-2"><Label>Username</Label><Input value={loginForm.username} onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })} required /></div>
+              <div className="space-y-2"><Label>GitHub Token</Label><Input type="password" value={loginForm.token} onChange={(e) => setLoginForm({ ...loginForm, token: e.target.value })} required /></div>
               <Button type="submit" className="w-full">Login</Button>
             </form>
           </CardContent>
@@ -275,14 +275,11 @@ export default function Dashboard() {
                 <CardHeader className="p-4">
                   <CardTitle className="text-lg">{prop.name}</CardTitle>
                   <p className="text-sm text-muted-foreground">{prop.location}</p>
+                  <p className="text-xs font-bold uppercase mt-1">{prop.type}</p>
                 </CardHeader>
                 <CardContent className="p-4 pt-0 flex justify-between gap-2">
-                  <Button variant="outline" size="sm" className="flex-1" onClick={() => startEdit(prop)}>
-                    <Pencil className="mr-2 h-3 w-3" /> Edit
-                  </Button>
-                  <Button variant="destructive" size="sm" onClick={() => handleDelete(prop.id)}>
-                    <Trash2 className="h-3 w-3" />
-                  </Button>
+                  <Button variant="outline" size="sm" className="flex-1" onClick={() => startEdit(prop)}><Pencil className="mr-2 h-3 w-3" /> Edit</Button>
+                  <Button variant="destructive" size="sm" onClick={() => handleDelete(prop.id)}><Trash2 className="h-3 w-3" /></Button>
                 </CardContent>
               </Card>
             ))}
@@ -295,16 +292,77 @@ export default function Dashboard() {
                 <Button type="button" variant="ghost" size="icon" onClick={() => setView("list")}><X className="h-4 w-4" /></Button>
               </CardHeader>
               <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2"><Label>Tipe Properti</Label>
+                  <Select value={formData.type} onValueChange={(v: "villa" | "glamping") => setFormData({...formData, type: v})}>
+                    <SelectTrigger><SelectValue /></SelectTrigger>
+                    <SelectContent><SelectItem value="villa">Villa</SelectItem><SelectItem value="glamping">Glamping</SelectItem></SelectContent>
+                  </Select>
+                </div>
                 <div className="space-y-2"><Label>ID Properti</Label><Input value={formData.id} onChange={(e) => setFormData({...formData, id: e.target.value})} disabled={!!editingId} required /></div>
                 <div className="space-y-2"><Label>Nama</Label><Input value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required /></div>
                 <div className="space-y-2"><Label>Lokasi</Label><Input value={formData.location} onChange={(e) => setFormData({...formData, location: e.target.value})} required /></div>
                 <div className="space-y-2"><Label>Kapasitas</Label><Input value={formData.capacity} onChange={(e) => setFormData({...formData, capacity: e.target.value})} required /></div>
+                <div className="space-y-2"><Label>Units</Label><Input type="number" value={formData.units} onChange={(e) => setFormData({...formData, units: parseInt(e.target.value)})} required /></div>
+                <div className="md:col-span-2 space-y-2"><Label>URL Gambar Utama</Label><Input value={formData.image} onChange={(e) => setFormData({...formData, image: e.target.value})} required /></div>
               </CardContent>
             </Card>
 
-            {/* Existing dynamic fields for rates, facilities, etc. remain the same but use the new handleSubmit */}
+            <Card>
+              <CardHeader><CardTitle>Harga (Rates)</CardTitle></CardHeader>
+              <CardContent className="space-y-4">
+                {rates.map((rate, index) => (
+                  <div key={index} className="flex gap-4 items-end">
+                    <div className="flex-1 space-y-2"><Label>Label</Label><Input value={rate.label} onChange={(e) => { const next = [...rates]; next[index].label = e.target.value; setRates(next); }} /></div>
+                    <div className="flex-1 space-y-2"><Label>Harga</Label><Input type="number" value={rate.price} onChange={(e) => { const next = [...rates]; next[index].price = parseInt(e.target.value); setRates(next); }} /></div>
+                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setRates, rates, index)}><Trash2 className="h-4 w-4" /></Button>
+                  </div>
+                ))}
+                <Button type="button" variant="outline" size="sm" onClick={() => setRates([...rates, { label: "", price: 0 }])}>Tambah Harga</Button>
+              </CardContent>
+            </Card>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card>
+                <CardHeader><CardTitle>Fasilitas</CardTitle></CardHeader>
+                <CardContent className="space-y-4">
+                  {facilities.map((f, i) => (
+                    <div key={i} className="flex gap-2">
+                      <Input value={f} onChange={(e) => updateField(setFacilities, facilities, i, e.target.value)} />
+                      <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setFacilities, facilities, i)}><Trash2 className="h-4 w-4" /></Button>
+                    </div>
+                  ))}
+                  <Button type="button" variant="outline" size="sm" onClick={() => addField(setFacilities, facilities)}>Tambah Fasilitas</Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader><CardTitle>Catatan</CardTitle></CardHeader>
+                <CardContent className="space-y-4">
+                  {notes.map((n, i) => (
+                    <div key={i} className="flex gap-2">
+                      <Input value={n} onChange={(e) => updateField(setNotes, notes, i, e.target.value)} />
+                      <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setNotes, notes, i)}><Trash2 className="h-4 w-4" /></Button>
+                    </div>
+                  ))}
+                  <Button type="button" variant="outline" size="sm" onClick={() => addField(setNotes, notes)}>Tambah Catatan</Button>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card>
+              <CardHeader><CardTitle>Galeri Foto</CardTitle></CardHeader>
+              <CardContent className="space-y-4">
+                {slideImages.map((s, i) => (
+                  <div key={i} className="flex gap-2">
+                    <Input value={s} onChange={(e) => updateField(setSlideImages, slideImages, i, e.target.value)} />
+                    <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setSlideImages, slideImages, i)}><Trash2 className="h-4 w-4" /></Button>
+                  </div>
+                ))}
+                <Button type="button" variant="outline" size="sm" onClick={() => addField(setSlideImages, slideImages)}>Tambah Gambar Galeri</Button>
+              </CardContent>
+            </Card>
+
             <Button type="submit" className="w-full h-12" disabled={loading}>
-              {loading ? <Loader2 className="animate-spin mr-2" /> : editingId ? "Update Properti" : "Simpan Properti"}
+              {loading ? <Loader2 className="animate-spin mr-2" /> : editingId ? "Update Properti ke GitHub" : "Simpan Properti ke GitHub"}
             </Button>
           </form>
         )}
