@@ -2,66 +2,6 @@ import type  from "./schema";
 
 export const villaData: Property[] = [
 
-
-{
-  id: "villa-kmy-04",
-  name: "Villa KMY 04",
-  location: "Sekipan, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 2500000 },
-    { label: "Freeday", price: 3000000 },
-    { label: "Weekend", price: 3500000 }
-  ],
-  units: 1,
-  facilities: [
-    "4 Kamar Tidur",
-    "2 Kamar Mandi Luar",
-    "2 Kamar Mandi Dalam",
-    "TV + Karaoke Set",
-    "Living Room",
-    "Living Room Luas",
-    "Dapur Lengkap (Magicom, Kulkas, Dispenser)",
-    "Free Galon, Kopi, Gula dan Teh",
-    "Parkiran Luas",
-    "Bisa Tambah Extra Bed (Charge)",
-    "Disediakan Alat Bakaran BBQ",
-    "Wifi",
-    "Rooftop",
-    "3 Lantai"
-  ],
-  capacity: "30 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4549.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4545.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4542.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4541.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4536.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4535.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4531.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4530.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4528.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4527.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4526.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4519.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4518.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4514.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4515.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4513.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4508.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4505.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4503.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4502.jpeg"
-],
-  type: "villa"
-},
 {
   id: "villa-125",
   name: "Villa 125",
