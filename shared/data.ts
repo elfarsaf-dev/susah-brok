@@ -3,60 +3,6 @@ import type  from "./schema";
 export const villaData: Property[] = [
 
 {
-  id: "villa-125",
-  name: "Villa 125",
-  location: "Kalisoro, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 2000000 },
-    { label: "Weekend", price: 2500000 }
-  ],
-  units: 1,
-  facilities: [
-    "4 Kamar Tidur",
-    "4 Kamar Mandi Dalam Air Hangat",
-    "1 Kamar Mandi Luar",
-    "Dapur dengan Alat Masak Komplit",
-    "Musholla",
-    "Private Pool / Kolam Renang",
-    "Wifi",
-    "Karaoke",
-    "Free Mie Instan",
-    "Free Kopi, Gula dan Teh",
-    "Rumah Kaca",
-    "View Langsung Gunung Lawu",
-    "Parkir Muat 6 Mobil"
-  ],
-  capacity: "40 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4409.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4408.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4402.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4396.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4395.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4391.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4386.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4385.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4384.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4381.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4380.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4372.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4364.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4360.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4359.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4358.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4349.jpeg"
-],
-  type: "villa"
-},
-{
   id: "santa-villa",
   name: "Santa Villa",
   location: "Kalisoro, Tawangmangu",
