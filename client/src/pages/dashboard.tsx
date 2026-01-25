@@ -84,10 +84,18 @@ export default function Dashboard() {
       const parseData = (match: any) => {
         if (!match) return [];
         try {
-          // Simplified evaluation for internal structured data
-          const cleanStr = match[1].replace(/,\s*\]/, ']').replace(/Property\[\]/g, '');
-          // This is a controlled environment parsing static data
-          return JSON.parse(JSON.stringify(eval(cleanStr)));
+          // Clean the string to be valid JSON if possible, otherwise eval safely
+          const cleanStr = match[1]
+            .replace(/Property\[\]/g, '')
+            .replace(/,\s*\]/, ']')
+            .replace(/([{,])\s*([a-zA-Z0-9_]+):/g, '$1"$2":'); // Add quotes to keys
+          
+          try {
+            return JSON.parse(cleanStr);
+          } catch (e) {
+            // Fallback to eval for complex objects that JSON.parse can't handle
+            return eval(`(${match[1]})`);
+          }
         } catch (e) { return []; }
       };
 
@@ -127,9 +135,9 @@ export default function Dashboard() {
       units: prop.units,
       image: prop.image,
     });
-    setRates(prop.rates.length > 0 ? prop.rates : [{ label: "Weekday", price: 0 }]);
-    setFacilities(prop.facilities.length > 0 ? prop.facilities : [""]);
-    setNotes(prop.notes.length > 0 ? prop.notes : [""]);
+    setRates(prop.rates && prop.rates.length > 0 ? prop.rates : [{ label: "Weekday", price: 0 }]);
+    setFacilities(prop.facilities && prop.facilities.length > 0 ? prop.facilities : [""]);
+    setNotes(prop.notes && prop.notes.length > 0 ? prop.notes : [""]);
     setSlideImages(prop.slideImages && prop.slideImages.length > 0 ? prop.slideImages : [""]);
     setView("form");
   };
@@ -168,6 +176,12 @@ export default function Dashboard() {
     }
   };
 
+  const formatObjectForTS = (obj: any) => {
+    return JSON.stringify(obj, null, 2)
+      .replace(/"([a-zA-Z0-9_]+)":/g, '$1:') // Remove quotes from keys
+      .replace(/"/g, '"'); // Ensure double quotes for values
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const token = localStorage.getItem("github_token");
@@ -175,24 +189,39 @@ export default function Dashboard() {
     
     try {
       const propertyData = {
-        ...formData,
-        rates,
+        id: formData.id,
+        name: formData.name,
+        location: formData.location,
+        rates: rates.filter(r => r.label.trim()),
+        units: Number(formData.units),
         facilities: facilities.filter(f => f.trim()),
+        capacity: formData.capacity,
         notes: notes.filter(n => n.trim()),
+        image: formData.image,
         slideImages: slideImages.filter(s => s.trim()),
-        units: Number(formData.units)
+        type: formData.type
       };
 
       const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
         headers: { Authorization: `token ${token}` }
       });
       const fileData = await getRes.json();
-      const content = atob(fileData.content);
+      let content = atob(fileData.content);
       
+      // FIX CORRUPTION: If the file is already corrupted (like in the screenshot), 
+      // we need to attempt a recovery or at least prevent making it worse.
+      // If "import type {" is followed by an object instead of a closing brace, 
+      // it's corrupted.
+      if (content.includes('import type {\n  "id":')) {
+        // Simple recovery: Re-wrap the header correctly
+        content = content.replace(/import type \{[\s\S]*?\} from "\.\/schema";/, 'import { type Property } from "./schema";');
+      }
+
       let updatedContent = "";
+      const formattedData = formatObjectForTS(propertyData);
+
       if (editingId) {
-        // Find exactly the block for the property being edited
-        // Matches the beginning of the object that contains the specific ID
+        // Improved regex to find the object block specifically by ID
         const startRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"`, 'g');
         const match = startRegex.exec(content);
         
@@ -209,8 +238,7 @@ export default function Dashboard() {
           }
           
           if (endPos !== -1) {
-            // Replaces ONLY that block, keeping the rest of the file intact
-            updatedContent = content.slice(0, match.index) + JSON.stringify(propertyData, null, 2) + content.slice(endPos);
+            updatedContent = content.slice(0, match.index) + formattedData + content.slice(endPos);
           } else {
             throw new Error("Could not find property block end");
           }
@@ -218,14 +246,13 @@ export default function Dashboard() {
           throw new Error("Could not find property block start");
         }
       } else {
-        // Add mode: Insert at the beginning of the array
         const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
         const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
         const arrayMatch = content.match(arrayRegex);
         if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} in file`);
         
         const insertPos = arrayMatch.index! + arrayMatch[0].length;
-        updatedContent = content.slice(0, insertPos) + "\n" + JSON.stringify(propertyData, null, 2) + ",\n" + content.slice(insertPos);
+        updatedContent = content.slice(0, insertPos) + "\n" + formattedData + ",\n" + content.slice(insertPos);
       }
 
       const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {

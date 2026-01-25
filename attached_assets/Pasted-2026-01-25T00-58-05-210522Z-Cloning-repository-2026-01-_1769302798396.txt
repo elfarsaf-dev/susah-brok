@@ -1,0 +1,68 @@
+2026-01-25T00:58:05.210522Z	Cloning repository...
+2026-01-25T00:58:05.82443Z	From https://github.com/elfarsaf-dev/susah-brok
+2026-01-25T00:58:05.824916Z	 * branch            00b5c5c1b96f6e1186111b60ef1abbebe83e4d60 -> FETCH_HEAD
+2026-01-25T00:58:05.825052Z	
+2026-01-25T00:58:05.85974Z	HEAD is now at 00b5c5c Edit property: Villa RN1
+2026-01-25T00:58:05.860047Z	
+2026-01-25T00:58:05.926625Z	
+2026-01-25T00:58:05.926976Z	Using v2 root directory strategy
+2026-01-25T00:58:05.945631Z	Success: Finished cloning repository files
+2026-01-25T00:58:08.026874Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-01-25T00:58:08.027762Z	
+2026-01-25T00:58:09.140706Z	No wrangler.toml file found. Continuing.
+2026-01-25T00:58:09.204411Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-01-25T00:58:09.204839Z	Installing project dependencies: npm clean-install --progress=false
+2026-01-25T00:58:13.191616Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-01-25T00:58:13.212791Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-01-25T00:58:17.691092Z	
+2026-01-25T00:58:17.691343Z	added 482 packages, and audited 483 packages in 8s
+2026-01-25T00:58:17.691824Z	
+2026-01-25T00:58:17.691938Z	64 packages are looking for funding
+2026-01-25T00:58:17.692078Z	  run `npm fund` for details
+2026-01-25T00:58:17.732983Z	
+2026-01-25T00:58:17.733205Z	14 vulnerabilities (3 low, 7 moderate, 4 high)
+2026-01-25T00:58:17.733354Z	
+2026-01-25T00:58:17.733492Z	To address issues that do not require attention, run:
+2026-01-25T00:58:17.733614Z	  npm audit fix
+2026-01-25T00:58:17.73373Z	
+2026-01-25T00:58:17.733893Z	To address all issues (including breaking changes), run:
+2026-01-25T00:58:17.734048Z	  npm audit fix --force
+2026-01-25T00:58:17.734173Z	
+2026-01-25T00:58:17.734297Z	Run `npm audit` for details.
+2026-01-25T00:58:17.759101Z	Executing user command: npm run build
+2026-01-25T00:58:18.11898Z	
+2026-01-25T00:58:18.11952Z	> rest-express@1.0.0 build
+2026-01-25T00:58:18.119763Z	> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-01-25T00:58:18.119903Z	
+2026-01-25T00:58:18.373392Z	[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+2026-01-25T00:58:18.437377Z	transforming...
+2026-01-25T00:58:18.755498Z	Browserslist: browsers data (caniuse-lite) is 15 months old. Please run:
+2026-01-25T00:58:18.755762Z	  npx update-browserslist-db@latest
+2026-01-25T00:58:18.756371Z	  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-01-25T00:58:20.812862Z	[32m✓[39m 1660 modules transformed.
+2026-01-25T00:58:20.814441Z	[31mx[39m Build failed in 2.42s
+2026-01-25T00:58:20.814842Z	[31merror during build:
+2026-01-25T00:58:20.814994Z	[31m[vite:esbuild] Transform failed with 1 error:
+2026-01-25T00:58:20.815101Z	/opt/buildhome/repo/shared/data.ts:2:6: ERROR: Expected "as" but found ":"[31m
+2026-01-25T00:58:20.81517Z	file: [36m/opt/buildhome/repo/shared/data.ts:2:6[31m
+2026-01-25T00:58:20.815251Z	[33m
+2026-01-25T00:58:20.81533Z	[33mExpected "as" but found ":"[33m
+2026-01-25T00:58:20.815389Z	1  |  import type {
+2026-01-25T00:58:20.815451Z	2  |    "id": "villa-rumah-nenek-1-kalisoro",
+2026-01-25T00:58:20.815507Z	   |        ^
+2026-01-25T00:58:20.815583Z	3  |    "name": "Villa RN1",
+2026-01-25T00:58:20.815645Z	4  |    "location": "Kalisoro, Tawangmangu",
+2026-01-25T00:58:20.81571Z	[31m
+2026-01-25T00:58:20.815779Z	    at failureErrorWithLog (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:1472:15)
+2026-01-25T00:58:20.815839Z	    at /opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:755:50
+2026-01-25T00:58:20.815897Z	    at responseCallbacks.<computed> (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:622:9)
+2026-01-25T00:58:20.815951Z	    at handleIncomingPacket (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:677:12)
+2026-01-25T00:58:20.816045Z	    at Socket.readFromStdout (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:600:7)
+2026-01-25T00:58:20.816113Z	    at Socket.emit (node:events:518:28)
+2026-01-25T00:58:20.816173Z	    at addChunk (node:internal/streams/readable:561:12)
+2026-01-25T00:58:20.816226Z	    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+2026-01-25T00:58:20.816284Z	    at Readable.push (node:internal/streams/readable:392:5)
+2026-01-25T00:58:20.816337Z	    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m
+2026-01-25T00:58:20.838014Z	Failed: Error while executing user command. Exited with error code: 1
+2026-01-25T00:58:20.848336Z	Failed: build command exited with code: 1
+2026-01-25T00:58:22.094276Z	Failed: error occurred while running build command
