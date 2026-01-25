@@ -64,12 +64,21 @@ slideImages: [
 
 {
   id: "villa-rumah-nenek-1-sekipan",
-  name: "Villa Rumah Nenek 1 Sekipan",
+  name: "Villa Rumah Nenek 1 Skp",
   location: "Sekipan, Tawangmangu",
   rates: [
-    { label: "Minggu - Kamis", price: 2000000 },
-    { label: "Jumat", price: 2500000 },
-    { label: "Sabtu / Weekend", price: 3000000 }
+    {
+      label: "Minggu - Kamis",
+      price: 2000000
+    },
+    {
+      label: "Jumat",
+      price: 2500000
+    },
+    {
+      label: "Sabtu / Weekend",
+      price: 3000000
+    }
   ],
   units: 1,
   facilities: [
@@ -101,22 +110,22 @@ slideImages: [
     "No drugs"
   ],
   image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5071.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5077.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5078.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5081.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5095.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5093.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5097.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5105.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5112.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5108.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5118.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5117.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5099.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5086.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5073.jpeg"
-],
+  slideImages: [
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5077.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5078.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5081.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5095.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5093.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5097.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5105.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5112.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5108.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5118.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5117.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5099.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5086.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5073.jpeg"
+  ],
   type: "villa"
 },
 
