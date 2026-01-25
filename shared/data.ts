@@ -1243,57 +1243,6 @@ export const villaData: Property[] = [
 
 export const glampingData: Property[] = [
 
-
-{
-  id: "nura-glamping",
-  name: "Nura Glamping",
-  location: "Sekipan, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 600000 },
-    { label: "Jumat", price: 800000 },
-    { label: "Weekend", price: 900000 }
-  ],
-  units: 1,
-  facilities: [
-    "Queen Size Bed",
-    "Android TV",
-    "Kamar Mandi Dalam Shower Water Heater",
-    "Dapur Mini",
-    "Wifi",
-    "Private Pool / Kolam Renang",
-    "Kamar Bisa Connecting",
-    "Floating Breakfast (Weekday)",
-    "BBQ (Weekend)",
-    "Welcome Drink dan Snack",
-    "SPA (Extra Charge)"
-  ],
-  capacity: "2–4 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4795.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4796.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4788.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4789.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4790.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4787.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4781.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4780.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4779.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4774.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4772.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4767.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4765.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4759.jpeg"
-],
-  type: "glamping"
-},
 {
     id: "diza-glamping",
     name: "DZ Glamping",
