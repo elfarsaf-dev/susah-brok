@@ -1,4 +1,69 @@
-import type { Property, Trip } from "./schema";
+import type {
+  id: "villa-rumah-nenek-1-kalisoro",
+  name: "Villa RN1",
+  location: "Kalisoro, Tawangmangu",
+  rates: [
+    {
+      label: "Weekday",
+      price: 1500000
+    },
+    {
+      label: "Weekend",
+      price: 1700000
+    }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur (5 Bed)",
+    "3 Kamar Mandi Air Panas",
+    "Dapur Komplit",
+    "Free Gula, Teh, Kopi",
+    "Free Aqua Galon",
+    "Free Mie Instan dan Telur",
+    "Disediakan Alat Bakaran BBQ",
+    "2 Ruang Tamu",
+    "2 TV Kabel",
+    "Karaoke",
+    "Mini Kolam Renang",
+    "Pendopo Tengah",
+    "Wifi Indihome 24 Jam",
+    "Parkir Luas (4 Mobil)",
+    "Keamanan 24 Jam",
+    "Gazebo",
+    "Taman Anak"
+  ],
+  capacity: "10–15 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5069.jpeg",
+  slideImages: [
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5068.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5064.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5063.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5059.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5058.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5042.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5045.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5053.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5046.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5039.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5036.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5037.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5017.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5026.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5029.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5032.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5033.jpeg",
+    "https://cdn.ferdev.my.id/assets/elfar/IMG_5016.jpeg"
+  ],
+  type: "villa"
+} from "./schema";
 
 export const villaData: Property[] = [
 {
