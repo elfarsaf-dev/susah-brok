@@ -1242,7 +1242,6 @@ export const villaData: Property[] = [
 ];
 
 export const glampingData: Property[] = [
-
 {
     id: "diza-glamping",
     name: "DZ Glamping",
@@ -1314,49 +1313,6 @@ export const glampingData: Property[] = [
       "Dekat wisata"
     ],
     image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5825.jpeg",
-    type: "glamping"
-  },
-{
-    id: "azalea-glamping",
-    name: "AZL Glamping",
-    location: "Pleseran, Tawangmangu",
-    rates: [
-      { label: "Weekday", price: 500000 },
-      { label: "Weekend", price: 800000 }
-    ],
-    units: 5,
-    facilities: [
-      "Bed ukuran 160x200",
-      "1 Kamar mandi dengan water heater",
-      "Smart TV 43\"",
-      "Free Wi-Fi",
-      "Mini kitchen",
-      "Alat masak & makan lengkap",
-      "Handuk + amenities",
-      "Cermin + hair dryer",
-      "Free sarapan untuk 2 orang",
-      "Welcome drink (teh, gula, kopi)",
-      "Dispenser (panas, biasa, dingin)",
-      "Mini private pool cukup besar",
-      "View bukit dan hutan pinus",
-      "Dekat sungai, bisa untuk ciblon",
-      "Diskon 50% tiket masuk wisata Buper Pleseran",
-      "Free BBQ",
-      "Free tenda"
-    ],
-    capacity: "2-7 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "Bukti nikah untuk pasangan",
-      "No miras",
-      "No mesum",
-      "No drugs",
-      "Cocok untuk keluarga kecil, dan pasangan suami istri",
-      "Pas juga untuk honeymoon",
-      "Dekat wisata Pleseran"
-    ],
-    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5831.jpeg",
     type: "glamping"
   },
 {
