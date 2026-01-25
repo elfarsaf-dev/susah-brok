@@ -95,7 +95,7 @@ export default function Dashboard() {
           } catch (e) {
             parsed = eval(`(${match[1]})`);
           }
-          return parsed.map((p: any) => ({ ...p, type }));
+          return parsed.map((p: any) => ({ ...p, type: p.type || type }));
         } catch (e) { return []; }
       };
 
@@ -144,8 +144,7 @@ export default function Dashboard() {
   };
 
   const formatObjectForTS = (obj: any) => {
-    const { type, ...rest } = obj;
-    return JSON.stringify(rest, null, 2)
+    return JSON.stringify(obj, null, 2)
       .replace(/"([a-zA-Z0-9_]+)":/g, '$1:');
   };
 
@@ -240,6 +239,7 @@ export default function Dashboard() {
         id: formData.id,
         name: formData.name,
         location: formData.location,
+        type: formData.type, // Make sure type is included
         rates: rates.filter(r => r.label.trim()),
         units: Number(formData.units),
         facilities: facilities.filter(f => f.trim()),
@@ -247,7 +247,6 @@ export default function Dashboard() {
         notes: notes.filter(n => n.trim()),
         image: formData.image,
         slideImages: slideImages.filter(s => s.trim()),
-        type: formData.type
       };
 
       const getRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
