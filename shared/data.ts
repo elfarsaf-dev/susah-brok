@@ -3,59 +3,6 @@ import type  from "./schema";
 export const villaData: Property[] = [
 
 {
-  id: "villa-mimimumu",
-  name: "Villa Mimimumu",
-  location: "Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 1300000 },
-    { label: "Weekend", price: 1500000 }
-  ],
-  units: 1,
-  facilities: [
-    "3 Kamar Tidur",
-    "2 Kamar Mandi Air Hangat",
-    "Kolam Renang",
-    "Fasilitas Dapur Lengkap",
-    "Kulkas",
-    "Peralatan Shalat",
-    "Free Mie Instan",
-    "Free Kopi, Gula dan Teh",
-    "Free Air Galon",
-    "Karaoke",
-    "Wifi",
-    "Smart TV",
-    "Disediakan Alat Bakaran Arang",
-    "Ruang Keluarga Luas",
-    "Dekat Kebun Stroberi",
-    "Dekat Wisata Bukit Sekipan"
-  ],
-  capacity: "20 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4818.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4813.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4812.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4811.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4810.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4809.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4821.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4819.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4825.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4841.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4844.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4838.jpeg"
-],
-  type: "villa"
-},
-
-{
   id: "villa-cleovin",
   name: "Villa Cleovin",
   location: "Tawangmangu",
