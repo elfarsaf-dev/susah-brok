@@ -1,7 +1,6 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-
 {
   id: "santa-villa",
   name: "Santa Villa",
@@ -109,45 +108,6 @@ export const villaData: Property[] = [
   "image": "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5830.jpeg",
   "type": "villa"
 },
-{
-    id: "villa-dita",
-    name: "Villa DT", 
-    location: "Sekipan, Tawangmangu",
-    rates: [
-      { label: "Minggu – Kamis", price: 2000000 },
-      { label: "Jumat", price: 2500000 },
-      { label: "Sabtu", price: 3000000 }
-    ],
-    units: 1,
-    facilities: [
-      "4 Kamar tidur",
-      "3 Kamar mandi",
-      "Bangunan 2 lantai",
-      "Free Wi-Fi",
-      "Kolam renang", 
-      "Karaoke keluarga",
-      "TV LED",
-      "Alat bakar lengkap",
-      "View perbukitan Sekipan",
-      "Halaman luas",
-      "Parkir luas hingga 6 mobil",
-      "Kitchen set lengkap",
-      "Alat makan lengkap",
-      "Free 2 extra bed",
-      "Free teh, kopi & mie"
-    ],
-    capacity: "Maksimal 25 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "Bukti nikah untuk pasangan", 
-      "No miras",
-      "No mesum",
-      "No drugs"
-    ],
-    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5818.jpeg",
-    type: "villa"
-  },
 {
     id: "villa-alami",
     name: "Villa ALM",
