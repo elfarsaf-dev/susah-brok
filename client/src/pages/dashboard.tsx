@@ -140,6 +140,26 @@ export default function Dashboard() {
     setView("form");
   };
 
+  const formatObjectForTS = (obj: any) => {
+    return JSON.stringify(obj, null, 2)
+      .replace(/"([a-zA-Z0-9_]+)":/g, '$1:');
+  };
+
+  const updateGithubContent = async (newContent: string, message: string, sha: string) => {
+    const token = localStorage.getItem("github_token");
+    const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
+      method: "PUT",
+      headers: { Authorization: `token ${token}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message,
+        content: btoa(newContent),
+        sha,
+      }),
+    });
+    if (!updateRes.ok) throw new Error("Gagal update GitHub");
+    return updateRes;
+  };
+
   const handleDelete = async (id: string) => {
     if (!confirm("Yakin ingin menghapus properti ini?")) return;
     setLoading(true);
@@ -149,34 +169,51 @@ export default function Dashboard() {
         headers: { Authorization: `token ${token}` }
       });
       const fileData = await getRes.json();
-      const content = atob(fileData.content);
+      let content = atob(fileData.content);
       
-      const regex = new RegExp(`\\{[^\\{]*?id:\\s*"${id}"[\\s\\S]*?\\},?\\n?`, 'g');
-      const updatedContent = content.replace(regex, '');
+      // Safe identification of the property block within ANY array
+      const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${id}"[\\s\\S]*?\\}`, 'g');
+      
+      // Custom block finder with brace counting to be 100% sure
+      let matches = [];
+      let m;
+      while ((m = idRegex.exec(content)) !== null) {
+          let open = 0;
+          let start = m.index;
+          let end = -1;
+          for(let i = start; i < content.length; i++) {
+              if(content[i] === '{') open++;
+              if(content[i] === '}') open--;
+              if(open === 0) {
+                  end = i + 1;
+                  break;
+              }
+          }
+          if (end !== -1) matches.push({start, end});
+      }
 
-      const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
-        method: "PUT",
-        headers: { Authorization: `token ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: `Delete property: ${id}`,
-          content: btoa(updatedContent),
-          sha: fileData.sha,
-        }),
-      });
-
-      if (!updateRes.ok) throw new Error("Gagal update GitHub");
-      toast({ title: "Berhasil dihapus" });
-      fetchProperties();
-    } catch (e) {
-      toast({ title: "Error", description: "Gagal menghapus", variant: "destructive" });
+      if (matches.length > 0) {
+          // Remove all matches and handle comma cleanup
+          let updatedContent = content;
+          // Sort matches descending to remove from end without affecting indices
+          matches.sort((a, b) => b.start - a.start).forEach(match => {
+              updatedContent = updatedContent.slice(0, match.start) + updatedContent.slice(match.end);
+          });
+          
+          // Cleanup trailing commas and double newlines
+          updatedContent = updatedContent.replace(/,\s*,/g, ',').replace(/\[\s*,/g, '[').replace(/,\s*\]/g, ']');
+          
+          await updateGithubContent(updatedContent, `Delete property: ${id}`, fileData.sha);
+          toast({ title: "Berhasil dihapus" });
+          fetchProperties();
+      } else {
+          throw new Error("Properti tidak ditemukan");
+      }
+    } catch (e: any) {
+      toast({ title: "Error", description: e.message, variant: "destructive" });
     } finally {
       setLoading(false);
     }
-  };
-
-  const formatObjectForTS = (obj: any) => {
-    return JSON.stringify(obj, null, 2)
-      .replace(/"([a-zA-Z0-9_]+)":/g, '$1:');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -205,89 +242,58 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // REPAIR: Remove corrupted headers and fragments
-      if (content.includes('import { type Property } from "./schema";')) {
-          // Check for fragments after the header but before villaData
-          const headerEnd = content.indexOf('import { type Property } from "./schema";') + 'import { type Property } from "./schema";'.length;
-          const arrayStart = content.indexOf('export const villaData');
-          if (arrayStart > headerEnd) {
-              const middle = content.slice(headerEnd, arrayStart);
-              if (middle.includes('"id":') || middle.includes('rates:')) {
-                  content = content.slice(0, headerEnd) + "\n\n" + content.slice(arrayStart);
+      // REPAIR: Full cleanup of corrupted fragments
+      content = content.replace(/import { type Property } from "\.\/schema";[\s\S]*?export const villaData/, 'import { type Property } from "./schema";\n\nexport const villaData');
+      
+      const formattedData = formatObjectForTS(propertyData);
+      let updatedContent = "";
+
+      // Safe identification of the array scope
+      const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
+      const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
+      const arrayMatch = content.match(arrayRegex);
+      
+      if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} array`);
+
+      const beforeArray = content.slice(0, arrayMatch.index);
+      const arrayPrefix = arrayMatch[1];
+      let arrayBody = arrayMatch[2];
+      const arraySuffix = arrayMatch[3];
+      const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
+
+      // Remove existing entries of this ID if any
+      const idSearchRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${propertyData.id}"[\\s\\S]*?\\}`, 'g');
+      let bodyMatches = [];
+      let bm;
+      while ((bm = idSearchRegex.exec(arrayBody)) !== null) {
+          let open = 0;
+          let start = bm.index;
+          let end = -1;
+          for(let i = start; i < arrayBody.length; i++) {
+              if(arrayBody[i] === '{') open++;
+              if(arrayBody[i] === '}') open--;
+              if(open === 0) {
+                  end = i + 1;
+                  break;
               }
           }
+          if (end !== -1) bodyMatches.push({start, end});
       }
 
-      let updatedContent = "";
-      const formattedData = formatObjectForTS(propertyData);
-
-      if (editingId) {
-        // Find the correct array scope first
-        const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
-        const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
-        const arrayMatch = content.match(arrayRegex);
-        
-        if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} array`);
-
-        const beforeArray = content.slice(0, arrayMatch.index);
-        const arrayPrefix = arrayMatch[1];
-        let arrayBody = arrayMatch[2];
-        const arraySuffix = arrayMatch[3];
-        const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
-
-        // STRICT regex for finding the object block by ID
-        // Matches { ... id: "ID" ... } ensuring it starts with { and ends with }
-        const idMatchRegex = new RegExp(`\\{[^\\{]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
-        
-        // Find all matches to calculate exact boundaries
-        let matches = [];
-        let m;
-        while ((m = idMatchRegex.exec(arrayBody)) !== null) {
-            // Count braces to confirm it's a full object
-            let open = 0;
-            let start = m.index;
-            let end = -1;
-            for(let i = start; i < arrayBody.length; i++) {
-                if(arrayBody[i] === '{') open++;
-                if(arrayBody[i] === '}') open--;
-                if(open === 0) {
-                    end = i + 1;
-                    break;
-                }
-            }
-            if (end !== -1) matches.push({start, end});
-        }
-
-        if (matches.length > 0) {
-            // Replace the first match (most specific)
-            const target = matches[0];
-            const newArrayBody = arrayBody.slice(0, target.start) + formattedData + arrayBody.slice(target.end);
-            updatedContent = beforeArray + arrayPrefix + newArrayBody + arraySuffix + afterArray;
-        } else {
-            // If not found in body, maybe it was wrongly placed outside or ID changed
-            throw new Error("Properti tidak ditemukan dalam array. Gunakan Tambah Baru jika ID berubah.");
-        }
-      } else {
-        const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
-        const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
-        const arrayMatch = content.match(arrayRegex);
-        if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} in file`);
-        
-        const insertPos = arrayMatch.index! + arrayMatch[0].length;
-        updatedContent = content.slice(0, insertPos) + "\n" + formattedData + ",\n" + content.slice(insertPos);
-      }
-
-      const updateRes = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`, {
-        method: "PUT",
-        headers: { Authorization: `token ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: `${editingId ? 'Edit' : 'Add'} property: ${propertyData.name}`,
-          content: btoa(updatedContent),
-          sha: fileData.sha,
-        }),
+      bodyMatches.sort((a, b) => b.start - a.start).forEach(match => {
+          arrayBody = arrayBody.slice(0, match.start) + arrayBody.slice(match.end);
       });
 
-      if (!updateRes.ok) throw new Error("Gagal update GitHub");
+      // Cleanup array body commas
+      arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
+      
+      // Add the new/edited entry at the top
+      const separator = arrayBody ? ',\n' : '';
+      const newArrayBody = `\n${formattedData}${separator}${arrayBody}\n`;
+      
+      updatedContent = beforeArray + arrayPrefix + newArrayBody + arraySuffix + afterArray;
+
+      await updateGithubContent(updatedContent, `${editingId ? 'Edit' : 'Add'} property: ${propertyData.name}`, fileData.sha);
 
       toast({ title: "Berhasil", description: "Data tersimpan ke GitHub" });
       setView("list");
@@ -388,8 +394,8 @@ export default function Dashboard() {
               <CardContent className="space-y-4">
                 {rates.map((rate, index) => (
                   <div key={index} className="flex gap-4 items-end">
-                    <div className="flex-1_space-y-2"><Label>Label</Label><Input value={rate.label} onChange={(e) => { const next = [...rates]; next[index].label = e.target.value; setRates(next); }} /></div>
-                    <div className="flex-1_space-y-2"><Label>Harga</Label><Input type="number" value={rate.price} onChange={(e) => { const next = [...rates]; next[index].price = parseInt(e.target.value); setRates(next); }} /></div>
+                    <div className="flex-1 space-y-2"><Label>Label</Label><Input value={rate.label} onChange={(e) => { const next = [...rates]; next[index].label = e.target.value; setRates(next); }} /></div>
+                    <div className="flex-1 space-y-2"><Label>Harga</Label><Input type="number" value={rate.price} onChange={(e) => { const next = [...rates]; next[index].price = parseInt(e.target.value); setRates(next); }} /></div>
                     <Button type="button" variant="ghost" size="icon" onClick={() => removeField(setRates, rates, index)}><Trash2 className="h-4 w-4" /></Button>
                   </div>
                 ))}

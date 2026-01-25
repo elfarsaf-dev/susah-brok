@@ -1,0 +1,132 @@
+{
+  id: "glamping-salam",
+  name: "Glamping Salam",
+  location: "Sekipan Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 600000 },
+    { label: "Jum'at", price: 700000 },
+    { label: "Weekend", price: 800000 }
+  ],
+  units: 5,
+  facilities: [
+    "1 Kamar dengan king bed",
+    "Free extrabed Uk. 90x200",
+    "1 kamar mandi dengan water heater",
+    "Tersedia handuk + alat mandi",
+    "Sofa bed",
+    "Kolam renang pribadi",
+    "Smart TV",
+    "Free Wifi",
+    "Tersedia dapur umum (alat masak lengkap)",
+    "Free 2 pack sarapan",
+    "Free Gula, teh, kopi",
+    "Parkir depan glamping",
+    "Dekat kebun strawberry dan wisata bukit sekipan"
+  ],
+  capacity: "4 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/glamping salam.jpeg",
+  slideImages: [
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.30 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.28 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-07-19 at 12.09.29 (1).jpeg"
+  ],
+  type: "glamping"
+},
+    { label: "Weekend", price: 1000000 }
+  ],
+  units: 5,
+  facilities: [
+    "Welcome Drink",
+    "Bed 160*200",
+    "Wi-Fi Available",
+    "TV Android",
+    "Kursi Lipat",
+    "Breakfast 2 Pax",
+    "Privat Pool 🏊",
+    "Air Hangat",
+    "Parkir Luas",
+    "View Bukit dan Kebun Sayur"
+  ],
+  capacity: "5 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan tabris.jpeg",
+  slideImages: [
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09.jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (1).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (2).jpeg"
+  ],
+  type: "glamping"
+},
+{
+  id: "glamping-srn",
+  name: "Glamping SRN",
+  location: "Tawangmangu",
+  rates: [
+    { label: "Weekday", price: 550000 },
+    { label: "Weekend", price: 850000 }
+  ],
+  units: 1,
+  facilities: [
+    "1 Bed ukuran 160x200cm",
+    "Smart TV",
+    "Wi-Fi",
+    "Sofa",
+    "1 Kamar Mandi Shower + Bathtub + Air Hangat",
+    "Kompor, Kulkas, Dispenser",
+    "1 Galon Air Mineral",
+    "Gula, Teh, Kopi",
+    "3 Popmie",
+    "Kolam Renang Dingin",
+    "Taman Luas",
+    "Teras",
+    "Extra Bed ukuran 120x200cm (Bantal + Selimut) 100rb"
+  ],
+  capacity: "8 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs",
+    "Promo sampai akhir Oktober (sementara masih ada pengerjaan finishing, tamu mungkin sedikit terganggu)"
+  ],
+  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.23_190b7e61.jpg",
+  slideImages: [
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_33dcd642.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_89beef0d.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.24_8779999d.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_6881a697.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_f31e3ba3.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.26_b65e4bee.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_50ced3bd.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_86a51689.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.27_af4f78fb.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.25_ba938b07.jpg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/rt/WhatsApp Image 2025-09-25 at 18.09.26_5f43d1a1.jpg"
+  ],
+  type: "glamping"
+},

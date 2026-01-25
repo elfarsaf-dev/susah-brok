@@ -1,0 +1,130 @@
+2026-01-25T01:34:33.175727Z	Cloning repository...
+2026-01-25T01:34:33.784167Z	From https://github.com/elfarsaf-dev/susah-brok
+2026-01-25T01:34:33.78493Z	 * branch            946d98b1fc34fb4b21852affa993403e8a1053b4 -> FETCH_HEAD
+2026-01-25T01:34:33.78504Z	
+2026-01-25T01:34:33.82063Z	HEAD is now at 946d98b Delete property: tabriz-glamping
+2026-01-25T01:34:33.821111Z	
+2026-01-25T01:34:33.891298Z	
+2026-01-25T01:34:33.891961Z	Using v2 root directory strategy
+2026-01-25T01:34:33.913152Z	Success: Finished cloning repository files
+2026-01-25T01:34:35.708783Z	Checking for configuration in a Wrangler configuration file (BETA)
+2026-01-25T01:34:35.709773Z	
+2026-01-25T01:34:36.818957Z	No wrangler.toml file found. Continuing.
+2026-01-25T01:34:36.884569Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-01-25T01:34:36.885467Z	Installing project dependencies: npm clean-install --progress=false
+2026-01-25T01:34:40.932334Z	npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2026-01-25T01:34:41.033224Z	npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2026-01-25T01:34:45.726305Z	
+2026-01-25T01:34:45.726614Z	added 482 packages, and audited 483 packages in 8s
+2026-01-25T01:34:45.727267Z	
+2026-01-25T01:34:45.727358Z	64 packages are looking for funding
+2026-01-25T01:34:45.727421Z	  run `npm fund` for details
+2026-01-25T01:34:45.763159Z	
+2026-01-25T01:34:45.763418Z	14 vulnerabilities (3 low, 7 moderate, 4 high)
+2026-01-25T01:34:45.763993Z	
+2026-01-25T01:34:45.764101Z	To address issues that do not require attention, run:
+2026-01-25T01:34:45.764161Z	  npm audit fix
+2026-01-25T01:34:45.764376Z	
+2026-01-25T01:34:45.764738Z	To address all issues (including breaking changes), run:
+2026-01-25T01:34:45.7649Z	  npm audit fix --force
+2026-01-25T01:34:45.765117Z	
+2026-01-25T01:34:45.765279Z	Run `npm audit` for details.
+2026-01-25T01:34:45.789424Z	Executing user command: npm run build
+2026-01-25T01:34:46.164137Z	
+2026-01-25T01:34:46.164347Z	> rest-express@1.0.0 build
+2026-01-25T01:34:46.164616Z	> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2026-01-25T01:34:46.164798Z	
+2026-01-25T01:34:46.42683Z	[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+2026-01-25T01:34:46.493722Z	transforming...
+2026-01-25T01:34:46.845361Z	Browserslist: browsers data (caniuse-lite) is 15 months old. Please run:
+2026-01-25T01:34:46.845881Z	  npx update-browserslist-db@latest
+2026-01-25T01:34:46.846177Z	  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2026-01-25T01:34:48.900273Z	[32m✓[39m 1655 modules transformed.
+2026-01-25T01:34:48.90226Z	[31mx[39m Build failed in 2.45s
+2026-01-25T01:34:48.902479Z	[31merror during build:
+2026-01-25T01:34:48.902624Z	[31m[vite:esbuild] Transform failed with 8 errors:
+2026-01-25T01:34:48.902722Z	/opt/buildhome/repo/shared/data.ts:2956:2: ERROR: The constant "units" must be initialized
+2026-01-25T01:34:48.902838Z	/opt/buildhome/repo/shared/data.ts:2957:2: ERROR: The constant "facilities" must be initialized
+2026-01-25T01:34:48.902949Z	/opt/buildhome/repo/shared/data.ts:2969:2: ERROR: The constant "capacity" must be initialized
+2026-01-25T01:34:48.90304Z	/opt/buildhome/repo/shared/data.ts:2970:2: ERROR: The constant "notes" must be initialized
+2026-01-25T01:34:48.903126Z	/opt/buildhome/repo/shared/data.ts:2978:2: ERROR: The constant "image" must be initialized
+2026-01-25T01:34:48.90322Z	...[31m
+2026-01-25T01:34:48.903343Z	file: [36m/opt/buildhome/repo/shared/data.ts:2956:2[31m
+2026-01-25T01:34:48.903449Z	[33m
+2026-01-25T01:34:48.903546Z	[33mThe constant "units" must be initialized[33m
+2026-01-25T01:34:48.903636Z	2954|      { label: "Weekend", price: 1000000 }
+2026-01-25T01:34:48.903726Z	2955|    ],
+2026-01-25T01:34:48.903831Z	2956|    units: 5,
+2026-01-25T01:34:48.90392Z	   |    ^
+2026-01-25T01:34:48.904009Z	2957|    facilities: [
+2026-01-25T01:34:48.904119Z	2958|      "Welcome Drink",
+2026-01-25T01:34:48.904209Z	
+2026-01-25T01:34:48.904297Z	[33mThe constant "facilities" must be initialized[33m
+2026-01-25T01:34:48.904379Z	2955|    ],
+2026-01-25T01:34:48.904457Z	2956|    units: 5,
+2026-01-25T01:34:48.904532Z	2957|    facilities: [
+2026-01-25T01:34:48.904609Z	   |    ^
+2026-01-25T01:34:48.904694Z	2958|      "Welcome Drink",
+2026-01-25T01:34:48.904776Z	2959|      "Bed 160*200",
+2026-01-25T01:34:48.904896Z	
+2026-01-25T01:34:48.90498Z	[33mThe constant "capacity" must be initialized[33m
+2026-01-25T01:34:48.90506Z	2967|      "View Bukit dan Kebun Sayur"
+2026-01-25T01:34:48.905144Z	2968|    ],
+2026-01-25T01:34:48.905221Z	2969|    capacity: "5 orang",
+2026-01-25T01:34:48.905498Z	   |    ^
+2026-01-25T01:34:48.905588Z	2970|    notes: [
+2026-01-25T01:34:48.905657Z	2971|      "Check in jam 14.00",
+2026-01-25T01:34:48.905714Z	
+2026-01-25T01:34:48.905777Z	[33mThe constant "notes" must be initialized[33m
+2026-01-25T01:34:48.905864Z	2968|    ],
+2026-01-25T01:34:48.90593Z	2969|    capacity: "5 orang",
+2026-01-25T01:34:48.905991Z	2970|    notes: [
+2026-01-25T01:34:48.906046Z	   |    ^
+2026-01-25T01:34:48.906104Z	2971|      "Check in jam 14.00",
+2026-01-25T01:34:48.906168Z	2972|      "Check out jam 12.00",
+2026-01-25T01:34:48.906229Z	
+2026-01-25T01:34:48.90629Z	[33mThe constant "image" must be initialized[33m
+2026-01-25T01:34:48.906349Z	2976|      "No drugs"
+2026-01-25T01:34:48.906402Z	2977|    ],
+2026-01-25T01:34:48.906464Z	2978|    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan tabris.jpeg",
+2026-01-25T01:34:48.906538Z	   |    ^
+2026-01-25T01:34:48.906592Z	2979|    slideImages: [
+2026-01-25T01:34:48.90665Z	2980|      "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
+2026-01-25T01:34:48.90671Z	
+2026-01-25T01:34:48.906776Z	[33mThe constant "slideImages" must be initialized[33m
+2026-01-25T01:34:48.906903Z	2977|    ],
+2026-01-25T01:34:48.907037Z	2978|    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan tabris.jpeg",
+2026-01-25T01:34:48.907158Z	2979|    slideImages: [
+2026-01-25T01:34:48.907285Z	   |    ^
+2026-01-25T01:34:48.907383Z	2980|      "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (3).jpeg",
+2026-01-25T01:34:48.907483Z	2981|      "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (4).jpeg",
+2026-01-25T01:34:48.907578Z	
+2026-01-25T01:34:48.907672Z	[33mThe constant "type" must be initialized[33m
+2026-01-25T01:34:48.907764Z	2986|      "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-05-21 at 09.28.09 (2).jpeg"
+2026-01-25T01:34:48.907874Z	2987|    ],
+2026-01-25T01:34:48.907966Z	2988|    type: "glamping"
+2026-01-25T01:34:48.908066Z	   |    ^
+2026-01-25T01:34:48.908161Z	2989|  },
+2026-01-25T01:34:48.90855Z	2990|  {
+2026-01-25T01:34:48.90867Z	
+2026-01-25T01:34:48.908764Z	[33mUnexpected "}"[33m
+2026-01-25T01:34:48.908886Z	2987|    ],
+2026-01-25T01:34:48.908957Z	2988|    type: "glamping"
+2026-01-25T01:34:48.909025Z	2989|  },
+2026-01-25T01:34:48.909124Z	   |  ^
+2026-01-25T01:34:48.909435Z	2990|  {
+2026-01-25T01:34:48.909553Z	2991|    id: "glamping-srn",
+2026-01-25T01:34:48.909645Z	[31m
+2026-01-25T01:34:48.909717Z	    at failureErrorWithLog (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:1472:15)
+2026-01-25T01:34:48.9098Z	    at /opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:755:50
+2026-01-25T01:34:48.909906Z	    at responseCallbacks.<computed> (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:622:9)
+2026-01-25T01:34:48.910009Z	    at handleIncomingPacket (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:677:12)
+2026-01-25T01:34:48.910098Z	    at Socket.readFromStdout (/opt/buildhome/repo/node_modules/vite/node_modules/esbuild/lib/main.js:600:7)
+2026-01-25T01:34:48.910191Z	    at Socket.emit (node:events:518:28)
+2026-01-25T01:34:48.910311Z	    at addChunk (node:internal/streams/readable:561:12)
+2026-01-25T01:34:48.910404Z	    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+2026-01-25T01:34:48.910497Z	    at Readable.push (node:internal/streams/readable:392:5)
+2026-01-25T01:34:48.910602Z	    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m
+2026-01-25T01:34:48.925768Z	Failed: Error while executing user command. Exited with error code: 1
+2026-01-25T01:34:48.935307Z	Failed: build command exited with code: 1
+2026-01-25T01:34:50.036662Z	Failed: error occurred while running build command
