@@ -1,51 +1,6 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-{
-  id: "villa-alaska",
-  name: "Villa Alaska",
-  location: "Sekipan, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 2500000 },
-    { label: "Weekend", price: 3000000 }
-  ],
-  units: 1,
-  facilities: [
-    "4 Kamar Tidur (5 Bed)",
-    "3 Kamar Mandi Water Heater",
-    "Dapur dengan Peralatan Komplit",
-    "Private Pool / Kolam Renang",
-    "Living Room",
-    "Smart TV",
-    "Rooftop",
-    "Free Mie, Kopi, Gula dan Teh",
-    "Disediakan Alat Bakaran BBQ"
-  ],
-  capacity: "30 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4846.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4852.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4853.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4858.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4857.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4856.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4866.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4865.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4859.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4867.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4877.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4876.jpeg"
-],
-  type: "villa"
-},
 
 {
   id: "villa-mimimumu",
