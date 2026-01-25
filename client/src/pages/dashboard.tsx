@@ -84,7 +84,9 @@ export default function Dashboard() {
       const parseData = (match: any) => {
         if (!match) return [];
         try {
+          // Simplified evaluation for internal structured data
           const cleanStr = match[1].replace(/,\s*\]/, ']').replace(/Property\[\]/g, '');
+          // This is a controlled environment parsing static data
           return JSON.parse(JSON.stringify(eval(cleanStr)));
         } catch (e) { return []; }
       };
@@ -189,15 +191,40 @@ export default function Dashboard() {
       
       let updatedContent = "";
       if (editingId) {
-        const regex = new RegExp(`\\{[^\\{]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
-        updatedContent = content.replace(regex, JSON.stringify(propertyData, null, 2));
+        // Find exactly the block for the property being edited
+        // Matches the beginning of the object that contains the specific ID
+        const startRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"`, 'g');
+        const match = startRegex.exec(content);
+        
+        if (match) {
+          let openBraces = 0;
+          let endPos = -1;
+          for (let i = match.index; i < content.length; i++) {
+            if (content[i] === '{') openBraces++;
+            if (content[i] === '}') openBraces--;
+            if (openBraces === 0) {
+              endPos = i + 1;
+              break;
+            }
+          }
+          
+          if (endPos !== -1) {
+            // Replaces ONLY that block, keeping the rest of the file intact
+            updatedContent = content.slice(0, match.index) + JSON.stringify(propertyData, null, 2) + content.slice(endPos);
+          } else {
+            throw new Error("Could not find property block end");
+          }
+        } else {
+          throw new Error("Could not find property block start");
+        }
       } else {
+        // Add mode: Insert at the beginning of the array
         const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
         const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
-        const match = content.match(arrayRegex);
-        if (!match) throw new Error(`Could not find ${arrayLabel} in file`);
+        const arrayMatch = content.match(arrayRegex);
+        if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} in file`);
         
-        const insertPos = match.index! + match[0].length;
+        const insertPos = arrayMatch.index! + arrayMatch[0].length;
         updatedContent = content.slice(0, insertPos) + "\n" + JSON.stringify(propertyData, null, 2) + ",\n" + content.slice(insertPos);
       }
 
