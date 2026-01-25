@@ -1,57 +1,6 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-
-{
-  id: "villa-asih",
-  name: "Villa Asih",
-  location: "Kalisoro, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 1000000 },
-    { label: "Jumat", price: 1500000 },
-    { label: "Weekend", price: 2000000 }
-  ],
-  units: 1,
-  facilities: [
-    "3 Kamar Tidur",
-    "2 Kamar Mandi",
-    "Kolam Renang",
-    "Ruang Tamu",
-    "Ruang Kumpul Keluarga",
-    "Kitchen Set",
-    "Fullset Karaoke",
-    "Free Wifi",
-    "Halaman Rumput Luas",
-    "Gazebo"
-  ],
-  capacity: "20 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4928.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4933.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4923.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4922.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4921.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4920.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4915.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4914.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4909.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4904.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4902.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4900.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4896.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4890.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4883.jpeg"
-],
-  type: "villa"
-},
 {
   id: "villa-alaska",
   name: "Villa Alaska",
