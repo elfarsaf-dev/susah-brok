@@ -1562,50 +1562,6 @@ export const glampingData: Property[] = [
 
 
 {
-  id: "glamping-tab",
-  name: "Glamping Tab",
-  location: "Pleseran, Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 400000 },
-    { label: "Jumat", price: 500000 },
-    { label: "Sabtu", price: 700000 }
-  ],
-  units: 1,
-  facilities: [
-    "Welcome Drink",
-    "Bed 160x200",
-    "WiFi",
-    "TV Android",
-    "Kursi Lipat",
-    "Breakfast 2 Pax",
-    "Private Pool / Kolam Renang",
-    "Air Hangat",
-    "Parkir Luas",
-    "View Bukit dan Kebun Sayur"
-  ],
-  capacity: "5 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5609.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5600.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5592.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5587.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5586.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5591.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5601.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5616.jpeg"
-],
-  type: "glamping"
-},
-
-{
   id: "glamping-hosbet",
   name: "Glamping Hosbet",
   location: "Pleseran, Tawangmangu",
