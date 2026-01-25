@@ -84,16 +84,14 @@ export default function Dashboard() {
       const parseData = (match: any) => {
         if (!match) return [];
         try {
-          // Clean the string to be valid JSON if possible, otherwise eval safely
           const cleanStr = match[1]
             .replace(/Property\[\]/g, '')
             .replace(/,\s*\]/, ']')
-            .replace(/([{,])\s*([a-zA-Z0-9_]+):/g, '$1"$2":'); // Add quotes to keys
+            .replace(/([{,])\s*([a-zA-Z0-9_]+):/g, '$1"$2":');
           
           try {
             return JSON.parse(cleanStr);
           } catch (e) {
-            // Fallback to eval for complex objects that JSON.parse can't handle
             return eval(`(${match[1]})`);
           }
         } catch (e) { return []; }
@@ -178,8 +176,7 @@ export default function Dashboard() {
 
   const formatObjectForTS = (obj: any) => {
     return JSON.stringify(obj, null, 2)
-      .replace(/"([a-zA-Z0-9_]+)":/g, '$1:') // Remove quotes from keys
-      .replace(/"/g, '"'); // Ensure double quotes for values
+      .replace(/"([a-zA-Z0-9_]+)":/g, '$1:');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -208,12 +205,8 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // FIX CORRUPTION: If the file is already corrupted (like in the screenshot), 
-      // we need to attempt a recovery or at least prevent making it worse.
-      // If "import type {" is followed by an object instead of a closing brace, 
-      // it's corrupted.
-      if (content.includes('import type {\n  "id":')) {
-        // Simple recovery: Re-wrap the header correctly
+      // REPAIR: Remove corrupted headers
+      if (content.includes('import type {') && content.includes('"id":')) {
         content = content.replace(/import type \{[\s\S]*?\} from "\.\/schema";/, 'import { type Property } from "./schema";');
       }
 
@@ -221,30 +214,22 @@ export default function Dashboard() {
       const formattedData = formatObjectForTS(propertyData);
 
       if (editingId) {
-        // Improved regex to find the object block specifically by ID
-        const startRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"`, 'g');
-        const match = startRegex.exec(content);
+        // Find the correct array scope first
+        const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
+        const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
+        const arrayMatch = content.match(arrayRegex);
         
-        if (match) {
-          let openBraces = 0;
-          let endPos = -1;
-          for (let i = match.index; i < content.length; i++) {
-            if (content[i] === '{') openBraces++;
-            if (content[i] === '}') openBraces--;
-            if (openBraces === 0) {
-              endPos = i + 1;
-              break;
-            }
-          }
-          
-          if (endPos !== -1) {
-            updatedContent = content.slice(0, match.index) + formattedData + content.slice(endPos);
-          } else {
-            throw new Error("Could not find property block end");
-          }
-        } else {
-          throw new Error("Could not find property block start");
-        }
+        if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} array`);
+
+        const arrayContent = arrayMatch[2];
+        const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${editingId}"[\\s\\S]*?\\}`, 'g');
+        
+        // Remove existing and insert new at the beginning of the array to ensure cleanliness
+        const cleanedArrayContent = arrayContent.replace(idRegex, '').trim();
+        const separator = cleanedArrayContent ? ',\n' : '';
+        const newArrayContent = `\n${formattedData}${separator}${cleanedArrayContent}\n`;
+        
+        updatedContent = content.replace(arrayRegex, `$1${newArrayContent}$3`);
       } else {
         const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
         const arrayRegex = new RegExp(`export const ${arrayLabel}: Property\\[\\] = \\[`);
