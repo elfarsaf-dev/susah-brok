@@ -1559,49 +1559,7 @@ slideImages: [
 ];
 
 export const glampingData: Property[] = [
-{
-  id: "glamping-turu",
-  name: "Glamping TURU",
-  location: "Pleseran, Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 500000 },
-    { label: "Jumat", price: 600000 },
-    { label: "Sabtu / Tgl Merah", price: 800000 }
-  ],
-  units: 1,
-  facilities: [
-    "Kamar Mandi Air Hangat",
-    "2 Bed",
-    "TV",
-    "WiFi",
-    "Private Pool / Kolam Renang",
-    "Alat Makan",
-    "Kompor Portable",
-    "Free Breakfast 2 Pack",
-    "Free Welcome Drink",
-    "Free BBQ"
-  ],
-  capacity: "6 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5643.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5630.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5629.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5623.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5622.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5621.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5619.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5617.jpeg"
-],
-  type: "glamping"
-},
+
 
 {
   id: "glamping-tab",
