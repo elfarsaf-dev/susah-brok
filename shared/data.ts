@@ -1,7 +1,6 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-
 {
   "id": "villa-fill&jill",
   "name": "Villa FJ",
@@ -71,46 +70,6 @@ export const villaData: Property[] = [
       "Lokasi dekat wisata Bukit Sekipan - cuma 5 langkah"
     ],
     image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5824.jpeg",
-    type: "villa"
-  },
-{
-    id: "villa-teduh-jiwa",
-    name: "Villa TD JW",
-    location: "Sekipan, Tawangmangu",
-    rates: [
-      { label: "Minggu - Kamis", price: 1500000 },
-      { label: "Jumat", price: 2500000 },
-      { label: "Sabtu", price: 3000000 }
-    ],
-    units: 1,
-    facilities: [
-      "3 Kamar tidur",
-      "4 Kamar mandi (2 luar, 2 dalam)",
-      "Ruang keluarga",
-      "Wi-Fi",
-      "Smart TV",
-      "Karaoke",
-      "Dapur lengkap (magicom, peralatan masak dan makan, kompor, kulkas, galon air mineral)",
-      "Kopi, gula, teh",
-      "Alat BBQ",
-      "Genset",
-      "Free BBQ",
-      "Extra bed 1",
-      "PS 3",
-      "Sepeda motor",
-      "Meja biliar",
-      "Kolam renang"
-    ],
-    capacity: "25 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "Bukti nikah untuk pasangan",
-      "No miras",
-      "No mesum",
-      "No drugs"
-    ],
-    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5821.jpeg",
     type: "villa"
   },
 {
