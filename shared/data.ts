@@ -1242,8 +1242,6 @@ export const villaData: Property[] = [
 ];
 
 export const glampingData: Property[] = [
-
-
 {
   id: "glamping-krishna",
   name: "Glamping Krishna",
@@ -1339,41 +1337,6 @@ slideImages: [
 ],
   type: "glamping"
 },
-{
-    id: "mongkrang-story-cottage",
-    name: "Mongkrang SC",
-    location: "Tawangmangu", 
-    rates: [
-      { label: "Weekday", price: 500000 },
-      { label: "Weekend", price: 700000 }
-    ],
-    units: 6,
-    facilities: [
-      "1 Bed",
-      "Sofa",
-      "Karpet tebal",
-      "TV Android",
-      "Wi-Fi",
-      "Teko listrik",
-      "Kamar mandi dalam",
-      "Air panas & dingin",
-      "Kopi dan teh",
-      "Include sarapan pagi untuk 2 orang",
-      "View Gunung Lawu"
-    ],
-    capacity: "Maksimal 6 orang",
-    notes: [
-      "Check in jam 2 siang",
-      "Check out jam 12 siang",
-      "Bukti nikah untuk pasangan",
-      "No miras", 
-      "No mesum",
-      "No drugs",
-      "Super cantik dengan view Gunung Lawu"
-    ],
-    image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/lawuscape-@main/Gambar/IMG_5815.jpeg",
-    type: "glamping"
-  },
 {
     id: "diza-glamping",
     name: "DZ Glamping",
