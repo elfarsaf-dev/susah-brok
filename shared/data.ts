@@ -2,6 +2,63 @@ import type { Property, Trip } from "./schema";
 
 export const villaData: Property[] = [
 {
+  id: "villa-yasalam",
+  name: "Villa Yasalam",
+  location: "Pancot, Tawangmangu",
+  rates: [
+    {
+      label: "Weekday",
+      price: 2500000
+    },
+    {
+      label: "Jum'at",
+      price: 3000000
+    },
+    {
+      label: "Weekend",
+      price: 3500000
+    }
+  ],
+  units: 1,
+  facilities: [
+    "Ruang keluarga",
+    "4 Kamar tidur (kingbed)",
+    "4 Kamar mandi (2 kamar mandi dalam, 2 kamar mandi luar)",
+    "Alat bakaran dan BBQ",
+    "Wi-Fi Available",
+    "Smart TV",
+    "Set Karaoke",
+    "Dapur dan meja makan dengan peralatan komplit",
+    "Area Parkir sampai 7 mobil (luar, dalam villa)",
+    "Kolam Renang",
+    "Area Balkon",
+    "Rooftop",
+    "Trek kebun sayur dan sungai"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_7741.jpeg",
+  slideImages: [
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (7).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (8).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (10).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (11).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (3).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (9).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (2).jpeg",
+    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (6).jpeg"
+  ]
+},
+{
   id: "villa-rumah-nenek-1-kalisoro",
   name: "Villa Rumah Nenek 1",
   location: "Kalisoro, Tawangmangu",
@@ -1602,55 +1659,6 @@ slideImages: [
     "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04.jpeg",
     "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (11).jpeg",
     "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-02-21 at 14.36.04 (10).jpeg"
-  ],
-  type: "villa"
-},
-{
-  id: "villa-yasalam",
-  name: "Villa Yasalam",
-  location: "Pancot, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 2500000 },
-    { label: "Jum'at", price: 3000000 },
-    { label: "Weekend", price: 3500000 }
-  ],
-  units: 1,
-  facilities: [
-    "Ruang keluarga",
-    "4 Kamar tidur (kingbed)",
-    "4 Kamar mandi (2 kamar mandi dalam, 2 kamar mandi luar)",
-    "Alat bakaran dan BBQ",
-    "Wi-Fi Available",
-    "Smart TV",
-    "Set Karaoke",
-    "Dapur dan meja makan dengan peralatan komplit",
-    "Area Parkir sampai 7 mobil (luar, dalam villa)",
-    "Kolam Renang",
-    "Area Balkon",
-    "Rooftop",
-    "Trek kebun sayur dan sungai"
-  ],
-  capacity: "20 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/depan yasalam.jpeg",
-  slideImages: [
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (7).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (8).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (10).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (11).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (3).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (9).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (2).jpeg",
-    "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (6).jpeg"
   ],
   type: "villa"
 },
