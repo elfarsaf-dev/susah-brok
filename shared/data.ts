@@ -1243,6 +1243,33 @@ export const villaData: Property[] = [
 
 export const glampingData: Property[] = [
 {
+  id: "glamping-ur",
+  name: "Gr",
+  location: "Lo",
+  rates: [
+    {
+      label: "Weekday",
+      price: 1000
+    },
+    {
+      label: "Weekend",
+      price: 10000
+    }
+  ],
+  units: 11,
+  facilities: [
+    "Iaha"
+  ],
+  capacity: "20",
+  notes: [
+    "Isjjs"
+  ],
+  image: "J",
+  slideImages: [
+    "Ja"
+  ]
+},
+{
     id: "diza-glamping",
     name: "DZ Glamping",
     location: "Tawangmangu",
