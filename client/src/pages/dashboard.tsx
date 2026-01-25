@@ -81,7 +81,7 @@ export default function Dashboard() {
       
       let allProps: Property[] = [];
       
-      const parseData = (match: any) => {
+      const parseData = (match: any, type: "villa" | "glamping") => {
         if (!match) return [];
         try {
           const cleanStr = match[1]
@@ -89,15 +89,17 @@ export default function Dashboard() {
             .replace(/,\s*\]/, ']')
             .replace(/([{,])\s*([a-zA-Z0-9_]+):/g, '$1"$2":');
           
+          let parsed = [];
           try {
-            return JSON.parse(cleanStr);
+            parsed = JSON.parse(cleanStr);
           } catch (e) {
-            return eval(`(${match[1]})`);
+            parsed = eval(`(${match[1]})`);
           }
+          return parsed.map((p: any) => ({ ...p, type }));
         } catch (e) { return []; }
       };
 
-      allProps = [...parseData(villaMatch), ...parseData(glampingMatch)];
+      allProps = [...parseData(villaMatch, "villa"), ...parseData(glampingMatch, "glamping")];
       setProperties(allProps);
     } catch (error) {
       toast({ title: "Error", description: "Gagal mengambil data", variant: "destructive" });
@@ -141,7 +143,8 @@ export default function Dashboard() {
   };
 
   const formatObjectForTS = (obj: any) => {
-    return JSON.stringify(obj, null, 2)
+    const { type, ...rest } = obj; // Don't include 'type' in the TS data
+    return JSON.stringify(rest, null, 2)
       .replace(/"([a-zA-Z0-9_]+)":/g, '$1:');
   };
 
@@ -160,8 +163,8 @@ export default function Dashboard() {
     return updateRes;
   };
 
-  const handleDelete = async (id: string) => {
-    if (!confirm("Yakin ingin menghapus properti ini?")) return;
+  const handleDelete = async (prop: Property) => {
+    if (!confirm(`Yakin ingin menghapus ${prop.name}?`)) return;
     setLoading(true);
     const token = localStorage.getItem("github_token");
     try {
@@ -171,17 +174,29 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // Improved block removal logic
-      const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${id}"[\\s\\S]*?\\}`, 'g');
+      const arrayLabel = prop.type === "villa" ? "villaData" : "glampingData";
+      const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
+      const arrayMatch = content.match(arrayRegex);
+      
+      if (!arrayMatch) throw new Error(`Could not find ${arrayLabel} array`);
+
+      const beforeArray = content.slice(0, arrayMatch.index);
+      const arrayPrefix = arrayMatch[1];
+      let arrayBody = arrayMatch[2];
+      const arraySuffix = arrayMatch[3];
+      const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
+
+      // Search ONLY within the target array body for the ID
+      const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${prop.id}"[\\s\\S]*?\\}`, 'g');
       let matches = [];
       let m;
-      while ((m = idRegex.exec(content)) !== null) {
+      while ((m = idRegex.exec(arrayBody)) !== null) {
           let open = 0;
           let start = m.index;
           let end = -1;
-          for(let i = start; i < content.length; i++) {
-              if(content[i] === '{') open++;
-              if(content[i] === '}') open--;
+          for(let i = start; i < arrayBody.length; i++) {
+              if(arrayBody[i] === '{') open++;
+              if(arrayBody[i] === '}') open--;
               if(open === 0) {
                   end = i + 1;
                   break;
@@ -191,23 +206,20 @@ export default function Dashboard() {
       }
 
       if (matches.length > 0) {
-          let updatedContent = content;
           matches.sort((a, b) => b.start - a.start).forEach(match => {
-              updatedContent = updatedContent.slice(0, match.start) + updatedContent.slice(match.end);
+              arrayBody = arrayBody.slice(0, match.start) + arrayBody.slice(match.end);
           });
           
-          // Better cleanup of trailing commas and spaces within arrays
-          updatedContent = updatedContent
-            .replace(/\[\s*,/g, '[')
-            .replace(/,\s*,/g, ',')
-            .replace(/,\s*\]/g, ']')
-            .replace(/\},\s*\}/g, '}}');
+          // Cleanup array body commas
+          arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
           
-          await updateGithubContent(updatedContent, `Delete property: ${id}`, fileData.sha);
+          const updatedContent = beforeArray + arrayPrefix + (arrayBody ? `\n${arrayBody}\n` : '') + arraySuffix + afterArray;
+          
+          await updateGithubContent(updatedContent, `Delete property: ${prop.id}`, fileData.sha);
           toast({ title: "Berhasil dihapus" });
           fetchProperties();
       } else {
-          throw new Error("Properti tidak ditemukan");
+          throw new Error(`Properti dengan ID ${prop.id} tidak ditemukan di daftar ${prop.type}`);
       }
     } catch (e: any) {
       toast({ title: "Error", description: e.message, variant: "destructive" });
@@ -242,12 +254,7 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // REPAIR: Full cleanup of corrupted fragments
-      content = content.replace(/import { type Property } from "\.\/schema";[\s\S]*?export const villaData/, 'import { type Property } from "./schema";\n\nexport const villaData');
-      
       const formattedData = formatObjectForTS(propertyData);
-      let updatedContent = "";
-
       const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
       const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
       const arrayMatch = content.match(arrayRegex);
@@ -260,51 +267,37 @@ export default function Dashboard() {
       const arraySuffix = arrayMatch[3];
       const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
 
-      // Remove existing entries of this ID across the WHOLE file to be safe
+      // Remove existing entries of this ID ONLY within the correct array
       const idSearchRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${propertyData.id}"[\\s\\S]*?\\}`, 'g');
-      
-      let allContentMatches = [];
-      let cm;
-      while ((cm = idSearchRegex.exec(content)) !== null) {
+      let bodyMatches = [];
+      let bm;
+      while ((bm = idSearchRegex.exec(arrayBody)) !== null) {
           let open = 0;
-          let start = cm.index;
+          let start = bm.index;
           let end = -1;
-          for(let i = start; i < content.length; i++) {
-              if(content[i] === '{') open++;
-              if(content[i] === '}') open--;
+          for(let i = start; i < arrayBody.length; i++) {
+              if(arrayBody[i] === '{') open++;
+              if(arrayBody[i] === '}') open--;
               if(open === 0) {
                   end = i + 1;
                   break;
               }
           }
-          if (end !== -1) allContentMatches.push({start, end});
+          if (end !== -1) bodyMatches.push({start, end});
       }
 
-      // If we found matches outside the target array, we need to clean them from 'content' first
-      if (allContentMatches.length > 0) {
-          let cleanedContent = content;
-          allContentMatches.sort((a, b) => b.start - a.start).forEach(match => {
-              cleanedContent = cleanedContent.slice(0, match.start) + cleanedContent.slice(match.end);
-          });
-          // Re-fetch array parts from cleaned content
-          const reMatch = cleanedContent.match(arrayRegex);
-          if (reMatch) {
-              const bArray = cleanedContent.slice(0, reMatch.index);
-              const aPrefix = reMatch[1];
-              let aBody = reMatch[2];
-              const aSuffix = reMatch[3];
-              const afArray = cleanedContent.slice(reMatch.index + reMatch[0].length);
-              
-              aBody = aBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
-              const separator = aBody ? ',\n' : '';
-              updatedContent = bArray + aPrefix + `\n${formattedData}${separator}${aBody}\n` + aSuffix + afArray;
-          }
-      } else {
-          // Normal case: insert into array
-          arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
-          const separator = arrayBody ? ',\n' : '';
-          updatedContent = beforeArray + arrayPrefix + `\n${formattedData}${separator}${arrayBody}\n` + arraySuffix + afterArray;
-      }
+      bodyMatches.sort((a, b) => b.start - a.start).forEach(match => {
+          arrayBody = arrayBody.slice(0, match.start) + arrayBody.slice(match.end);
+      });
+
+      // Cleanup array body
+      arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
+      
+      // Add the new/edited entry
+      const separator = arrayBody ? ',\n' : '';
+      const newArrayBody = `\n${formattedData}${separator}${arrayBody}\n`;
+      
+      const updatedContent = beforeArray + arrayPrefix + newArrayBody + arraySuffix + afterArray;
 
       await updateGithubContent(updatedContent, `${editingId ? 'Edit' : 'Add'} property: ${propertyData.name}`, fileData.sha);
 
@@ -365,16 +358,16 @@ export default function Dashboard() {
         {view === "list" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {properties.map((prop) => (
-              <Card key={prop.id} className="overflow-hidden">
+              <Card key={`${prop.type}-${prop.id}`} className="overflow-hidden">
                 <img src={prop.image} alt={prop.name} className="h-40 w-full object-cover" />
                 <CardHeader className="p-4">
                   <CardTitle className="text-lg">{prop.name}</CardTitle>
                   <p className="text-sm text-muted-foreground">{prop.location}</p>
-                  <p className="text-xs font-bold uppercase mt-1">{prop.type}</p>
+                  <p className="text-xs font-bold uppercase mt-1 text-primary">{prop.type}</p>
                 </CardHeader>
                 <CardContent className="p-4 pt-0 flex justify-between gap-2">
                   <Button variant="outline" size="sm" className="flex-1" onClick={() => startEdit(prop)}><Pencil className="mr-2 h-3 w-3" /> Edit</Button>
-                  <Button variant="destructive" size="sm" onClick={() => handleDelete(prop.id)}><Trash2 className="h-3 w-3" /></Button>
+                  <Button variant="destructive" size="sm" onClick={() => handleDelete(prop)}><Trash2 className="h-4 w-4" /></Button>
                 </CardContent>
               </Card>
             ))}
