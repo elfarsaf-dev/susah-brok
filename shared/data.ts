@@ -1,57 +1,6 @@
 import type  from "./schema";
 
 export const villaData: Property[] = [
-
-{
-  id: "villa-cleovin",
-  name: "Villa Cleovin",
-  location: "Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 800000 },
-    { label: "Jumat", price: 1000000 },
-    { label: "Sabtu", price: 1500000 }
-  ],
-  units: 1,
-  facilities: [
-    "2 King Size Bed",
-    "Sofa Bed",
-    "2 Kamar Mandi Air Hangat",
-    "Amenities",
-    "Kolam Air Hangat",
-    "Smart TV Karaoke + Wifi",
-    "Mini Kitchen",
-    "Welcome Drink (Gula, Teh, Kopi)",
-    "Breakfast 4 Pack",
-    "Ketel Listrik",
-    "Disediakan Alat BBQ"
-  ],
-  capacity: "8 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4694.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4625.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4631.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4639.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4635.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4634.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4644.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4648.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4646.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4652.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4656.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4663.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4655.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4651.jpeg"
-],
-  type: "villa"
-},
 {
   id: "villa-omah-rija",
   name: "Villa Omah Rija",
