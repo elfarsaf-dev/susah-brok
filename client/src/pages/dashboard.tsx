@@ -171,10 +171,8 @@ export default function Dashboard() {
       const fileData = await getRes.json();
       let content = atob(fileData.content);
       
-      // Safe identification of the property block within ANY array
+      // Improved block removal logic
       const idRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${id}"[\\s\\S]*?\\}`, 'g');
-      
-      // Custom block finder with brace counting to be 100% sure
       let matches = [];
       let m;
       while ((m = idRegex.exec(content)) !== null) {
@@ -193,15 +191,17 @@ export default function Dashboard() {
       }
 
       if (matches.length > 0) {
-          // Remove all matches and handle comma cleanup
           let updatedContent = content;
-          // Sort matches descending to remove from end without affecting indices
           matches.sort((a, b) => b.start - a.start).forEach(match => {
               updatedContent = updatedContent.slice(0, match.start) + updatedContent.slice(match.end);
           });
           
-          // Cleanup trailing commas and double newlines
-          updatedContent = updatedContent.replace(/,\s*,/g, ',').replace(/\[\s*,/g, '[').replace(/,\s*\]/g, ']');
+          // Better cleanup of trailing commas and spaces within arrays
+          updatedContent = updatedContent
+            .replace(/\[\s*,/g, '[')
+            .replace(/,\s*,/g, ',')
+            .replace(/,\s*\]/g, ']')
+            .replace(/\},\s*\}/g, '}}');
           
           await updateGithubContent(updatedContent, `Delete property: ${id}`, fileData.sha);
           toast({ title: "Berhasil dihapus" });
@@ -248,7 +248,6 @@ export default function Dashboard() {
       const formattedData = formatObjectForTS(propertyData);
       let updatedContent = "";
 
-      // Safe identification of the array scope
       const arrayLabel = propertyData.type === "villa" ? "villaData" : "glampingData";
       const arrayRegex = new RegExp(`(export const ${arrayLabel}: Property\\[\\] = \\[)([\\s\\S]*?)(\\];)`);
       const arrayMatch = content.match(arrayRegex);
@@ -261,37 +260,51 @@ export default function Dashboard() {
       const arraySuffix = arrayMatch[3];
       const afterArray = content.slice(arrayMatch.index + arrayMatch[0].length);
 
-      // Remove existing entries of this ID if any
+      // Remove existing entries of this ID across the WHOLE file to be safe
       const idSearchRegex = new RegExp(`\\{[\\s\\S]*?id:\\s*"${propertyData.id}"[\\s\\S]*?\\}`, 'g');
-      let bodyMatches = [];
-      let bm;
-      while ((bm = idSearchRegex.exec(arrayBody)) !== null) {
+      
+      let allContentMatches = [];
+      let cm;
+      while ((cm = idSearchRegex.exec(content)) !== null) {
           let open = 0;
-          let start = bm.index;
+          let start = cm.index;
           let end = -1;
-          for(let i = start; i < arrayBody.length; i++) {
-              if(arrayBody[i] === '{') open++;
-              if(arrayBody[i] === '}') open--;
+          for(let i = start; i < content.length; i++) {
+              if(content[i] === '{') open++;
+              if(content[i] === '}') open--;
               if(open === 0) {
                   end = i + 1;
                   break;
               }
           }
-          if (end !== -1) bodyMatches.push({start, end});
+          if (end !== -1) allContentMatches.push({start, end});
       }
 
-      bodyMatches.sort((a, b) => b.start - a.start).forEach(match => {
-          arrayBody = arrayBody.slice(0, match.start) + arrayBody.slice(match.end);
-      });
-
-      // Cleanup array body commas
-      arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
-      
-      // Add the new/edited entry at the top
-      const separator = arrayBody ? ',\n' : '';
-      const newArrayBody = `\n${formattedData}${separator}${arrayBody}\n`;
-      
-      updatedContent = beforeArray + arrayPrefix + newArrayBody + arraySuffix + afterArray;
+      // If we found matches outside the target array, we need to clean them from 'content' first
+      if (allContentMatches.length > 0) {
+          let cleanedContent = content;
+          allContentMatches.sort((a, b) => b.start - a.start).forEach(match => {
+              cleanedContent = cleanedContent.slice(0, match.start) + cleanedContent.slice(match.end);
+          });
+          // Re-fetch array parts from cleaned content
+          const reMatch = cleanedContent.match(arrayRegex);
+          if (reMatch) {
+              const bArray = cleanedContent.slice(0, reMatch.index);
+              const aPrefix = reMatch[1];
+              let aBody = reMatch[2];
+              const aSuffix = reMatch[3];
+              const afArray = cleanedContent.slice(reMatch.index + reMatch[0].length);
+              
+              aBody = aBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
+              const separator = aBody ? ',\n' : '';
+              updatedContent = bArray + aPrefix + `\n${formattedData}${separator}${aBody}\n` + aSuffix + afArray;
+          }
+      } else {
+          // Normal case: insert into array
+          arrayBody = arrayBody.trim().replace(/^,|,$/g, '').replace(/,\s*,/g, ',');
+          const separator = arrayBody ? ',\n' : '';
+          updatedContent = beforeArray + arrayPrefix + `\n${formattedData}${separator}${arrayBody}\n` + arraySuffix + afterArray;
+      }
 
       await updateGithubContent(updatedContent, `${editingId ? 'Edit' : 'Add'} property: ${propertyData.name}`, fileData.sha);
 
