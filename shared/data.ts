@@ -1242,50 +1242,7 @@ export const villaData: Property[] = [
 ];
 
 export const glampingData: Property[] = [
-{
-  id: "glamping-krishna",
-  name: "Glamping Krishna",
-  location: "Tawangmangu",
-  rates: [
-    { label: "Minggu - Kamis", price: 600000 },
-    { label: "Jumat", price: 700000 },
-    { label: "Sabtu", price: 800000 }
-  ],
-  units: 1,
-  facilities: [
-    "1 King Size Bed",
-    "Sofa Bed",
-    "Kamar Mandi Air Hangat",
-    "Amenities",
-    "Kolam Air Hangat",
-    "Smart TV + Wifi",
-    "Mini Kitchen",
-    "Welcome Drink (Gula, Teh dan Kopi)",
-    "Breakfast 2 Pack",
-    "Ketel Listrik",
-    "Disediakan Alat BBQ"
-  ],
-  capacity: "5 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4689.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4681.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4680.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4671.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4678.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4670.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4665.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_4682.jpeg"
-],
-  type: "glamping"
-},
+
 
 {
   id: "nura-glamping",
