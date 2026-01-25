@@ -1394,63 +1394,6 @@ export const villaData: Property[] = [
 
 export const glampingData: Property[] = [
 
-
-{
-  id: "glamping-hosbet",
-  name: "Glamping Hosbet",
-  location: "Pleseran, Tawangmangu",
-  rates: [
-    { label: "Weekday", price: 600000 },
-    { label: "Jumat", price: 700000 },
-    { label: "Weekend", price: 800000 }
-  ],
-  units: 1,
-  facilities: [
-    "Single Bed",
-    "Mini Pool",
-    "Rooftop",
-    "Dapur",
-    "Dispenser",
-    "Alat Dapur Komplit",
-    "Amenities Komplit",
-    "Meja Kursi Mini",
-    "TV Android",
-    "Kulkas",
-    "Mini Bar",
-    "Kamar Mandi Dalam",
-    "Kloset Duduk",
-    "Parkir Luas",
-    "View Istimewa",
-    "Akses Jalan Mudah",
-    "Free Sarapan 2 Porsi",
-    "Free BBQ"
-  ],
-  capacity: "5 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_5292.jpeg",
-slideImages: [
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5287.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5283.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5280.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5271.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5270.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5248.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5249.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5247.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5245.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5244.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5243.jpeg",
-  "https://cdn.ferdev.my.id/assets/elfar/IMG_5242.jpeg"
-],
-  type: "glamping"
-},
 {
   id: "nuha-glamping",
   name: "Nuha Glamping",
