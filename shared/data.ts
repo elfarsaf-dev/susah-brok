@@ -24,7 +24,7 @@ export const villaData: Property[] = [
     "Villa + Balkon",
     "5 Kamar Tidur",
     "3 Kamar Mandi Air Panas",
-    "1 Kamar Mandi",
+    "1 Kamar Mandi biasa",
     "Mini Kolam Renang",
     "Pantry / Mini Bar",
     "Fasilitas Dapur Lengkap",
@@ -66,6 +66,7 @@ export const villaData: Property[] = [
     "https://cdn.ferdev.my.id/assets/elfar/IMG_5073.jpeg"
   ]
 },
+
 {
   id: "villa-rumah-nenek-1-kalisoro",
   name: "Villa RN1-K",
