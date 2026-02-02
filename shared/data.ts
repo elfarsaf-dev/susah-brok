@@ -3,8 +3,9 @@ import type { Property, Trip } from "./schema";
 export const villaData: Property[] = [
 {
   id: "villa-asih",
-  name: "Villa AsH",
+  name: "Villa AsHh",
   location: "Kalisoro, Tawangmangu",
+  type: "villa",
   rates: [
     {
       label: "Weekday",
@@ -59,6 +60,7 @@ export const villaData: Property[] = [
     "https://cdn.ferdev.my.id/assets/elfar/IMG_4883.jpeg"
   ]
 },
+
 {
   id: "villa-rumah-nenek-1-sekipan",
   name: "Villa RN1-S",
