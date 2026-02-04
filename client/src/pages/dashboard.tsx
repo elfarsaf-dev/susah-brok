@@ -527,11 +527,11 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
                   </div>
                   <div className="space-y-2">
                     <Label>ID Properti</Label>
-                    <Input className="h-11" value={formData.id} onChange={(e) => setFormData({...formData, id: e.target.value})} disabled={!!editingId} placeholder="Contoh: villa-01" required />
+                    <Input className="h-11" value={formData.id} onChange={(e) => setFormData({...formData, id: e.target.value})} disabled={!!editingId} placeholder="nama villa/glamping asli" required />
                   </div>
                   <div className="sm:col-span-2 space-y-2">
                     <Label>Nama Properti</Label>
-                    <Input className="h-11" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} placeholder="Masukkan nama villa/glamping" required />
+                    <Input className="h-11" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} placeholder="Masukkan nama samaran villa/glamping" required />
                   </div>
                   <div className="sm:col-span-2 space-y-2">
                     <Label>Lokasi</Label>
