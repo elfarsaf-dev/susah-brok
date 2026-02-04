@@ -125,22 +125,49 @@ export default function Dashboard() {
     setIsLoggedIn(false);
   };
 
-  const handleCopyFacilities = (prop: Property) => {
-    if (!prop.facilities || prop.facilities.length === 0) {
-      toast({ title: "Gagal", description: "Tidak ada fasilitas untuk disalin", variant: "destructive" });
-      return;
-    }
+  const handleCopyFormatted = (prop: Property) => {
+    const formatRupiah = (num: number) => {
+      return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(num);
+    };
+
+    const ratesText = prop.rates
+      .map(r => `✨ ${r.label} ${formatRupiah(r.price)}`)
+      .join("\n");
 
     const facilitiesText = prop.facilities
       .filter(f => f.trim())
-      .map(f => `- ${f}`)
+      .map(f => `✅ ${f}`)
       .join("\n");
+
+    const emojiType = prop.type === "villa" ? "🏡" : "🏠";
+    const typeLabel = prop.type.charAt(0).toUpperCase() + prop.type.slice(1);
+
+    const template = `${emojiType} *${typeLabel} ${prop.name}*  
+📍 ${prop.location}  
+
+💰 _*Harga*_  
+${ratesText}  
+
+👥 Kapasitas ${prop.capacity}  
+
+👨‍👩‍👧‍👦 Cocok untuk keluarga, staycation, honeymoon 😍🥰, romantic getaway  
+
+🎯 Fasilitas :  
+${facilitiesText}  
+
+📛 Note:  
+⏩ Check in jam 14.00  
+⏪ Check out jam 12.00  
+🚻 Bukti nikah untuk pasangan  
+🍺 No miras  
+🔞 No mesum  
+🏴‍☠️ No drugs  
+
+Terima kasih atas perhatian nya... 🙏🙏🙏`;
     
-    const plainText = `Fasilitas ${prop.name}:\n${facilitiesText}`;
-    
-    navigator.clipboard.writeText(plainText).then(() => {
+    navigator.clipboard.writeText(template).then(() => {
       setCopiedId(prop.id);
-      toast({ title: "Berhasil!", description: "Fasilitas disalin ke clipboard" });
+      toast({ title: "Berhasil!", description: "Detail properti disalin (Format WhatsApp)" });
       setTimeout(() => setCopiedId(null), 2000);
     });
   };
@@ -452,14 +479,14 @@ export default function Dashboard() {
                         variant="secondary" 
                         size="sm" 
                         className="rounded-lg px-3" 
-                        onClick={() => handleCopyFacilities(prop)}
+                        onClick={() => handleCopyFormatted(prop)}
                       >
                         {copiedId === prop.id ? (
                           <Check className="h-4 w-4 text-green-600" />
                         ) : (
                           <Copy className="h-4 w-4" />
                         )}
-                        <span className="ml-2 hidden xs:inline">Fasilitas</span>
+                        <span className="ml-2 hidden xs:inline">Salin Detail</span>
                       </Button>
                       <Button variant="destructive" size="sm" className="rounded-lg px-3" onClick={() => handleDelete(prop)}>
                         <Trash2 className="h-4 w-4" />
