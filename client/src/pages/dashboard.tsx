@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard } from "lucide-react";
+import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard, Copy, Check } from "lucide-react";
 
 interface Rate {
   label: string;
@@ -35,6 +35,7 @@ export default function Dashboard() {
   const [properties, setProperties] = useState<Property[]>([]);
   const [view, setView] = useState<"list" | "form">("list");
   const [editingId, setEditingId] = useState<string | null>(null);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const [facilities, setFacilities] = useState<string[]>([""]);
   const [notes, setNotes] = useState<string[]>([""]);
@@ -122,6 +123,26 @@ export default function Dashboard() {
   const handleLogout = () => {
     localStorage.clear();
     setIsLoggedIn(false);
+  };
+
+  const handleCopyFacilities = (prop: Property) => {
+    if (!prop.facilities || prop.facilities.length === 0) {
+      toast({ title: "Gagal", description: "Tidak ada fasilitas untuk disalin", variant: "destructive" });
+      return;
+    }
+
+    const facilitiesText = prop.facilities
+      .filter(f => f.trim())
+      .map(f => `- ${f}`)
+      .join("\n");
+    
+    const plainText = `Fasilitas ${prop.name}:\n${facilitiesText}`;
+    
+    navigator.clipboard.writeText(plainText).then(() => {
+      setCopiedId(prop.id);
+      toast({ title: "Berhasil!", description: "Fasilitas disalin ke clipboard" });
+      setTimeout(() => setCopiedId(null), 2000);
+    });
   };
 
   const startEdit = (prop: Property) => {
@@ -239,7 +260,7 @@ export default function Dashboard() {
         id: formData.id,
         name: formData.name,
         location: formData.location,
-        type: formData.type, // Make sure type is included
+        type: formData.type,
         rates: rates.filter(r => r.label.trim()),
         units: Number(formData.units),
         facilities: facilities.filter(f => f.trim()),
@@ -422,13 +443,28 @@ export default function Dashboard() {
                     </div>
                     <p className="text-sm text-muted-foreground line-clamp-1">{prop.location}</p>
                   </CardHeader>
-                  <CardContent className="p-4 pt-2 flex items-center justify-between gap-3">
-                    <Button variant="outline" size="sm" className="flex-1 rounded-lg" onClick={() => startEdit(prop)}>
-                      <Pencil className="mr-2 h-3.5 w-3.5" /> Edit
-                    </Button>
-                    <Button variant="destructive" size="sm" className="rounded-lg px-3" onClick={() => handleDelete(prop)}>
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
+                  <CardContent className="p-4 pt-2 flex flex-col gap-3">
+                    <div className="flex items-center justify-between gap-2">
+                      <Button variant="outline" size="sm" className="flex-1 rounded-lg" onClick={() => startEdit(prop)}>
+                        <Pencil className="mr-2 h-3.5 w-3.5" /> Edit
+                      </Button>
+                      <Button 
+                        variant="secondary" 
+                        size="sm" 
+                        className="rounded-lg px-3" 
+                        onClick={() => handleCopyFacilities(prop)}
+                      >
+                        {copiedId === prop.id ? (
+                          <Check className="h-4 w-4 text-green-600" />
+                        ) : (
+                          <Copy className="h-4 w-4" />
+                        )}
+                        <span className="ml-2 hidden xs:inline">Fasilitas</span>
+                      </Button>
+                      <Button variant="destructive" size="sm" className="rounded-lg px-3" onClick={() => handleDelete(prop)}>
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
