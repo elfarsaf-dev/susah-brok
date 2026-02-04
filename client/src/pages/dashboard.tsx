@@ -450,46 +450,46 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
               {properties.map((prop) => (
-                <Card key={`${prop.type}-${prop.id}`} className="overflow-hidden shadow-sm hover:shadow-md transition-shadow border-none">
+                <Card key={`${prop.type}-${prop.id}`} className="overflow-hidden shadow-sm hover:shadow-md transition-shadow border-none flex flex-col">
                   <div className="relative aspect-video">
                     <img src={prop.image} alt={prop.name} className="w-full h-full object-cover" />
-                    <div className="absolute top-3 left-3">
-                      <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-sm ${
+                    <div className="absolute top-2 left-2">
+                      <span className={`px-1.5 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider shadow-sm ${
                         prop.type === "villa" ? "bg-blue-500 text-white" : "bg-emerald-500 text-white"
                       }`}>
                         {prop.type}
                       </span>
                     </div>
                   </div>
-                  <CardHeader className="p-4 pb-2">
-                    <div className="flex justify-between items-start gap-2">
-                      <CardTitle className="text-lg font-bold line-clamp-1">{prop.name}</CardTitle>
-                      <span className="text-xs text-muted-foreground whitespace-nowrap">ID: {prop.id}</span>
+                  <CardHeader className="p-3 sm:p-4 pb-1 sm:pb-2 flex-1">
+                    <div className="flex flex-col sm:flex-row justify-between items-start gap-1">
+                      <CardTitle className="text-sm sm:text-lg font-bold line-clamp-1">{prop.name}</CardTitle>
+                      <span className="text-[10px] text-muted-foreground whitespace-nowrap">ID: {prop.id}</span>
                     </div>
-                    <p className="text-sm text-muted-foreground line-clamp-1">{prop.location}</p>
+                    <p className="text-[10px] sm:text-sm text-muted-foreground line-clamp-1">{prop.location}</p>
                   </CardHeader>
-                  <CardContent className="p-4 pt-2 flex flex-col gap-3">
-                    <div className="flex items-center justify-between gap-2">
-                      <Button variant="outline" size="sm" className="flex-1 rounded-lg" onClick={() => startEdit(prop)}>
-                        <Pencil className="mr-2 h-3.5 w-3.5" /> Edit
+                  <CardContent className="p-3 sm:p-4 pt-1 sm:pt-2 flex flex-col gap-2">
+                    <div className="grid grid-cols-1 gap-1.5">
+                      <Button variant="outline" size="sm" className="h-8 sm:h-9 w-full rounded-lg text-xs sm:text-sm px-2" onClick={() => startEdit(prop)}>
+                        <Pencil className="mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Edit
                       </Button>
                       <Button 
                         variant="secondary" 
                         size="sm" 
-                        className="rounded-lg px-3" 
+                        className="h-8 sm:h-9 w-full rounded-lg text-xs sm:text-sm px-2" 
                         onClick={() => handleCopyFormatted(prop)}
                       >
                         {copiedId === prop.id ? (
-                          <Check className="h-4 w-4 text-green-600" />
+                          <Check className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
                         ) : (
-                          <Copy className="h-4 w-4" />
+                          <Copy className="h-3 w-3 sm:h-4 sm:w-4" />
                         )}
-                        <span className="ml-2 hidden xs:inline">Salin Detail</span>
+                        <span className="ml-1.5">Salin Detail</span>
                       </Button>
-                      <Button variant="destructive" size="sm" className="rounded-lg px-3" onClick={() => handleDelete(prop)}>
-                        <Trash2 className="h-4 w-4" />
+                      <Button variant="destructive" size="sm" className="h-8 sm:h-9 w-full rounded-lg text-xs sm:text-sm px-2" onClick={() => handleDelete(prop)}>
+                        <Trash2 className="h-3 w-3 sm:h-4 sm:w-4" /> <span className="ml-1.5 sm:hidden">Hapus</span>
                       </Button>
                     </div>
                   </CardContent>
