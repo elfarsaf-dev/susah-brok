@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard, Copy, Check } from "lucide-react";
+import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard, Copy, Check, Upload, Image as ImageIcon } from "lucide-react";
 
 interface Rate {
   label: string;
@@ -26,12 +26,16 @@ interface Property {
   type: "villa" | "glamping";
 }
 
+const API_URL = "https://api.ferdev.my.id/remote/elfar";
+const API_KEY = "key-elfs";
+
 export default function Dashboard() {
   const { toast } = useToast();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loginForm, setLoginForm] = useState({ username: "", password: "" });
   
   const [loading, setLoading] = useState(false);
+  const [uploading, setUploading] = useState<string | null>(null);
   const [properties, setProperties] = useState<Property[]>([]);
   const [view, setView] = useState<"list" | "form">("list");
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -123,6 +127,45 @@ export default function Dashboard() {
   const handleLogout = () => {
     localStorage.clear();
     setIsLoggedIn(false);
+  };
+
+  const handleUpload = async (file: File, type: 'main' | 'slide', index?: number) => {
+    const uploadId = type === 'main' ? 'main' : `slide-${index}`;
+    setUploading(uploadId);
+    
+    const form = new FormData();
+    form.append("file", file);
+
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+        },
+        body: form,
+      });
+
+      if (!res.ok) throw new Error("Upload gagal");
+      
+      const data = await res.json();
+      const url = data.url || data.data?.url || data.fileUrl; // Adjust based on actual API response structure
+      
+      if (!url) throw new Error("URL gambar tidak ditemukan di respon API");
+
+      if (type === 'main') {
+        setFormData(prev => ({ ...prev, image: url }));
+      } else if (typeof index === 'number') {
+        const next = [...slideImages];
+        next[index] = url;
+        setSlideImages(next);
+      }
+      
+      toast({ title: "Berhasil", description: "Gambar berhasil diupload" });
+    } catch (error: any) {
+      toast({ title: "Upload Gagal", description: error.message, variant: "destructive" });
+    } finally {
+      setUploading(null);
+    }
   };
 
   const handleCopyFormatted = (prop: Property) => {
@@ -545,9 +588,37 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
                     <Label>Jumlah Unit</Label>
                     <Input className="h-11" type="number" value={formData.units} onChange={(e) => setFormData({...formData, units: parseInt(e.target.value)})} required />
                   </div>
-                  <div className="sm:col-span-2 space-y-2">
-                    <Label>URL Gambar Utama</Label>
-                    <Input className="h-11" value={formData.image} onChange={(e) => setFormData({...formData, image: e.target.value})} placeholder="https://..." required />
+                  <div className="sm:col-span-2 space-y-4">
+                    <Label>Gambar Utama</Label>
+                    <div className="flex flex-col sm:flex-row gap-4 items-start">
+                      <div className="flex-1 w-full space-y-2">
+                        <Input className="h-11" value={formData.image} onChange={(e) => setFormData({...formData, image: e.target.value})} placeholder="URL gambar atau upload -->" required />
+                      </div>
+                      <div className="relative w-full sm:w-auto">
+                        <input 
+                          type="file" 
+                          id="main-upload" 
+                          className="hidden" 
+                          accept="image/*"
+                          onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0], 'main')} 
+                        />
+                        <Button 
+                          type="button" 
+                          variant="secondary" 
+                          className="w-full sm:w-auto h-11 px-6"
+                          disabled={uploading === 'main'}
+                          onClick={() => document.getElementById('main-upload')?.click()}
+                        >
+                          {uploading === 'main' ? <Loader2 className="animate-spin mr-2 h-4 w-4" /> : <Upload className="mr-2 h-4 w-4" />}
+                          Upload Foto
+                        </Button>
+                      </div>
+                    </div>
+                    {formData.image && (
+                      <div className="relative w-24 h-24 rounded-lg overflow-hidden border">
+                        <img src={formData.image} className="w-full h-full object-cover" />
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -625,17 +696,45 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
                 <CardHeader className="bg-muted/30">
                   <CardTitle className="text-lg">Galeri Foto (Slide Images)</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-6 space-y-6">
                   {slideImages.map((s, i) => (
-                    <div key={i} className="flex gap-2">
-                      <Input className="h-10" value={s} onChange={(e) => updateField(setSlideImages, slideImages, i, e.target.value)} placeholder="URL gambar galeri" />
-                      <Button type="button" variant="ghost" size="icon" className="text-destructive" onClick={() => removeField(setSlideImages, slideImages, i)}>
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
+                    <div key={i} className="space-y-3 p-4 rounded-xl border bg-muted/5">
+                      <div className="flex flex-col sm:flex-row gap-3 items-start">
+                        <div className="flex-1 w-full">
+                          <Input className="h-10" value={s} onChange={(e) => updateField(setSlideImages, slideImages, i, e.target.value)} placeholder="URL atau upload gambar" />
+                        </div>
+                        <div className="flex gap-2 w-full sm:w-auto">
+                          <input 
+                            type="file" 
+                            id={`slide-upload-${i}`} 
+                            className="hidden" 
+                            accept="image/*"
+                            onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0], 'slide', i)} 
+                          />
+                          <Button 
+                            type="button" 
+                            variant="secondary" 
+                            size="sm"
+                            className="flex-1 sm:flex-none h-10"
+                            disabled={uploading === `slide-${i}`}
+                            onClick={() => document.getElementById(`slide-upload-${i}`)?.click()}
+                          >
+                            {uploading === `slide-${i}` ? <Loader2 className="animate-spin h-4 w-4" /> : <Upload className="h-4 w-4" />}
+                          </Button>
+                          <Button type="button" variant="ghost" size="sm" className="h-10 text-destructive" onClick={() => removeField(setSlideImages, slideImages, i)}>
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                      {s && (
+                        <div className="relative w-20 h-20 rounded-lg overflow-hidden border">
+                          <img src={s} className="w-full h-full object-cover" />
+                        </div>
+                      )}
                     </div>
                   ))}
-                  <Button type="button" variant="outline" className="w-full border-dashed" onClick={() => addField(setSlideImages, slideImages)}>
-                    <Plus className="mr-2 h-4 w-4" /> Tambah Gambar Galeri
+                  <Button type="button" variant="outline" className="w-full border-dashed h-11" onClick={() => addField(setSlideImages, slideImages)}>
+                    <Plus className="mr-2 h-4 w-4" /> Tambah Slot Galeri
                   </Button>
                 </CardContent>
               </Card>
