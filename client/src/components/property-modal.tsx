@@ -498,7 +498,7 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               ) : (
                 <Download className="h-4 w-4 text-primary" />
               )}
-              <span className="text-xs font-semibold text-gray-700 hidden sm:inline">
+              <span className="text-xs font-semibold text-gray-700">
                 {isDownloading ? "Mengunduh..." : "Ambil Gambar"}
               </span>
             </Button>
