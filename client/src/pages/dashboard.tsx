@@ -148,9 +148,9 @@ export default function Dashboard() {
       if (!res.ok) throw new Error("Upload gagal");
       
       const data = await res.json();
-      const url = data.url || data.data?.url || data.fileUrl; // Adjust based on actual API response structure
+      const url = data.dlink || data.url || data.data?.url; 
       
-      if (!url) throw new Error("URL gambar tidak ditemukan di respon API");
+      if (!url) throw new Error("URL gambar tidak ditemukan di respon API (Gunakan 'dlink')");
 
       if (type === 'main') {
         setFormData(prev => ({ ...prev, image: url }));
