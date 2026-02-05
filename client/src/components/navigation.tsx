@@ -19,6 +19,7 @@ export default function Navigation() {
     },
     { href: "/#about", label: "Tentang", isExternal: true },
     { href: "/#contact", label: "Kontak", isExternal: true },
+    { href: "/dashboard", label: "dash", isExternal: false },
   ];
 
   const handleNavClick = (href?: string, isExternal?: boolean, onClick?: () => void) => {
