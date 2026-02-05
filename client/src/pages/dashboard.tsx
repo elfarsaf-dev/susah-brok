@@ -168,6 +168,46 @@ export default function Dashboard() {
     }
   };
 
+  const handleUploadMultiple = async (files: FileList) => {
+    setUploading('slide-multiple');
+    const uploadedUrls: string[] = [];
+    
+    for (let i = 0; i < files.length; i++) {
+      const form = new FormData();
+      form.append("file", files[i]);
+
+      try {
+        const res = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${API_KEY}`,
+          },
+          body: form,
+        });
+
+        if (!res.ok) throw new Error(`Upload gagal untuk file ke-${i + 1}`);
+        
+        const data = await res.json();
+        const url = data.dlink || data.url || data.data?.url; 
+        
+        if (url) {
+          uploadedUrls.push(url);
+        }
+      } catch (error: any) {
+        toast({ title: "Upload Gagal", description: error.message, variant: "destructive" });
+      }
+    }
+
+    if (uploadedUrls.length > 0) {
+      setSlideImages(prev => {
+        const filtered = prev.filter(s => s.trim());
+        return [...filtered, ...uploadedUrls];
+      });
+      toast({ title: "Berhasil", description: `${uploadedUrls.length} gambar berhasil diupload` });
+    }
+    setUploading(null);
+  };
+
   const handleCopyFormatted = (prop: Property) => {
     const formatRupiah = (num: number) => {
       return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(num);
