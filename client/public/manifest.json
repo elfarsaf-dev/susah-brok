@@ -3,7 +3,9 @@
   "short_name": "BOS Villa",
   "description": "Villa & Glamping Terbaik di Tawangmangu",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#16A34A",
   "icons": [
