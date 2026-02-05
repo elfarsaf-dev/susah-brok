@@ -5,7 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard, Copy, Check, Upload, Image as ImageIcon } from "lucide-react";
+import { Plus, LogOut, Loader2, Trash2, Pencil, List, X, Key, LayoutDashboard, Copy, Check, Upload, Image as ImageIcon, Download } from "lucide-react";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 
 interface Rate {
   label: string;
@@ -40,6 +42,7 @@ export default function Dashboard() {
   const [view, setView] = useState<"list" | "form">("list");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
+  const [downloadingId, setDownloadingId] = useState<string | null>(null);
 
   const [facilities, setFacilities] = useState<string[]>([""]);
   const [notes, setNotes] = useState<string[]>([""]);
@@ -253,6 +256,47 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
       toast({ title: "Berhasil!", description: "Detail properti disalin (Format WhatsApp)" });
       setTimeout(() => setCopiedId(null), 2000);
     });
+  };
+
+  const downloadAllImages = async (prop: Property) => {
+    setDownloadingId(prop.id);
+    try {
+      const sliderImages = prop.slideImages && prop.slideImages.length > 0 
+        ? [prop.image, ...prop.slideImages]
+        : [prop.image];
+        
+      const zip = new JSZip();
+      const folder = zip.folder(prop.name.replace(/[^a-z0-9]/gi, '_'));
+      
+      const downloadPromises = sliderImages.map(async (url, index) => {
+        try {
+          const response = await fetch(url);
+          const blob = await response.blob();
+          const extension = url.split('.').pop()?.split('?')[0] || 'jpg';
+          folder?.file(`${prop.name.replace(/[^a-z0-9]/gi, '_')}_${index + 1}.${extension}`, blob);
+        } catch (error) {
+          console.error(`Failed to download image ${index + 1}:`, error);
+        }
+      });
+
+      await Promise.all(downloadPromises);
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, `${prop.name.replace(/[^a-z0-9]/gi, '_')}_images.zip`);
+      
+      toast({
+        title: "Download Berhasil",
+        description: `Semua gambar untuk ${prop.name} telah diunduh.`,
+      });
+    } catch (error) {
+      console.error("Error zipping images:", error);
+      toast({
+        title: "Download Gagal",
+        description: "Terjadi kesalahan saat mengunduh gambar.",
+        variant: "destructive",
+      });
+    } finally {
+      setDownloadingId(null);
+    }
   };
 
   const startEdit = (prop: Property) => {
@@ -557,6 +601,20 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
                     <div className="grid grid-cols-1 gap-1.5">
                       <Button variant="outline" size="sm" className="h-8 sm:h-9 w-full rounded-lg text-xs sm:text-sm px-2" onClick={() => startEdit(prop)}>
                         <Pencil className="mr-1.5 h-3 w-3 sm:h-3.5 sm:w-3.5" /> Edit
+                      </Button>
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="h-8 sm:h-9 w-full rounded-lg text-xs sm:text-sm px-2" 
+                        onClick={() => downloadAllImages(prop)}
+                        disabled={downloadingId === prop.id}
+                      >
+                        {downloadingId === prop.id ? (
+                          <Loader2 className="h-3 w-3 sm:h-4 sm:w-4 animate-spin" />
+                        ) : (
+                          <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                        )}
+                        <span className="ml-1.5">{downloadingId === prop.id ? "Mengunduh..." : "Ambil Gambar"}</span>
                       </Button>
                       <Button 
                         variant="secondary" 

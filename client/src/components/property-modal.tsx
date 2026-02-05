@@ -478,32 +478,6 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
             </Button>
           </motion.div>
 
-          {/* Download Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.35, duration: 0.2 }}
-            className="absolute top-3 left-3 z-10"
-          >
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={downloadAllImages}
-              disabled={isDownloading}
-              className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full px-3 py-1.5 transition-all shadow-lg flex items-center gap-2"
-              data-testid="button-download-all"
-            >
-              {isDownloading ? (
-                <Loader2 className="h-4 w-4 text-primary animate-spin" />
-              ) : (
-                <Download className="h-4 w-4 text-primary" />
-              )}
-              <span className="text-xs font-semibold text-gray-700">
-                {isDownloading ? "Mengunduh..." : "Ambil Gambar"}
-              </span>
-            </Button>
-          </motion.div>
-          
           {/* Image Slider */}
           <motion.div 
             className="relative h-80" 
