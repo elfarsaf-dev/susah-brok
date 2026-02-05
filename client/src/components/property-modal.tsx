@@ -1,10 +1,13 @@
 import { useState, useEffect, useRef } from "react";
-import { X, ChevronLeft, ChevronRight, Check, Info } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Check, Info, Download, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Property } from "@shared/schema";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+import { useToast } from "@/hooks/use-toast";
 
 interface PropertyModalProps {
   property: Property;
@@ -17,7 +20,9 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [isAutoSliding, setIsAutoSliding] = useState(true);
+  const [isDownloading, setIsDownloading] = useState(false);
   const autoSlideIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const { toast } = useToast();
 
   // Admin contact information
   const adminContacts = {
@@ -397,6 +402,43 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
     window.open(whatsappUrl, '_blank');
   };
 
+  const downloadAllImages = async () => {
+    setIsDownloading(true);
+    try {
+      const zip = new JSZip();
+      const folder = zip.folder(property.name.replace(/[^a-z0-9]/gi, '_'));
+      
+      const downloadPromises = sliderImages.map(async (url, index) => {
+        try {
+          const response = await fetch(url);
+          const blob = await response.blob();
+          const extension = url.split('.').pop()?.split('?')[0] || 'jpg';
+          folder?.file(`${property.name.replace(/[^a-z0-9]/gi, '_')}_${index + 1}.${extension}`, blob);
+        } catch (error) {
+          console.error(`Failed to download image ${index + 1}:`, error);
+        }
+      });
+
+      await Promise.all(downloadPromises);
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, `${property.name.replace(/[^a-z0-9]/gi, '_')}_images.zip`);
+      
+      toast({
+        title: "Download Berhasil",
+        description: `Semua gambar untuk ${property.name} telah diunduh.`,
+      });
+    } catch (error) {
+      console.error("Error zipping images:", error);
+      toast({
+        title: "Download Gagal",
+        description: "Terjadi kesalahan saat mengunduh gambar.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <AnimatePresence>
       <Dialog open={true} onOpenChange={onClose}>
@@ -433,6 +475,32 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
               data-testid="button-close-modal"
             >
               <X className="h-4 w-4 text-gray-600" />
+            </Button>
+          </motion.div>
+
+          {/* Download Button */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.35, duration: 0.2 }}
+            className="absolute top-3 left-3 z-10"
+          >
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={downloadAllImages}
+              disabled={isDownloading}
+              className="bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full px-3 py-1.5 transition-all shadow-lg flex items-center gap-2"
+              data-testid="button-download-all"
+            >
+              {isDownloading ? (
+                <Loader2 className="h-4 w-4 text-primary animate-spin" />
+              ) : (
+                <Download className="h-4 w-4 text-primary" />
+              )}
+              <span className="text-xs font-semibold text-gray-700 hidden sm:inline">
+                {isDownloading ? "Mengunduh..." : "Ambil Gambar"}
+              </span>
             </Button>
           </motion.div>
           
