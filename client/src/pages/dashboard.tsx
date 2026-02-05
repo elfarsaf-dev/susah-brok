@@ -733,49 +733,68 @@ Terima kasih atas perhatian nya... 🙏🙏🙏`;
 
               {/* Gallery */}
               <Card className="border-none shadow-sm overflow-hidden">
-                <CardHeader className="bg-muted/30">
+                <CardHeader className="bg-muted/30 flex flex-row items-center justify-between py-4">
                   <CardTitle className="text-lg">Galeri Foto (Slide Images)</CardTitle>
+                  <div className="relative">
+                    <input
+                      type="file"
+                      multiple
+                      accept="image/*"
+                      className="hidden"
+                      id="slide-upload-multiple"
+                      onChange={(e) => e.target.files && handleUploadMultiple(e.target.files)}
+                      disabled={!!uploading}
+                    />
+                    <Button 
+                      type="button" 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => document.getElementById('slide-upload-multiple')?.click()}
+                      disabled={!!uploading}
+                    >
+                      {uploading === 'slide-multiple' ? (
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      ) : (
+                        <Upload className="mr-2 h-4 w-4" />
+                      )}
+                      Upload Banyak Foto
+                    </Button>
+                  </div>
                 </CardHeader>
                 <CardContent className="p-6 space-y-6">
-                  {slideImages.map((s, i) => (
-                    <div key={i} className="space-y-3 p-4 rounded-xl border bg-muted/5">
-                      <div className="flex flex-col sm:flex-row gap-3 items-start">
-                        <div className="flex-1 w-full">
-                          <Input className="h-10" value={s} onChange={(e) => updateField(setSlideImages, slideImages, i, e.target.value)} placeholder="URL atau upload gambar" />
-                        </div>
-                        <div className="flex gap-2 w-full sm:w-auto">
-                          <input 
-                            type="file" 
-                            id={`slide-upload-${i}`} 
-                            className="hidden" 
-                            accept="image/*"
-                            onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0], 'slide', i)} 
-                          />
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    {slideImages.map((s, i) => s.trim() && (
+                      <div key={i} className="relative aspect-video rounded-xl overflow-hidden border group bg-muted/5">
+                        <img src={s} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
                           <Button 
                             type="button" 
-                            variant="secondary" 
-                            size="sm"
-                            className="flex-1 sm:flex-none h-10"
-                            disabled={uploading === `slide-${i}`}
-                            onClick={() => document.getElementById(`slide-upload-${i}`)?.click()}
+                            variant="destructive" 
+                            size="icon" 
+                            className="h-8 w-8 rounded-full" 
+                            onClick={() => removeField(setSlideImages, slideImages, i)}
                           >
-                            {uploading === `slide-${i}` ? <Loader2 className="animate-spin h-4 w-4" /> : <Upload className="h-4 w-4" />}
-                          </Button>
-                          <Button type="button" variant="ghost" size="sm" className="h-10 text-destructive" onClick={() => removeField(setSlideImages, slideImages, i)}>
                             <Trash2 className="h-4 w-4" />
                           </Button>
                         </div>
                       </div>
-                      {s && (
-                        <div className="relative w-20 h-20 rounded-lg overflow-hidden border">
-                          <img src={s} className="w-full h-full object-cover" />
-                        </div>
-                      )}
+                    ))}
+                  </div>
+
+                  {slideImages.filter(s => s.trim()).length === 0 && (
+                    <div className="border-2 border-dashed rounded-xl p-12 text-center text-muted-foreground bg-muted/5">
+                      <ImageIcon className="mx-auto h-12 w-12 opacity-20 mb-4" />
+                      <p>Belum ada foto galeri.</p>
+                      <p className="text-xs">Klik tombol "Upload Banyak Foto" di atas.</p>
                     </div>
-                  ))}
-                  <Button type="button" variant="outline" className="w-full border-dashed h-11" onClick={() => addField(setSlideImages, slideImages)}>
-                    <Plus className="mr-2 h-4 w-4" /> Tambah Slot Galeri
-                  </Button>
+                  )}
+
+                  <div className="pt-4 border-t">
+                    <Label className="text-xs text-muted-foreground mb-2 block">Tambah URL Manual</Label>
+                    <Button type="button" variant="ghost" size="sm" className="w-full border border-dashed" onClick={() => addField(setSlideImages, slideImages)}>
+                      <Plus className="mr-2 h-4 w-4" /> Tambah Slot URL
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
 
