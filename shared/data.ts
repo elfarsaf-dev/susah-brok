@@ -42,7 +42,7 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_4928.jpeg",
+  image: "www.cdn.ferdev.my.id/assets/elfar/IMG_4928.jpeg",
   slideImages: [
     "https://cdn.ferdev.my.id/assets/elfar/IMG_4933.jpeg",
     "https://cdn.ferdev.my.id/assets/elfar/IMG_4923.jpeg",
@@ -60,6 +60,7 @@ export const villaData: Property[] = [
     "https://cdn.ferdev.my.id/assets/elfar/IMG_4883.jpeg"
   ]
 },
+
 
 {
   id: "villa-rumah-nenek-1-sekipan",
