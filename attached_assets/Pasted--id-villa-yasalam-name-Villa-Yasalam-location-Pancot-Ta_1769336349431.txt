@@ -41,7 +41,7 @@
     "No mesum",
     "No drugs"
   ],
-  image: "https://cdn.ferdev.my.id/assets/elfar/IMG_7741.jpeg",
+  image: "https://fcdn.my.id/assets/elfar/IMG_7741.jpeg",
   slideImages: [
     "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (5).jpeg",
     "https://cdn.jsdelivr.net/gh/elfarsaf-dev/Heu@main/telo/WhatsApp Image 2024-01-30 at 11.02.58 (4).jpeg",
