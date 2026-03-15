@@ -46,7 +46,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Third-Party Services
 - **WhatsApp Business**: Primary booking channel via deep links to admin phone numbers
-- **CDN Assets**: Images hosted on `cdn.ferdev.my.id` and `cdn.jsdelivr.net` (GitHub-backed)
+- **CDN Assets**: Images hosted on `fcdn.my.id` and `cdn.jsdelivr.net` (GitHub-backed)
 - **Google Search Console**: Site verification configured
 
 ### Database
