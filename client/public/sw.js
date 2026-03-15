@@ -6,7 +6,7 @@ const ASSETS_TO_CACHE = [
   '/index.html',
   '/manifest.json',
   '/sw.js',
-  'https://cdn.ferdev.my.id/assets/elfar/IMG_5981.png'
+  'https://fcdn.ferdev.my.id/assets/elfar/IMG_5981.png'
 ];
 
 self.addEventListener('install', (event) => {
