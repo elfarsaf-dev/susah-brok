@@ -93,7 +93,7 @@ export default function ContactSection() {
           <div className="text-center">
             <div className="w-20 h-20 bg-transparent flex items-center justify-center mx-auto mb-4">
               <img 
-                src="https://fcdn.my.id/i/IMG_5981.png" 
+                src="https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_5981.png" 
                 alt="BOS VILLA TAWANGMANGU Logo" 
                 className="w-full h-full object-contain"
               />
