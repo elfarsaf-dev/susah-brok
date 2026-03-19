@@ -2,70 +2,10 @@ import type { Property, Trip } from "./schema";
 
 export const villaData: Property[] = [
 {
-  id: "villa-asih",
-  name: "Villa AsHh",
-  location: "Kalisoro, Tawangmangu",
-  type: "villa",
-  rates: [
-    {
-      label: "Weekday",
-      price: 1000000
-    },
-    {
-      label: "Jumat",
-      price: 1500000
-    },
-    {
-      label: "Weekend",
-      price: 2000000
-    }
-  ],
-  units: 1,
-  facilities: [
-    "3 Kamar Tidur",
-    "2 Kamar Mandi",
-    "Kolam Renang",
-    "Ruang Tamu",
-    "Ruang Kumpul Keluarga",
-    "Kitchen Set",
-    "Fullset Karaoke",
-    "Free Wifi",
-    "Halaman Rumput Luas",
-    "Gazebo"
-  ],
-  capacity: "20 orang",
-  notes: [
-    "Check in jam 14.00",
-    "Check out jam 12.00",
-    "Bukti nikah untuk pasangan",
-    "No miras",
-    "No mesum",
-    "No drugs"
-  ],
-  image: "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4928.jpeg%3Fv%3D1",
-  slideImages: [
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4933.jpeg%3Fv%3D1",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4923.jpeg%3Fv%3D1",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4922.jpeg%3Fv%3D1",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4921.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4920.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4915.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4914.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4909.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4904.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4902.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4900.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4896.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4890.jpeg",
-    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4883.jpeg"
-  ]
-},
-
-
-{
   id: "villa-rumah-nenek-1-sekipan",
   name: "Villa RN1-S",
   location: "Sekipan, Tawangmangu",
+  type: "villa",
   rates: [
     {
       label: "Minggu - Kamis",
@@ -125,6 +65,65 @@ export const villaData: Property[] = [
     "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_5099.jpeg",
     "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_5086.jpeg",
     "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_5073.jpeg"
+  ]
+},
+{
+  id: "villa-asih",
+  name: "Villa AsHh",
+  location: "Kalisoro, Tawangmangu",
+  type: "villa",
+  rates: [
+    {
+      label: "Weekday",
+      price: 1000000
+    },
+    {
+      label: "Jumat",
+      price: 1500000
+    },
+    {
+      label: "Weekend",
+      price: 2000000
+    }
+  ],
+  units: 1,
+  facilities: [
+    "3 Kamar Tidur",
+    "2 Kamar Mandi",
+    "Kolam Renang",
+    "Ruang Tamu",
+    "Ruang Kumpul Keluarga",
+    "Kitchen Set",
+    "Fullset Karaoke",
+    "Free Wifi",
+    "Halaman Rumput Luas",
+    "Gazebo"
+  ],
+  capacity: "20 orang",
+  notes: [
+    "Check in jam 14.00",
+    "Check out jam 12.00",
+    "Bukti nikah untuk pasangan",
+    "No miras",
+    "No mesum",
+    "No drugs"
+  ],
+  image: "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4928.jpeg%3Fv%3D1",
+  slideImages: [
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4933.jpeg%3Fv%3D1",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4923.jpeg%3Fv%3D1",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4922.jpeg%3Fv%3D1",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4921.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4920.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4915.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4914.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4909.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4904.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4902.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4900.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4896.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4890.jpeg",
+    "https://img.cocspedsafliz.workers.dev/?url=https%3A%2F%2Ffcdn.my.id%2Fi%2FIMG_4883.jpeg"
   ]
 },
 
