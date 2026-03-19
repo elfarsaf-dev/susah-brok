@@ -42,10 +42,10 @@ export const villaData: Property[] = [
     "No mesum",
     "No drugs"
   ],
-  image: "https://fcdn.my.id/i/IMG_4928.jpeg?v=1",
+  image: "https://img.cocspedsafliz.workers.dev/?url=https://fcdn.my.id/i/IMG_4928.jpeg?v=1",
   slideImages: [
-    "https://fcdn.my.id/i/IMG_4933.jpeg?v=1",
-    "https://fcdn.my.id/i/IMG_4923.jpeg?v=1",
+    "https://img.cocspedsafliz.workers.dev/?url=https://fcdn.my.id/i/IMG_4933.jpeg?v=1",
+    "https://img.cocspedsafliz.workers.dev/?url=https://fcdn.my.id/i/IMG_4923.jpeg?v=1",
     "https://fcdn.my.id/i/IMG_4922.jpeg?v=1",
     "https://fcdn.my.id/i/IMG_4921.jpeg",
     "https://fcdn.my.id/i/IMG_4920.jpeg",
