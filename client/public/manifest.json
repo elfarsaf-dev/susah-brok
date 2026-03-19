@@ -10,7 +10,7 @@
   "theme_color": "#16A34A",
   "icons": [
     {
-      "src": "/icons/pwa-icon.svg",
+      "src": "/icons/pwa-icon.png",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
