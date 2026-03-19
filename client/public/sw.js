@@ -5,7 +5,7 @@ const ASSETS_TO_CACHE = [
   '/index.html',
   '/manifest.json',
   '/sw.js',
-  '/icons/pwa-icon.svg'
+  '/icons/pwa-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -62,7 +62,7 @@ self.addEventListener('fetch', (event) => {
 
           return networkResponse;
         })
-        .catch(() => caches.match('/icons/pwa-icon.svg'));
+        .catch(() => caches.match('/icons/pwa-icon.png'));
     })
   );
 });
